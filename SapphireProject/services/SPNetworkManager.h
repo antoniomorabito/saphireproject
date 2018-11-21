@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "SPLibrary.h"
+typedef void (^SPCompletionHandler)(BOOL success,id responseObject, NSError *error);
 @interface SPNetworkManager : NSObject
-
+- (void)doLogin:(NSDictionary* )data
+           view:(UIView *)view
+completionHandler:(SPCompletionHandler)handler;
 @end

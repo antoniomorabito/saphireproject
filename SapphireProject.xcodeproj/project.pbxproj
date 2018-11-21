@@ -15,6 +15,8 @@
 		042CA0CC21A4F19800AF8E74 /* SapphireProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0CB21A4F19800AF8E74 /* SapphireProjectUITests.m */; };
 		042CA0E221A5198000AF8E74 /* SPAuthentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CA0E121A5198000AF8E74 /* SPAuthentication.storyboard */; };
 		042CA0E421A5198D00AF8E74 /* SPSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CA0E321A5198D00AF8E74 /* SPSplash.storyboard */; };
+		042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0E721A51ADB00AF8E74 /* SPNetworkManager.m */; };
+		042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0EB21A51B0000AF8E74 /* SPMessageUtility.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
 		D2C46621665588F2112EB34E /* Pods_SapphireProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */; };
 		FC484965EABA76293F8BC26D /* Pods_SapphireProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */; };
@@ -53,6 +55,11 @@
 		042CA0CD21A4F19800AF8E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042CA0E121A5198000AF8E74 /* SPAuthentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPAuthentication.storyboard; sourceTree = "<group>"; };
 		042CA0E321A5198D00AF8E74 /* SPSplash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSplash.storyboard; sourceTree = "<group>"; };
+		042CA0E521A51AC200AF8E74 /* SPLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPLibrary.h; sourceTree = "<group>"; };
+		042CA0E621A51ADB00AF8E74 /* SPNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPNetworkManager.h; sourceTree = "<group>"; };
+		042CA0E721A51ADB00AF8E74 /* SPNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPNetworkManager.m; sourceTree = "<group>"; };
+		042CA0EA21A51AFF00AF8E74 /* SPMessageUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMessageUtility.h; sourceTree = "<group>"; };
+		042CA0EB21A51B0000AF8E74 /* SPMessageUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMessageUtility.m; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +124,7 @@
 		042CA0A321A4F19500AF8E74 /* SapphireProject */ = {
 			isa = PBXGroup;
 			children = (
+				042CA0E921A51AE700AF8E74 /* helper */,
 				042CA0DC21A4FC4100AF8E74 /* services */,
 				042CA0DB21A4FA1200AF8E74 /* view */,
 				042CA0DA21A4FA0C00AF8E74 /* controller */,
@@ -175,8 +183,20 @@
 		042CA0DC21A4FC4100AF8E74 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				042CA0E521A51AC200AF8E74 /* SPLibrary.h */,
+				042CA0E621A51ADB00AF8E74 /* SPNetworkManager.h */,
+				042CA0E721A51ADB00AF8E74 /* SPNetworkManager.m */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		042CA0E921A51AE700AF8E74 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				042CA0EA21A51AFF00AF8E74 /* SPMessageUtility.h */,
+				042CA0EB21A51B0000AF8E74 /* SPMessageUtility.m */,
+			);
+			path = helper;
 			sourceTree = "<group>";
 		};
 		16EE95EDFD4CDF92DA045A5F /* Frameworks */ = {
@@ -425,6 +445,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
+				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
+				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
 			);

@@ -23,6 +23,7 @@
 		042CA0F421A51E7000AF8E74 /* SPOverviewAttendace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CA0F321A51E7000AF8E74 /* SPOverviewAttendace.storyboard */; };
 		042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0F921A51F8E00AF8E74 /* SPSplash.m */; };
 		042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0FD21A51FEA00AF8E74 /* SPLogin.m */; };
+		042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10021A55A8F00AF8E74 /* SPReachability.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
 		D2C46621665588F2112EB34E /* Pods_SapphireProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */; };
 		FC484965EABA76293F8BC26D /* Pods_SapphireProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */; };
@@ -74,6 +75,8 @@
 		042CA0F921A51F8E00AF8E74 /* SPSplash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSplash.m; sourceTree = "<group>"; };
 		042CA0FC21A51FEA00AF8E74 /* SPLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPLogin.h; sourceTree = "<group>"; };
 		042CA0FD21A51FEA00AF8E74 /* SPLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPLogin.m; sourceTree = "<group>"; };
+		042CA0FF21A55A8F00AF8E74 /* SPReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPReachability.h; sourceTree = "<group>"; };
+		042CA10021A55A8F00AF8E74 /* SPReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPReachability.m; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +219,8 @@
 			children = (
 				042CA0EA21A51AFF00AF8E74 /* SPMessageUtility.h */,
 				042CA0EB21A51B0000AF8E74 /* SPMessageUtility.m */,
+				042CA0FF21A55A8F00AF8E74 /* SPReachability.h */,
+				042CA10021A55A8F00AF8E74 /* SPReachability.m */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -509,6 +514,7 @@
 				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
+				042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SPLibrary.h"
 @interface SPNetworkManager : NSObject
 
 @end

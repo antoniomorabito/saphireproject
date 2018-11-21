@@ -9,5 +9,10 @@
 #import "SPNetworkManager.h"
 
 @implementation SPNetworkManager
-
+- (void)doLogin:(NSDictionary* )data
+           view:(UIView *)view
+completionHandler:(SPCompletionHandler)handler;
+{
+    
+}
 @end

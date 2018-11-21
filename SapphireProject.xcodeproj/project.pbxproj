@@ -21,6 +21,7 @@
 		042CA0F021A51DF900AF8E74 /* SPCompetitor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CA0EF21A51DF900AF8E74 /* SPCompetitor.storyboard */; };
 		042CA0F221A51E0F00AF8E74 /* SPSKU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */; };
 		042CA0F421A51E7000AF8E74 /* SPOverviewAttendace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CA0F321A51E7000AF8E74 /* SPOverviewAttendace.storyboard */; };
+		042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0F921A51F8E00AF8E74 /* SPSplash.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
 		D2C46621665588F2112EB34E /* Pods_SapphireProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */; };
 		FC484965EABA76293F8BC26D /* Pods_SapphireProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */; };
@@ -68,6 +69,8 @@
 		042CA0EF21A51DF900AF8E74 /* SPCompetitor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPCompetitor.storyboard; sourceTree = "<group>"; };
 		042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSKU.storyboard; sourceTree = "<group>"; };
 		042CA0F321A51E7000AF8E74 /* SPOverviewAttendace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPOverviewAttendace.storyboard; sourceTree = "<group>"; };
+		042CA0F821A51F8E00AF8E74 /* SPSplash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSplash.h; sourceTree = "<group>"; };
+		042CA0F921A51F8E00AF8E74 /* SPSplash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSplash.m; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,9 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				042CA0F721A51F6000AF8E74 /* main */,
+				042CA0F621A51F5700AF8E74 /* auth */,
+				042CA0F521A51F5100AF8E74 /* splash */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -209,6 +215,29 @@
 				042CA0EB21A51B0000AF8E74 /* SPMessageUtility.m */,
 			);
 			path = helper;
+			sourceTree = "<group>";
+		};
+		042CA0F521A51F5100AF8E74 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				042CA0F821A51F8E00AF8E74 /* SPSplash.h */,
+				042CA0F921A51F8E00AF8E74 /* SPSplash.m */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		042CA0F621A51F5700AF8E74 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		042CA0F721A51F6000AF8E74 /* main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		16EE95EDFD4CDF92DA045A5F /* Frameworks */ = {
@@ -463,6 +492,7 @@
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
+				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
 			);

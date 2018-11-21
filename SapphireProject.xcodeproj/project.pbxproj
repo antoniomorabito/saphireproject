@@ -13,6 +13,8 @@
 		042CA0B721A4F19800AF8E74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0B621A4F19800AF8E74 /* main.m */; };
 		042CA0C121A4F19800AF8E74 /* SapphireProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0C021A4F19800AF8E74 /* SapphireProjectTests.m */; };
 		042CA0CC21A4F19800AF8E74 /* SapphireProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0CB21A4F19800AF8E74 /* SapphireProjectUITests.m */; };
+		042CA0E221A5198000AF8E74 /* SPAuthentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CA0E121A5198000AF8E74 /* SPAuthentication.storyboard */; };
+		042CA0E421A5198D00AF8E74 /* SPSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CA0E321A5198D00AF8E74 /* SPSplash.storyboard */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
 		D2C46621665588F2112EB34E /* Pods_SapphireProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */; };
 		FC484965EABA76293F8BC26D /* Pods_SapphireProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */; };
@@ -49,6 +51,8 @@
 		042CA0C721A4F19800AF8E74 /* SapphireProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SapphireProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042CA0CB21A4F19800AF8E74 /* SapphireProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SapphireProjectUITests.m; sourceTree = "<group>"; };
 		042CA0CD21A4F19800AF8E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042CA0E121A5198000AF8E74 /* SPAuthentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPAuthentication.storyboard; sourceTree = "<group>"; };
+		042CA0E321A5198D00AF8E74 /* SPSplash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSplash.storyboard; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +166,8 @@
 		042CA0DB21A4FA1200AF8E74 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				042CA0E121A5198000AF8E74 /* SPAuthentication.storyboard */,
+				042CA0E321A5198D00AF8E74 /* SPSplash.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -304,6 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				042CA0B121A4F19800AF8E74 /* Assets.xcassets in Resources */,
+				042CA0E421A5198D00AF8E74 /* SPSplash.storyboard in Resources */,
+				042CA0E221A5198000AF8E74 /* SPAuthentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
@@ -342,8 +348,6 @@
 				"${BUILT_PRODUCTS_DIR}/XMLReader/XMLReader.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDTake.framework",
@@ -363,15 +367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SapphireProjectUITests-checkManifestLockResult.txt",
 			);
@@ -385,15 +385,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SapphireProjectTests-checkManifestLockResult.txt",
 			);
@@ -407,15 +403,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SapphireProject-checkManifestLockResult.txt",
 			);
@@ -593,7 +585,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.co.id.SapphireProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -611,7 +603,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.co.id.SapphireProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

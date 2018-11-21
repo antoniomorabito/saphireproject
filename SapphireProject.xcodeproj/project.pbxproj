@@ -268,6 +268,7 @@
 		042CA09921A4F19500AF8E74 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SP;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = telkom;
 				TargetAttributes = {

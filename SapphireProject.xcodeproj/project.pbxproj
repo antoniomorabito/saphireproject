@@ -25,6 +25,8 @@
 		042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0FD21A51FEA00AF8E74 /* SPLogin.m */; };
 		042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10021A55A8F00AF8E74 /* SPReachability.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
+		8422417821A617F40022AB75 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */; };
+		8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */; };
 		D2C46621665588F2112EB34E /* Pods_SapphireProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */; };
 		FC484965EABA76293F8BC26D /* Pods_SapphireProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,8 @@
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		9B7C0FE9487E1FCE67FB66DC /* Pods-SapphireProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject.release.xcconfig"; sourceTree = "<group>"; };
 		D3AE6AC5CE1B4FD92FABCF3F /* Pods-SapphireProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProjectUITests/Pods-SapphireProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EE86CCECC15B319EBE7312B0 /* Pods-SapphireProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProjectUITests/Pods-SapphireProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		042CA0A321A4F19500AF8E74 /* SapphireProject */ = {
 			isa = PBXGroup;
 			children = (
+				843B6E6F21A579B4003593BF /* library */,
+				843B6E6C21A56929003593BF /* font */,
 				042CA0E921A51AE700AF8E74 /* helper */,
 				042CA0DC21A4FC4100AF8E74 /* services */,
 				042CA0DB21A4FA1200AF8E74 /* view */,
@@ -281,6 +287,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		843B6E6C21A56929003593BF /* font */ = {
+			isa = PBXGroup;
+			children = (
+				843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */,
+				843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		843B6E6F21A579B4003593BF /* library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,7 +370,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SP;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = telkom;
 				TargetAttributes = {
 					042CA0A021A4F19500AF8E74 = {
@@ -389,6 +411,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8422417821A617F40022AB75 /* Montserrat-Bold.otf in Resources */,
+				8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */,
 				042CA0EE21A51DB900AF8E74 /* SPMain.storyboard in Resources */,
 				042CA0F421A51E7000AF8E74 /* SPOverviewAttendace.storyboard in Resources */,
 				042CA0F221A51E0F00AF8E74 /* SPSKU.storyboard in Resources */,
@@ -429,6 +453,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TweeTextField/TweeTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/XMLReader/XMLReader.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -439,6 +464,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TweeTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMLReader.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +631,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -656,6 +683,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -675,6 +704,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.co.id.SapphireProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -694,6 +724,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.co.id.SapphireProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

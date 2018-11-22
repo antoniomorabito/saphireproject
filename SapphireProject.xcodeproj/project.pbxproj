@@ -145,7 +145,6 @@
 		042CA0A321A4F19500AF8E74 /* SapphireProject */ = {
 			isa = PBXGroup;
 			children = (
-				843B6E6F21A579B4003593BF /* library */,
 				843B6E6C21A56929003593BF /* font */,
 				042CA0E921A51AE700AF8E74 /* helper */,
 				042CA0DC21A4FC4100AF8E74 /* services */,
@@ -294,13 +293,6 @@
 				843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */,
 			);
 			path = font;
-			sourceTree = "<group>";
-		};
-		843B6E6F21A579B4003593BF /* library */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

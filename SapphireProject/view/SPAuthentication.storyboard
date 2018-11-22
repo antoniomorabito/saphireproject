@@ -36,26 +36,26 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN IN PAGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGT-iU-Xg6">
-                                                <rect key="frame" x="30" y="245.5" width="114.5" height="20"/>
+                                                <rect key="frame" x="30" y="280" width="114.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                 <color key="textColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, log in using the account that you have registered" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKu-Hy-Kmt">
-                                                <rect key="frame" x="30" y="273.5" width="315" height="13.5"/>
+                                                <rect key="frame" x="30" y="308" width="315" height="13.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                                 <color key="textColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user" translatesAutoresizingMaskIntoConstraints="NO" id="DIt-YO-nDa">
-                                                <rect key="frame" x="30" y="318" width="16" height="16"/>
+                                                <rect key="frame" x="30" y="352.5" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="P81-c8-b7B"/>
                                                     <constraint firstAttribute="width" constant="16" id="jYf-Iv-viV"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YOS-cB-qIr" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="62" y="311" width="283" height="32"/>
+                                                <rect key="frame" x="62" y="345.5" width="283" height="32"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="XpX-uC-rSi"/>
@@ -95,19 +95,19 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6sC-Op-ZlA">
-                                                <rect key="frame" x="30" y="432" width="51" height="31"/>
+                                                <rect key="frame" x="30" y="466.5" width="51" height="31"/>
                                                 <color key="tintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_password" translatesAutoresizingMaskIntoConstraints="NO" id="teG-4k-Ke6">
-                                                <rect key="frame" x="30" y="384" width="16" height="16"/>
+                                                <rect key="frame" x="30" y="418.5" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="16" id="WfT-KU-bS8"/>
                                                     <constraint firstAttribute="height" constant="16" id="wgn-kx-vHi"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-BB-vPX" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="62" y="377" width="283" height="32"/>
+                                                <rect key="frame" x="62" y="411.5" width="283" height="32"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="sKt-To-4pE"/>
@@ -147,7 +147,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bco-sP-2OX">
-                                                <rect key="frame" x="30" y="527.5" width="315" height="44"/>
+                                                <rect key="frame" x="30" y="562" width="315" height="44"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="gcI-9c-Xh2"/>
@@ -158,10 +158,10 @@
                                                 </state>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="MT9-cB-qym">
-                                                <rect key="frame" x="137.5" y="8" width="100" height="229.5"/>
+                                                <rect key="frame" x="137.5" y="8" width="100" height="264"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZT-ji-eRi">
-                                                <rect key="frame" x="95" y="441" width="87" height="13"/>
+                                                <rect key="frame" x="95" y="475.5" width="87" height="13"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                                 <color key="textColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -195,7 +195,7 @@
                                             <constraint firstItem="YOS-cB-qIr" firstAttribute="leading" secondItem="DIt-YO-nDa" secondAttribute="trailing" constant="16" id="qU6-fJ-PVl"/>
                                             <constraint firstItem="SD5-kq-99D" firstAttribute="trailing" secondItem="MKu-Hy-Kmt" secondAttribute="trailing" constant="30" id="sQI-29-Qgg"/>
                                             <constraint firstItem="yGT-iU-Xg6" firstAttribute="leading" secondItem="MKu-Hy-Kmt" secondAttribute="leading" id="tCG-5o-G2m"/>
-                                            <constraint firstItem="Bco-sP-2OX" firstAttribute="centerY" secondItem="SD5-kq-99D" secondAttribute="centerY" multiplier="1.6" id="zdO-0o-bSE"/>
+                                            <constraint firstItem="Bco-sP-2OX" firstAttribute="centerY" secondItem="SD5-kq-99D" secondAttribute="centerY" multiplier="1.7" id="zdO-0o-bSE"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="SD5-kq-99D"/>
                                     </view>

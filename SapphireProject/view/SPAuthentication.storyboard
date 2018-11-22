@@ -99,6 +99,9 @@
                                                 <rect key="frame" x="30" y="432" width="51" height="31"/>
                                                 <color key="tintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="didTapSwitch:" destination="1qI-l5-znL" eventType="valueChanged" id="I4Z-VN-hqa"/>
+                                                </connections>
                                             </switch>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_password" translatesAutoresizingMaskIntoConstraints="NO" id="teG-4k-Ke6">
                                                 <rect key="frame" x="30" y="384" width="16" height="16"/>
@@ -228,6 +231,7 @@
                         <outlet property="fieldPassword" destination="gvF-BB-vPX" id="fc2-Se-tVT"/>
                         <outlet property="fieldusername" destination="YOS-cB-qIr" id="mkT-qA-JT7"/>
                         <outlet property="scrollView" destination="ugO-Zh-NZx" id="rW8-OX-DJj"/>
+                        <outlet property="switchtapcontroler" destination="6sC-Op-ZlA" id="8xg-de-3dv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQU-Q6-XbB" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *fieldusername;
 @property (weak, nonatomic) IBOutlet UITextField *fieldPassword;
+@property (weak, nonatomic) IBOutlet UISwitch *switchtapcontroler;
 
 @end

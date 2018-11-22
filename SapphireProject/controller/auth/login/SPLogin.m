@@ -107,6 +107,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+bool isTap=false;
+- (IBAction)didTapSwitch:(id)sender {
+    if (isTap) {
+        _switchtapcontroler.selected = false;
+        _fieldPassword.secureTextEntry = true;
+        isTap = false;
+    }
+    else{
+        _switchtapcontroler.selected = true;
+        _fieldPassword.secureTextEntry = false;
+        
+        isTap = true;
+    }
+}
+
 /*
 #pragma mark - Navigation
 

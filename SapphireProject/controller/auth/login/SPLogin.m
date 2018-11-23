@@ -135,7 +135,7 @@ bool isTap=false;
     else{
         
     
-    UIViewController *vc =[[UIStoryboard storyboardWithName:@"" bundle:nil]instantiateViewControllerWithIdentifier:@""];
+    UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
     
     
     [self presentViewController:vc animated:YES completion:nil];

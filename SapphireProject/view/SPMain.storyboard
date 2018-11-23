@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E7e-o1-nsw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E7e-o1-nsw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -85,103 +84,6 @@
                                     <constraint firstItem="yR4-yl-fai" firstAttribute="leading" secondItem="zNy-zv-bns" secondAttribute="leading" constant="16" id="kQT-zf-Ve6"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="rNp-Bd-SKX" userLabel="TabBar">
-                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68A-Zs-1cn">
-                                        <rect key="frame" x="0.0" y="0.0" width="4" height="68"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="4" id="8rc-6f-nWj"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydr-ul-QMa">
-                                        <rect key="frame" x="29.5" y="0.0" width="60" height="68"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="arE-li-Hyz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                        <inset key="titleEdgeInsets" minX="-60" minY="38" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="-17" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Home" image="ic_tab1_off">
-                                            <color key="titleColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="selected" image="ic_tab1">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="highlighted" image="ic_tab1">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pd3-OD-vqI">
-                                        <rect key="frame" x="115" y="0.0" width="60" height="68"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="pce-lR-ltD"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                        <inset key="titleEdgeInsets" minX="-60" minY="38" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="-17" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Absensi" image="ic_tab2_off">
-                                            <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="selected" image="ic_tab2">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="highlighted" image="ic_tab2">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCg-C7-TeR">
-                                        <rect key="frame" x="200" y="0.0" width="60" height="68"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="pYB-WM-IAg"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                        <inset key="titleEdgeInsets" minX="-60" minY="38" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="-17" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Upload" image="ic_tab3_off">
-                                            <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="selected" image="ic_tab3">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="highlighted" image="ic_tab3">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0i-na-IeE">
-                                        <rect key="frame" x="285.5" y="0.0" width="60" height="68"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="P7Z-JC-rd2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                        <inset key="titleEdgeInsets" minX="-60" minY="38" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="-17" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Profile" image="ic_tab4_off">
-                                            <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="selected" image="ic_tab4">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="highlighted" image="ic_tab4">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAQ-sK-Jqg">
-                                        <rect key="frame" x="371" y="0.0" width="4" height="68"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="4" id="Dx8-AP-c1V"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Ydr-ul-QMa" secondAttribute="bottom" id="MdP-nW-lV4"/>
-                                    <constraint firstItem="Ydr-ul-QMa" firstAttribute="top" secondItem="rNp-Bd-SKX" secondAttribute="top" id="wox-j9-yvq"/>
-                                    <constraint firstAttribute="height" constant="68" id="zzp-rM-Hp0"/>
-                                </constraints>
-                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dsm-jL-Avm">
                                 <rect key="frame" x="0.0" y="275" width="375" height="324"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,25 +124,56 @@
                                     <constraint firstAttribute="height" constant="4" id="koR-pQ-zH1"/>
                                 </constraints>
                             </imageView>
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK0-jR-wqL" customClass="SPMainTab">
+                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="M4Z-Gb-KjI"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Home" image="ic_tab1_off" selectedImage="ic_tab1" id="ksG-Aa-4dg">
+                                        <color key="badgeColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Attendance" image="ic_tab2_off" selectedImage="ic_tab2" id="EFx-C1-EBi">
+                                        <color key="badgeColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Upload" image="ic_tab3_off" selectedImage="ic_tab3" id="A9y-iz-PmL">
+                                        <color key="badgeColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Profile" image="ic_tab4_off" selectedImage="ic_tab4" id="5pi-1f-frf">
+                                        <color key="badgeColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="tintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="height">
+                                        <real key="value" value="68"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="R4Q-fb-Nqj" firstAttribute="trailing" secondItem="zNy-zv-bns" secondAttribute="trailing" id="0ee-az-GXN"/>
-                            <constraint firstItem="R4Q-fb-Nqj" firstAttribute="bottom" secondItem="rNp-Bd-SKX" secondAttribute="bottom" id="30g-9t-ZSr"/>
+                            <constraint firstItem="OK0-jR-wqL" firstAttribute="top" secondItem="pEU-cg-FVq" secondAttribute="bottom" id="2k6-q6-eNM"/>
                             <constraint firstItem="uty-BU-Msa" firstAttribute="leading" secondItem="R4Q-fb-Nqj" secondAttribute="leading" id="4M4-2u-62u"/>
                             <constraint firstItem="uty-BU-Msa" firstAttribute="top" secondItem="zNy-zv-bns" secondAttribute="bottom" id="AJU-cM-Kbs"/>
                             <constraint firstItem="R4Q-fb-Nqj" firstAttribute="trailing" secondItem="dsm-jL-Avm" secondAttribute="trailing" id="Bwj-Uu-tgo"/>
                             <constraint firstItem="dsm-jL-Avm" firstAttribute="leading" secondItem="R4Q-fb-Nqj" secondAttribute="leading" id="DE4-Gr-5gy"/>
                             <constraint firstItem="dsm-jL-Avm" firstAttribute="top" secondItem="zNy-zv-bns" secondAttribute="bottom" id="JoJ-cN-pdX"/>
                             <constraint firstItem="R4Q-fb-Nqj" firstAttribute="trailing" secondItem="uty-BU-Msa" secondAttribute="trailing" id="JzZ-nT-JpH"/>
-                            <constraint firstItem="rNp-Bd-SKX" firstAttribute="top" secondItem="dsm-jL-Avm" secondAttribute="bottom" id="L8h-w0-itt"/>
                             <constraint firstItem="R4Q-fb-Nqj" firstAttribute="trailing" secondItem="pEU-cg-FVq" secondAttribute="trailing" id="LOF-1a-evV"/>
-                            <constraint firstItem="rNp-Bd-SKX" firstAttribute="leading" secondItem="R4Q-fb-Nqj" secondAttribute="leading" id="YcL-Ua-2vL"/>
+                            <constraint firstItem="R4Q-fb-Nqj" firstAttribute="trailing" secondItem="OK0-jR-wqL" secondAttribute="trailing" id="Pb8-9v-Gnc"/>
+                            <constraint firstItem="OK0-jR-wqL" firstAttribute="leading" secondItem="R4Q-fb-Nqj" secondAttribute="leading" id="QVv-s8-gM0"/>
                             <constraint firstItem="pEU-cg-FVq" firstAttribute="leading" secondItem="R4Q-fb-Nqj" secondAttribute="leading" id="brH-FN-AnI"/>
-                            <constraint firstItem="R4Q-fb-Nqj" firstAttribute="trailing" secondItem="rNp-Bd-SKX" secondAttribute="trailing" id="ces-QF-bnh"/>
+                            <constraint firstItem="R4Q-fb-Nqj" firstAttribute="bottom" secondItem="OK0-jR-wqL" secondAttribute="bottom" id="d2Y-76-gVU"/>
                             <constraint firstItem="zNy-zv-bns" firstAttribute="top" secondItem="0C5-zS-pSK" secondAttribute="top" id="efc-0b-KiU"/>
+                            <constraint firstItem="OK0-jR-wqL" firstAttribute="top" secondItem="dsm-jL-Avm" secondAttribute="bottom" id="qmd-b8-p3t"/>
                             <constraint firstItem="zNy-zv-bns" firstAttribute="leading" secondItem="R4Q-fb-Nqj" secondAttribute="leading" id="w4y-Km-Isw"/>
-                            <constraint firstItem="rNp-Bd-SKX" firstAttribute="top" secondItem="pEU-cg-FVq" secondAttribute="bottom" id="wbJ-WS-7Zt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R4Q-fb-Nqj"/>
                     </view>
@@ -296,7 +229,7 @@
         <image name="ic_tab3_off" width="60" height="34"/>
         <image name="ic_tab4" width="60" height="34"/>
         <image name="ic_tab4_off" width="60" height="34"/>
-        <image name="scrim_bar" width="20" height="3"/>
+        <image name="scrim_bar" width="20" height="3.5"/>
         <image name="scrim_bar_" width="20" height="4"/>
     </resources>
 </document>

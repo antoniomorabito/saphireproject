@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zua-FM-Ghp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,16 +40,16 @@
             <objects>
                 <viewController id="F0J-Ti-C58" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdz-Fh-K1Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAl-cp-XLk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqv-nF-naG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Monday, 12 Nov 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-F4-StN">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="General" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-F4-StN">
                                                 <rect key="frame" x="16" y="16" width="343" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -113,11 +113,11 @@
                                                     <constraint firstAttribute="width" constant="20" id="YVY-Ke-MAS"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product Name" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-rj-idW" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="164.5" width="343" height="41"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Category (Ex. Baby Toy)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="1ni-Wl-HZC" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="52" y="164.5" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="MLc-aG-Qqm"/>
+                                                    <constraint firstAttribute="height" constant="41" id="dBn-tF-JwP"/>
                                                 </constraints>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
@@ -135,11 +135,107 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product Price (Ex. 20000)" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UOf-I5-tWW" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="221.5" width="343" height="41"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="9eW-fB-5TG">
+                                                <rect key="frame" x="16" y="180" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="2VK-nh-ARS"/>
+                                                    <constraint firstAttribute="width" constant="20" id="XNm-8n-GTf"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Consumer Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZH-Am-8P0">
+                                                <rect key="frame" x="16" y="221.5" width="123" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bB8-ng-CLg">
+                                                <rect key="frame" x="28" y="864" width="319" height="44"/>
+                                                <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="vMY-ir-d3W"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Consumer Name" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-rj-idW" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="16" y="256" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="5KA-bT-ldd"/>
+                                                    <constraint firstAttribute="height" constant="41" id="MLc-aG-Qqm"/>
+                                                </constraints>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="name"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
+                                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-7O-EMz">
+                                                <rect key="frame" x="16" y="313" width="343" height="95.5"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="sXb-85-crD" customClass="JVFloatLabeledTextView">
+                                                <rect key="frame" x="16" y="313" width="343" height="95.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="95.5" id="mNT-Ie-rQL"/>
+                                                </constraints>
+                                                <inset key="scrollIndicatorInsets" minX="0.0" minY="11" maxX="0.0" maxY="0.0"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" returnKeyType="next" textContentType="street-address"/>
+                                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Consumer Address"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
+                                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="floatingLabelShouldLockToTop" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Consumer Phone Number" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="t50-h2-Hti" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="16" y="424.5" width="343" height="41"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="eES-4U-ke0"/>
+                                                </constraints>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
+                                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Consumer Price" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-tt-Cgv" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="16" y="481.5" width="343" height="41"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="XiI-ZJ-r3i"/>
                                                 </constraints>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
@@ -157,146 +253,48 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Promo Description" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EAG-ll-Cdg" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="278.5" width="343" height="41"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="b29-hz-b7s"/>
-                                                </constraints>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
-                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
-                                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Period Start" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="gf3-by-Zq6" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="335.5" width="127.5" height="41"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="V1a-tw-8dW"/>
-                                                </constraints>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
-                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
-                                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="rFw-8e-ScV">
-                                                <rect key="frame" x="16" y="350" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="JHV-Xq-WRJ"/>
-                                                    <constraint firstAttribute="width" constant="20" id="T3Y-wX-6QH"/>
-                                                </constraints>
-                                            </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0r-Kg-52L">
-                                                <rect key="frame" x="179.5" y="603" width="16" height="0.0"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="16" id="GUE-Xv-H4W"/>
-                                                    <constraint firstAttribute="height" id="P29-eF-FwF"/>
-                                                </constraints>
-                                            </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Period Date" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-70-N2Z" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="231.5" y="335.5" width="127.5" height="41"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="1Na-96-yIt"/>
-                                                </constraints>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
-                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
-                                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="r1F-Nd-3lx">
-                                                <rect key="frame" x="195.5" y="350" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="6hK-xh-Qs4"/>
-                                                    <constraint firstAttribute="height" constant="20" id="wbn-zK-Mr1"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bB8-ng-CLg">
-                                                <rect key="frame" x="28" y="531" width="319" height="44"/>
-                                                <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="vMY-ir-d3W"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
-                                                <state key="normal" title="Submit">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="pZH-Am-8P0" firstAttribute="top" secondItem="1ni-Wl-HZC" secondAttribute="bottom" constant="16" id="0xi-bw-JBO"/>
+                                            <constraint firstItem="RVn-tt-Cgv" firstAttribute="top" secondItem="t50-h2-Hti" secondAttribute="bottom" constant="16" id="4Md-Dx-V4Y"/>
                                             <constraint firstItem="JZZ-fm-cge" firstAttribute="centerY" secondItem="b4X-JH-8Bt" secondAttribute="centerY" constant="5" id="4Q8-CH-LZp"/>
-                                            <constraint firstAttribute="trailing" secondItem="Alv-70-N2Z" secondAttribute="trailing" constant="16" id="5UK-3H-bS5"/>
-                                            <constraint firstItem="UOf-I5-tWW" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="7Be-Su-6rw"/>
-                                            <constraint firstAttribute="trailing" secondItem="UOf-I5-tWW" secondAttribute="trailing" constant="16" id="8Nq-Ag-fTn"/>
-                                            <constraint firstItem="rFw-8e-ScV" firstAttribute="centerY" secondItem="gf3-by-Zq6" secondAttribute="centerY" constant="4" id="8cW-eW-qB1"/>
-                                            <constraint firstAttribute="bottom" secondItem="g0r-Kg-52L" secondAttribute="bottom" id="9Ej-Gv-Hbe"/>
+                                            <constraint firstAttribute="trailing" secondItem="1ni-Wl-HZC" secondAttribute="trailing" constant="16" id="4rG-dU-HHr"/>
+                                            <constraint firstAttribute="trailing" secondItem="t50-h2-Hti" secondAttribute="trailing" constant="16" id="7hS-mp-b8X"/>
                                             <constraint firstAttribute="trailing" secondItem="vo6-rj-idW" secondAttribute="trailing" constant="16" id="9Ow-j4-LSu"/>
                                             <constraint firstItem="EP9-TG-IhB" firstAttribute="leading" secondItem="eW4-Wq-xKm" secondAttribute="trailing" constant="16" id="9Xk-Gv-I5N"/>
-                                            <constraint firstItem="g0r-Kg-52L" firstAttribute="centerX" secondItem="Lqv-nF-naG" secondAttribute="centerX" id="AWj-an-pdL"/>
-                                            <constraint firstItem="Alv-70-N2Z" firstAttribute="leading" secondItem="r1F-Nd-3lx" secondAttribute="trailing" constant="16" id="EVe-La-FFm"/>
+                                            <constraint firstItem="t50-h2-Hti" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="CIA-qX-QGF"/>
+                                            <constraint firstItem="pZH-Am-8P0" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="Cec-Fa-Cv9"/>
+                                            <constraint firstItem="2Kz-7O-EMz" firstAttribute="trailing" secondItem="sXb-85-crD" secondAttribute="trailing" id="DOY-xW-hWk"/>
+                                            <constraint firstAttribute="trailing" secondItem="RVn-tt-Cgv" secondAttribute="trailing" constant="16" id="F3b-F2-jM9"/>
+                                            <constraint firstItem="vo6-rj-idW" firstAttribute="top" secondItem="pZH-Am-8P0" secondAttribute="bottom" constant="16" id="GBX-NC-67c"/>
                                             <constraint firstItem="bB8-ng-CLg" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="28" id="GOp-7i-orW"/>
-                                            <constraint firstItem="Alv-70-N2Z" firstAttribute="top" secondItem="gf3-by-Zq6" secondAttribute="top" id="Hby-et-Zib"/>
                                             <constraint firstItem="vo6-rj-idW" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="Hrs-Tu-xVS"/>
+                                            <constraint firstItem="1ni-Wl-HZC" firstAttribute="top" secondItem="EP9-TG-IhB" secondAttribute="bottom" constant="16" id="I4s-V5-2d5"/>
                                             <constraint firstAttribute="trailing" secondItem="bB8-ng-CLg" secondAttribute="trailing" constant="28" id="Jl7-9D-fz3"/>
-                                            <constraint firstItem="r1F-Nd-3lx" firstAttribute="leading" secondItem="g0r-Kg-52L" secondAttribute="trailing" id="L6A-i9-caO"/>
+                                            <constraint firstItem="RVn-tt-Cgv" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="LMJ-OK-Rnk"/>
                                             <constraint firstItem="Uhi-F4-StN" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="LQh-8y-rCK"/>
                                             <constraint firstAttribute="bottom" secondItem="bB8-ng-CLg" secondAttribute="bottom" constant="28" id="M1B-5d-Yrn"/>
+                                            <constraint firstItem="t50-h2-Hti" firstAttribute="top" secondItem="sXb-85-crD" secondAttribute="bottom" constant="16" id="MPY-tP-O34"/>
                                             <constraint firstItem="Uhi-F4-StN" firstAttribute="top" secondItem="Lqv-nF-naG" secondAttribute="top" constant="16" id="NFg-lO-cia"/>
-                                            <constraint firstItem="EAG-ll-Cdg" firstAttribute="top" secondItem="UOf-I5-tWW" secondAttribute="bottom" constant="16" id="Oft-mF-W6P"/>
                                             <constraint firstAttribute="trailing" secondItem="EP9-TG-IhB" secondAttribute="trailing" constant="16" id="R7t-IX-W1i"/>
-                                            <constraint firstItem="rFw-8e-ScV" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="RyB-8L-Akm"/>
-                                            <constraint firstItem="UOf-I5-tWW" firstAttribute="top" secondItem="vo6-rj-idW" secondAttribute="bottom" constant="16" id="ZOd-Xu-JRr"/>
+                                            <constraint firstItem="9eW-fB-5TG" firstAttribute="centerY" secondItem="1ni-Wl-HZC" secondAttribute="centerY" constant="5" id="Rnw-V4-J10"/>
+                                            <constraint firstItem="2Kz-7O-EMz" firstAttribute="bottom" secondItem="sXb-85-crD" secondAttribute="bottom" id="U70-XQ-vpq"/>
                                             <constraint firstItem="EP9-TG-IhB" firstAttribute="top" secondItem="b4X-JH-8Bt" secondAttribute="bottom" constant="16" id="coy-P4-jzl"/>
-                                            <constraint firstItem="gf3-by-Zq6" firstAttribute="leading" secondItem="rFw-8e-ScV" secondAttribute="trailing" constant="16" id="dCX-OG-c14"/>
-                                            <constraint firstItem="g0r-Kg-52L" firstAttribute="leading" secondItem="gf3-by-Zq6" secondAttribute="trailing" id="dXw-SN-JOO"/>
-                                            <constraint firstAttribute="trailing" secondItem="EAG-ll-Cdg" secondAttribute="trailing" constant="16" id="eCM-NJ-Lah"/>
+                                            <constraint firstItem="1ni-Wl-HZC" firstAttribute="leading" secondItem="9eW-fB-5TG" secondAttribute="trailing" constant="16" id="evE-3U-CtA"/>
                                             <constraint firstItem="eW4-Wq-xKm" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="fPv-Ll-ATo"/>
+                                            <constraint firstItem="sXb-85-crD" firstAttribute="top" secondItem="vo6-rj-idW" secondAttribute="bottom" constant="16" id="gDn-0F-sF3"/>
                                             <constraint firstAttribute="trailing" secondItem="Uhi-F4-StN" secondAttribute="trailing" constant="16" id="goB-Pb-MT8"/>
-                                            <constraint firstItem="gf3-by-Zq6" firstAttribute="top" secondItem="EAG-ll-Cdg" secondAttribute="bottom" constant="16" id="hus-Pm-7Bp"/>
-                                            <constraint firstItem="EAG-ll-Cdg" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="iNh-7Z-sl3"/>
-                                            <constraint firstItem="bB8-ng-CLg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gf3-by-Zq6" secondAttribute="bottom" constant="28" id="jvK-Dk-YSQ"/>
+                                            <constraint firstItem="9eW-fB-5TG" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="h0s-wq-t2a"/>
+                                            <constraint firstAttribute="trailing" secondItem="sXb-85-crD" secondAttribute="trailing" constant="16" id="iEf-uG-HXc"/>
+                                            <constraint firstItem="2Kz-7O-EMz" firstAttribute="top" secondItem="sXb-85-crD" secondAttribute="top" id="kpz-49-9fz"/>
                                             <constraint firstItem="eW4-Wq-xKm" firstAttribute="centerY" secondItem="EP9-TG-IhB" secondAttribute="centerY" constant="5" id="lQm-Rb-BtP"/>
                                             <constraint firstItem="b4X-JH-8Bt" firstAttribute="leading" secondItem="JZZ-fm-cge" secondAttribute="trailing" constant="16" id="luJ-5P-tgM"/>
                                             <constraint firstItem="b4X-JH-8Bt" firstAttribute="top" secondItem="Uhi-F4-StN" secondAttribute="bottom" constant="16" id="mqR-WX-bo2"/>
+                                            <constraint firstItem="sXb-85-crD" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="oyy-ML-0Df"/>
                                             <constraint firstAttribute="trailing" secondItem="b4X-JH-8Bt" secondAttribute="trailing" constant="16" id="pHB-0n-zgV"/>
-                                            <constraint firstItem="vo6-rj-idW" firstAttribute="top" secondItem="EP9-TG-IhB" secondAttribute="bottom" constant="16" id="pXp-PQ-RhW"/>
                                             <constraint firstItem="JZZ-fm-cge" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="rnt-xW-ZKo"/>
-                                            <constraint firstItem="r1F-Nd-3lx" firstAttribute="centerY" secondItem="Alv-70-N2Z" secondAttribute="centerY" constant="4" id="xad-bS-wM2"/>
+                                            <constraint firstItem="2Kz-7O-EMz" firstAttribute="leading" secondItem="sXb-85-crD" secondAttribute="leading" id="x6N-VA-wfx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -328,8 +326,8 @@
                             <rect key="frame" x="187.5" y="0.0" width="0.0" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competitor Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVf-jS-ycD">
-                                    <rect key="frame" x="-71" y="0.0" width="142" height="44"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sell Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVf-jS-ycD">
+                                    <rect key="frame" x="-35.5" y="0.0" width="71" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="Ci0-TY-SMo"/>
                                     </constraints>
@@ -345,6 +343,7 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0L-7n-hpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -354,7 +353,6 @@
     <resources>
         <image name="bg_field_unfocus" width="32" height="32"/>
         <image name="ic_back" width="20" height="20"/>
-        <image name="ic_dot_date" width="20" height="20"/>
         <image name="ic_dot_package" width="20" height="20"/>
         <image name="ic_dot_pin" width="20" height="20"/>
     </resources>

@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="236" height="125"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TZh-Re-oPN">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_competition_info" translatesAutoresizingMaskIntoConstraints="NO" id="TZh-Re-oPN">
                     <rect key="frame" x="93" y="20" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Ulj-fg-E3X"/>
@@ -51,4 +51,7 @@
             <point key="canvasLocation" x="272" y="145.27736131934034"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_competition_info" width="50" height="50"/>
+    </resources>
 </document>

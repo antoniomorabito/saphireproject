@@ -30,6 +30,7 @@
 		8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */; };
 		8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */; };
 		84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */; };
+		84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */; };
 		D2C46621665588F2112EB34E /* Pods_SapphireProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */; };
 		FC484965EABA76293F8BC26D /* Pods_SapphireProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHomeCell.xib; sourceTree = "<group>"; };
 		84FCFF2121A7D2100037F0A9 /* SapphireProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SapphireProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMainTab.swift; sourceTree = "<group>"; };
+		84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSellOut.storyboard; sourceTree = "<group>"; };
 		9B7C0FE9487E1FCE67FB66DC /* Pods-SapphireProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject.release.xcconfig"; sourceTree = "<group>"; };
 		D3AE6AC5CE1B4FD92FABCF3F /* Pods-SapphireProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProjectUITests/Pods-SapphireProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EE86CCECC15B319EBE7312B0 /* Pods-SapphireProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProjectUITests/Pods-SapphireProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				042CA0ED21A51DB900AF8E74 /* SPMain.storyboard */,
 				8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */,
 				042CA0EF21A51DF900AF8E74 /* SPCompetitor.storyboard */,
+				84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */,
 				042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */,
 				042CA0F321A51E7000AF8E74 /* SPOverviewAttendace.storyboard */,
 			);
@@ -439,6 +442,7 @@
 				042CA0F421A51E7000AF8E74 /* SPOverviewAttendace.storyboard in Resources */,
 				042CA0F221A51E0F00AF8E74 /* SPSKU.storyboard in Resources */,
 				8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */,
+				84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */,
 				042CA0B121A4F19800AF8E74 /* Assets.xcassets in Resources */,
 				042CA0E421A5198D00AF8E74 /* SPSplash.storyboard in Resources */,
 				042CA0E221A5198000AF8E74 /* SPAuthentication.storyboard in Resources */,

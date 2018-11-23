@@ -31,6 +31,9 @@
 		8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */; };
 		84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */; };
 		84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */; };
+		84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FCFF2A21A84CBA0037F0A9 /* JVFloatLabeledTextView.m */; };
+		84FCFF2F21A84CBB0037F0A9 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FCFF2D21A84CBB0037F0A9 /* JVFloatLabeledTextField.m */; };
+		84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FCFF3021A84CEE0037F0A9 /* NSString+TextDirectionality.m */; };
 		D2C46621665588F2112EB34E /* Pods_SapphireProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */; };
 		FC484965EABA76293F8BC26D /* Pods_SapphireProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +97,12 @@
 		84FCFF2121A7D2100037F0A9 /* SapphireProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SapphireProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMainTab.swift; sourceTree = "<group>"; };
 		84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSellOut.storyboard; sourceTree = "<group>"; };
+		84FCFF2A21A84CBA0037F0A9 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		84FCFF2B21A84CBA0037F0A9 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		84FCFF2C21A84CBB0037F0A9 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		84FCFF2D21A84CBB0037F0A9 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		84FCFF3021A84CEE0037F0A9 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		84FCFF3121A84CEE0037F0A9 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextDirectionality.h"; sourceTree = "<group>"; };
 		9B7C0FE9487E1FCE67FB66DC /* Pods-SapphireProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject.release.xcconfig"; sourceTree = "<group>"; };
 		D3AE6AC5CE1B4FD92FABCF3F /* Pods-SapphireProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProjectUITests/Pods-SapphireProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EE86CCECC15B319EBE7312B0 /* Pods-SapphireProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SapphireProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SapphireProjectUITests/Pods-SapphireProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -321,6 +330,12 @@
 		84FCFF2021A7D1E50037F0A9 /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				84FCFF2C21A84CBB0037F0A9 /* JVFloatLabeledTextField.h */,
+				84FCFF2D21A84CBB0037F0A9 /* JVFloatLabeledTextField.m */,
+				84FCFF2B21A84CBA0037F0A9 /* JVFloatLabeledTextView.h */,
+				84FCFF2A21A84CBA0037F0A9 /* JVFloatLabeledTextView.m */,
+				84FCFF3121A84CEE0037F0A9 /* NSString+TextDirectionality.h */,
+				84FCFF3021A84CEE0037F0A9 /* NSString+TextDirectionality.m */,
 				84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */,
 				84FCFF2121A7D2100037F0A9 /* SapphireProject-Bridging-Header.h */,
 			);
@@ -560,9 +575,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FCFF2F21A84CBB0037F0A9 /* JVFloatLabeledTextField.m in Sources */,
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
+				84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
+				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,

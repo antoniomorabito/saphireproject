@@ -77,7 +77,7 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                         <color key="value" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Username"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -160,6 +160,9 @@
                                                 <state key="normal" title="Sign In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapSignIn:" destination="1qI-l5-znL" eventType="touchUpInside" id="W31-fF-GGr"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="MT9-cB-qym">
                                                 <rect key="frame" x="137.5" y="8" width="100" height="264"/>

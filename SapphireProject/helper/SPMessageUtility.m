@@ -13,7 +13,7 @@
 {
     __block BOOL value;
     UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:@"Pertamina MS2"
+                                  alertControllerWithTitle:@"Saphire"
                                   message:text
                                   preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction

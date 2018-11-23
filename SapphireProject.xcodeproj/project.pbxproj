@@ -24,6 +24,7 @@
 		042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0F921A51F8E00AF8E74 /* SPSplash.m */; };
 		042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0FD21A51FEA00AF8E74 /* SPLogin.m */; };
 		042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10021A55A8F00AF8E74 /* SPReachability.m */; };
+		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
 		8422417821A617F40022AB75 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */; };
 		8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */; };
@@ -80,6 +81,8 @@
 		042CA0FD21A51FEA00AF8E74 /* SPLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPLogin.m; sourceTree = "<group>"; };
 		042CA0FF21A55A8F00AF8E74 /* SPReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPReachability.h; sourceTree = "<group>"; };
 		042CA10021A55A8F00AF8E74 /* SPReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPReachability.m; sourceTree = "<group>"; };
+		042CA10B21A79FAA00AF8E74 /* SPMainTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMainTabbar.h; sourceTree = "<group>"; };
+		042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMainTabbar.m; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +256,7 @@
 		042CA0F721A51F6000AF8E74 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				042CA10A21A79F9100AF8E74 /* tabbar */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -264,6 +268,15 @@
 				042CA0FD21A51FEA00AF8E74 /* SPLogin.m */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		042CA10A21A79F9100AF8E74 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				042CA10B21A79FAA00AF8E74 /* SPMainTabbar.h */,
+				042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */,
+			);
+			path = tabbar;
 			sourceTree = "<group>";
 		};
 		16EE95EDFD4CDF92DA045A5F /* Frameworks */ = {
@@ -534,6 +547,7 @@
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,
+				042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */,
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
 				042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */,

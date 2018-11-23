@@ -121,6 +121,27 @@ bool isTap=false;
         isTap = true;
     }
 }
+- (IBAction)didTapSignIn:(id)sender {
+    
+    
+    if (_fieldusername.text.length == 0) {
+    
+        [SPMessageUtility message:@"Field username is still empty" needAction:YES viewController:self];
+    }
+    else if (_fieldPassword.text.length == 0)
+    {
+        [SPMessageUtility message:@"Field password is still empty" needAction:YES viewController:self];
+    }
+    else{
+        
+    
+    UIViewController *vc =[[UIStoryboard storyboardWithName:@"" bundle:nil]instantiateViewControllerWithIdentifier:@""];
+    
+    
+    [self presentViewController:vc animated:YES completion:nil];
+    }
+    
+}
 
 /*
 #pragma mark - Navigation

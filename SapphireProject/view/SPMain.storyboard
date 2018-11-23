@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E7e-o1-nsw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +22,7 @@
         <!--Navigation Controller-->
         <scene sceneID="npO-Ta-6ts">
             <objects>
-                <navigationController navigationBarHidden="YES" id="E7e-o1-nsw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navtabbar" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="E7e-o1-nsw" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="YTV-1T-KMa">
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-711" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Tabbar-->
         <scene sceneID="Un2-pM-1Qo">
             <objects>
-                <viewController id="mxt-nU-yAk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tabbar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mxt-nU-yAk" customClass="SPMainTabbar" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0C5-zS-pSK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +296,7 @@
         <image name="ic_tab3_off" width="60" height="34"/>
         <image name="ic_tab4" width="60" height="34"/>
         <image name="ic_tab4_off" width="60" height="34"/>
-        <image name="scrim_bar" width="20" height="3.5"/>
+        <image name="scrim_bar" width="20" height="3"/>
         <image name="scrim_bar_" width="20" height="4"/>
     </resources>
 </document>

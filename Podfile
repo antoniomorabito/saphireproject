@@ -12,6 +12,7 @@ target 'SapphireProject' do
     pod 'IQDropDownTextField'
     pod 'XMLReader'
     pod 'TweeTextField'
+    pod 'FreakingSimpleRoundImageView'
 
   target 'SapphireProjectTests' do
     inherit! :search_paths

@@ -28,10 +28,14 @@
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
 		8422417821A617F40022AB75 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */; };
 		8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */; };
+		845411A221AEAC3600DE8DA8 /* SPRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845411A121AEAC3600DE8DA8 /* SPRoundView.swift */; };
+		845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845411A321AEAD0D00DE8DA8 /* RoundingMode.swift */; };
+		845411A621AEE42F00DE8DA8 /* SPHomePromoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */; };
 		84727FDF21A9AFE000EDC907 /* SPSellOutOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */; };
 		84727FE121A9B3F000EDC907 /* SPSKUOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */; };
-		84727FE321A9B4FF00EDC907 /* SPAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84727FE221A9B4FF00EDC907 /* SPAttendance.storyboard */; };
+		84727FE321A9B4FF00EDC907 /* SPTabAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */; };
 		8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */; };
+		84CC670021AD8BC300DC3C9F /* SPTabHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */; };
 		84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */; };
 		84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */; };
 		84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FCFF2A21A84CBA0037F0A9 /* JVFloatLabeledTextView.m */; };
@@ -96,10 +100,14 @@
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
 		843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		845411A121AEAC3600DE8DA8 /* SPRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPRoundView.swift; sourceTree = "<group>"; };
+		845411A321AEAD0D00DE8DA8 /* RoundingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundingMode.swift; sourceTree = "<group>"; };
+		845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHomePromoCell.xib; sourceTree = "<group>"; };
 		84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSellOutOverview.storyboard; sourceTree = "<group>"; };
 		84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSKUOverview.storyboard; sourceTree = "<group>"; };
-		84727FE221A9B4FF00EDC907 /* SPAttendance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPAttendance.storyboard; sourceTree = "<group>"; };
+		84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabAttendance.storyboard; sourceTree = "<group>"; };
 		8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHomeCell.xib; sourceTree = "<group>"; };
+		84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabHome.storyboard; sourceTree = "<group>"; };
 		84FCFF2121A7D2100037F0A9 /* SapphireProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SapphireProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMainTab.swift; sourceTree = "<group>"; };
 		84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSellOut.storyboard; sourceTree = "<group>"; };
@@ -228,13 +236,15 @@
 				042CA0E121A5198000AF8E74 /* SPAuthentication.storyboard */,
 				042CA0E321A5198D00AF8E74 /* SPSplash.storyboard */,
 				042CA0ED21A51DB900AF8E74 /* SPMain.storyboard */,
+				84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */,
+				84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */,
 				8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */,
+				845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */,
 				042CA0EF21A51DF900AF8E74 /* SPCompetitor.storyboard */,
 				84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */,
 				042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */,
 				042CA0F321A51E7000AF8E74 /* SPAttendanceOverview.storyboard */,
 				84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */,
-				84727FE221A9B4FF00EDC907 /* SPAttendance.storyboard */,
 				84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */,
 			);
 			path = view;
@@ -346,6 +356,8 @@
 				84FCFF3121A84CEE0037F0A9 /* NSString+TextDirectionality.h */,
 				84FCFF3021A84CEE0037F0A9 /* NSString+TextDirectionality.m */,
 				84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */,
+				845411A121AEAC3600DE8DA8 /* SPRoundView.swift */,
+				845411A321AEAD0D00DE8DA8 /* RoundingMode.swift */,
 				84FCFF2121A7D2100037F0A9 /* SapphireProject-Bridging-Header.h */,
 			);
 			path = custom;
@@ -468,10 +480,12 @@
 				8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */,
 				84727FE121A9B3F000EDC907 /* SPSKUOverview.storyboard in Resources */,
 				84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */,
-				84727FE321A9B4FF00EDC907 /* SPAttendance.storyboard in Resources */,
+				84727FE321A9B4FF00EDC907 /* SPTabAttendance.storyboard in Resources */,
+				84CC670021AD8BC300DC3C9F /* SPTabHome.storyboard in Resources */,
 				042CA0B121A4F19800AF8E74 /* Assets.xcassets in Resources */,
 				042CA0E421A5198D00AF8E74 /* SPSplash.storyboard in Resources */,
 				84727FDF21A9AFE000EDC907 /* SPSellOutOverview.storyboard in Resources */,
+				845411A621AEE42F00DE8DA8 /* SPHomePromoCell.xib in Resources */,
 				042CA0E221A5198000AF8E74 /* SPAuthentication.storyboard in Resources */,
 				042CA0F021A51DF900AF8E74 /* SPCompetitor.storyboard in Resources */,
 			);
@@ -503,6 +517,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FDTake/FDTake.framework",
+				"${BUILT_PRODUCTS_DIR}/FreakingSimpleRoundImageView/FreakingSimpleRoundImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQDropDownTextField/IQDropDownTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
@@ -514,6 +529,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDTake.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FreakingSimpleRoundImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQDropDownTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
@@ -588,12 +604,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FCFF2F21A84CBB0037F0A9 /* JVFloatLabeledTextField.m in Sources */,
+				845411A221AEAC3600DE8DA8 /* SPRoundView.swift in Sources */,
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
 				84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
+				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,
 				042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */,

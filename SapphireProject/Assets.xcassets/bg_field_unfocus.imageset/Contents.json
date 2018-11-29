@@ -8,12 +8,12 @@
       "resizing" : {
         "mode" : "9-part",
         "center" : {
-          "mode" : "tile",
+          "mode" : "stretch",
           "width" : 1,
           "height" : 1
         },
         "cap-insets" : {
-          "bottom" : 32,
+          "bottom" : 4,
           "top" : 31,
           "right" : 32,
           "left" : 31
@@ -27,12 +27,12 @@
       "resizing" : {
         "mode" : "9-part",
         "center" : {
-          "mode" : "tile",
+          "mode" : "stretch",
           "width" : 1,
           "height" : 1
         },
         "cap-insets" : {
-          "bottom" : 48,
+          "bottom" : 6,
           "top" : 47,
           "right" : 48,
           "left" : 47
@@ -46,5 +46,8 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }

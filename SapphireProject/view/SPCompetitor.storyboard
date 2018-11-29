@@ -245,7 +245,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="n44-43-G8s"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-t6-7wY">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-t6-7wY">
                                                 <rect key="frame" x="28" y="531" width="319" height="44"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -255,6 +255,11 @@
                                                 <state key="normal" title="Submit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -329,7 +334,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competitor Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me3-q1-Dy4">
-                                    <rect key="frame" x="-60" y="0.0" width="120" height="44"/>
+                                    <rect key="frame" x="-71" y="0.0" width="142" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="5fT-IB-SBW"/>
                                     </constraints>
@@ -352,7 +357,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg_field_unfocus" width="32" height="32"/>
+        <image name="bg_field_unfocus" width="32" height="18"/>
         <image name="ic_back" width="20" height="20"/>
         <image name="ic_dot_date" width="20" height="20"/>
         <image name="ic_dot_package" width="20" height="20"/>

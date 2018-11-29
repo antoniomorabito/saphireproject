@@ -113,7 +113,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bco-sP-2OX">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bco-sP-2OX">
                                                 <rect key="frame" x="30" y="533" width="315" height="44"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -123,6 +123,11 @@
                                                 <state key="normal" title="Sign In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="didTapSignIn:" destination="1qI-l5-znL" eventType="touchUpInside" id="W31-fF-GGr"/>
                                                 </connections>
@@ -207,7 +212,7 @@
     </scenes>
     <resources>
         <image name="bg_auth" width="1440" height="1920"/>
-        <image name="bg_field_unfocus" width="32" height="32"/>
+        <image name="bg_field_unfocus" width="32" height="18"/>
         <image name="ic_password" width="16" height="16"/>
         <image name="ic_user" width="16" height="16"/>
         <image name="img_logo" width="640" height="720"/>

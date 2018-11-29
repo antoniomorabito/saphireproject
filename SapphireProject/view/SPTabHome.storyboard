@@ -45,6 +45,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gk-lN-dme" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shade_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="aBY-EK-dQv">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
+                                    </imageView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDn-PB-RNT">
                                         <rect key="frame" x="0.0" y="64" width="375" height="211"/>
                                         <constraints>
@@ -75,13 +78,16 @@
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="LDn-PB-RNT" firstAttribute="top" secondItem="cI7-DL-Z2t" secondAttribute="bottom" id="3I4-J0-aEX"/>
+                                    <constraint firstAttribute="bottom" secondItem="aBY-EK-dQv" secondAttribute="bottom" id="B9x-pf-JUA"/>
                                     <constraint firstAttribute="trailing" secondItem="LDn-PB-RNT" secondAttribute="trailing" id="WzZ-8Z-Lrf"/>
                                     <constraint firstAttribute="trailing" secondItem="6NO-xl-IZe" secondAttribute="trailing" id="fIJ-rC-MvZ"/>
                                     <constraint firstAttribute="bottom" secondItem="LDn-PB-RNT" secondAttribute="bottom" id="gTC-cV-CUH"/>
                                     <constraint firstItem="LDn-PB-RNT" firstAttribute="top" secondItem="6NO-xl-IZe" secondAttribute="bottom" id="hYb-7d-VbT"/>
                                     <constraint firstItem="cI7-DL-Z2t" firstAttribute="centerX" secondItem="4gk-lN-dme" secondAttribute="centerX" id="ifS-lF-D81"/>
                                     <constraint firstItem="LDn-PB-RNT" firstAttribute="leading" secondItem="4gk-lN-dme" secondAttribute="leading" id="iiU-wK-ns5"/>
-                                    <constraint firstItem="LDn-PB-RNT" firstAttribute="top" secondItem="4gk-lN-dme" secondAttribute="top" constant="64" id="uvO-Z5-qYU"/>
+                                    <constraint firstItem="aBY-EK-dQv" firstAttribute="leading" secondItem="4gk-lN-dme" secondAttribute="leading" id="mqH-Rs-Wad"/>
+                                    <constraint firstAttribute="trailing" secondItem="aBY-EK-dQv" secondAttribute="trailing" id="wQR-uu-SQP"/>
+                                    <constraint firstItem="aBY-EK-dQv" firstAttribute="top" secondItem="4gk-lN-dme" secondAttribute="top" id="y6U-K9-Hwd"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="brc-Ww-hfs">
@@ -135,6 +141,8 @@
                             <constraint firstItem="qvD-Dp-Hos" firstAttribute="bottom" secondItem="brc-Ww-hfs" secondAttribute="bottom" id="RCt-F5-5cg"/>
                             <constraint firstItem="qvD-Dp-Hos" firstAttribute="bottom" secondItem="0op-jl-Hkr" secondAttribute="bottom" id="Xrh-IO-it8"/>
                             <constraint firstItem="qvD-Dp-Hos" firstAttribute="trailing" secondItem="4gk-lN-dme" secondAttribute="trailing" id="Zsk-Bc-eXm"/>
+                            <constraint firstItem="cI7-DL-Z2t" firstAttribute="top" secondItem="qvD-Dp-Hos" secondAttribute="top" id="bOG-o0-bNN"/>
+                            <constraint firstItem="LDn-PB-RNT" firstAttribute="top" secondItem="qvD-Dp-Hos" secondAttribute="top" constant="44" id="eyi-xr-xA5"/>
                             <constraint firstItem="0op-jl-Hkr" firstAttribute="leading" secondItem="qvD-Dp-Hos" secondAttribute="leading" id="hA5-t6-qNC"/>
                             <constraint firstItem="RFO-0a-b7g" firstAttribute="top" secondItem="4gk-lN-dme" secondAttribute="bottom" id="i97-kB-LTI"/>
                             <constraint firstItem="4gk-lN-dme" firstAttribute="leading" secondItem="qvD-Dp-Hos" secondAttribute="leading" id="rU9-WE-abX"/>
@@ -189,5 +197,6 @@
         <image name="ic_more" width="20" height="20"/>
         <image name="scrim_bar" width="20" height="3.5"/>
         <image name="scrim_bar_" width="20" height="4"/>
+        <image name="shade_gradient" width="0.66666668653488159" height="138"/>
     </resources>
 </document>

@@ -250,11 +250,11 @@
 				845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */,
 				042CA0EF21A51DF900AF8E74 /* SPCompetitor.storyboard */,
 				84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */,
+				84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */,
 				042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */,
+				84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */,
 				84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */,
 				042CA0F321A51E7000AF8E74 /* SPAttendanceOverview.storyboard */,
-				84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */,
-				84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";

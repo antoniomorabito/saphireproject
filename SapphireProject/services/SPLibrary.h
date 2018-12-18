@@ -28,5 +28,5 @@
 #import "SPMessageUtility.h"
 //#import <SOAPEngine64/SOAPEngine.h>
 #import "XMLReader.h"
-
+#import "SapphireProject-Swift.h"
 #endif /* SPLibrary_h */

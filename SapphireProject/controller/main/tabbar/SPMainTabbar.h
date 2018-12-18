@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPNetworkManager.h"
 
-@interface SPMainTabbar : UITabBarController
+@interface SPMainTabbar : UIViewController
+@property (weak, nonatomic) IBOutlet SPMainTab *mainCustomTabbar;
 
 @end

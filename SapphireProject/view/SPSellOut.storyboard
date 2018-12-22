@@ -55,7 +55,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Location (Ex. Jawa Barat)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-JH-8Bt" customClass="JVFloatLabeledTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Date" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-JH-8Bt" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="50.5" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -77,14 +77,14 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-fm-cge">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-fm-cge">
                                                 <rect key="frame" x="16" y="66" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="9mO-7g-cTJ"/>
                                                     <constraint firstAttribute="width" constant="20" id="gFz-0U-iGY"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Category (Ex. Baby Toy)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="EP9-TG-IhB" customClass="JVFloatLabeledTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Location (Ex. Jawa Barat)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="EP9-TG-IhB" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="107.5" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -106,7 +106,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-Wq-xKm">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-Wq-xKm">
                                                 <rect key="frame" x="16" y="123" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="75x-Yb-3mV"/>
@@ -325,7 +325,7 @@
                                                         <rect key="frame" x="265" y="40" width="94" height="29"/>
                                                         <color key="tintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </stepper>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5000" textAlignment="center" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="Ybo-iA-FUs">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="Ybo-iA-FUs">
                                                         <rect key="frame" x="16" y="40" width="166" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="29" id="yRa-LU-xfv"/>
@@ -512,6 +512,7 @@
     <resources>
         <image name="bg_field_unfocus" width="32" height="18"/>
         <image name="ic_back" width="20" height="20"/>
+        <image name="ic_dot_date" width="20" height="20"/>
         <image name="ic_dot_package" width="20" height="20"/>
         <image name="ic_dot_pin" width="20" height="20"/>
     </resources>

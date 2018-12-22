@@ -106,7 +106,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="RUb-vF-Ymw">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="RUb-vF-Ymw">
                                                 <rect key="frame" x="16" y="123.33333333333334" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="Row-4K-fzN"/>
@@ -369,5 +369,6 @@
         <image name="ic_back" width="20" height="20"/>
         <image name="ic_dot_date" width="20" height="20"/>
         <image name="ic_dot_package" width="20" height="20"/>
+        <image name="ic_dot_pin" width="20" height="20"/>
     </resources>
 </document>

@@ -23,7 +23,7 @@
         <!--Navigation Controller-->
         <scene sceneID="GoC-aG-4fD">
             <objects>
-                <navigationController storyboardIdentifier="navtabbar" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="SGR-Dr-p0Z" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navAttendance" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="SGR-Dr-p0Z" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="M8P-je-aWc">
                         <autoresizingMask key="autoresizingMask"/>
@@ -68,7 +68,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-TY-7LZ">
-                                        <rect key="frame" x="135.5" y="20" width="105" height="44"/>
+                                        <rect key="frame" x="135" y="20" width="105" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="tQl-6o-Kbd"/>
                                         </constraints>
@@ -468,7 +468,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="134" height="67"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please press here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-Sb-bmC">
-                                                                        <rect key="frame" x="21.5" y="9" width="92" height="12.5"/>
+                                                                        <rect key="frame" x="21" y="9" width="92" height="12.5"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>

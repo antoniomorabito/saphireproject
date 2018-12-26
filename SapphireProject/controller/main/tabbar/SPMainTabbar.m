@@ -67,15 +67,15 @@
     }
     
    else if (tag == 1) {
-        vc= [[UIStoryboard storyboardWithName:@"SPTabHome" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+        vc= [[UIStoryboard storyboardWithName:@"SPTabAttendance" bundle:nil]instantiateViewControllerWithIdentifier:@"navAttendance"];
     }
     
    else if (tag == 2) {
-       vc= [[UIStoryboard storyboardWithName:@"SPTabHome" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+       vc= [[UIStoryboard storyboardWithName:@"SPTabUpload" bundle:nil]instantiateViewControllerWithIdentifier:@"navUpload"];
    }
     
    else if (tag == 3) {
-       vc= [[UIStoryboard storyboardWithName:@"SPTabHome" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+       vc= [[UIStoryboard storyboardWithName:@"SPTabProfile" bundle:nil]instantiateViewControllerWithIdentifier:@"navprofile"];
    }
     
     

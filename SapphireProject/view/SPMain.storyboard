@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E7e-o1-nsw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E7e-o1-nsw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,23 +42,24 @@
                                 </constraints>
                                 <items>
                                     <tabBarItem title="Home" image="ic_tab1_off" selectedImage="ic_tab1" id="ksG-Aa-4dg">
-                                        <color key="badgeColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="badgeColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                                     </tabBarItem>
                                     <tabBarItem title="Attendance" image="ic_tab2_off" selectedImage="ic_tab2" id="EFx-C1-EBi">
-                                        <color key="badgeColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="badgeColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                                     </tabBarItem>
                                     <tabBarItem title="Upload" image="ic_tab3_off" selectedImage="ic_tab3" id="A9y-iz-PmL">
-                                        <color key="badgeColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="badgeColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                                     </tabBarItem>
                                     <tabBarItem title="Profile" image="ic_tab4_off" selectedImage="ic_tab4" id="5pi-1f-frf">
-                                        <color key="badgeColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="badgeColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="selectedImageTintColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="height">
                                         <real key="value" value="68"/>

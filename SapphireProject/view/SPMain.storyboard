@@ -65,12 +65,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tabBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVr-hk-hE8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="R4Q-fb-Nqj" firstAttribute="trailing" secondItem="OK0-jR-wqL" secondAttribute="trailing" id="Pb8-9v-Gnc"/>
                             <constraint firstItem="OK0-jR-wqL" firstAttribute="leading" secondItem="R4Q-fb-Nqj" secondAttribute="leading" id="QVv-s8-gM0"/>
                             <constraint firstItem="R4Q-fb-Nqj" firstAttribute="bottom" secondItem="OK0-jR-wqL" secondAttribute="bottom" id="d2Y-76-gVU"/>
+                            <constraint firstItem="UVr-hk-hE8" firstAttribute="leading" secondItem="R4Q-fb-Nqj" secondAttribute="leading" id="j8j-ws-LmQ"/>
+                            <constraint firstItem="UVr-hk-hE8" firstAttribute="top" secondItem="0C5-zS-pSK" secondAttribute="top" id="nJa-v6-2FP"/>
+                            <constraint firstItem="OK0-jR-wqL" firstAttribute="top" secondItem="UVr-hk-hE8" secondAttribute="bottom" id="sRt-7U-4xN"/>
+                            <constraint firstItem="R4Q-fb-Nqj" firstAttribute="trailing" secondItem="UVr-hk-hE8" secondAttribute="trailing" id="wFK-m2-N5n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R4Q-fb-Nqj"/>
                     </view>

@@ -115,10 +115,10 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ul-h4-OKd">
-                                <rect key="frame" x="0.0" y="275" width="375" height="392"/>
+                                <rect key="frame" x="0.0" y="275" width="375" height="324"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiu-Yi-ggp">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="392"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="324"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Ms-Y0-PpB">
                                                 <rect key="frame" x="8" y="0.0" width="359" height="66"/>
@@ -446,7 +446,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFK-nD-hLW" customClass="SPRoundView" customModule="SapphireProject" customModuleProvider="target">
-                                                <rect key="frame" x="112.5" y="170.5" width="150" height="150"/>
+                                                <rect key="frame" x="112.5" y="137" width="150" height="150"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5D-Kd-u3g" customClass="SPRoundView" customModule="SapphireProject" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="8" width="134" height="134"/>
@@ -459,7 +459,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQe-cE-DD8" userLabel="dmy2">
-                                                                <rect key="frame" x="134" y="20" width="0.0" height="38"/>
+                                                                <rect key="frame" x="134" y="19.5" width="0.0" height="38"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="38" id="Had-6d-ifP"/>
@@ -467,7 +467,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asz-Vd-T0B" userLabel="dmy3">
-                                                                <rect key="frame" x="0.0" y="20" width="0.0" height="94"/>
+                                                                <rect key="frame" x="0.0" y="19.5" width="0.0" height="94.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" id="EtJ-0R-T0J"/>
@@ -492,7 +492,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEA-gU-MFy">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="70"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="69.5"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                                                         <state key="normal" title="OUT">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -513,13 +513,13 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL HOURS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIH-LF-foX">
-                                                                <rect key="frame" x="23.5" y="20" width="87.5" height="15"/>
+                                                                <rect key="frame" x="23.5" y="19.5" width="87.5" height="15"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                                 <color key="textColor" red="0.0" green="0.46666666670000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00:52" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyS-O1-svU">
-                                                                <rect key="frame" x="29.5" y="36" width="75.5" height="22"/>
+                                                                <rect key="frame" x="29.5" y="35.5" width="75.5" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -569,7 +569,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCK-0g-Gcl">
-                                                <rect key="frame" x="375" y="104" width="0.0" height="288"/>
+                                                <rect key="frame" x="375" y="104" width="0.0" height="220"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" id="XYb-4H-0fs"/>
@@ -599,7 +599,7 @@
                                             <constraint firstItem="gFK-nD-hLW" firstAttribute="centerX" secondItem="JdK-iF-HS2" secondAttribute="centerX" id="o8S-qc-fcs"/>
                                             <constraint firstItem="3R5-Pc-JIY" firstAttribute="leading" secondItem="JdK-iF-HS2" secondAttribute="leading" id="pQz-3S-7Ep"/>
                                             <constraint firstItem="Dqj-H1-nSD" firstAttribute="centerY" secondItem="wMX-iu-g1X" secondAttribute="centerY" id="qfT-Ln-Cc4"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="392" id="sXc-aC-Nzr"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="324" id="sXc-aC-Nzr"/>
                                             <constraint firstItem="wMX-iu-g1X" firstAttribute="leading" secondItem="JdK-iF-HS2" secondAttribute="leading" constant="16" id="uj4-eF-cVM"/>
                                             <constraint firstItem="aoa-pf-QBK" firstAttribute="centerX" secondItem="JdK-iF-HS2" secondAttribute="centerX" id="wap-8A-5E4"/>
                                         </constraints>
@@ -628,7 +628,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="a8Y-fg-E9H" firstAttribute="trailing" secondItem="aW1-E8-q5v" secondAttribute="trailing" id="3Zf-og-zyq"/>
                             <constraint firstItem="u3n-Aq-PUm" firstAttribute="top" secondItem="a8Y-fg-E9H" secondAttribute="top" constant="54" id="6A8-Ca-nk2"/>
@@ -636,7 +636,7 @@
                             <constraint firstItem="8Nm-09-q4k" firstAttribute="leading" secondItem="a8Y-fg-E9H" secondAttribute="leading" id="AB4-9I-G3A"/>
                             <constraint firstItem="czG-VP-JEp" firstAttribute="top" secondItem="a8Y-fg-E9H" secondAttribute="top" constant="44" id="FdB-DD-MTP"/>
                             <constraint firstItem="a8Y-fg-E9H" firstAttribute="trailing" secondItem="czG-VP-JEp" secondAttribute="trailing" id="Gws-So-OfI"/>
-                            <constraint firstItem="a8Y-fg-E9H" firstAttribute="bottom" secondItem="6ul-h4-OKd" secondAttribute="bottom" id="JJL-SC-AL2"/>
+                            <constraint firstItem="a8Y-fg-E9H" firstAttribute="bottom" secondItem="6ul-h4-OKd" secondAttribute="bottom" constant="68" id="JJL-SC-AL2"/>
                             <constraint firstItem="aW1-E8-q5v" firstAttribute="top" secondItem="Vnr-2r-gX8" secondAttribute="bottom" id="OA3-Ym-jon"/>
                             <constraint firstItem="a8Y-fg-E9H" firstAttribute="trailing" secondItem="6ul-h4-OKd" secondAttribute="trailing" id="QGm-My-w9d"/>
                             <constraint firstItem="6ul-h4-OKd" firstAttribute="leading" secondItem="a8Y-fg-E9H" secondAttribute="leading" id="brK-y4-oMs"/>

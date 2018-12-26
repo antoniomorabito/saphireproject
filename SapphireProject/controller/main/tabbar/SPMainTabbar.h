@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SPNetworkManager.h"
-
+#import "SPHomeVC.h"
 @interface SPMainTabbar : UIViewController<UITabBarDelegate>
 @property (weak, nonatomic) IBOutlet SPMainTab *mainCustomTabbar;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end

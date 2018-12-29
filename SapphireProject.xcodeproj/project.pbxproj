@@ -29,6 +29,7 @@
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
 		8422417821A617F40022AB75 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */; };
 		8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */; };
+		842CAA5121D614EE00B7CFF9 /* SPOffTake-Weekly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842CAA5021D614EE00B7CFF9 /* SPOffTake-Weekly.storyboard */; };
 		845411A221AEAC3600DE8DA8 /* SPRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845411A121AEAC3600DE8DA8 /* SPRoundView.swift */; };
 		845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845411A321AEAD0D00DE8DA8 /* RoundingMode.swift */; };
 		845411A621AEE42F00DE8DA8 /* SPHomePromoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */; };
@@ -39,6 +40,7 @@
 		8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */; };
 		84869CA321B01F9A00B19623 /* SPTabProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */; };
 		84C6728E21AFE0690063CB63 /* SPFeedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */; };
+		84CA659C21D789E0003CA458 /* SPOffTake-Monthly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */; };
 		84CC670021AD8BC300DC3C9F /* SPTabHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */; };
 		84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */; };
 		84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */; };
@@ -104,6 +106,7 @@
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		842CAA5021D614EE00B7CFF9 /* SPOffTake-Weekly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPOffTake-Weekly.storyboard"; sourceTree = "<group>"; };
 		843B6E6D21A5695D003593BF /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
 		843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		845411A121AEAC3600DE8DA8 /* SPRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPRoundView.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHomeCell.xib; sourceTree = "<group>"; };
 		84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabProfile.storyboard; sourceTree = "<group>"; };
 		84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPFeedback.storyboard; sourceTree = "<group>"; };
+		84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPOffTake-Monthly.storyboard"; sourceTree = "<group>"; };
 		84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabHome.storyboard; sourceTree = "<group>"; };
 		84FCFF2121A7D2100037F0A9 /* SapphireProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SapphireProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMainTab.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 				845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */,
 				042CA0EF21A51DF900AF8E74 /* SPCompetitor.storyboard */,
 				84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */,
+				842CAA5021D614EE00B7CFF9 /* SPOffTake-Weekly.storyboard */,
+				84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */,
 				84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */,
 				042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */,
 				84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */,
@@ -499,6 +505,7 @@
 				8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */,
 				042CA0EE21A51DB900AF8E74 /* SPMain.storyboard in Resources */,
 				042CA0F421A51E7000AF8E74 /* SPAttendanceOverview.storyboard in Resources */,
+				84CA659C21D789E0003CA458 /* SPOffTake-Monthly.storyboard in Resources */,
 				042CA0F221A51E0F00AF8E74 /* SPSKU.storyboard in Resources */,
 				8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */,
 				84727FE121A9B3F000EDC907 /* SPSKUOverview.storyboard in Resources */,
@@ -513,6 +520,7 @@
 				042CA0E221A5198000AF8E74 /* SPAuthentication.storyboard in Resources */,
 				84869CA321B01F9A00B19623 /* SPTabProfile.storyboard in Resources */,
 				042CA0F021A51DF900AF8E74 /* SPCompetitor.storyboard in Resources */,
+				842CAA5121D614EE00B7CFF9 /* SPOffTake-Weekly.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

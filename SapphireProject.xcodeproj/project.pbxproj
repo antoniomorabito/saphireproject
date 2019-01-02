@@ -39,6 +39,7 @@
 		84727FE321A9B4FF00EDC907 /* SPTabAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */; };
 		8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */; };
 		84869CA321B01F9A00B19623 /* SPTabProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */; };
+		84C51B8221DBBF9F0048AFF9 /* SPQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C51B8121DBBF9F0048AFF9 /* SPQuiz.storyboard */; };
 		84C6728E21AFE0690063CB63 /* SPFeedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */; };
 		84CA659C21D789E0003CA458 /* SPOffTake-Monthly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */; };
 		84CC670021AD8BC300DC3C9F /* SPTabHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */; };
@@ -118,6 +119,7 @@
 		84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabAttendance.storyboard; sourceTree = "<group>"; };
 		8473BA1D21A70594005A7AB7 /* SPHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHomeCell.xib; sourceTree = "<group>"; };
 		84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabProfile.storyboard; sourceTree = "<group>"; };
+		84C51B8121DBBF9F0048AFF9 /* SPQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPQuiz.storyboard; sourceTree = "<group>"; };
 		84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPFeedback.storyboard; sourceTree = "<group>"; };
 		84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPOffTake-Monthly.storyboard"; sourceTree = "<group>"; };
 		84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabHome.storyboard; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				042CA0EF21A51DF900AF8E74 /* SPCompetitor.storyboard */,
 				84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */,
 				842CAA5021D614EE00B7CFF9 /* SPOffTake-Weekly.storyboard */,
+				84C51B8121DBBF9F0048AFF9 /* SPQuiz.storyboard */,
 				84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */,
 				84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */,
 				042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */,
@@ -510,6 +513,7 @@
 				8473BA1E21A70594005A7AB7 /* SPHomeCell.xib in Resources */,
 				84727FE121A9B3F000EDC907 /* SPSKUOverview.storyboard in Resources */,
 				84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */,
+				84C51B8221DBBF9F0048AFF9 /* SPQuiz.storyboard in Resources */,
 				84727FE321A9B4FF00EDC907 /* SPTabAttendance.storyboard in Resources */,
 				84C6728E21AFE0690063CB63 /* SPFeedback.storyboard in Resources */,
 				84CC670021AD8BC300DC3C9F /* SPTabHome.storyboard in Resources */,

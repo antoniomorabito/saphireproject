@@ -99,6 +99,14 @@
 		042CA10021A55A8F00AF8E74 /* SPReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPReachability.m; sourceTree = "<group>"; };
 		042CA10B21A79FAA00AF8E74 /* SPMainTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMainTabbar.h; sourceTree = "<group>"; };
 		042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMainTabbar.m; sourceTree = "<group>"; };
+		0465396121EE107B00A3BF1F /* SPAppConfig+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPAppConfig+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0465396221EE107B00A3BF1F /* SPAppConfig+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPAppConfig+CoreDataClass.h"; sourceTree = "<group>"; };
+		0465396321EE107B00A3BF1F /* SPAppConfig+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPAppConfig+CoreDataClass.m"; sourceTree = "<group>"; };
+		0465396421EE107B00A3BF1F /* SPAppConfig+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPAppConfig+CoreDataProperties.m"; sourceTree = "<group>"; };
+		0465396521EE107B00A3BF1F /* SPUser+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0465396621EE107B00A3BF1F /* SPUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		0465396721EE107B00A3BF1F /* SPUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		0465396821EE107B00A3BF1F /* SPUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
 		04F71C7A21D37A9A00C5068A /* SPHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeVC.m; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +232,14 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0465396121EE107B00A3BF1F /* SPAppConfig+CoreDataProperties.h */,
+				0465396221EE107B00A3BF1F /* SPAppConfig+CoreDataClass.h */,
+				0465396321EE107B00A3BF1F /* SPAppConfig+CoreDataClass.m */,
+				0465396421EE107B00A3BF1F /* SPAppConfig+CoreDataProperties.m */,
+				0465396521EE107B00A3BF1F /* SPUser+CoreDataProperties.h */,
+				0465396621EE107B00A3BF1F /* SPUser+CoreDataClass.h */,
+				0465396721EE107B00A3BF1F /* SPUser+CoreDataClass.m */,
+				0465396821EE107B00A3BF1F /* SPUser+CoreDataProperties.m */,
 				042CA0AD21A4F19500AF8E74 /* SapphireProject.xcdatamodeld */,
 			);
 			path = model;

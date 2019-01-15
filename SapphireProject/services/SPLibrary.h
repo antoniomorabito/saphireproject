@@ -11,7 +11,7 @@
 #define ParseString(data) [data isKindOfClass:[NSNull class]] ? @"" : data
 #define ParseInt(data) [data isKindOfClass:[NSNull class]] ? 0 : data
 #define ParseArray(data) [data isKindOfClass:[NSNull class]] ? nil : data
-#define kCABaseURL                     @"https://apps.pertamina.com/svc_ms2mobiledev/svc_ms2mobile.asmx?op="
+#define kCABaseURL                     @"http://saphire.id/api.saphire/"
 //http://apibrightgas-homeservices.azurewebsites.net/
 #define kCABaseRawImage                     @"http://nikahyuu.com/api/"
 #import <MagicalRecord/MagicalRecord.h>
@@ -29,4 +29,10 @@
 //#import <SOAPEngine64/SOAPEngine.h>
 #import "XMLReader.h"
 #import "SapphireProject-Swift.h"
+
+//coredata
+#import "SPAppConfig+CoreDataClass.h"
+#import "SPUser+CoreDataClass.h"
+
+
 #endif /* SPLibrary_h */

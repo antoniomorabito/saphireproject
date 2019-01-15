@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="SPAppConfig" representedClassName="SPAppConfig" syncable="YES" codeGenerationType="class">
+        <attribute name="parameterFormat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parameterName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parameterValue" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SPUser" representedClassName="SPUser" syncable="YES" codeGenerationType="class">
+        <attribute name="areaId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="areaName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gradeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gradeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="levelId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="levelName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="statusId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="statusName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
+        <element name="SPAppConfig" positionX="-54" positionY="117" width="128" height="90"/>
+    </elements>
 </model>

@@ -13,4 +13,8 @@ typedef void (^SPCompletionHandler)(BOOL success,id responseObject, NSError *err
 - (void)doLogin:(NSDictionary* )data
            view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;
+
+- (void)doGetConfig:(NSDictionary* )data
+           view:(UIView *)view
+completionHandler:(SPCompletionHandler)handler;
 @end

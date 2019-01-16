@@ -11,8 +11,7 @@ target 'SapphireProject' do
     pod 'FDTake', '= 0.2.5'
     pod 'IQDropDownTextField'
     pod 'XMLReader'
-    pod 'TweeTextField'
-    pod 'FreakingSimpleRoundImageView'
+    pod 'FreakingSimpleRoundImageView', '~> 1.2.3'
     
   target 'SapphireProjectTests' do
     inherit! :search_paths

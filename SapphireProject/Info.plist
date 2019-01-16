@@ -24,6 +24,50 @@
 	<string>SPSplash</string>
 	<key>UIMainStoryboardFile</key>
 	<string>SPSplash</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>http://saphire.id/api.saphire</string>
+		<string>comgooglemaps</string>
+		<string>googlechromes</string>
+		<string>http://saphire.id/api.saphire</string>
+		<string>http://saphire.id/api.saphire</string>
+		<string>http://saphire.id/api.saphire</string>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>NSAllowsArbitraryLoadsInWebContent</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>http://saphire.id/api.saphire</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>App would like to access your photo gallery for your profile photo upload. Your photos wont be shared without your permission.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>App would like to access your contacts to let you choose a friend who you can send a safety sms.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App would like to use your current location to display it on the app, also for directions and estimation of your travel times. It is secure and private.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>App would like to use your current location to display it on the app, also for directions and estimation of your travel times. It is secure and private.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App would like to use your current location to display it on the app, also for directions and estimation of your travel times. It is secure and private.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App would like to access your photo gallery for your profile photo upload. Your photos wont be shared without your permission.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

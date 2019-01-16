@@ -134,11 +134,30 @@ bool isTap=false;
     }
     else{
         
+        SPNetworkManager *network = [[SPNetworkManager alloc]init];
+        
+        NSDictionary *data =@{@"username":_fieldusername.text,@"password":_fieldPassword.text,
+                              @"fcm":@"null"
+                              };
+        [network doLogin:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+           
+            
+            if (success) {
+                UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+                
+                
+                [self presentViewController:vc animated:YES completion:nil];
+            }
+            else{
+                
+                NSLog(@"response error :%@",responseObject);
+                [SPMessageUtility message:[responseObject objectForKey:@"error_description"] needAction:YES viewController:self];
+            }
+            
+        }];
+        
     
-    UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
-    
-    
-    [self presentViewController:vc animated:YES completion:nil];
+ 
     }
     
 }

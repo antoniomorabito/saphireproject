@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SPNetworkManager.h"
 @interface SPSplash : UIViewController
 
 @end

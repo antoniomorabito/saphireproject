@@ -16,6 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    //Set Main Cell in Collection View
+    [self.collectionView registerNib:[UINib nibWithNibName:@"SPHomeCell" bundle:nil] forCellWithReuseIdentifier:@"menucell"];
+    
+    [self.collectionView reloadData];
+   
     // Do any additional setup after loading the view.
 }
 
@@ -24,6 +33,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+#pragma mark : Collection View Datasource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 20;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+
+    
+    
+}
+
+- (SPHomeMenuCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    SPHomeMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"menucell" forIndexPath:indexPath];
+    
+    //Add your cell Values here
+    
+    return cell;
+}
 /*
 #pragma mark - Navigation
 
@@ -35,3 +64,7 @@
 */
 
 @end
+
+
+
+

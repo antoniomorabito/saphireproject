@@ -25,6 +25,7 @@
 		042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0FD21A51FEA00AF8E74 /* SPLogin.m */; };
 		042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10021A55A8F00AF8E74 /* SPReachability.m */; };
 		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
+		04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */; };
 		04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F71C7A21D37A9A00C5068A /* SPHomeVC.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
 		8422417821A617F40022AB75 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843B6E6E21A5695D003593BF /* Montserrat-Bold.otf */; };
@@ -110,6 +111,8 @@
 		0465396621EE107B00A3BF1F /* SPUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPUser+CoreDataClass.h"; sourceTree = "<group>"; };
 		0465396721EE107B00A3BF1F /* SPUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataClass.m"; sourceTree = "<group>"; };
 		0465396821EE107B00A3BF1F /* SPUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
+		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
 		04F71C7A21D37A9A00C5068A /* SPHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeVC.m; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,9 +355,19 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
+		04EE4D7621F48654002D07DF /* cellgroup */ = {
+			isa = PBXGroup;
+			children = (
+				04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */,
+				04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */,
+			);
+			path = cellgroup;
+			sourceTree = "<group>";
+		};
 		04F71C7821D37A7700C5068A /* home */ = {
 			isa = PBXGroup;
 			children = (
+				04EE4D7621F48654002D07DF /* cellgroup */,
 				04F71C7921D37A9A00C5068A /* SPHomeVC.h */,
 				04F71C7A21D37A9A00C5068A /* SPHomeVC.m */,
 			);
@@ -665,6 +678,7 @@
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,
+				04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */,
 				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,
 				042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */,
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,

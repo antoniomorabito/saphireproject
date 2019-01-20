@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPNetworkManager.h"
+#import "SPHomeMenuCell.h"
+@interface SPHomeVC : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>
 
-@interface SPHomeVC : UIViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (strong,nonatomic)NSMutableArray *datas;
 @end

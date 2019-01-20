@@ -23,9 +23,27 @@
 {
     [super viewDidAppear:animated];
     
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAuthentication" bundle:nil]instantiateViewControllerWithIdentifier:@"login"];
     
-    [self presentViewController:vc animated:YES completion:nil];
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetConfig:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+       
+        
+        if (success) {
+            UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+            
+            
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+        else{
+            UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAuthentication" bundle:nil]instantiateViewControllerWithIdentifier:@"login"];
+            
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+    }];
+    
+    
+  
     
 }
 - (void)didReceiveMemoryWarning {

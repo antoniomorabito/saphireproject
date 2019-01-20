@@ -143,10 +143,23 @@ bool isTap=false;
            
             
             if (success) {
-                UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
                 
-                
-                [self presentViewController:vc animated:YES completion:nil];
+                //get app config
+                [network doGetConfig:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+                   
+                    
+                    if (success) {
+                        UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+                        
+                        
+                        [self presentViewController:vc animated:YES completion:nil];
+                    }
+                    else{
+                        NSLog(@"response error config adalah :%@",responseObject);
+                        [SPMessageUtility message:[responseObject objectForKey:@"error_description"] needAction:YES viewController:self];
+                    }
+                }];
+               
             }
             else{
                 

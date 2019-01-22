@@ -132,6 +132,10 @@
 		04EBBCE721F72BC400B26B44 /* SPQuizMaster+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPQuizMaster+CoreDataClass.h"; sourceTree = "<group>"; };
 		04EBBCE821F72BC400B26B44 /* SPQuizMaster+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPQuizMaster+CoreDataClass.m"; sourceTree = "<group>"; };
 		04EBBCE921F72BC400B26B44 /* SPQuizMaster+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPQuizMaster+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04EBBCEC21F7592400B26B44 /* SPCategory+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04EBBCED21F7592400B26B44 /* SPCategory+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPCategory+CoreDataClass.h"; sourceTree = "<group>"; };
+		04EBBCEE21F7592400B26B44 /* SPCategory+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPCategory+CoreDataClass.m"; sourceTree = "<group>"; };
+		04EBBCEF21F7592400B26B44 /* SPCategory+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -271,6 +275,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04EBBCEC21F7592400B26B44 /* SPCategory+CoreDataProperties.h */,
+				04EBBCED21F7592400B26B44 /* SPCategory+CoreDataClass.h */,
+				04EBBCEE21F7592400B26B44 /* SPCategory+CoreDataClass.m */,
+				04EBBCEF21F7592400B26B44 /* SPCategory+CoreDataProperties.m */,
 				04EBBCE621F72BC400B26B44 /* SPQuizMaster+CoreDataProperties.h */,
 				04EBBCE721F72BC400B26B44 /* SPQuizMaster+CoreDataClass.h */,
 				04EBBCE821F72BC400B26B44 /* SPQuizMaster+CoreDataClass.m */,

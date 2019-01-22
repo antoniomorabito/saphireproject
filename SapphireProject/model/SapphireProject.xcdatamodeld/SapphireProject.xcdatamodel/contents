@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="SPAppConfig" representedClassName="SPAppConfig" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES" syncable="YES"/>
+        <attribute name="attribute1" optional="YES" syncable="YES"/>
+        <attribute name="attribute2" optional="YES" syncable="YES"/>
+        <attribute name="attribute3" optional="YES" syncable="YES"/>
+        <attribute name="attribute4" optional="YES" syncable="YES"/>
         <attribute name="parameterFormat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parameterName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parameterValue" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SPCategory" representedClassName="SPCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="created_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="SPQuizMaster" representedClassName="SPQuizMaster" syncable="YES" codeGenerationType="class">
         <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
@@ -56,9 +68,10 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SPAppConfig" positionX="-54" positionY="117" width="128" height="90"/>
+        <element name="SPAppConfig" positionX="-54" positionY="117" width="128" height="165"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPQuizMaster" positionX="-45" positionY="144" width="128" height="240"/>
+        <element name="SPCategory" positionX="-36" positionY="153" width="128" height="120"/>
     </elements>
 </model>

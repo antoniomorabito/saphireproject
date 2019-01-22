@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SPUploadCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIView *notifView;
+@property (weak, nonatomic) IBOutlet UILabel *lblUpload;
+@property (weak, nonatomic) IBOutlet UIButton *btnUpload;
 
 @end

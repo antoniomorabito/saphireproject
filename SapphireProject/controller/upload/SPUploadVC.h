@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SPUploadVC : UIViewController
+#import "SPNetworkManager.h"
+#import "SPUploadCell.h"
+@interface SPUploadVC : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *datas;
 
 @end

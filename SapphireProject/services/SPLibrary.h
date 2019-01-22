@@ -34,7 +34,7 @@
 #import "SPStore+CoreDataProperties.h"
 #import "SPAppConfig+CoreDataClass.h"
 #import "SPUser+CoreDataClass.h"
-
+#import "SPQuizMaster+CoreDataProperties.h"
 #import "SapphireProject-Bridging-Header.h"
 
 

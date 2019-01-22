@@ -21,4 +21,9 @@ completionHandler:(SPCompletionHandler)handler;
 - (void)doGetStore:(NSDictionary* )data
                view:(UIView *)view
   completionHandler:(SPCompletionHandler)handler;
+
+
+- (void)doGetQuiz:(NSDictionary* )data
+              view:(UIView *)view
+ completionHandler:(SPCompletionHandler)handler;
 @end

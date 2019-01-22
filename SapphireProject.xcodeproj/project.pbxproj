@@ -179,6 +179,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0419FF2D21F61F1600C8CA30 /* upload */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = upload;
+			sourceTree = "<group>";
+		};
 		042CA09821A4F19500AF8E74 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +264,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0419FF2D21F61F1600C8CA30 /* upload */,
 				04F71C7821D37A7700C5068A /* home */,
 				042CA0F721A51F6000AF8E74 /* main */,
 				042CA0F621A51F5700AF8E74 /* auth */,

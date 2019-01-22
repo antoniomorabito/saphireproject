@@ -5,6 +5,22 @@
         <attribute name="parameterName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parameterValue" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SPStore" representedClassName="SPStore" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="area_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="channel_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dealer_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idstore" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_create" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="SPUser" representedClassName="SPUser" syncable="YES" codeGenerationType="class">
         <attribute name="areaId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="areaName" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,7 +41,8 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
         <element name="SPAppConfig" positionX="-54" positionY="117" width="128" height="90"/>
+        <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
+        <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
     </elements>
 </model>

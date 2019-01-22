@@ -31,6 +31,7 @@
 #import "SapphireProject-Swift.h"
 
 //coredata
+#import "SPStore+CoreDataProperties.h"
 #import "SPAppConfig+CoreDataClass.h"
 #import "SPUser+CoreDataClass.h"
 

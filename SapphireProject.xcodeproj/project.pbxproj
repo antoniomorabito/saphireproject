@@ -122,6 +122,10 @@
 		04EBBCD921F7173000B26B44 /* SPProfileVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPProfileVC.m; sourceTree = "<group>"; };
 		04EBBCDD21F7175500B26B44 /* SPProfileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPProfileCell.h; sourceTree = "<group>"; };
 		04EBBCDE21F7175500B26B44 /* SPProfileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPProfileCell.m; sourceTree = "<group>"; };
+		04EBBCE021F7298C00B26B44 /* SPStore+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPStore+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04EBBCE121F7298C00B26B44 /* SPStore+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPStore+CoreDataClass.h"; sourceTree = "<group>"; };
+		04EBBCE221F7298C00B26B44 /* SPStore+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPStore+CoreDataClass.m"; sourceTree = "<group>"; };
+		04EBBCE321F7298C00B26B44 /* SPStore+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPStore+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -261,6 +265,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04EBBCE021F7298C00B26B44 /* SPStore+CoreDataProperties.h */,
+				04EBBCE121F7298C00B26B44 /* SPStore+CoreDataClass.h */,
+				04EBBCE221F7298C00B26B44 /* SPStore+CoreDataClass.m */,
+				04EBBCE321F7298C00B26B44 /* SPStore+CoreDataProperties.m */,
 				0465396121EE107B00A3BF1F /* SPAppConfig+CoreDataProperties.h */,
 				0465396221EE107B00A3BF1F /* SPAppConfig+CoreDataClass.h */,
 				0465396321EE107B00A3BF1F /* SPAppConfig+CoreDataClass.m */,

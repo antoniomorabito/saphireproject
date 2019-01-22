@@ -30,4 +30,8 @@ completionHandler:(SPCompletionHandler)handler;
 - (void)doGetCategory:(NSDictionary* )data
              view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;
+
+- (void)doGetDealer:(NSDictionary* )data
+                 view:(UIView *)view
+    completionHandler:(SPCompletionHandler)handler;
 @end

@@ -37,5 +37,6 @@
 #import "SPQuizMaster+CoreDataProperties.h"
 #import "SapphireProject-Bridging-Header.h"
 #import "SPCategory+CoreDataProperties.h"
+#import "SPDealer+CoreDataProperties.h"
 
 #endif /* SPLibrary_h */

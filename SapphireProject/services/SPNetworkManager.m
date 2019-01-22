@@ -375,4 +375,76 @@ completionHandler:(SPCompletionHandler)handler;{
         [hud hideAnimated:YES];
     }];
 }
+- (void)doGetDealer:(NSDictionary* )data
+               view:(UIView *)view
+  completionHandler:(SPCompletionHandler)handler;{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.text = @"";
+    [hud showAnimated:YES];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    SPUser *user = [SPUser MR_findFirst];
+    
+    //    NSLog(@"user data  : %@ dan username %@ dan user company : %@ , dan user id :%@",user.token,user.username,user.companyId,user.userId);
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.token] forHTTPHeaderField:@"token"];
+    
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.companyId] forHTTPHeaderField:@"companyId"];
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.userId] forHTTPHeaderField:@"userId"];
+    
+    
+    
+    [manager GET:[NSString stringWithFormat:@"%@master-dealers",kCABaseURL]  parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        NSLog(@"response dealer : %@",responseObject);
+        
+        NSError *jsonError;
+        NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
+        if(jsonError) {
+            // check the error description
+            NSLog(@"json error : %@", [jsonError localizedDescription]);
+        } else {
+            // use the jsonDictionaryOrArray
+            
+            NSLog(@"json data  : %@",jsonDictionaryOrArray);
+        }
+        [SPDealer MR_truncateAll];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
+        
+        NSArray *dataContent = [jsonDictionaryOrArray objectForKey:@"data"];
+        
+        for (int i = 0; i<dataContent.count; i++) {
+            SPDealer *app = [SPDealer MR_createEntity];
+            
+            NSDictionary *object = [dataContent objectAtIndex:i];
+            
+            app.iddealer = ParseString([object objectForKey:@"id"]);
+            app.name = ParseString([object objectForKey:@"name"]);
+            app.status = ParseString([object objectForKey:@"status"]);
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        }
+        
+        
+        handler(YES,responseObject,nil);
+        [hud hideAnimated:YES];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+        NSLog(@"error response nya adalah : %@",ErrorResponse);
+        NSData *data = [ErrorResponse dataUsingEncoding:NSUTF8StringEncoding];
+        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        handler(NO,json,error);
+        
+        [hud hideAnimated:YES];
+    }];
+}
 @end

@@ -136,6 +136,10 @@
 		04EBBCED21F7592400B26B44 /* SPCategory+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPCategory+CoreDataClass.h"; sourceTree = "<group>"; };
 		04EBBCEE21F7592400B26B44 /* SPCategory+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPCategory+CoreDataClass.m"; sourceTree = "<group>"; };
 		04EBBCEF21F7592400B26B44 /* SPCategory+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04EBBCF221F75B6800B26B44 /* SPDealer+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDealer+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04EBBCF321F75B6800B26B44 /* SPDealer+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDealer+CoreDataClass.h"; sourceTree = "<group>"; };
+		04EBBCF421F75B6800B26B44 /* SPDealer+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDealer+CoreDataClass.m"; sourceTree = "<group>"; };
+		04EBBCF521F75B6800B26B44 /* SPDealer+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDealer+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -275,6 +279,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04EBBCF221F75B6800B26B44 /* SPDealer+CoreDataProperties.h */,
+				04EBBCF321F75B6800B26B44 /* SPDealer+CoreDataClass.h */,
+				04EBBCF421F75B6800B26B44 /* SPDealer+CoreDataClass.m */,
+				04EBBCF521F75B6800B26B44 /* SPDealer+CoreDataProperties.m */,
 				04EBBCEC21F7592400B26B44 /* SPCategory+CoreDataProperties.h */,
 				04EBBCED21F7592400B26B44 /* SPCategory+CoreDataClass.h */,
 				04EBBCEE21F7592400B26B44 /* SPCategory+CoreDataClass.m */,

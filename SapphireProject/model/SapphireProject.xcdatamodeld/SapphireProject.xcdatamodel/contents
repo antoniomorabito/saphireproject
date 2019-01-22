@@ -17,6 +17,11 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SPDealer" representedClassName="SPDealer" syncable="YES" codeGenerationType="class">
+        <attribute name="iddealer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="SPQuizMaster" representedClassName="SPQuizMaster" syncable="YES" codeGenerationType="class">
         <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answer_1" optional="YES" attributeType="String" syncable="YES"/>
@@ -73,5 +78,6 @@
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPQuizMaster" positionX="-45" positionY="144" width="128" height="240"/>
         <element name="SPCategory" positionX="-36" positionY="153" width="128" height="120"/>
+        <element name="SPDealer" positionX="-18" positionY="162" width="128" height="90"/>
     </elements>
 </model>

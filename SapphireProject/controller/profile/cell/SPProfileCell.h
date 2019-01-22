@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SPProfileCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
 
 @end

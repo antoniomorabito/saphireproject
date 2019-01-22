@@ -20,6 +20,10 @@
     self.tableView.delegate = self;
     self.tableView.dataSource= self;
     // Do any additional setup after loading the view.
+    
+    self.datas = [[NSMutableArray alloc]initWithObjects:@"SKU",@"Sell Out",@"Feedback",@"Competitor Info", nil];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,14 +43,17 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
+    
+    NSString *data= [self.datas objectAtIndex:indexPath.row];
     SPUploadCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"uploadcell" forIndexPath:indexPath];
     
+    cell.lblUpload.text = data;
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return self.datas.count;
 }
 
 

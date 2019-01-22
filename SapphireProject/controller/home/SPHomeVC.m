@@ -60,6 +60,7 @@
     NSString *data = [self.datas objectAtIndex:indexPath.row];
     SPHomeMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"menuCell" forIndexPath:indexPath];
     
+    cell.lbljudul.text = [NSString stringWithFormat:@"%@",data];
     if ([data isEqualToString:@"Sell out"]) {
         
         cell.iconimage.image =[UIImage imageNamed:@"ic_sellout"];

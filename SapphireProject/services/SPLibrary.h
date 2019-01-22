@@ -38,5 +38,6 @@
 #import "SapphireProject-Bridging-Header.h"
 #import "SPCategory+CoreDataProperties.h"
 #import "SPDealer+CoreDataProperties.h"
+#import "SPCompetitor+CoreDataProperties.h"
 
 #endif /* SPLibrary_h */

@@ -29,8 +29,6 @@
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
 		04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCDE21F7175500B26B44 /* SPProfileCell.m */; };
-		04EBBCEA21F72BC400B26B44 /* SPQuizMaster+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCE821F72BC400B26B44 /* SPQuizMaster+CoreDataClass.m */; };
-		04EBBCEB21F72BC400B26B44 /* SPQuizMaster+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCE921F72BC400B26B44 /* SPQuizMaster+CoreDataProperties.m */; };
 		04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */; };
 		04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F71C7A21D37A9A00C5068A /* SPHomeVC.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
@@ -140,6 +138,10 @@
 		04EBBCF321F75B6800B26B44 /* SPDealer+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDealer+CoreDataClass.h"; sourceTree = "<group>"; };
 		04EBBCF421F75B6800B26B44 /* SPDealer+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDealer+CoreDataClass.m"; sourceTree = "<group>"; };
 		04EBBCF521F75B6800B26B44 /* SPDealer+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDealer+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04EBBCF821F75C3200B26B44 /* SPCompetitor+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPCompetitor+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04EBBCF921F75C3200B26B44 /* SPCompetitor+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPCompetitor+CoreDataClass.h"; sourceTree = "<group>"; };
+		04EBBCFA21F75C3200B26B44 /* SPCompetitor+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPCompetitor+CoreDataClass.m"; sourceTree = "<group>"; };
+		04EBBCFB21F75C3200B26B44 /* SPCompetitor+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPCompetitor+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -279,6 +281,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04EBBCF821F75C3200B26B44 /* SPCompetitor+CoreDataProperties.h */,
+				04EBBCF921F75C3200B26B44 /* SPCompetitor+CoreDataClass.h */,
+				04EBBCFA21F75C3200B26B44 /* SPCompetitor+CoreDataClass.m */,
+				04EBBCFB21F75C3200B26B44 /* SPCompetitor+CoreDataProperties.m */,
 				04EBBCF221F75B6800B26B44 /* SPDealer+CoreDataProperties.h */,
 				04EBBCF321F75B6800B26B44 /* SPDealer+CoreDataClass.h */,
 				04EBBCF421F75B6800B26B44 /* SPDealer+CoreDataClass.m */,
@@ -752,13 +758,11 @@
 				84FCFF2F21A84CBB0037F0A9 /* JVFloatLabeledTextField.m in Sources */,
 				04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */,
 				845411A221AEAC3600DE8DA8 /* SPRoundView.swift in Sources */,
-				04EBBCEA21F72BC400B26B44 /* SPQuizMaster+CoreDataClass.m in Sources */,
 				04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */,
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
 				84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
-				04EBBCEB21F72BC400B26B44 /* SPQuizMaster+CoreDataProperties.m in Sources */,
 				04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */,
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,

@@ -34,4 +34,8 @@ completionHandler:(SPCompletionHandler)handler;
 - (void)doGetDealer:(NSDictionary* )data
                  view:(UIView *)view
     completionHandler:(SPCompletionHandler)handler;
+
+- (void)doGetCompetitor:(NSDictionary* )data
+               view:(UIView *)view
+  completionHandler:(SPCompletionHandler)handler;
 @end

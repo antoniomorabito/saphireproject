@@ -25,6 +25,8 @@
 		042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0FD21A51FEA00AF8E74 /* SPLogin.m */; };
 		042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10021A55A8F00AF8E74 /* SPReachability.m */; };
 		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
+		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
+		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */; };
 		04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F71C7A21D37A9A00C5068A /* SPHomeVC.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
@@ -110,6 +112,10 @@
 		0465396621EE107B00A3BF1F /* SPUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPUser+CoreDataClass.h"; sourceTree = "<group>"; };
 		0465396721EE107B00A3BF1F /* SPUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataClass.m"; sourceTree = "<group>"; };
 		0465396821EE107B00A3BF1F /* SPUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
+		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
+		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
+		04EBBCD521F7143F00B26B44 /* SPUploadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadCell.m; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -180,6 +186,9 @@
 		0419FF2D21F61F1600C8CA30 /* upload */ = {
 			isa = PBXGroup;
 			children = (
+				04EBBCD321F70CA800B26B44 /* cell */,
+				04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */,
+				04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */,
 			);
 			path = upload;
 			sourceTree = "<group>";
@@ -358,6 +367,15 @@
 				042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */,
 			);
 			path = tabbar;
+			sourceTree = "<group>";
+		};
+		04EBBCD321F70CA800B26B44 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				04EBBCD421F7143F00B26B44 /* SPUploadCell.h */,
+				04EBBCD521F7143F00B26B44 /* SPUploadCell.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		04EE4D7621F48654002D07DF /* cellgroup */ = {
@@ -673,10 +691,12 @@
 			files = (
 				84FCFF2F21A84CBB0037F0A9 /* JVFloatLabeledTextField.m in Sources */,
 				845411A221AEAC3600DE8DA8 /* SPRoundView.swift in Sources */,
+				04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */,
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
 				84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
+				04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */,
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,

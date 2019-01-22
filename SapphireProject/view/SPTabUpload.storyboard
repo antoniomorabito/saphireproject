@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="-711" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--UploadVC-->
         <scene sceneID="LPG-3O-lZO">
             <objects>
-                <viewController id="NGI-lp-DBY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="upload" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NGI-lp-DBY" customClass="SPUploadVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8mK-Kd-QIA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +49,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="51" id="IDF-8w-XRl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="uploadcell" rowHeight="51" id="IDF-8w-XRl" customClass="SPUploadCell">
                                         <rect key="frame" x="0.0" y="1" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IDF-8w-XRl" id="KmL-fZ-gXY">
@@ -111,6 +112,11 @@
                                                 <constraint firstItem="xZH-96-gfA" firstAttribute="trailing" secondItem="ehI-Sq-8yj" secondAttribute="trailing" id="qkk-dF-vuc"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnUpload" destination="PF9-n6-bf5" id="sbi-qv-vcX"/>
+                                            <outlet property="lblUpload" destination="Mfh-2Q-DQ3" id="kxJ-R7-pRb"/>
+                                            <outlet property="notifView" destination="xZH-96-gfA" id="3d8-0q-gZN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -147,6 +153,9 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2yC-7h-Ldq" id="FAK-OJ-2k1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHe-xr-lXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

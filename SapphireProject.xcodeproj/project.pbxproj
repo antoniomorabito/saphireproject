@@ -27,6 +27,8 @@
 		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
+		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
+		04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCDE21F7175500B26B44 /* SPProfileCell.m */; };
 		04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */; };
 		04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F71C7A21D37A9A00C5068A /* SPHomeVC.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
@@ -116,6 +118,10 @@
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
 		04EBBCD521F7143F00B26B44 /* SPUploadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadCell.m; sourceTree = "<group>"; };
+		04EBBCD821F7173000B26B44 /* SPProfileVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPProfileVC.h; sourceTree = "<group>"; };
+		04EBBCD921F7173000B26B44 /* SPProfileVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPProfileVC.m; sourceTree = "<group>"; };
+		04EBBCDD21F7175500B26B44 /* SPProfileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPProfileCell.h; sourceTree = "<group>"; };
+		04EBBCDE21F7175500B26B44 /* SPProfileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPProfileCell.m; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -271,6 +277,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				04EBBCD721F7171E00B26B44 /* profile */,
 				0419FF2D21F61F1600C8CA30 /* upload */,
 				04F71C7821D37A7700C5068A /* home */,
 				042CA0F721A51F6000AF8E74 /* main */,
@@ -374,6 +381,25 @@
 			children = (
 				04EBBCD421F7143F00B26B44 /* SPUploadCell.h */,
 				04EBBCD521F7143F00B26B44 /* SPUploadCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		04EBBCD721F7171E00B26B44 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				04EBBCDC21F7174400B26B44 /* cell */,
+				04EBBCD821F7173000B26B44 /* SPProfileVC.h */,
+				04EBBCD921F7173000B26B44 /* SPProfileVC.m */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		04EBBCDC21F7174400B26B44 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				04EBBCDD21F7175500B26B44 /* SPProfileCell.h */,
+				04EBBCDE21F7175500B26B44 /* SPProfileCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -690,6 +716,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FCFF2F21A84CBB0037F0A9 /* JVFloatLabeledTextField.m in Sources */,
+				04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */,
 				845411A221AEAC3600DE8DA8 /* SPRoundView.swift in Sources */,
 				04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */,
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
@@ -699,6 +726,7 @@
 				04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */,
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
+				04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */,
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,

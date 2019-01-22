@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FsF-14-Qqk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FsF-14-Qqk">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="-711" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="Jwv-Mq-NOa">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="10K-tE-rEn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="10K-tE-rEn" customClass="SPProfileVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iif-Cy-JYD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +108,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="51" id="7MJ-DY-R5Q">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="profileCell" rowHeight="51" id="7MJ-DY-R5Q" customClass="SPProfileCell">
                                         <rect key="frame" x="0.0" y="1" width="414" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7MJ-DY-R5Q" id="8iq-aT-w2u">
@@ -126,6 +128,9 @@
                                                 <constraint firstItem="kQ3-iH-UYH" firstAttribute="centerY" secondItem="8iq-aT-w2u" secondAttribute="centerY" id="k8L-aI-g6B"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblName" destination="kQ3-iH-UYH" id="AbZ-Dz-b1U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -189,6 +194,11 @@
                         <viewLayoutGuide key="safeArea" id="9pR-7x-QeL"/>
                     </view>
                     <navigationItem key="navigationItem" id="hxj-lV-I4Y"/>
+                    <connections>
+                        <outlet property="imageBackground" destination="UUx-ha-ToS" id="bSY-EX-lf3"/>
+                        <outlet property="lblName" destination="ios-ns-BJw" id="JeZ-bE-1bf"/>
+                        <outlet property="tableView" destination="sfd-Wy-IRk" id="554-jd-cRb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bya-RS-au1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,8 +206,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="scrim_bar" width="20" height="3.6666667461395264"/>
+        <image name="scrim_bar" width="20" height="3"/>
         <image name="scrim_bar_" width="20" height="4"/>
-        <image name="shade_gradient" width="0.66666668653488159" height="138"/>
+        <image name="shade_gradient" width="1" height="1"/>
     </resources>
 </document>

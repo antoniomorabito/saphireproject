@@ -34,5 +34,7 @@
 #import "SPAppConfig+CoreDataClass.h"
 #import "SPUser+CoreDataClass.h"
 
+#import "SapphireProject-Bridging-Header.h"
+
 
 #endif /* SPLibrary_h */

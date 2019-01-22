@@ -142,6 +142,10 @@
                                             <constraint firstAttribute="bottom" secondItem="TEH-yQ-THT" secondAttribute="bottom" id="lfx-R8-7IR"/>
                                             <constraint firstAttribute="trailing" secondItem="TEH-yQ-THT" secondAttribute="trailing" id="vgk-iA-ot7"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="iconimage" destination="UmN-nd-ZVB" id="eNW-zP-AyH"/>
+                                            <outlet property="lbljudul" destination="aVL-Pj-EGe" id="oId-fk-eXz"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

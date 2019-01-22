@@ -23,6 +23,18 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SPProduct" representedClassName="SPProduct" syncable="YES" codeGenerationType="class">
+        <attribute name="category_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="channel_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idproduct" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="incentive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="model_product" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="periode_end" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="periode_start" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="SPQuizMaster" representedClassName="SPQuizMaster" syncable="YES" codeGenerationType="class">
         <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answer_1" optional="YES" attributeType="String" syncable="YES"/>
@@ -81,5 +93,6 @@
         <element name="SPCategory" positionX="-36" positionY="153" width="128" height="120"/>
         <element name="SPDealer" positionX="-18" positionY="162" width="128" height="90"/>
         <element name="SPCompetitor" positionX="0" positionY="171" width="128" height="105"/>
+        <element name="SPProduct" positionX="18" positionY="180" width="128" height="195"/>
     </elements>
 </model>

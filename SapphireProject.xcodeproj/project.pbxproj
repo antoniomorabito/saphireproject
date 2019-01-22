@@ -142,6 +142,10 @@
 		04EBBCF921F75C3200B26B44 /* SPCompetitor+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPCompetitor+CoreDataClass.h"; sourceTree = "<group>"; };
 		04EBBCFA21F75C3200B26B44 /* SPCompetitor+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPCompetitor+CoreDataClass.m"; sourceTree = "<group>"; };
 		04EBBCFB21F75C3200B26B44 /* SPCompetitor+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPCompetitor+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04EBBCFE21F75D8B00B26B44 /* SPProduct+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPProduct+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04EBBCFF21F75D8B00B26B44 /* SPProduct+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPProduct+CoreDataClass.h"; sourceTree = "<group>"; };
+		04EBBD0021F75D8B00B26B44 /* SPProduct+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPProduct+CoreDataClass.m"; sourceTree = "<group>"; };
+		04EBBD0121F75D8B00B26B44 /* SPProduct+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPProduct+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -281,6 +285,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04EBBCFE21F75D8B00B26B44 /* SPProduct+CoreDataProperties.h */,
+				04EBBCFF21F75D8B00B26B44 /* SPProduct+CoreDataClass.h */,
+				04EBBD0021F75D8B00B26B44 /* SPProduct+CoreDataClass.m */,
+				04EBBD0121F75D8B00B26B44 /* SPProduct+CoreDataProperties.m */,
 				04EBBCF821F75C3200B26B44 /* SPCompetitor+CoreDataProperties.h */,
 				04EBBCF921F75C3200B26B44 /* SPCompetitor+CoreDataClass.h */,
 				04EBBCFA21F75C3200B26B44 /* SPCompetitor+CoreDataClass.m */,

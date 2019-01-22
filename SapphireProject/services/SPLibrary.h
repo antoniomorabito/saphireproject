@@ -39,5 +39,5 @@
 #import "SPCategory+CoreDataProperties.h"
 #import "SPDealer+CoreDataProperties.h"
 #import "SPCompetitor+CoreDataProperties.h"
-
+#import "SPProduct+CoreDataProperties.h"
 #endif /* SPLibrary_h */

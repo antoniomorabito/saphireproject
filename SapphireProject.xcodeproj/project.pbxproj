@@ -29,6 +29,7 @@
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
 		04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCDE21F7175500B26B44 /* SPProfileCell.m */; };
+		04EBBD0721F76E0200B26B44 /* SPFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBD0621F76E0200B26B44 /* SPFeedbackVC.m */; };
 		04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */; };
 		04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F71C7A21D37A9A00C5068A /* SPHomeVC.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
@@ -146,6 +147,8 @@
 		04EBBCFF21F75D8B00B26B44 /* SPProduct+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPProduct+CoreDataClass.h"; sourceTree = "<group>"; };
 		04EBBD0021F75D8B00B26B44 /* SPProduct+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPProduct+CoreDataClass.m"; sourceTree = "<group>"; };
 		04EBBD0121F75D8B00B26B44 /* SPProduct+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPProduct+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04EBBD0521F76E0200B26B44 /* SPFeedbackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPFeedbackVC.h; sourceTree = "<group>"; };
+		04EBBD0621F76E0200B26B44 /* SPFeedbackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPFeedbackVC.m; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -325,6 +328,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				04EBBD0421F76DEE00B26B44 /* feedback */,
 				04EBBCD721F7171E00B26B44 /* profile */,
 				0419FF2D21F61F1600C8CA30 /* upload */,
 				04F71C7821D37A7700C5068A /* home */,
@@ -450,6 +454,15 @@
 				04EBBCDE21F7175500B26B44 /* SPProfileCell.m */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		04EBBD0421F76DEE00B26B44 /* feedback */ = {
+			isa = PBXGroup;
+			children = (
+				04EBBD0521F76E0200B26B44 /* SPFeedbackVC.h */,
+				04EBBD0621F76E0200B26B44 /* SPFeedbackVC.m */,
+			);
+			path = feedback;
 			sourceTree = "<group>";
 		};
 		04EE4D7621F48654002D07DF /* cellgroup */ = {
@@ -678,24 +691,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CZPicker/CZPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/DatePickerDialog-ObjC/DatePickerDialog_ObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/FDTake/FDTake.framework",
 				"${BUILT_PRODUCTS_DIR}/FreakingSimpleRoundImageView/FreakingSimpleRoundImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQDropDownTextField/IQDropDownTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/XMLReader/XMLReader.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CZPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog_ObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDTake.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FreakingSimpleRoundImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQDropDownTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMLReader.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -781,6 +796,7 @@
 				04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */,
 				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,
 				042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */,
+				04EBBD0721F76E0200B26B44 /* SPFeedbackVC.m in Sources */,
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
 				042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */,

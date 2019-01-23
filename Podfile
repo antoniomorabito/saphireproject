@@ -10,9 +10,9 @@ target 'SapphireProject' do
     pod 'SDWebImage', '~> 4.0'
     pod 'FDTake', '= 0.2.5'
     pod 'IQDropDownTextField'
-    pod 'XMLReader'
+    pod 'DatePickerDialog-ObjC'
     pod 'FreakingSimpleRoundImageView', '~> 1.2.3'
-    
+    pod 'CZPicker'
   target 'SapphireProjectTests' do
     inherit! :search_paths
     # Pods for testing

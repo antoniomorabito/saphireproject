@@ -50,7 +50,37 @@
     return 1;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+      NSString *data = [self.datas objectAtIndex:indexPath.row];
+    if ([data isEqualToString:@"Sell out"]) {
+        
+      
+    }
+    else if ([data isEqualToString:@"Monthly Offtake"]) {
+       
+    }
+    else if ([data isEqualToString:@"Weekly Offtake"]) {
+    }
+    else if ([data isEqualToString:@"Attendance Overview"]) {
+       
+    }
+    else if ([data isEqualToString:@"Sell Out Overview"]) {
+      
+    }
+    else if ([data isEqualToString:@"Competitor Info"]) {
+      
+    }
+    else if ([data isEqualToString:@"Feedback"]) {
+     
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPFeedback" bundle:nil]instantiateViewControllerWithIdentifier:@"dofeedback"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    else if ([data isEqualToString:@"SKU"]) {
+     
+    }
+    else if ([data isEqualToString:@"SKU Overview"]){
+     
+    }
 
     
     

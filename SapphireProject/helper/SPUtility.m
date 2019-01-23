@@ -9,5 +9,24 @@
 #import "SPUtility.h"
 
 @implementation SPUtility
-
++(void)initBannerNotif:(NSString *)title subtitle:(NSString*)mes body:(NSString*)bodmessage{
+    [APBannerManager showBannerWithTitle:title
+                                subtitle:mes
+                                    body:bodmessage
+                                   image:[UIImage imageNamed:@"img_logo"]
+                             actionBlock:^(APBannerActionType type) {
+                                 switch (type) {
+                                     case APBannerActionTypeTap:
+                                         NSLog(@"TAP");
+                                         break;
+                                     case APBannerActionTypeDismiss:
+                                         NSLog(@"DISMISS");
+                                         break;
+                                 }
+                             }];
+    
+    [APBannerManager setTitleColor:[UIColor greenColor]];
+    
+    [APBannerManager setDuration:[NSNumber numberWithInteger:2]];
+}
 @end

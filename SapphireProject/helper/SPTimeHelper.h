@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SPNetworkManager.h"
 @interface SPTimeHelper : NSObject
 
 @end

@@ -5,6 +5,7 @@ target 'SapphireProject' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
     use_frameworks!
     pod 'MagicalRecord'
+    pod 'TrueTime'
     pod 'MBProgressHUD'
     pod 'AFNetworking'
     pod 'SDWebImage', '~> 4.0'
@@ -13,6 +14,8 @@ target 'SapphireProject' do
     pod 'DatePickerDialog-ObjC'
     pod 'FreakingSimpleRoundImageView', '~> 1.2.3'
     pod 'CZPicker'
+    pod 'APBanner'
+    
   target 'SapphireProjectTests' do
     inherit! :search_paths
     # Pods for testing

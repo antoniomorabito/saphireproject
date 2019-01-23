@@ -139,10 +139,7 @@ completionHandler:(SPCompletionHandler)handler;
 - (void)doGetStore:(NSDictionary* )data
               view:(UIView *)view
  completionHandler:(SPCompletionHandler)handler;{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"";
-    [hud showAnimated:YES];
+
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -207,7 +204,7 @@ completionHandler:(SPCompletionHandler)handler;
         
         
         handler(YES,responseObject,nil);
-        [hud hideAnimated:YES];
+      
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
@@ -216,16 +213,13 @@ completionHandler:(SPCompletionHandler)handler;
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         handler(NO,json,error);
         
-        [hud hideAnimated:YES];
+      
     }];
 }
 - (void)doGetQuiz:(NSDictionary* )data
              view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"";
-    [hud showAnimated:YES];
+
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -289,7 +283,7 @@ completionHandler:(SPCompletionHandler)handler;{
         
         
         handler(YES,responseObject,nil);
-        [hud hideAnimated:YES];
+    
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
@@ -298,17 +292,13 @@ completionHandler:(SPCompletionHandler)handler;{
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         handler(NO,json,error);
         
-        [hud hideAnimated:YES];
+    
     }];
 }
 - (void)doGetCategory:(NSDictionary* )data
                  view:(UIView *)view
-    completionHandler:(SPCompletionHandler)handler;{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"";
-    [hud showAnimated:YES];
-    
+    completionHandler:(SPCompletionHandler)handler;{;
+
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
@@ -363,7 +353,7 @@ completionHandler:(SPCompletionHandler)handler;{
         
         
         handler(YES,responseObject,nil);
-        [hud hideAnimated:YES];
+    
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
@@ -371,17 +361,12 @@ completionHandler:(SPCompletionHandler)handler;{
         NSData *data = [ErrorResponse dataUsingEncoding:NSUTF8StringEncoding];
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         handler(NO,json,error);
-        
-        [hud hideAnimated:YES];
     }];
 }
 - (void)doGetDealer:(NSDictionary* )data
                view:(UIView *)view
   completionHandler:(SPCompletionHandler)handler;{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"";
-    [hud showAnimated:YES];
+
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -435,7 +420,7 @@ completionHandler:(SPCompletionHandler)handler;{
         
         
         handler(YES,responseObject,nil);
-        [hud hideAnimated:YES];
+        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
@@ -444,16 +429,13 @@ completionHandler:(SPCompletionHandler)handler;{
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         handler(NO,json,error);
         
-        [hud hideAnimated:YES];
+        
     }];
 }
 - (void)doGetCompetitor:(NSDictionary* )data
                    view:(UIView *)view
       completionHandler:(SPCompletionHandler)handler;{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"";
-    [hud showAnimated:YES];
+
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -507,7 +489,7 @@ completionHandler:(SPCompletionHandler)handler;{
         
         
         handler(YES,responseObject,nil);
-        [hud hideAnimated:YES];
+      
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
@@ -515,17 +497,13 @@ completionHandler:(SPCompletionHandler)handler;{
         NSData *data = [ErrorResponse dataUsingEncoding:NSUTF8StringEncoding];
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         handler(NO,json,error);
-        
-        [hud hideAnimated:YES];
+    
     }];
 }
 - (void)doGetProducts:(NSDictionary* )data
                  view:(UIView *)view
     completionHandler:(SPCompletionHandler)handler;{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"";
-    [hud showAnimated:YES];
+
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -586,7 +564,7 @@ completionHandler:(SPCompletionHandler)handler;{
         
         
         handler(YES,responseObject,nil);
-        [hud hideAnimated:YES];
+    
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
@@ -595,7 +573,7 @@ completionHandler:(SPCompletionHandler)handler;{
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         handler(NO,json,error);
         
-        [hud hideAnimated:YES];
+    
     }];
 }
 @end

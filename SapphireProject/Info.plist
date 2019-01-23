@@ -18,12 +18,6 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>SPSplash</string>
-	<key>UIMainStoryboardFile</key>
-	<string>SPSplash</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>http://saphire.id/api.saphire</string>
@@ -37,6 +31,8 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>NSAllowsArbitraryLoadsInWebContent</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -68,6 +64,14 @@
 	<string>App would like to use your current location to display it on the app, also for directions and estimation of your travel times. It is secure and private.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>App would like to access your photo gallery for your profile photo upload. Your photos wont be shared without your permission.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>SPSplash</string>
+	<key>UIMainStoryboardFile</key>
+	<string>SPSplash</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

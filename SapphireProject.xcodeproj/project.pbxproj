@@ -30,6 +30,8 @@
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
 		04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCDE21F7175500B26B44 /* SPProfileCell.m */; };
 		04EBBD0721F76E0200B26B44 /* SPFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBD0621F76E0200B26B44 /* SPFeedbackVC.m */; };
+		04EBBD0A21F84AE000B26B44 /* SPTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBD0921F84AE000B26B44 /* SPTimeHelper.m */; };
+		04EBBD0D21F862D700B26B44 /* SPUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBD0C21F862D700B26B44 /* SPUtility.m */; };
 		04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */; };
 		04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F71C7A21D37A9A00C5068A /* SPHomeVC.m */; };
 		1F59C8ECF1CD2D786AA1A277 /* Pods_SapphireProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */; };
@@ -149,6 +151,10 @@
 		04EBBD0121F75D8B00B26B44 /* SPProduct+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPProduct+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EBBD0521F76E0200B26B44 /* SPFeedbackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPFeedbackVC.h; sourceTree = "<group>"; };
 		04EBBD0621F76E0200B26B44 /* SPFeedbackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPFeedbackVC.m; sourceTree = "<group>"; };
+		04EBBD0821F84AE000B26B44 /* SPTimeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTimeHelper.h; sourceTree = "<group>"; };
+		04EBBD0921F84AE000B26B44 /* SPTimeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTimeHelper.m; sourceTree = "<group>"; };
+		04EBBD0B21F862D700B26B44 /* SPUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUtility.h; sourceTree = "<group>"; };
+		04EBBD0C21F862D700B26B44 /* SPUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUtility.m; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
@@ -381,6 +387,10 @@
 				042CA0EB21A51B0000AF8E74 /* SPMessageUtility.m */,
 				042CA0FF21A55A8F00AF8E74 /* SPReachability.h */,
 				042CA10021A55A8F00AF8E74 /* SPReachability.m */,
+				04EBBD0821F84AE000B26B44 /* SPTimeHelper.h */,
+				04EBBD0921F84AE000B26B44 /* SPTimeHelper.m */,
+				04EBBD0B21F862D700B26B44 /* SPUtility.h */,
+				04EBBD0C21F862D700B26B44 /* SPUtility.m */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -606,6 +616,11 @@
 					042CA0A021A4F19500AF8E74 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					042CA0BB21A4F19800AF8E74 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -691,6 +706,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/APBanner/APBanner.framework",
 				"${BUILT_PRODUCTS_DIR}/CZPicker/CZPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog-ObjC/DatePickerDialog_ObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/FDTake/FDTake.framework",
@@ -698,11 +714,14 @@
 				"${BUILT_PRODUCTS_DIR}/IQDropDownTextField/IQDropDownTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TrueTime/TrueTime.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APBanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CZPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog_ObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDTake.framework",
@@ -710,7 +729,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQDropDownTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrueTime.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -785,11 +806,13 @@
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
 				84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
+				04EBBD0A21F84AE000B26B44 /* SPTimeHelper.m in Sources */,
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
 				04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */,
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
 				04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */,
+				04EBBD0D21F862D700B26B44 /* SPUtility.m in Sources */,
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,

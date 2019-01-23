@@ -129,10 +129,79 @@
     else if (textField == _fieldLocation) {
         return FALSE;
     }
+    
+    else if (textField == _fieldCategory) {
+        return FALSE;
+    }
     else{
     return YES;
     }
     
+}
+#pragma mark - Private Method
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(registerKeyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(registerKeyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)registerKeyboardWillShow:(NSNotification *)aNotification {
+    NSDictionary *userInfo = aNotification.userInfo;
+    NSNumber *durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval animationDuration = durationValue.doubleValue;
+    
+    NSNumber *curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey];
+    UIViewAnimationCurve animationCurve = curveValue.intValue;
+    
+    // Create animation.
+    void (^animations)(void) = ^() {
+        CGPoint newOffset = self->_scrollView.contentOffset;
+        newOffset.y = 160;
+        self.scrollView.contentOffset = newOffset;
+    };
+    
+    // Begin animation.
+    [UIView animateWithDuration:animationDuration
+                          delay:0.0
+                        options:(animationCurve << 16)
+                     animations:animations
+                     completion:nil];
+}
+
+- (void)registerKeyboardWillHide:(NSNotification *)aNotification {
+    NSDictionary *userInfo = aNotification.userInfo;
+    NSNumber *durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval animationDuration = durationValue.doubleValue;
+    
+    NSNumber *curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey];
+    UIViewAnimationCurve animationCurve = curveValue.intValue;
+    
+    // Create animation.
+    void (^animations)(void) = ^() {
+        CGPoint newOffset = self->_scrollView.contentOffset;
+        newOffset.y = 0;
+        self.scrollView.contentOffset = newOffset;
+    };
+    
+    // Begin animation.
+    [UIView animateWithDuration:animationDuration
+                          delay:0.0
+                        options:(animationCurve << 16)
+                     animations:animations
+                     completion:^(BOOL finished) {
+                     }];
 }
 /*
 #pragma mark - Navigation

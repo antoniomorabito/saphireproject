@@ -17,4 +17,6 @@
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPhoneNumber;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong,nonatomic)NSMutableArray *datasLocations;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextView *textFeedback;
+
 @end

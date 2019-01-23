@@ -380,6 +380,7 @@
                         <outlet property="fieldPhoneNumber" destination="HJr-pV-yPA" id="e4t-Z8-G7X"/>
                         <outlet property="fieldStatus" destination="aD3-CA-AXJ" id="Ewb-i1-Rrm"/>
                         <outlet property="scrollView" destination="8hN-G2-P3A" id="4jJ-58-vts"/>
+                        <outlet property="textFeedback" destination="Tt6-eQ-oKG" id="T5j-Pg-9Ih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVb-Tq-kSO" userLabel="First Responder" sceneMemberID="firstResponder"/>

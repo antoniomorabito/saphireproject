@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SPFeedbackVC : UIViewController
-
+#import "SPNetworkManager.h"
+@interface SPFeedbackVC : UIViewController<UITextFieldDelegate,CZPickerViewDataSource, CZPickerViewDelegate>
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldDate;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldLocation;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldCategory;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldStatus;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldCustomerName;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPhoneNumber;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong,nonatomic)NSMutableArray *datasLocations;
 @end

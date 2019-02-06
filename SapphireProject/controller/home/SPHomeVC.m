@@ -74,9 +74,15 @@
         [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"Monthly Offtake"]) {
-       
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPOffTake-Monthly" bundle:nil]instantiateViewControllerWithIdentifier:@"navmonthlyofftake"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"Weekly Offtake"]) {
+        
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPOffTake-Weekly" bundle:nil]instantiateViewControllerWithIdentifier:@"navweeklyofftake"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"Attendance Overview"]) {
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];

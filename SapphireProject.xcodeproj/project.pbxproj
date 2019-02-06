@@ -27,7 +27,6 @@
 		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
 		0490B577220B84140054F854 /* SPSelloutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B576220B84140054F854 /* SPSelloutVC.m */; };
 		0490B57B220B89650054F854 /* SPSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B57A220B89650054F854 /* SPSKUVC.m */; };
-		0490B57F220B8C210054F854 /* SPSKOvervVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B57E220B8C210054F854 /* SPSKOvervVC.m */; };
 		0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B581220B8CB30054F854 /* SPTableSKUVC.m */; };
 		0490B586220B91CC0054F854 /* SPSkuOverOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B585220B91CC0054F854 /* SPSkuOverOneCell.m */; };
 		0490B58A220B9D480054F854 /* SPSelloutOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B589220B9D480054F854 /* SPSelloutOverviewVC.m */; };
@@ -36,6 +35,12 @@
 		0490B596220BA0960054F854 /* SPAttendanceOverCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B595220BA0960054F854 /* SPAttendanceOverCellOne.m */; };
 		0490B599220BA0AB0054F854 /* SPAttendanceOverviewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B598220BA0AB0054F854 /* SPAttendanceOverviewCellSecond.m */; };
 		0490B59D220BA2760054F854 /* SPCompetitorInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B59C220BA2760054F854 /* SPCompetitorInfoVC.m */; };
+		0490B5A2220BA4C00054F854 /* SPWeeklyOfftakeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5A1220BA4C00054F854 /* SPWeeklyOfftakeVC.m */; };
+		0490B5A5220BA4CE0054F854 /* SPMonthlyOfftakeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5A4220BA4CE0054F854 /* SPMonthlyOfftakeVC.m */; };
+		0490B5A9220BA5400054F854 /* SPHeaderCellOfftake.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5A8220BA5400054F854 /* SPHeaderCellOfftake.m */; };
+		0490B5AC220BA5590054F854 /* SPMiddleWeeklyOfftakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5AB220BA5590054F854 /* SPMiddleWeeklyOfftakeCell.m */; };
+		0490B5AF220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5AE220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m */; };
+		0490B5B3220BA7070054F854 /* SPMonthlyOfftakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5B2220BA7070054F854 /* SPMonthlyOfftakeCell.m */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
@@ -132,8 +137,6 @@
 		0490B576220B84140054F854 /* SPSelloutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSelloutVC.m; sourceTree = "<group>"; };
 		0490B579220B89650054F854 /* SPSKUVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSKUVC.h; sourceTree = "<group>"; };
 		0490B57A220B89650054F854 /* SPSKUVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSKUVC.m; sourceTree = "<group>"; };
-		0490B57D220B8C210054F854 /* SPSKOvervVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSKOvervVC.h; sourceTree = "<group>"; };
-		0490B57E220B8C210054F854 /* SPSKOvervVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSKOvervVC.m; sourceTree = "<group>"; };
 		0490B580220B8CB30054F854 /* SPTableSKUVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTableSKUVC.h; sourceTree = "<group>"; };
 		0490B581220B8CB30054F854 /* SPTableSKUVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTableSKUVC.m; sourceTree = "<group>"; };
 		0490B584220B91CC0054F854 /* SPSkuOverOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSkuOverOneCell.h; sourceTree = "<group>"; };
@@ -150,6 +153,18 @@
 		0490B598220BA0AB0054F854 /* SPAttendanceOverviewCellSecond.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAttendanceOverviewCellSecond.m; sourceTree = "<group>"; };
 		0490B59B220BA2760054F854 /* SPCompetitorInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCompetitorInfoVC.h; sourceTree = "<group>"; };
 		0490B59C220BA2760054F854 /* SPCompetitorInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCompetitorInfoVC.m; sourceTree = "<group>"; };
+		0490B5A0220BA4C00054F854 /* SPWeeklyOfftakeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPWeeklyOfftakeVC.h; sourceTree = "<group>"; };
+		0490B5A1220BA4C00054F854 /* SPWeeklyOfftakeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPWeeklyOfftakeVC.m; sourceTree = "<group>"; };
+		0490B5A3220BA4CE0054F854 /* SPMonthlyOfftakeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMonthlyOfftakeVC.h; sourceTree = "<group>"; };
+		0490B5A4220BA4CE0054F854 /* SPMonthlyOfftakeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMonthlyOfftakeVC.m; sourceTree = "<group>"; };
+		0490B5A7220BA5400054F854 /* SPHeaderCellOfftake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHeaderCellOfftake.h; sourceTree = "<group>"; };
+		0490B5A8220BA5400054F854 /* SPHeaderCellOfftake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHeaderCellOfftake.m; sourceTree = "<group>"; };
+		0490B5AA220BA5590054F854 /* SPMiddleWeeklyOfftakeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMiddleWeeklyOfftakeCell.h; sourceTree = "<group>"; };
+		0490B5AB220BA5590054F854 /* SPMiddleWeeklyOfftakeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMiddleWeeklyOfftakeCell.m; sourceTree = "<group>"; };
+		0490B5AD220BA5710054F854 /* SPFooterWeeklyOfftakeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPFooterWeeklyOfftakeCell.h; sourceTree = "<group>"; };
+		0490B5AE220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPFooterWeeklyOfftakeCell.m; sourceTree = "<group>"; };
+		0490B5B1220BA7070054F854 /* SPMonthlyOfftakeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMonthlyOfftakeCell.h; sourceTree = "<group>"; };
+		0490B5B2220BA7070054F854 /* SPMonthlyOfftakeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMonthlyOfftakeCell.m; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -501,8 +516,6 @@
 			isa = PBXGroup;
 			children = (
 				0490B583220B91B00054F854 /* cell */,
-				0490B57D220B8C210054F854 /* SPSKOvervVC.h */,
-				0490B57E220B8C210054F854 /* SPSKOvervVC.m */,
 				0490B580220B8CB30054F854 /* SPTableSKUVC.h */,
 				0490B581220B8CB30054F854 /* SPTableSKUVC.m */,
 			);
@@ -570,6 +583,9 @@
 		0490B59E220BA39D0054F854 /* monthlyofftake */ = {
 			isa = PBXGroup;
 			children = (
+				0490B5B0220BA6B10054F854 /* cell */,
+				0490B5A3220BA4CE0054F854 /* SPMonthlyOfftakeVC.h */,
+				0490B5A4220BA4CE0054F854 /* SPMonthlyOfftakeVC.m */,
 			);
 			path = monthlyofftake;
 			sourceTree = "<group>";
@@ -577,8 +593,33 @@
 		0490B59F220BA3A40054F854 /* weeklyofftake */ = {
 			isa = PBXGroup;
 			children = (
+				0490B5A6220BA5260054F854 /* cell */,
+				0490B5A0220BA4C00054F854 /* SPWeeklyOfftakeVC.h */,
+				0490B5A1220BA4C00054F854 /* SPWeeklyOfftakeVC.m */,
 			);
 			path = weeklyofftake;
+			sourceTree = "<group>";
+		};
+		0490B5A6220BA5260054F854 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				0490B5A7220BA5400054F854 /* SPHeaderCellOfftake.h */,
+				0490B5A8220BA5400054F854 /* SPHeaderCellOfftake.m */,
+				0490B5AA220BA5590054F854 /* SPMiddleWeeklyOfftakeCell.h */,
+				0490B5AB220BA5590054F854 /* SPMiddleWeeklyOfftakeCell.m */,
+				0490B5AD220BA5710054F854 /* SPFooterWeeklyOfftakeCell.h */,
+				0490B5AE220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		0490B5B0220BA6B10054F854 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				0490B5B1220BA7070054F854 /* SPMonthlyOfftakeCell.h */,
+				0490B5B2220BA7070054F854 /* SPMonthlyOfftakeCell.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		04EBBCD321F70CA800B26B44 /* cell */ = {
@@ -943,6 +984,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FCFF2F21A84CBB0037F0A9 /* JVFloatLabeledTextField.m in Sources */,
+				0490B5AC220BA5590054F854 /* SPMiddleWeeklyOfftakeCell.m in Sources */,
 				04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */,
 				845411A221AEAC3600DE8DA8 /* SPRoundView.swift in Sources */,
 				04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */,
@@ -950,9 +992,11 @@
 				0490B596220BA0960054F854 /* SPAttendanceOverCellOne.m in Sources */,
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
 				84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */,
+				0490B5AF220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
 				0490B58E220B9D8B0054F854 /* SPSelloutoverCell.m in Sources */,
 				04EBBD0A21F84AE000B26B44 /* SPTimeHelper.m in Sources */,
+				0490B5A2220BA4C00054F854 /* SPWeeklyOfftakeVC.m in Sources */,
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
 				04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */,
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
@@ -961,6 +1005,7 @@
 				0490B586220B91CC0054F854 /* SPSkuOverOneCell.m in Sources */,
 				04EBBD0D21F862D700B26B44 /* SPUtility.m in Sources */,
 				0490B577220B84140054F854 /* SPSelloutVC.m in Sources */,
+				0490B5A5220BA4CE0054F854 /* SPMonthlyOfftakeVC.m in Sources */,
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,
@@ -972,11 +1017,12 @@
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,
 				0490B57B220B89650054F854 /* SPSKUVC.m in Sources */,
 				0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */,
+				0490B5A9220BA5400054F854 /* SPHeaderCellOfftake.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
 				0490B58A220B9D480054F854 /* SPSelloutOverviewVC.m in Sources */,
 				0490B592220BA0760054F854 /* SPAttendanceOverviewVC.m in Sources */,
 				042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */,
-				0490B57F220B8C210054F854 /* SPSKOvervVC.m in Sources */,
+				0490B5B3220BA7070054F854 /* SPMonthlyOfftakeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  SPSKOvervVC.h
+//  SPFooterWeeklyOfftakeCell.h
 //  SapphireProject
 //
 //  Created by mac on 07/02/19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPSKOvervVC : UIViewController
+@interface SPFooterWeeklyOfftakeCell : UITableViewCell
 
 @end

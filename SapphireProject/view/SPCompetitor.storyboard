@@ -50,13 +50,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Monday, 12 Nov 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjg-jh-V03">
-                                                <rect key="frame" x="16" y="16" width="343" height="18.5"/>
+                                                <rect key="frame" x="16" y="16" width="343" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Location (Ex. Jawa Barat)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="ccc-MU-huW" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="50.5" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="49.5" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="0a0-tD-XWV"/>
@@ -78,14 +78,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-Rf-YJg">
-                                                <rect key="frame" x="16" y="66" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="65" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="NUL-sp-IUt"/>
                                                     <constraint firstAttribute="width" constant="20" id="jAn-gZ-8hz"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Category (Ex. Baby Toy)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="ub1-YU-XTt" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="107.5" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="106.5" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="Uph-9g-fXW"/>
@@ -107,14 +107,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="Do8-1w-DCG">
-                                                <rect key="frame" x="16" y="123" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="122" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Ngx-2t-YW0"/>
                                                     <constraint firstAttribute="width" constant="20" id="rTP-jj-3Im"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product Name" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZX4-MS-Zgl" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="164.5" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="163.5" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="e1o-v6-J0i"/>
@@ -136,7 +136,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product Price (Ex. 20000)" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CZe-pT-Kjz" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="221.5" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="220.5" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="oJi-1B-jiK"/>
@@ -158,7 +158,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Promo Description" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FXS-lF-tSI" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="278.5" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="277.5" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="pec-FW-ayM"/>
@@ -180,7 +180,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Period Start" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="uqx-Ko-dYo" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="335.5" width="127.5" height="41"/>
+                                                <rect key="frame" x="52" y="334.5" width="127.5" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="uRD-OS-MgP"/>
@@ -202,7 +202,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-8X-VWY">
-                                                <rect key="frame" x="16" y="350" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="349" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="FuZ-Ih-n3e"/>
                                                     <constraint firstAttribute="height" constant="20" id="NLa-KR-1ZY"/>
@@ -217,7 +217,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Period Date" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="d73-N4-cEb" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="231.5" y="335.5" width="127.5" height="41"/>
+                                                <rect key="frame" x="231.5" y="334.5" width="127.5" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="Aoc-jZ-fe2"/>
@@ -239,7 +239,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="8ld-1f-Ffs">
-                                                <rect key="frame" x="195.5" y="350" width="20" height="20"/>
+                                                <rect key="frame" x="195.5" y="349" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="aTf-yS-uxh"/>
                                                     <constraint firstAttribute="height" constant="20" id="n44-43-G8s"/>

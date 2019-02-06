@@ -42,6 +42,7 @@
 		0490B5AF220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5AE220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m */; };
 		0490B5B3220BA7070054F854 /* SPMonthlyOfftakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5B2220BA7070054F854 /* SPMonthlyOfftakeCell.m */; };
 		0490B5B7220BA8040054F854 /* SPQuizVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5B6220BA8040054F854 /* SPQuizVC.m */; };
+		0490B5BB220BA8C20054F854 /* SPAttendanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5BA220BA8C20054F854 /* SPAttendanceVC.m */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
@@ -168,6 +169,8 @@
 		0490B5B2220BA7070054F854 /* SPMonthlyOfftakeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMonthlyOfftakeCell.m; sourceTree = "<group>"; };
 		0490B5B5220BA8040054F854 /* SPQuizVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPQuizVC.h; sourceTree = "<group>"; };
 		0490B5B6220BA8040054F854 /* SPQuizVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPQuizVC.m; sourceTree = "<group>"; };
+		0490B5B9220BA8C20054F854 /* SPAttendanceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAttendanceVC.h; sourceTree = "<group>"; };
+		0490B5BA220BA8C20054F854 /* SPAttendanceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAttendanceVC.m; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -385,6 +388,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0490B5B8220BA8B20054F854 /* attendance */,
 				0490B5B4220BA7DE0054F854 /* quiz */,
 				0490B59F220BA3A40054F854 /* weeklyofftake */,
 				0490B59E220BA39D0054F854 /* monthlyofftake */,
@@ -633,6 +637,15 @@
 				0490B5B6220BA8040054F854 /* SPQuizVC.m */,
 			);
 			path = quiz;
+			sourceTree = "<group>";
+		};
+		0490B5B8220BA8B20054F854 /* attendance */ = {
+			isa = PBXGroup;
+			children = (
+				0490B5B9220BA8C20054F854 /* SPAttendanceVC.h */,
+				0490B5BA220BA8C20054F854 /* SPAttendanceVC.m */,
+			);
+			path = attendance;
 			sourceTree = "<group>";
 		};
 		04EBBCD321F70CA800B26B44 /* cell */ = {
@@ -1034,6 +1047,7 @@
 				0490B5A9220BA5400054F854 /* SPHeaderCellOfftake.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
 				0490B58A220B9D480054F854 /* SPSelloutOverviewVC.m in Sources */,
+				0490B5BB220BA8C20054F854 /* SPAttendanceVC.m in Sources */,
 				0490B592220BA0760054F854 /* SPAttendanceOverviewVC.m in Sources */,
 				042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */,
 				0490B5B3220BA7070054F854 /* SPMonthlyOfftakeCell.m in Sources */,

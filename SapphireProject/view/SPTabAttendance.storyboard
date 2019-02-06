@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SGR-Dr-p0Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SGR-Dr-p0Z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="-711" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--AttendanceVC-->
         <scene sceneID="rhf-Lf-plY">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lmh-EG-L3o" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lmh-EG-L3o" customClass="SPAttendanceVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QrF-9K-NMJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -663,8 +665,8 @@
         <image name="bg_field_unfocus" width="32" height="18"/>
         <image name="ic_clock_in" width="20" height="20"/>
         <image name="ic_clock_out" width="20" height="20"/>
-        <image name="scrim_bar" width="20" height="3.5"/>
+        <image name="scrim_bar" width="20" height="3"/>
         <image name="scrim_bar_" width="20" height="4"/>
-        <image name="shade_gradient" width="0.66666668653488159" height="138"/>
+        <image name="shade_gradient" width="1" height="1"/>
     </resources>
 </document>

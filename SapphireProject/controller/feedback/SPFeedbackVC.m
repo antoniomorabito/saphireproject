@@ -45,6 +45,7 @@
     _fieldPhoneNumber.inputAccessoryView = toolbars;
     _fieldStatus.inputAccessoryView = toolbars;
     _fieldCategory.inputAccessoryView = toolbars;
+    _textFeedback.inputAccessoryView = toolbars;
     // Do any additional setup after loading the view.
     
     
@@ -102,6 +103,8 @@
 }
 
 - (IBAction)didTapSubmit:(id)sender {
+    
+    
 }
 - (IBAction)didTapDate:(UITextField *)sender {
     

@@ -25,6 +25,7 @@
 		042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA0FD21A51FEA00AF8E74 /* SPLogin.m */; };
 		042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10021A55A8F00AF8E74 /* SPReachability.m */; };
 		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
+		0490B577220B84140054F854 /* SPSelloutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B576220B84140054F854 /* SPSelloutVC.m */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
@@ -117,6 +118,8 @@
 		0465396621EE107B00A3BF1F /* SPUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPUser+CoreDataClass.h"; sourceTree = "<group>"; };
 		0465396721EE107B00A3BF1F /* SPUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataClass.m"; sourceTree = "<group>"; };
 		0465396821EE107B00A3BF1F /* SPUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		0490B575220B84140054F854 /* SPSelloutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSelloutVC.h; sourceTree = "<group>"; };
+		0490B576220B84140054F854 /* SPSelloutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSelloutVC.m; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -334,6 +337,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0490B574220B800D0054F854 /* sellout */,
 				04EBBD0421F76DEE00B26B44 /* feedback */,
 				04EBBCD721F7171E00B26B44 /* profile */,
 				0419FF2D21F61F1600C8CA30 /* upload */,
@@ -436,6 +440,15 @@
 				042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */,
 			);
 			path = tabbar;
+			sourceTree = "<group>";
+		};
+		0490B574220B800D0054F854 /* sellout */ = {
+			isa = PBXGroup;
+			children = (
+				0490B575220B84140054F854 /* SPSelloutVC.h */,
+				0490B576220B84140054F854 /* SPSelloutVC.m */,
+			);
+			path = sellout;
 			sourceTree = "<group>";
 		};
 		04EBBCD321F70CA800B26B44 /* cell */ = {
@@ -813,6 +826,7 @@
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
 				04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */,
 				04EBBD0D21F862D700B26B44 /* SPUtility.m in Sources */,
+				0490B577220B84140054F854 /* SPSelloutVC.m in Sources */,
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,
@@ -980,14 +994,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Q3T86Q558;
+				DEVELOPMENT_TEAM = WGTKHKRPV6;
 				INFOPLIST_FILE = SapphireProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.co.id.SapphireProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.co.id;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SapphireProject/custom/SapphireProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1003,14 +1017,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Q3T86Q558;
+				DEVELOPMENT_TEAM = WGTKHKRPV6;
 				INFOPLIST_FILE = SapphireProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.co.id.SapphireProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.co.id;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SapphireProject/custom/SapphireProject-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

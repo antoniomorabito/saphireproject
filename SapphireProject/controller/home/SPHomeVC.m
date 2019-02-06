@@ -69,7 +69,9 @@
       NSString *data = [self.datas objectAtIndex:indexPath.row];
     if ([data isEqualToString:@"Sell out"]) {
         
-      
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSellOut" bundle:nil]instantiateViewControllerWithIdentifier:@"navsellout"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"Monthly Offtake"]) {
        

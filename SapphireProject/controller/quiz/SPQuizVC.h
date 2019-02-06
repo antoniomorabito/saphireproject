@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SPNetworkManager.h"
 @interface SPQuizVC : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SPWeeklyOfftakeVC : UIViewController
+#import "SPNetworkManager.h"
+#import "SPFooterWeeklyOfftakeCell.h"
+#import "SPMiddleWeeklyOfftakeCell.h"
+#import "SPHeaderCellOfftake.h"
+@interface SPWeeklyOfftakeVC : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

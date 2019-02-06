@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SPMonthlyOfftakeVC : UIViewController
+#import "SPNetworkManager.h"
+#import "SPMonthlyOfftakeCell.h"
+@interface SPMonthlyOfftakeVC : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

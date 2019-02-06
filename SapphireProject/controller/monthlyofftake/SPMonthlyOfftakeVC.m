@@ -1,3 +1,4 @@
+
 //
 //  SPMonthlyOfftakeVC.m
 //  SapphireProject
@@ -16,14 +17,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     // Do any additional setup after loading the view.
 }
-
+//
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 8;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+        SPMonthlyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"monthlyofftake" forIndexPath:indexPath];
+        
+        // Configure the cell...
+        
+        return cell;
+    
+}
 /*
 #pragma mark - Navigation
 
@@ -33,5 +56,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)didTapBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

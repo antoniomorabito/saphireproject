@@ -91,7 +91,10 @@
         [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"Competitor Info"]) {
-      
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPCompetitor" bundle:nil]instantiateViewControllerWithIdentifier:@"navcompetitor"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+//
     }
     else if ([data isEqualToString:@"Feedback"]) {
      

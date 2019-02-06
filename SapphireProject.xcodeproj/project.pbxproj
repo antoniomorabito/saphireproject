@@ -35,6 +35,7 @@
 		0490B592220BA0760054F854 /* SPAttendanceOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B591220BA0760054F854 /* SPAttendanceOverviewVC.m */; };
 		0490B596220BA0960054F854 /* SPAttendanceOverCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B595220BA0960054F854 /* SPAttendanceOverCellOne.m */; };
 		0490B599220BA0AB0054F854 /* SPAttendanceOverviewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B598220BA0AB0054F854 /* SPAttendanceOverviewCellSecond.m */; };
+		0490B59D220BA2760054F854 /* SPCompetitorInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B59C220BA2760054F854 /* SPCompetitorInfoVC.m */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
@@ -147,6 +148,8 @@
 		0490B595220BA0960054F854 /* SPAttendanceOverCellOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAttendanceOverCellOne.m; sourceTree = "<group>"; };
 		0490B597220BA0AB0054F854 /* SPAttendanceOverviewCellSecond.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAttendanceOverviewCellSecond.h; sourceTree = "<group>"; };
 		0490B598220BA0AB0054F854 /* SPAttendanceOverviewCellSecond.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAttendanceOverviewCellSecond.m; sourceTree = "<group>"; };
+		0490B59B220BA2760054F854 /* SPCompetitorInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCompetitorInfoVC.h; sourceTree = "<group>"; };
+		0490B59C220BA2760054F854 /* SPCompetitorInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCompetitorInfoVC.m; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0490B59F220BA3A40054F854 /* weeklyofftake */,
+				0490B59E220BA39D0054F854 /* monthlyofftake */,
 				0490B59A220BA1AF0054F854 /* competitorinfo */,
 				0490B58F220B9EBF0054F854 /* attendanceoverview */,
 				0490B587220B9D1B0054F854 /* selloutoverview */,
@@ -556,8 +561,24 @@
 		0490B59A220BA1AF0054F854 /* competitorinfo */ = {
 			isa = PBXGroup;
 			children = (
+				0490B59B220BA2760054F854 /* SPCompetitorInfoVC.h */,
+				0490B59C220BA2760054F854 /* SPCompetitorInfoVC.m */,
 			);
 			path = competitorinfo;
+			sourceTree = "<group>";
+		};
+		0490B59E220BA39D0054F854 /* monthlyofftake */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = monthlyofftake;
+			sourceTree = "<group>";
+		};
+		0490B59F220BA3A40054F854 /* weeklyofftake */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = weeklyofftake;
 			sourceTree = "<group>";
 		};
 		04EBBCD321F70CA800B26B44 /* cell */ = {
@@ -943,6 +964,7 @@
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,
+				0490B59D220BA2760054F854 /* SPCompetitorInfoVC.m in Sources */,
 				04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */,
 				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,
 				042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */,

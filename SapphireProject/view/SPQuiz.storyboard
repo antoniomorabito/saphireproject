@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nRL-sQ-mu6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--QuizVC-->
         <scene sceneID="Jil-Vi-mFh">
             <objects>
-                <viewController id="nRL-sQ-mu6" sceneMemberID="viewController">
+                <viewController id="nRL-sQ-mu6" customClass="SPQuizVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pvO-sw-ykj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                     <constraint firstAttribute="height" constant="44" id="sLY-s6-5PM"/>
                                 </constraints>
                                 <state key="normal" image="ic_close"/>
+                                <connections>
+                                    <action selector="didTapDismiss:" destination="nRL-sQ-mu6" eventType="touchUpInside" id="0SJ-jj-P4r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3v-w9-x2n">
                                 <rect key="frame" x="159.5" y="88" width="56" height="56"/>
@@ -285,6 +288,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4VH-HN-B3w"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="eKx-nR-yr1" id="iAf-9A-XTk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnI-Vm-Vat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,7 +20,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ttb-93-Gyc">
             <objects>
-                <navigationController id="UOc-KK-qbk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navselloutoverview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UOc-KK-qbk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="hp1-WE-kxa">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="-263" y="151"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Sellout OverviewVC-->
         <scene sceneID="pHx-Q3-yXM">
             <objects>
-                <tableViewController id="RPJ-Gg-x0k" sceneMemberID="viewController">
+                <tableViewController id="RPJ-Gg-x0k" customClass="SPSelloutOverviewVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="yEt-hi-SiO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="166" id="DyK-Wu-pvX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="overcell" rowHeight="166" id="DyK-Wu-pvX" customClass="SPSelloutoverCell">
                                 <rect key="frame" x="0.0" y="1" width="375" height="166"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DyK-Wu-pvX" id="KJr-fP-WVc">
@@ -199,6 +199,9 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="ic_back" id="fCN-lx-CSD">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapBack:" destination="RPJ-Gg-x0k" id="j2c-dQ-OV4"/>
+                            </connections>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="rFq-y3-UOv">
                             <rect key="frame" x="187.5" y="0.0" width="0.0" height="44"/>

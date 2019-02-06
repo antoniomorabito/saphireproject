@@ -30,6 +30,8 @@
 		0490B57F220B8C210054F854 /* SPSKOvervVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B57E220B8C210054F854 /* SPSKOvervVC.m */; };
 		0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B581220B8CB30054F854 /* SPTableSKUVC.m */; };
 		0490B586220B91CC0054F854 /* SPSkuOverOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B585220B91CC0054F854 /* SPSkuOverOneCell.m */; };
+		0490B58A220B9D480054F854 /* SPSelloutOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B589220B9D480054F854 /* SPSelloutOverviewVC.m */; };
+		0490B58E220B9D8B0054F854 /* SPSelloutoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B58D220B9D8B0054F854 /* SPSelloutoverCell.m */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
@@ -132,6 +134,10 @@
 		0490B581220B8CB30054F854 /* SPTableSKUVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTableSKUVC.m; sourceTree = "<group>"; };
 		0490B584220B91CC0054F854 /* SPSkuOverOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSkuOverOneCell.h; sourceTree = "<group>"; };
 		0490B585220B91CC0054F854 /* SPSkuOverOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSkuOverOneCell.m; sourceTree = "<group>"; };
+		0490B588220B9D480054F854 /* SPSelloutOverviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSelloutOverviewVC.h; sourceTree = "<group>"; };
+		0490B589220B9D480054F854 /* SPSelloutOverviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSelloutOverviewVC.m; sourceTree = "<group>"; };
+		0490B58C220B9D8B0054F854 /* SPSelloutoverCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSelloutoverCell.h; sourceTree = "<group>"; };
+		0490B58D220B9D8B0054F854 /* SPSelloutoverCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSelloutoverCell.m; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -349,6 +355,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0490B587220B9D1B0054F854 /* selloutoverview */,
 				0490B57C220B8C0D0054F854 /* SKUOverview */,
 				0490B578220B894B0054F854 /* sku */,
 				0490B574220B800D0054F854 /* sellout */,
@@ -491,6 +498,25 @@
 			children = (
 				0490B584220B91CC0054F854 /* SPSkuOverOneCell.h */,
 				0490B585220B91CC0054F854 /* SPSkuOverOneCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		0490B587220B9D1B0054F854 /* selloutoverview */ = {
+			isa = PBXGroup;
+			children = (
+				0490B58B220B9D6F0054F854 /* cell */,
+				0490B588220B9D480054F854 /* SPSelloutOverviewVC.h */,
+				0490B589220B9D480054F854 /* SPSelloutOverviewVC.m */,
+			);
+			path = selloutoverview;
+			sourceTree = "<group>";
+		};
+		0490B58B220B9D6F0054F854 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				0490B58C220B9D8B0054F854 /* SPSelloutoverCell.h */,
+				0490B58D220B9D8B0054F854 /* SPSelloutoverCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -863,6 +889,7 @@
 				042CA0AF21A4F19500AF8E74 /* SapphireProject.xcdatamodeld in Sources */,
 				84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
+				0490B58E220B9D8B0054F854 /* SPSelloutoverCell.m in Sources */,
 				04EBBD0A21F84AE000B26B44 /* SPTimeHelper.m in Sources */,
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
 				04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */,
@@ -883,6 +910,7 @@
 				0490B57B220B89650054F854 /* SPSKUVC.m in Sources */,
 				0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
+				0490B58A220B9D480054F854 /* SPSelloutOverviewVC.m in Sources */,
 				042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */,
 				0490B57F220B8C210054F854 /* SPSKOvervVC.m in Sources */,
 			);

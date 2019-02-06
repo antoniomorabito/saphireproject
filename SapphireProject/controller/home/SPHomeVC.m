@@ -83,6 +83,9 @@
     }
     else if ([data isEqualToString:@"Sell Out Overview"]) {
       
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSellOutOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navselloutoverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"Competitor Info"]) {
       

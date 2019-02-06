@@ -94,11 +94,16 @@
         [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"SKU"]) {
-     
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSKU" bundle:nil]instantiateViewControllerWithIdentifier:@"navsku"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"SKU Overview"]){
-     
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSKUOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navSKUOverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
     }
+
 
     
     

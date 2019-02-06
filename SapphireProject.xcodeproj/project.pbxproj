@@ -27,6 +27,9 @@
 		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
 		0490B577220B84140054F854 /* SPSelloutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B576220B84140054F854 /* SPSelloutVC.m */; };
 		0490B57B220B89650054F854 /* SPSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B57A220B89650054F854 /* SPSKUVC.m */; };
+		0490B57F220B8C210054F854 /* SPSKOvervVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B57E220B8C210054F854 /* SPSKOvervVC.m */; };
+		0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B581220B8CB30054F854 /* SPTableSKUVC.m */; };
+		0490B586220B91CC0054F854 /* SPSkuOverOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B585220B91CC0054F854 /* SPSkuOverOneCell.m */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
@@ -123,6 +126,12 @@
 		0490B576220B84140054F854 /* SPSelloutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSelloutVC.m; sourceTree = "<group>"; };
 		0490B579220B89650054F854 /* SPSKUVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSKUVC.h; sourceTree = "<group>"; };
 		0490B57A220B89650054F854 /* SPSKUVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSKUVC.m; sourceTree = "<group>"; };
+		0490B57D220B8C210054F854 /* SPSKOvervVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSKOvervVC.h; sourceTree = "<group>"; };
+		0490B57E220B8C210054F854 /* SPSKOvervVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSKOvervVC.m; sourceTree = "<group>"; };
+		0490B580220B8CB30054F854 /* SPTableSKUVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTableSKUVC.h; sourceTree = "<group>"; };
+		0490B581220B8CB30054F854 /* SPTableSKUVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTableSKUVC.m; sourceTree = "<group>"; };
+		0490B584220B91CC0054F854 /* SPSkuOverOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSkuOverOneCell.h; sourceTree = "<group>"; };
+		0490B585220B91CC0054F854 /* SPSkuOverOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSkuOverOneCell.m; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -340,6 +349,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0490B57C220B8C0D0054F854 /* SKUOverview */,
 				0490B578220B894B0054F854 /* sku */,
 				0490B574220B800D0054F854 /* sellout */,
 				04EBBD0421F76DEE00B26B44 /* feedback */,
@@ -462,6 +472,27 @@
 				0490B57A220B89650054F854 /* SPSKUVC.m */,
 			);
 			path = sku;
+			sourceTree = "<group>";
+		};
+		0490B57C220B8C0D0054F854 /* SKUOverview */ = {
+			isa = PBXGroup;
+			children = (
+				0490B583220B91B00054F854 /* cell */,
+				0490B57D220B8C210054F854 /* SPSKOvervVC.h */,
+				0490B57E220B8C210054F854 /* SPSKOvervVC.m */,
+				0490B580220B8CB30054F854 /* SPTableSKUVC.h */,
+				0490B581220B8CB30054F854 /* SPTableSKUVC.m */,
+			);
+			path = SKUOverview;
+			sourceTree = "<group>";
+		};
+		0490B583220B91B00054F854 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				0490B584220B91CC0054F854 /* SPSkuOverOneCell.h */,
+				0490B585220B91CC0054F854 /* SPSkuOverOneCell.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		04EBBCD321F70CA800B26B44 /* cell */ = {
@@ -838,6 +869,7 @@
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
 				04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */,
+				0490B586220B91CC0054F854 /* SPSkuOverOneCell.m in Sources */,
 				04EBBD0D21F862D700B26B44 /* SPUtility.m in Sources */,
 				0490B577220B84140054F854 /* SPSelloutVC.m in Sources */,
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
@@ -849,8 +881,10 @@
 				04EBBD0721F76E0200B26B44 /* SPFeedbackVC.m in Sources */,
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,
 				0490B57B220B89650054F854 /* SPSKUVC.m in Sources */,
+				0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */,
 				042CA0A621A4F19500AF8E74 /* AppDelegate.m in Sources */,
 				042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */,
+				0490B57F220B8C210054F854 /* SPSKOvervVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -79,6 +79,9 @@
     else if ([data isEqualToString:@"Weekly Offtake"]) {
     }
     else if ([data isEqualToString:@"Attendance Overview"]) {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
        
     }
     else if ([data isEqualToString:@"Sell Out Overview"]) {

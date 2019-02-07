@@ -42,4 +42,8 @@ completionHandler:(SPCompletionHandler)handler;
 - (void)doGetProducts:(NSDictionary* )data
                    view:(UIView *)view
       completionHandler:(SPCompletionHandler)handler;
+
+- (void)doSellout:(NSDictionary* )data
+                 view:(UIView *)view
+    completionHandler:(SPCompletionHandler)handler;
 @end

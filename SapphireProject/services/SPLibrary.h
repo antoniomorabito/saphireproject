@@ -40,7 +40,7 @@
 #import "SPDealer+CoreDataProperties.h"
 #import "SPCompetitor+CoreDataProperties.h"
 #import "SPProduct+CoreDataProperties.h"
-
+@import TrueTime;
 
 
 #import "LSLDatePickerDialog.h"

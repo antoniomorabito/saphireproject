@@ -1,28 +1,21 @@
-
 //
-//  SPAttendanceVC.m
+//  SPCarouselChild.m
 //  SapphireProject
 //
 //  Created by mac on 07/02/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 
-#import "SPAttendanceVC.h"
+#import "SPCarouselChild.h"
 
-@interface SPAttendanceVC ()
+@interface SPCarouselChild ()
 
 @end
 
-@implementation SPAttendanceVC
+@implementation SPCarouselChild
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-     TrueTimeClient *client = [TrueTimeClient sharedInstance];
-    
-      NSDate *now = [[client referenceTime] now];
-    
-    NSLog(@"nilai datenya adalah : %@",now);
     // Do any additional setup after loading the view.
 }
 

@@ -1,7 +1,92 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Carousel Child-->
+        <scene sceneID="nre-up-5XX">
+            <objects>
+                <viewController storyboardIdentifier="carouselPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Spf-DP-1Ze" customClass="SPCarouselChild" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zoq-7s-1gP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cbd-ZB-opb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MVu-1r-oQt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvn-kF-z0g" userLabel="BG_DUMMY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ZO-rj-v96">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
+                            </imageView>
+                            <view alpha="0.25" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-8f-d67">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-tT-A7H">
+                                <rect key="frame" x="20" y="179" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Fvp-8w-O8y"/>
+                                    <constraint firstAttribute="height" constant="21" id="xLt-rP-zCf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fvp-8w-O8y"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bvn-kF-z0g" firstAttribute="height" secondItem="MVu-1r-oQt" secondAttribute="height" id="2YI-6F-pVL"/>
+                            <constraint firstItem="7ZO-rj-v96" firstAttribute="top" secondItem="bvn-kF-z0g" secondAttribute="top" id="3ze-Ro-IBW"/>
+                            <constraint firstItem="hz8-tT-A7H" firstAttribute="leading" secondItem="7ZO-rj-v96" secondAttribute="leading" constant="20" id="483-Ah-SlV"/>
+                            <constraint firstItem="hz8-tT-A7H" firstAttribute="bottom" secondItem="7ZO-rj-v96" secondAttribute="bottom" constant="-37" id="4Xj-Fe-lD8"/>
+                            <constraint firstItem="hz8-tT-A7H" firstAttribute="centerX" secondItem="7ZO-rj-v96" secondAttribute="centerX" id="5ze-kr-V0o"/>
+                            <constraint firstItem="bvn-kF-z0g" firstAttribute="width" secondItem="MVu-1r-oQt" secondAttribute="width" id="MoZ-my-UoD"/>
+                            <constraint firstItem="7ZO-rj-v96" firstAttribute="bottom" secondItem="bvn-kF-z0g" secondAttribute="bottom" constant="-3" id="V1h-Rn-QOp"/>
+                            <constraint firstItem="7ZO-rj-v96" firstAttribute="trailing" secondItem="bvn-kF-z0g" secondAttribute="trailing" id="ZjQ-CG-Ml5"/>
+                            <constraint firstItem="7ZO-rj-v96" firstAttribute="leading" secondItem="bvn-kF-z0g" secondAttribute="leading" id="hDo-sH-x1h"/>
+                            <constraint firstItem="hz8-tT-A7H" firstAttribute="trailing" secondItem="7ZO-rj-v96" secondAttribute="trailing" constant="-20" id="isI-lg-bd8"/>
+                            <constraint firstItem="bvn-kF-z0g" firstAttribute="centerY" secondItem="MVu-1r-oQt" secondAttribute="centerY" id="jlv-U8-9Fb"/>
+                            <constraint firstItem="bvn-kF-z0g" firstAttribute="centerX" secondItem="MVu-1r-oQt" secondAttribute="centerX" id="m0a-jE-1cA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dea-Xn-Vgh"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5ze-kr-V0o"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="240"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="7ZO-rj-v96" id="KAl-MD-U8u"/>
+                        <outlet property="headerMap" destination="hz8-tT-A7H" id="Lhc-v4-UJv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIG-UF-dt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163" y="103"/>
+        </scene>
+    </scenes>
 </document>

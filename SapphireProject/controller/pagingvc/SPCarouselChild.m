@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [_backgroundImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/tour-image/load/%@",kCABaseURL,_imageBack]]
+//                        placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    [self.backgroundImage setImage:[UIImage imageNamed:_imageBack]];
+//    self.headerMap.text = [NSString stringWithFormat:@"%@",_headerString];
     // Do any additional setup after loading the view.
 }
 

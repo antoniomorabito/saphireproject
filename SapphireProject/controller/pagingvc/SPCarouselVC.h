@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SPCarouselVC : UIViewController
-
+#import "SPNetworkManager.h"
+#import "SPCarouselChild.h"
+@interface SPCarouselVC : UIViewController<UIPageViewControllerDataSource,UIPageViewControllerDelegate,UIScrollViewDelegate,UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UIPageControl *paging;
+@property (strong,nonatomic)NSString *kategori;
+@property (strong,nonatomic)NSString *tags;
+@property (strong,nonatomic)NSArray *datas;
+- (void)changePage:(SPCarouselChild *)card;
 @end

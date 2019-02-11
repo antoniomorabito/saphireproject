@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zua-FM-Ghp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zua-FM-Ghp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,23 +40,23 @@
             <objects>
                 <viewController storyboardIdentifier="sellout" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F0J-Ti-C58" customClass="SPSelloutVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdz-Fh-K1Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAl-cp-XLk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqv-nF-naG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="910"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="General" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-F4-StN">
-                                                <rect key="frame" x="16" y="16" width="343" height="17.5"/>
+                                                <rect key="frame" x="16" y="16" width="343" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Date" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-JH-8Bt" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="49.5" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="50.5" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="2GO-73-Vse"/>
@@ -78,14 +78,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-fm-cge">
-                                                <rect key="frame" x="16" y="65" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="66" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="9mO-7g-cTJ"/>
                                                     <constraint firstAttribute="width" constant="20" id="gFz-0U-iGY"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Location (Ex. Jawa Barat)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="EP9-TG-IhB" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="106.5" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="107.5" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="jQn-Jl-yBq"/>
@@ -107,14 +107,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-Wq-xKm">
-                                                <rect key="frame" x="16" y="122" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="123" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="75x-Yb-3mV"/>
                                                     <constraint firstAttribute="width" constant="20" id="YVY-Ke-MAS"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Category (Ex. Baby Toy)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="1ni-Wl-HZC" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="163.5" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="164.5" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="dBn-tF-JwP"/>
@@ -136,20 +136,20 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="9eW-fB-5TG">
-                                                <rect key="frame" x="16" y="179" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="180" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="2VK-nh-ARS"/>
                                                     <constraint firstAttribute="width" constant="20" id="XNm-8n-GTf"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Customer Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZH-Am-8P0">
-                                                <rect key="frame" x="16" y="220.5" width="101.5" height="17.5"/>
+                                                <rect key="frame" x="16" y="221.5" width="119" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Customer Name" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-rj-idW" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="254" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="256" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="MLc-aG-Qqm"/>
@@ -171,10 +171,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-7O-EMz">
-                                                <rect key="frame" x="16" y="311" width="343" height="95.5"/>
+                                                <rect key="frame" x="16" y="313" width="343" height="95.5"/>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="sXb-85-crD" customClass="JVFloatLabeledTextView">
-                                                <rect key="frame" x="16" y="311" width="343" height="95.5"/>
+                                                <rect key="frame" x="16" y="313" width="343" height="95.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="95.5" id="mNT-Ie-rQL"/>
@@ -199,7 +199,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Costumer Phone Number" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="t50-h2-Hti" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="422.5" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="424.5" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="eES-4U-ke0"/>
@@ -221,7 +221,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Customer Price" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-tt-Cgv" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="479.5" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="481.5" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="XiI-ZJ-r3i"/>
@@ -243,13 +243,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Product Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZo-Vq-4F5">
-                                                <rect key="frame" x="16" y="537" width="89" height="17.5"/>
+                                                <rect key="frame" x="16" y="539" width="105" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Availability" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="Wgq-fp-yuA" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="571" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="574" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="LpF-k4-rYR"/>
@@ -271,14 +271,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="tco-DW-280">
-                                                <rect key="frame" x="16" y="586.5" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="589.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="7EH-L7-YQJ"/>
                                                     <constraint firstAttribute="width" constant="20" id="7hU-mg-d4R"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Installation" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-5y-cFa" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="628" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="631" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="Mgw-Ww-R3y"/>
@@ -300,33 +300,33 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="cE0-Eg-buI">
-                                                <rect key="frame" x="16" y="643.5" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="646.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="9Og-Ih-oMt"/>
                                                     <constraint firstAttribute="height" constant="20" id="kmI-3T-35e"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcv-tu-xEo">
-                                                <rect key="frame" x="0.0" y="669" width="375" height="141"/>
+                                                <rect key="frame" x="0.0" y="672" width="375" height="178"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCT_NAME" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZO-8Y-QxV">
-                                                        <rect key="frame" x="16" y="16" width="343" height="0.0"/>
+                                                        <rect key="frame" x="16" y="16" width="343" height="21"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCT_PRICE" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My5-Og-a6K">
-                                                        <rect key="frame" x="16" y="24" width="343" height="0.0"/>
+                                                        <rect key="frame" x="16" y="45" width="343" height="16"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="TCG-J2-5xU">
-                                                        <rect key="frame" x="265" y="40" width="94" height="29"/>
+                                                        <rect key="frame" x="265" y="77" width="94" height="29"/>
                                                         <color key="tintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </stepper>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="Ybo-iA-FUs">
-                                                        <rect key="frame" x="16" y="40" width="166" height="29"/>
+                                                        <rect key="frame" x="16" y="77" width="166" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="29" id="yRa-LU-xfv"/>
                                                         </constraints>
@@ -335,19 +335,19 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pc(s)/unit(s)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCD-Ba-pSI">
-                                                        <rect key="frame" x="190" y="48.5" width="51.5" height="12"/>
+                                                        <rect key="frame" x="190" y="85.5" width="58.5" height="12"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBTOTAL" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPe-hC-DTV">
-                                                        <rect key="frame" x="16" y="85" width="343" height="15.5"/>
+                                                        <rect key="frame" x="16" y="122" width="343" height="16"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBTOTAL_PRICE" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eA7-jD-AEm">
-                                                        <rect key="frame" x="16" y="108.5" width="343" height="15.5"/>
+                                                        <rect key="frame" x="16" y="146" width="343" height="16"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -377,8 +377,65 @@
                                                     <constraint firstItem="My5-Og-a6K" firstAttribute="trailing" secondItem="4ZO-8Y-QxV" secondAttribute="trailing" id="yyo-dZ-Txb"/>
                                                 </constraints>
                                             </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AE1-By-EdY">
+                                                <rect key="frame" x="0.0" y="882" width="375" height="81"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="81" id="qxN-Jx-nFF"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="16" id="ELy-H4-A7E">
+                                                    <size key="itemSize" width="144" height="81"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2IO-4X-AUf" userLabel="Image">
+                                                        <rect key="frame" x="16" y="0.0" width="144" height="81"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-c8-Upt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="SSo-c8-Upt" firstAttribute="leading" secondItem="2IO-4X-AUf" secondAttribute="leading" id="Ao1-kW-5K0"/>
+                                                            <constraint firstItem="SSo-c8-Upt" firstAttribute="top" secondItem="2IO-4X-AUf" secondAttribute="top" id="ExJ-jW-ru9"/>
+                                                            <constraint firstAttribute="bottom" secondItem="SSo-c8-Upt" secondAttribute="bottom" id="cxI-dI-jU7"/>
+                                                            <constraint firstAttribute="trailing" secondItem="SSo-c8-Upt" secondAttribute="trailing" id="o5w-il-QyS"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="144" height="81"/>
+                                                    </collectionViewCell>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BUy-GU-6kS" userLabel="Add Button">
+                                                        <rect key="frame" x="215" y="0.0" width="144" height="81"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQc-Xg-CTy">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                                                    <state key="normal" image="ic_cam"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </view>
+                                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="aQc-Xg-CTy" secondAttribute="bottom" id="11u-2p-lDb"/>
+                                                            <constraint firstItem="aQc-Xg-CTy" firstAttribute="leading" secondItem="BUy-GU-6kS" secondAttribute="leading" id="6yB-OQ-Rd3"/>
+                                                            <constraint firstItem="aQc-Xg-CTy" firstAttribute="top" secondItem="BUy-GU-6kS" secondAttribute="top" id="Enr-LK-KIN"/>
+                                                            <constraint firstAttribute="trailing" secondItem="aQc-Xg-CTy" secondAttribute="trailing" id="abS-tN-TeV"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="144" height="81"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bB8-ng-CLg">
-                                                <rect key="frame" x="28" y="838" width="319" height="44"/>
+                                                <rect key="frame" x="28" y="1064" width="319" height="44"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="vMY-ir-d3W"/>
@@ -393,10 +450,17 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Pick your picture(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJm-WZ-wx6">
+                                                <rect key="frame" x="16" y="850" width="125" height="16"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="pZH-Am-8P0" firstAttribute="top" secondItem="1ni-Wl-HZC" secondAttribute="bottom" constant="16" id="0xi-bw-JBO"/>
+                                            <constraint firstItem="AE1-By-EdY" firstAttribute="top" secondItem="wJm-WZ-wx6" secondAttribute="bottom" constant="16" id="2A7-sa-DIG"/>
                                             <constraint firstItem="RVn-tt-Cgv" firstAttribute="top" secondItem="t50-h2-Hti" secondAttribute="bottom" constant="16" id="4Md-Dx-V4Y"/>
                                             <constraint firstItem="JZZ-fm-cge" firstAttribute="centerY" secondItem="b4X-JH-8Bt" secondAttribute="centerY" constant="5" id="4Q8-CH-LZp"/>
                                             <constraint firstAttribute="trailing" secondItem="1ni-Wl-HZC" secondAttribute="trailing" constant="16" id="4rG-dU-HHr"/>
@@ -421,15 +485,18 @@
                                             <constraint firstAttribute="bottom" secondItem="bB8-ng-CLg" secondAttribute="bottom" constant="28" id="M1B-5d-Yrn"/>
                                             <constraint firstItem="Wgq-fp-yuA" firstAttribute="top" secondItem="nZo-Vq-4F5" secondAttribute="bottom" constant="16.5" id="MPE-Uz-6n3"/>
                                             <constraint firstItem="t50-h2-Hti" firstAttribute="top" secondItem="sXb-85-crD" secondAttribute="bottom" constant="16" id="MPY-tP-O34"/>
+                                            <constraint firstItem="wJm-WZ-wx6" firstAttribute="top" secondItem="fcv-tu-xEo" secondAttribute="bottom" id="MoC-eC-PlE"/>
                                             <constraint firstItem="Uhi-F4-StN" firstAttribute="top" secondItem="Lqv-nF-naG" secondAttribute="top" constant="16" id="NFg-lO-cia"/>
-                                            <constraint firstItem="bB8-ng-CLg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fcv-tu-xEo" secondAttribute="bottom" constant="28" id="OKD-QW-pVd"/>
                                             <constraint firstAttribute="trailing" secondItem="fcv-tu-xEo" secondAttribute="trailing" id="QZF-ID-QC5"/>
                                             <constraint firstAttribute="trailing" secondItem="EP9-TG-IhB" secondAttribute="trailing" constant="16" id="R7t-IX-W1i"/>
                                             <constraint firstItem="CjH-5y-cFa" firstAttribute="top" secondItem="Wgq-fp-yuA" secondAttribute="bottom" constant="16" id="Rgk-3N-h0W"/>
                                             <constraint firstItem="9eW-fB-5TG" firstAttribute="centerY" secondItem="1ni-Wl-HZC" secondAttribute="centerY" constant="5" id="Rnw-V4-J10"/>
+                                            <constraint firstItem="wJm-WZ-wx6" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="SmO-Ru-3XB"/>
                                             <constraint firstItem="2Kz-7O-EMz" firstAttribute="bottom" secondItem="sXb-85-crD" secondAttribute="bottom" id="U70-XQ-vpq"/>
                                             <constraint firstItem="tco-DW-280" firstAttribute="centerY" secondItem="Wgq-fp-yuA" secondAttribute="centerY" constant="5" id="Ujs-XM-VCH"/>
                                             <constraint firstItem="Ybo-iA-FUs" firstAttribute="top" secondItem="My5-Og-a6K" secondAttribute="bottom" constant="16" id="V9H-68-xaN"/>
+                                            <constraint firstItem="bB8-ng-CLg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AE1-By-EdY" secondAttribute="bottom" constant="28" id="VrD-qr-GdI"/>
+                                            <constraint firstAttribute="trailing" secondItem="AE1-By-EdY" secondAttribute="trailing" id="b7o-iP-xuw"/>
                                             <constraint firstItem="EP9-TG-IhB" firstAttribute="top" secondItem="b4X-JH-8Bt" secondAttribute="bottom" constant="16" id="coy-P4-jzl"/>
                                             <constraint firstAttribute="trailing" secondItem="Wgq-fp-yuA" secondAttribute="trailing" constant="16" id="dZz-wd-J9A"/>
                                             <constraint firstItem="1ni-Wl-HZC" firstAttribute="leading" secondItem="9eW-fB-5TG" secondAttribute="trailing" constant="16" id="evE-3U-CtA"/>
@@ -449,6 +516,7 @@
                                             <constraint firstAttribute="trailing" secondItem="b4X-JH-8Bt" secondAttribute="trailing" constant="16" id="pHB-0n-zgV"/>
                                             <constraint firstItem="Wgq-fp-yuA" firstAttribute="leading" secondItem="tco-DW-280" secondAttribute="trailing" constant="16" id="qeH-SH-3Nq"/>
                                             <constraint firstItem="JZZ-fm-cge" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="rnt-xW-ZKo"/>
+                                            <constraint firstItem="AE1-By-EdY" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" id="sBq-H1-vCo"/>
                                             <constraint firstItem="cE0-Eg-buI" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="sRx-HN-ny7"/>
                                             <constraint firstItem="My5-Og-a6K" firstAttribute="trailing" secondItem="4ZO-8Y-QxV" secondAttribute="trailing" id="sjR-rD-fqB"/>
                                             <constraint firstAttribute="trailing" secondItem="CjH-5y-cFa" secondAttribute="trailing" constant="16" id="svK-Ef-EeV"/>
@@ -506,6 +574,7 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="1200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0L-7n-hpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -515,6 +584,7 @@
     <resources>
         <image name="bg_field_unfocus" width="32" height="18"/>
         <image name="ic_back" width="20" height="20"/>
+        <image name="ic_cam" width="27" height="24"/>
         <image name="ic_dot_date" width="20" height="20"/>
         <image name="ic_dot_package" width="20" height="20"/>
         <image name="ic_dot_pin" width="20" height="20"/>

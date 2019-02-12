@@ -241,6 +241,7 @@
 		84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSKUOverview.storyboard; sourceTree = "<group>"; };
 		84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabAttendance.storyboard; sourceTree = "<group>"; };
 		84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabProfile.storyboard; sourceTree = "<group>"; };
+		848A7D762212C92F0005293B /* SPTabAttendance-v2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPTabAttendance-v2.storyboard"; sourceTree = "<group>"; };
 		84C51B8121DBBF9F0048AFF9 /* SPQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPQuiz.storyboard; sourceTree = "<group>"; };
 		84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPFeedback.storyboard; sourceTree = "<group>"; };
 		84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPOffTake-Monthly.storyboard"; sourceTree = "<group>"; };
@@ -433,6 +434,7 @@
 				042CA0ED21A51DB900AF8E74 /* SPMain.storyboard */,
 				84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */,
 				84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */,
+				848A7D762212C92F0005293B /* SPTabAttendance-v2.storyboard */,
 				845411A721AF0B9800DE8DA8 /* SPTabUpload.storyboard */,
 				84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */,
 				845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */,

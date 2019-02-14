@@ -143,13 +143,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Customer Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZH-Am-8P0">
-                                                <rect key="frame" x="16" y="221.5" width="119" height="18.5"/>
+                                                <rect key="frame" x="16" y="278.5" width="119" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Customer Name" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-rj-idW" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="256" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="313" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="MLc-aG-Qqm"/>
@@ -171,10 +171,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-7O-EMz">
-                                                <rect key="frame" x="16" y="313" width="343" height="95.5"/>
+                                                <rect key="frame" x="16" y="370" width="343" height="95.5"/>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="sXb-85-crD" customClass="JVFloatLabeledTextView">
-                                                <rect key="frame" x="16" y="313" width="343" height="95.5"/>
+                                                <rect key="frame" x="16" y="370" width="343" height="95.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="95.5" id="mNT-Ie-rQL"/>
@@ -199,7 +199,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Costumer Phone Number" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="t50-h2-Hti" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="424.5" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="481.5" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="eES-4U-ke0"/>
@@ -221,7 +221,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Customer Price" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-tt-Cgv" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="16" y="481.5" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="538.5" width="343" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="XiI-ZJ-r3i"/>
@@ -243,13 +243,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Product Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZo-Vq-4F5">
-                                                <rect key="frame" x="16" y="539" width="105" height="18.5"/>
+                                                <rect key="frame" x="16" y="596" width="105" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Availability" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="Wgq-fp-yuA" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="574" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="631" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="LpF-k4-rYR"/>
@@ -271,14 +271,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="tco-DW-280">
-                                                <rect key="frame" x="16" y="589.5" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="646.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="7EH-L7-YQJ"/>
                                                     <constraint firstAttribute="width" constant="20" id="7hU-mg-d4R"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Installation" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-5y-cFa" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="631" width="307" height="41"/>
+                                                <rect key="frame" x="52" y="688" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="Mgw-Ww-R3y"/>
@@ -300,14 +300,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="cE0-Eg-buI">
-                                                <rect key="frame" x="16" y="646.5" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="703.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="9Og-Ih-oMt"/>
                                                     <constraint firstAttribute="height" constant="20" id="kmI-3T-35e"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcv-tu-xEo">
-                                                <rect key="frame" x="0.0" y="672" width="375" height="186"/>
+                                                <rect key="frame" x="0.0" y="729" width="375" height="186"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCT_NAME" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZO-8Y-QxV">
                                                         <rect key="frame" x="16" y="24" width="343" height="21"/>
@@ -394,7 +394,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyJ-H1-3CD">
-                                                <rect key="frame" x="0.0" y="858" width="375" height="113"/>
+                                                <rect key="frame" x="0.0" y="915" width="375" height="113"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Pick your picture(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJm-WZ-wx6">
                                                         <rect key="frame" x="16" y="0.0" width="125" height="16"/>
@@ -470,13 +470,43 @@
                                                     <constraint firstItem="AE1-By-EdY" firstAttribute="top" secondItem="wJm-WZ-wx6" secondAttribute="bottom" constant="16" id="mqZ-m6-3wW"/>
                                                 </constraints>
                                             </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Product Type" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="DuX-Ft-QdI" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="52" y="221.5" width="307" height="41"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="zlM-l7-sbr"/>
+                                                </constraints>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
+                                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="MQ9-iI-U14">
+                                                <rect key="frame" x="16" y="237" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Lyr-4m-8Nt"/>
+                                                    <constraint firstAttribute="width" constant="20" id="nGI-jW-lLk"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="pZH-Am-8P0" firstAttribute="top" secondItem="1ni-Wl-HZC" secondAttribute="bottom" constant="16" id="0xi-bw-JBO"/>
+                                            <constraint firstItem="DuX-Ft-QdI" firstAttribute="leading" secondItem="MQ9-iI-U14" secondAttribute="trailing" constant="16" id="1GH-pE-nFb"/>
                                             <constraint firstItem="RVn-tt-Cgv" firstAttribute="top" secondItem="t50-h2-Hti" secondAttribute="bottom" constant="16" id="4Md-Dx-V4Y"/>
                                             <constraint firstItem="JZZ-fm-cge" firstAttribute="centerY" secondItem="b4X-JH-8Bt" secondAttribute="centerY" constant="5" id="4Q8-CH-LZp"/>
                                             <constraint firstAttribute="trailing" secondItem="1ni-Wl-HZC" secondAttribute="trailing" constant="16" id="4rG-dU-HHr"/>
+                                            <constraint firstAttribute="trailing" secondItem="DuX-Ft-QdI" secondAttribute="trailing" constant="16" id="65k-H4-SN6"/>
                                             <constraint firstAttribute="trailing" secondItem="t50-h2-Hti" secondAttribute="trailing" constant="16" id="7hS-mp-b8X"/>
                                             <constraint firstAttribute="trailing" secondItem="vo6-rj-idW" secondAttribute="trailing" constant="16" id="9Ow-j4-LSu"/>
                                             <constraint firstItem="EP9-TG-IhB" firstAttribute="leading" secondItem="eW4-Wq-xKm" secondAttribute="trailing" constant="16" id="9Xk-Gv-I5N"/>
@@ -488,6 +518,7 @@
                                             <constraint firstItem="bB8-ng-CLg" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="28" id="GOp-7i-orW"/>
                                             <constraint firstItem="vo6-rj-idW" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="Hrs-Tu-xVS"/>
                                             <constraint firstItem="1ni-Wl-HZC" firstAttribute="top" secondItem="EP9-TG-IhB" secondAttribute="bottom" constant="16" id="I4s-V5-2d5"/>
+                                            <constraint firstItem="DuX-Ft-QdI" firstAttribute="top" secondItem="1ni-Wl-HZC" secondAttribute="bottom" constant="16" id="ILu-48-uGU"/>
                                             <constraint firstItem="bB8-ng-CLg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wyJ-H1-3CD" secondAttribute="bottom" constant="28" id="IMP-dD-Mt5"/>
                                             <constraint firstItem="fcv-tu-xEo" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" id="Iaa-Ua-kH7"/>
                                             <constraint firstAttribute="trailing" secondItem="bB8-ng-CLg" secondAttribute="trailing" constant="28" id="Jl7-9D-fz3"/>
@@ -508,6 +539,8 @@
                                             <constraint firstItem="2Kz-7O-EMz" firstAttribute="bottom" secondItem="sXb-85-crD" secondAttribute="bottom" id="U70-XQ-vpq"/>
                                             <constraint firstItem="tco-DW-280" firstAttribute="centerY" secondItem="Wgq-fp-yuA" secondAttribute="centerY" constant="5" id="Ujs-XM-VCH"/>
                                             <constraint firstItem="Ybo-iA-FUs" firstAttribute="top" secondItem="My5-Og-a6K" secondAttribute="bottom" constant="16" id="V9H-68-xaN"/>
+                                            <constraint firstItem="MQ9-iI-U14" firstAttribute="centerY" secondItem="DuX-Ft-QdI" secondAttribute="centerY" constant="5" id="Y0P-QB-QoW"/>
+                                            <constraint firstItem="pZH-Am-8P0" firstAttribute="top" secondItem="DuX-Ft-QdI" secondAttribute="bottom" constant="16" id="Yyu-Z5-KMC"/>
                                             <constraint firstAttribute="trailing" secondItem="wyJ-H1-3CD" secondAttribute="trailing" id="Za3-eM-ved"/>
                                             <constraint firstItem="EP9-TG-IhB" firstAttribute="top" secondItem="b4X-JH-8Bt" secondAttribute="bottom" constant="16" id="coy-P4-jzl"/>
                                             <constraint firstAttribute="trailing" secondItem="Wgq-fp-yuA" secondAttribute="trailing" constant="16" id="dZz-wd-J9A"/>
@@ -519,6 +552,7 @@
                                             <constraint firstItem="9eW-fB-5TG" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="h0s-wq-t2a"/>
                                             <constraint firstItem="fcv-tu-xEo" firstAttribute="top" secondItem="CjH-5y-cFa" secondAttribute="bottom" id="hIO-XH-SQC"/>
                                             <constraint firstAttribute="trailing" secondItem="sXb-85-crD" secondAttribute="trailing" constant="16" id="iEf-uG-HXc"/>
+                                            <constraint firstItem="MQ9-iI-U14" firstAttribute="leading" secondItem="Lqv-nF-naG" secondAttribute="leading" constant="16" id="jHp-1h-jR5"/>
                                             <constraint firstItem="wyJ-H1-3CD" firstAttribute="top" secondItem="fcv-tu-xEo" secondAttribute="bottom" id="jL4-uh-eN8"/>
                                             <constraint firstItem="2Kz-7O-EMz" firstAttribute="top" secondItem="sXb-85-crD" secondAttribute="top" id="kpz-49-9fz"/>
                                             <constraint firstItem="eW4-Wq-xKm" firstAttribute="centerY" secondItem="EP9-TG-IhB" secondAttribute="centerY" constant="5" id="lQm-Rb-BtP"/>

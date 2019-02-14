@@ -246,6 +246,7 @@
 		84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPFeedback.storyboard; sourceTree = "<group>"; };
 		84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPOffTake-Monthly.storyboard"; sourceTree = "<group>"; };
 		84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabHome.storyboard; sourceTree = "<group>"; };
+		84E3C5F72215AB9D00CECFBC /* SPSKU-v2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPSKU-v2.storyboard"; sourceTree = "<group>"; };
 		84FCFF2121A7D2100037F0A9 /* SapphireProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SapphireProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		84FCFF2221A7D2110037F0A9 /* SPMainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMainTab.swift; sourceTree = "<group>"; };
 		84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSellOut.storyboard; sourceTree = "<group>"; };
@@ -445,6 +446,7 @@
 				84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */,
 				84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */,
 				042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */,
+				84E3C5F72215AB9D00CECFBC /* SPSKU-v2.storyboard */,
 				84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */,
 				84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */,
 				042CA0F321A51E7000AF8E74 /* SPAttendanceOverview.storyboard */,

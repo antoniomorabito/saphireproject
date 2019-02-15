@@ -48,7 +48,7 @@
                                         <color key="badgeColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                                     </tabBarItem>
-                                    <tabBarItem tag="1" title="Attendance" image="ic_tab2_off" selectedImage="ic_tab2" id="EFx-C1-EBi">
+                                    <tabBarItem tag="1" title="Absensi" image="ic_tab2_off" selectedImage="ic_tab2" id="EFx-C1-EBi">
                                         <color key="badgeColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                                     </tabBarItem>
@@ -56,7 +56,7 @@
                                         <color key="badgeColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                                     </tabBarItem>
-                                    <tabBarItem tag="3" title="Profile" image="ic_tab4_off" selectedImage="ic_tab4" id="5pi-1f-frf">
+                                    <tabBarItem tag="3" title="Profil" image="ic_tab4_off" selectedImage="ic_tab4" id="5pi-1f-frf">
                                         <color key="badgeColor" red="0.19964459540000001" green="0.79965239759999995" blue="0.5986716151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                                     </tabBarItem>

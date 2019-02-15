@@ -49,6 +49,10 @@
 		0490B5B3220BA7070054F854 /* SPMonthlyOfftakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5B2220BA7070054F854 /* SPMonthlyOfftakeCell.m */; };
 		0490B5B7220BA8040054F854 /* SPQuizVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5B6220BA8040054F854 /* SPQuizVC.m */; };
 		0490B5BB220BA8C20054F854 /* SPAttendanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B5BA220BA8C20054F854 /* SPAttendanceVC.m */; };
+		04934B732216450D00AB5250 /* SearchStringPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04934B6B2216450D00AB5250 /* SearchStringPickerViewController.m */; };
+		04934B742216450D00AB5250 /* SearchStringPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04934B6C2216450D00AB5250 /* SearchStringPickerViewController.xib */; };
+		04934B752216450D00AB5250 /* NSString+SearchablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04934B6D2216450D00AB5250 /* NSString+SearchablePicker.m */; };
+		04934B762216450D00AB5250 /* UIImage+SearchablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04934B6E2216450D00AB5250 /* UIImage+SearchablePicker.m */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
@@ -185,6 +189,14 @@
 		0490B5B6220BA8040054F854 /* SPQuizVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPQuizVC.m; sourceTree = "<group>"; };
 		0490B5B9220BA8C20054F854 /* SPAttendanceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAttendanceVC.h; sourceTree = "<group>"; };
 		0490B5BA220BA8C20054F854 /* SPAttendanceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAttendanceVC.m; sourceTree = "<group>"; };
+		04934B6B2216450D00AB5250 /* SearchStringPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchStringPickerViewController.m; sourceTree = "<group>"; };
+		04934B6C2216450D00AB5250 /* SearchStringPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchStringPickerViewController.xib; sourceTree = "<group>"; };
+		04934B6D2216450D00AB5250 /* NSString+SearchablePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SearchablePicker.m"; sourceTree = "<group>"; };
+		04934B6E2216450D00AB5250 /* UIImage+SearchablePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SearchablePicker.m"; sourceTree = "<group>"; };
+		04934B6F2216450D00AB5250 /* SearchStringPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchStringPickerViewController.h; sourceTree = "<group>"; };
+		04934B702216450D00AB5250 /* NSString+SearchablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SearchablePicker.h"; sourceTree = "<group>"; };
+		04934B712216450D00AB5250 /* SearchablePicker-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SearchablePicker-Bridging-Header.h"; sourceTree = "<group>"; };
+		04934B722216450D00AB5250 /* UIImage+SearchablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SearchablePicker.h"; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -327,6 +339,7 @@
 		042CA0A321A4F19500AF8E74 /* SapphireProject */ = {
 			isa = PBXGroup;
 			children = (
+				04934B6A2216450D00AB5250 /* SearchablePicker */,
 				043E028A220C0E1D00CCA20C /* imageasset */,
 				84FCFF2021A7D1E50037F0A9 /* custom */,
 				843B6E6C21A56929003593BF /* font */,
@@ -690,6 +703,21 @@
 			path = attendance;
 			sourceTree = "<group>";
 		};
+		04934B6A2216450D00AB5250 /* SearchablePicker */ = {
+			isa = PBXGroup;
+			children = (
+				04934B6B2216450D00AB5250 /* SearchStringPickerViewController.m */,
+				04934B6C2216450D00AB5250 /* SearchStringPickerViewController.xib */,
+				04934B6D2216450D00AB5250 /* NSString+SearchablePicker.m */,
+				04934B6E2216450D00AB5250 /* UIImage+SearchablePicker.m */,
+				04934B6F2216450D00AB5250 /* SearchStringPickerViewController.h */,
+				04934B702216450D00AB5250 /* NSString+SearchablePicker.h */,
+				04934B712216450D00AB5250 /* SearchablePicker-Bridging-Header.h */,
+				04934B722216450D00AB5250 /* UIImage+SearchablePicker.h */,
+			);
+			path = SearchablePicker;
+			sourceTree = "<group>";
+		};
 		04EBBCD321F70CA800B26B44 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -918,6 +946,7 @@
 				84CA659C21D789E0003CA458 /* SPOffTake-Monthly.storyboard in Resources */,
 				042CA0F221A51E0F00AF8E74 /* SPSKU.storyboard in Resources */,
 				84727FE121A9B3F000EDC907 /* SPSKUOverview.storyboard in Resources */,
+				04934B742216450D00AB5250 /* SearchStringPickerViewController.xib in Resources */,
 				84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */,
 				84C51B8221DBBF9F0048AFF9 /* SPQuiz.storyboard in Resources */,
 				84727FE321A9B4FF00EDC907 /* SPTabAttendance.storyboard in Resources */,
@@ -963,7 +992,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/APBanner/APBanner.framework",
-				"${BUILT_PRODUCTS_DIR}/CZPicker/CZPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog-ObjC/DatePickerDialog_ObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/FDTake/FDTake.framework",
 				"${BUILT_PRODUCTS_DIR}/FreakingSimpleRoundImageView/FreakingSimpleRoundImageView.framework",
@@ -978,7 +1006,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APBanner.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CZPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog_ObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDTake.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FreakingSimpleRoundImageView.framework",
@@ -1067,6 +1094,7 @@
 				84FCFF2E21A84CBB0037F0A9 /* JVFloatLabeledTextView.m in Sources */,
 				0490B5AF220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
+				04934B732216450D00AB5250 /* SearchStringPickerViewController.m in Sources */,
 				0490B58E220B9D8B0054F854 /* SPSelloutoverCell.m in Sources */,
 				04EBBD0A21F84AE000B26B44 /* SPTimeHelper.m in Sources */,
 				0490B5A2220BA4C00054F854 /* SPWeeklyOfftakeVC.m in Sources */,
@@ -1075,6 +1103,7 @@
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
 				04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */,
+				04934B762216450D00AB5250 /* UIImage+SearchablePicker.m in Sources */,
 				0490B586220B91CC0054F854 /* SPSkuOverOneCell.m in Sources */,
 				04EBBD0D21F862D700B26B44 /* SPUtility.m in Sources */,
 				0490B577220B84140054F854 /* SPSelloutVC.m in Sources */,
@@ -1083,6 +1112,7 @@
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,
 				0490B59D220BA2760054F854 /* SPCompetitorInfoVC.m in Sources */,
+				04934B752216450D00AB5250 /* NSString+SearchablePicker.m in Sources */,
 				04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */,
 				042CA0FA21A51F8E00AF8E74 /* SPSplash.m in Sources */,
 				042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */,

@@ -59,43 +59,22 @@
 }
 
 - (IBAction)didTapPickLocation:(id)sender {
-    NSArray *fruits = @[@"Apple", @"Banana", @"Grape", @"Watermelon", @"Lychee"];
-    self.datasLocations = [[NSMutableArray alloc]initWithArray:fruits copyItems:YES];
+    NSArray *aryCountries = [NSArray arrayWithObjects:@"Afghanistan", @"Georgia", @"Haiti", @"India", nil];
     
-    
-    CZPickerView *picker = [[CZPickerView alloc] initWithHeaderTitle:@"Lokasi"
-                                                   cancelButtonTitle:@"Cancel"
-                                                  confirmButtonTitle:@"Confirm"];
-    picker.delegate = self;
-    picker.dataSource = self;
-    picker.needFooterView = NO;
-    [picker show];
+    [SearchStringPickerViewController showPickerWithTitle:@"Countries"
+                                                     rows:aryCountries
+                                         initialSelection:0
+                                               sourceView:sender
+                                                doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
+                                                    NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
+                                                    
+                                                    _fieldLocation.text =selectedValue;
+                                                }
+                                              cancelBlock:nil
+                                presentFromViewController:self];
 }
 
-#pragma mark - CZPickerViewDataSource
-- (NSInteger)numberOfRowsInPickerView:(CZPickerView *)pickerView {
-    return self.datasLocations.count;
-}
-- (void)czpickerView:(CZPickerView *)pickerView didConfirmWithItemAtRow:(NSInteger)row {
-    NSLog(@"%@ is chosen!", self.datasLocations[row]);
-    
-    self.fieldLocation.text =self.datasLocations[row];
-    
-}
-- (NSString *)czpickerView:(CZPickerView *)pickerView
-               titleForRow:(NSInteger)row{
-    return self.datasLocations[row];
-}
 
-- (void)czpickerViewDidClickCancelButton:(CZPickerView *)pickerView {
-
-    NSLog(@"Canceled.");
-}
-- (void)czpickerViewWillDisplay:(CZPickerView *)pickerView {
-    NSLog(@"Picker will display.");
-    
-    [self.fieldLocation resignFirstResponder];
-}
 
 - (IBAction)didTapBack:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -104,7 +83,7 @@
 
 - (IBAction)didTapSubmit:(id)sender {
     
-    
+
 }
 - (IBAction)didTapDate:(UITextField *)sender {
     

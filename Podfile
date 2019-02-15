@@ -13,9 +13,9 @@ target 'SapphireProject' do
     pod 'IQDropDownTextField'
     pod 'DatePickerDialog-ObjC'
     pod 'FreakingSimpleRoundImageView', '~> 1.2.3'
-    pod 'CZPicker'
     pod 'APBanner'
     pod 'TrueTime'
+
   target 'SapphireProjectTests' do
     inherit! :search_paths
     # Pods for testing

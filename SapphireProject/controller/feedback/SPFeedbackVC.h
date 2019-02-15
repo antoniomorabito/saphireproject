@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SPNetworkManager.h"
-@interface SPFeedbackVC : UIViewController<UITextFieldDelegate,CZPickerViewDataSource, CZPickerViewDelegate>
+@interface SPFeedbackVC : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldDate;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldLocation;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldCategory;

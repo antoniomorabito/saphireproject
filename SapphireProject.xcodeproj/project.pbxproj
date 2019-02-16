@@ -26,8 +26,6 @@
 		042CA10121A55A8F00AF8E74 /* SPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10021A55A8F00AF8E74 /* SPReachability.m */; };
 		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
 		042F42E52218B5D500D4CFA9 /* SPMainTakeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042F42E42218B5D500D4CFA9 /* SPMainTakeImageCell.m */; };
-		042F42EA2218C3E000D4CFA9 /* SPDataFeedBack+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 042F42E82218C3E000D4CFA9 /* SPDataFeedBack+CoreDataClass.m */; };
-		042F42EB2218C3E000D4CFA9 /* SPDataFeedBack+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 042F42E92218C3E000D4CFA9 /* SPDataFeedBack+CoreDataProperties.m */; };
 		043E0289220C0D1000CCA20C /* SPCarouselVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E0288220C0D1000CCA20C /* SPCarouselVC.m */; };
 		043E028E220C0E2D00CCA20C /* imagetwo.png in Resources */ = {isa = PBXBuildFile; fileRef = 043E028B220C0E2D00CCA20C /* imagetwo.png */; };
 		043E028F220C0E2D00CCA20C /* imagethree.png in Resources */ = {isa = PBXBuildFile; fileRef = 043E028C220C0E2D00CCA20C /* imagethree.png */; };
@@ -1127,10 +1125,8 @@
 				0490B5AF220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
 				04934B732216450D00AB5250 /* SearchStringPickerViewController.m in Sources */,
-				042F42EA2218C3E000D4CFA9 /* SPDataFeedBack+CoreDataClass.m in Sources */,
 				0490B58E220B9D8B0054F854 /* SPSelloutoverCell.m in Sources */,
 				04EBBD0A21F84AE000B26B44 /* SPTimeHelper.m in Sources */,
-				042F42EB2218C3E000D4CFA9 /* SPDataFeedBack+CoreDataProperties.m in Sources */,
 				0490B5A2220BA4C00054F854 /* SPWeeklyOfftakeVC.m in Sources */,
 				042CA0FE21A51FEA00AF8E74 /* SPLogin.m in Sources */,
 				04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */,

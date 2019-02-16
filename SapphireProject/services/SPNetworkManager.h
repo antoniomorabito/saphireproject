@@ -46,4 +46,8 @@ completionHandler:(SPCompletionHandler)handler;
 - (void)doSellout:(NSDictionary* )data
                  view:(UIView *)view
     completionHandler:(SPCompletionHandler)handler;
+
+- (void)doAddFeedback:(NSDictionary* )data
+             view:(UIView *)view
+completionHandler:(SPCompletionHandler)handler;
 @end

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SPSKUVC : UIViewController
+#import "SPNetworkManager.h"
+@interface SPSKUVC : UIViewController<UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
+@property (unsafe_unretained, nonatomic) IBOutlet JVFloatLabeledTextField *fieldTanggal;
+@property (unsafe_unretained, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihLokasi;
+@property (unsafe_unretained, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihKategori;
+@property (unsafe_unretained, nonatomic) IBOutlet JVFloatLabeledTextField *fieldNamModel;
+@property (unsafe_unretained, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

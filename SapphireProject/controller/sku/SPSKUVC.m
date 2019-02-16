@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _fieldTanggal.delegate = self;
+    _fieldTanggal.delegate = self;
     // Do any additional setup after loading the view.
 }
 - (IBAction)didTapBack:(id)sender {

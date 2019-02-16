@@ -18,6 +18,15 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SPDataFeedBack" representedClassName="SPDataFeedBack" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerFeedback" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="statusBuy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeFeedback" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="SPDataSellout" representedClassName="SPDataSellout" syncable="YES" codeGenerationType="class">
         <attribute name="customerAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="customerName" optional="YES" attributeType="String" syncable="YES"/>
@@ -108,5 +117,6 @@
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
         <element name="SPDataSellout" positionX="-18" positionY="135" width="128" height="210"/>
+        <element name="SPDataFeedBack" positionX="-9" positionY="144" width="128" height="150"/>
     </elements>
 </model>

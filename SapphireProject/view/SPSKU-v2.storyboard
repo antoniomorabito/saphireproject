@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -203,7 +203,7 @@
                                                         </constraints>
                                                         <size key="customSize" width="144" height="81"/>
                                                     </collectionViewCell>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TEG-bY-5a6" userLabel="Add Button">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TEG-bY-5a6" userLabel="Add Button" customClass="SPMainTakeImageCell">
                                                         <rect key="frame" x="215" y="0.0" width="144" height="81"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -224,6 +224,9 @@
                                                             <constraint firstItem="bdJ-cM-UOp" firstAttribute="top" secondItem="TEG-bY-5a6" secondAttribute="top" id="lAp-iG-2mG"/>
                                                         </constraints>
                                                         <size key="customSize" width="144" height="81"/>
+                                                        <connections>
+                                                            <outlet property="btnTakeFoto" destination="bdJ-cM-UOp" id="oE4-Id-ZyB"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -326,6 +329,13 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="asE-WX-yBZ" id="VB7-sy-aRT"/>
+                        <outlet property="fieldNamModel" destination="KBa-JS-YCe" id="lSd-R9-kAI"/>
+                        <outlet property="fieldPilihKategori" destination="cUY-QB-xhF" id="hPq-DY-5Yy"/>
+                        <outlet property="fieldPilihLokasi" destination="4RF-JR-FPV" id="Exo-6r-ZWC"/>
+                        <outlet property="fieldTanggal" destination="9PQ-H5-Png" id="Hl8-KO-z1y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbq-Qr-1zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

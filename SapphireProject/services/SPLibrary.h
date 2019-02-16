@@ -52,4 +52,5 @@
 
 //coredata modeling
 #import "SPDataSellout+CoreDataProperties.h"
+#import "SPDataFeedBack+CoreDataProperties.h"
 #endif /* SPLibrary_h */

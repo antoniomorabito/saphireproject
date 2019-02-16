@@ -623,6 +623,7 @@
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="fieldCategory" destination="1ni-Wl-HZC" id="Cdw-OM-iSJ"/>
+                        <outlet property="fieldCounterAddAndMin" destination="TCG-J2-5xU" id="kZ6-vC-Bd7"/>
                         <outlet property="fieldCustomerAddress" destination="sXb-85-crD" id="DFR-wt-h3e"/>
                         <outlet property="fieldCustomerName" destination="vo6-rj-idW" id="YTG-uB-Jtf"/>
                         <outlet property="fieldCustomerPhoneNumber" destination="t50-h2-Hti" id="F1n-Qt-SgL"/>
@@ -630,6 +631,9 @@
                         <outlet property="fieldDate" destination="b4X-JH-8Bt" id="9yX-yC-QCr"/>
                         <outlet property="fieldLocation" destination="EP9-TG-IhB" id="pSl-cz-Ltf"/>
                         <outlet property="fieldProductName" destination="DuX-Ft-QdI" id="h3C-w9-ePx"/>
+                        <outlet property="fieldProdukInstalasi" destination="CjH-5y-cFa" id="vJb-hx-C4d"/>
+                        <outlet property="fieldProdukKeberadaan" destination="Wgq-fp-yuA" id="Icn-gr-nyu"/>
+                        <outlet property="fieldSubTotalPrice" destination="Ybo-iA-FUs" id="adH-z5-k2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0L-7n-hpb" userLabel="First Responder" sceneMemberID="firstResponder"/>

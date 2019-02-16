@@ -137,6 +137,10 @@
 		042CA10021A55A8F00AF8E74 /* SPReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPReachability.m; sourceTree = "<group>"; };
 		042CA10B21A79FAA00AF8E74 /* SPMainTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMainTabbar.h; sourceTree = "<group>"; };
 		042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMainTabbar.m; sourceTree = "<group>"; };
+		042F42DC2218553800D4CFA9 /* SPDataSellout+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataSellout+CoreDataProperties.h"; sourceTree = "<group>"; };
+		042F42DD2218553800D4CFA9 /* SPDataSellout+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataSellout+CoreDataClass.h"; sourceTree = "<group>"; };
+		042F42DE2218553800D4CFA9 /* SPDataSellout+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataSellout+CoreDataClass.m"; sourceTree = "<group>"; };
+		042F42DF2218553800D4CFA9 /* SPDataSellout+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataSellout+CoreDataProperties.m"; sourceTree = "<group>"; };
 		043E0287220C0D1000CCA20C /* SPCarouselVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCarouselVC.h; sourceTree = "<group>"; };
 		043E0288220C0D1000CCA20C /* SPCarouselVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCarouselVC.m; sourceTree = "<group>"; };
 		043E028B220C0E2D00CCA20C /* imagetwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagetwo.png; sourceTree = "<group>"; };
@@ -378,6 +382,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				042F42DC2218553800D4CFA9 /* SPDataSellout+CoreDataProperties.h */,
+				042F42DD2218553800D4CFA9 /* SPDataSellout+CoreDataClass.h */,
+				042F42DE2218553800D4CFA9 /* SPDataSellout+CoreDataClass.m */,
+				042F42DF2218553800D4CFA9 /* SPDataSellout+CoreDataProperties.m */,
 				04EBBCFE21F75D8B00B26B44 /* SPProduct+CoreDataProperties.h */,
 				04EBBCFF21F75D8B00B26B44 /* SPProduct+CoreDataClass.h */,
 				04EBBD0021F75D8B00B26B44 /* SPProduct+CoreDataClass.m */,

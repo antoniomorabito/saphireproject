@@ -49,4 +49,7 @@
 
 
 #import "SPUtility.h"
+
+//coredata modeling
+#import "SPDataSellout+CoreDataProperties.h"
 #endif /* SPLibrary_h */

@@ -602,7 +602,7 @@ completionHandler:(SPCompletionHandler)handler;{
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"response master-products?page=0&limit=10 : %@",responseObject);
+        NSLog(@"sellout/add : %@",responseObject);
         
         NSError *jsonError;
         NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
@@ -614,31 +614,7 @@ completionHandler:(SPCompletionHandler)handler;{
             
             NSLog(@"json data  : %@",jsonDictionaryOrArray);
         }
-        [SPProduct MR_truncateAll];
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-        
-        
-        NSArray *dataContent = [jsonDictionaryOrArray objectForKey:@"data"];
-        
-        for (int i = 0; i<dataContent.count; i++) {
-            SPProduct *app = [SPProduct MR_createEntity];
-            
-            NSDictionary *object = [dataContent objectAtIndex:i];
-            
-            app.idproduct = ParseString([object objectForKey:@"id"]);
-            app.category_id = ParseString([object objectForKey:@"category_id"]);
-            app.region_id = ParseString([object objectForKey:@"region_id"]);
-            app.channel_id = ParseString([object objectForKey:@"channel_id"]);
-            app.model_product = ParseString([object objectForKey:@"model_product"]);
-            app.price = ParseString([object objectForKey:@"price"]);
-            app.incentive = ParseString([object objectForKey:@"incentive"]);
-            app.periode_start = ParseString([object objectForKey:@"periode_start"]);
-            app.periode_end = ParseString([object objectForKey:@"periode_end"]);
-            app.status = ParseString([object objectForKey:@"status"]);
-            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-        }
-        
-        
+    
         handler(YES,responseObject,nil);
         
         

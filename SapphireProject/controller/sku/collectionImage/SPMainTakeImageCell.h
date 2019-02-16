@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SPMainTakeImageCell : UICollectionViewCell
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *btnTakeFoto;
 
 @end

@@ -48,7 +48,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaB-CW-ppx">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose date" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-H5-Png" customClass="JVFloatLabeledTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih Tanggal" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-H5-Png" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="24" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -77,7 +77,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="ehf-iH-Dlq"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Location (Ex. Jawa Barat)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="4RF-JR-FPV" customClass="JVFloatLabeledTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih Lokasi Anda (Cth. Jawa Barat)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="4RF-JR-FPV" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="81" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -106,7 +106,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="sqp-uY-Mtf"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Category (Ex. Baby Toy)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="cUY-QB-xhF" customClass="JVFloatLabeledTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih Kategori (Cth. Mainan Bayi)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="cUY-QB-xhF" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="138" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -135,7 +135,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="ZGJ-ys-4Cm"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Model Name" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-JS-YCe" customClass="JVFloatLabeledTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nama Model" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-JS-YCe" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="195" width="307" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -164,8 +164,8 @@
                                                     <constraint firstAttribute="height" constant="20" id="BuF-ZW-VjX"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Pick your picture(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG7-Ea-C9k">
-                                                <rect key="frame" x="16" y="252" width="125" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Pilih gambar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG7-Ea-C9k">
+                                                <rect key="frame" x="16" y="252" width="84" height="16"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>

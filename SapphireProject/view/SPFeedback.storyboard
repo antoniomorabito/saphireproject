@@ -49,14 +49,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyC-N5-sFr">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="General" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veF-A4-Aa2">
-                                                <rect key="frame" x="16" y="16" width="382" height="17.666666666666671"/>
+
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Umum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veF-A4-Aa2">
+                                                <rect key="frame" x="16" y="16" width="382" height="18.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose date" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="tZk-VP-Tuz" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="52" y="49.666666666666671" width="346" height="41"/>
+
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih Tanggal" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="tZk-VP-Tuz" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="52" y="50.666666666666671" width="346" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="KLa-f2-Q14"/>
@@ -88,8 +90,13 @@
                                                     <constraint firstAttribute="width" constant="20" id="wLS-n2-CGi"/>
                                                 </constraints>
                                             </imageView>
+<<<<<<< HEAD
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Location (Ex. Jawa Barat)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-bS-qF0" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="106.66666666666666" width="346" height="41"/>
+=======
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih Lokasi Anda (Cth. Jawa Barat)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-bS-qF0" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="52" y="107.66666666666666" width="346" height="41"/>
+>>>>>>> e654965aee95d8c208c090fd5d0e2bea5d447343
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="HLw-Mu-90M"/>
@@ -121,8 +128,13 @@
                                                     <constraint firstAttribute="height" constant="20" id="eeu-JD-VwN"/>
                                                 </constraints>
                                             </imageView>
+<<<<<<< HEAD
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Category (Ex. Baby Toy)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="bpt-RA-rx1" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="163.66666666666666" width="346" height="41"/>
+=======
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih Kategori (Cth. Mainan Bayi)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="bpt-RA-rx1" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="52" y="164.66666666666666" width="346" height="41"/>
+>>>>>>> e654965aee95d8c208c090fd5d0e2bea5d447343
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="VSN-vf-PS0"/>
@@ -150,8 +162,13 @@
                                                     <constraint firstAttribute="height" constant="20" id="sn1-l3-ln1"/>
                                                 </constraints>
                                             </imageView>
+<<<<<<< HEAD
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your Status" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="aD3-CA-AXJ" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="220.66666666666669" width="346" height="41"/>
+=======
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih Status" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="aD3-CA-AXJ" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="52" y="221.66666666666669" width="346" height="41"/>
+>>>>>>> e654965aee95d8c208c090fd5d0e2bea5d447343
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="9Jh-os-tCn"/>
@@ -179,14 +196,24 @@
                                                     <constraint firstAttribute="width" constant="20" id="P2k-jZ-e0f"/>
                                                 </constraints>
                                             </imageView>
+<<<<<<< HEAD
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Customer Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLi-lz-6bR">
                                                 <rect key="frame" x="16" y="278.33333333333331" width="382" height="17.666666666666686"/>
+=======
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Data Pelanggan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLi-lz-6bR">
+                                                <rect key="frame" x="16" y="279.33333333333331" width="382" height="18.666666666666686"/>
+>>>>>>> e654965aee95d8c208c090fd5d0e2bea5d447343
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+<<<<<<< HEAD
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Customer Name" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-Vr-XyA" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="16" y="312" width="382" height="41"/>
+=======
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nama Pelanggan" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-Vr-XyA" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="16" y="314" width="382" height="41"/>
+>>>>>>> e654965aee95d8c208c090fd5d0e2bea5d447343
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="3Wj-KJ-odh"/>
@@ -207,8 +234,13 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
+<<<<<<< HEAD
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Customer Phone Number" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HJr-pV-yPA" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="16" y="369" width="382" height="41"/>
+=======
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="No. Telepon Pelanggan" minimumFontSize="17" background="bg_field_unfocus" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HJr-pV-yPA" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="16" y="371" width="382" height="41"/>
+>>>>>>> e654965aee95d8c208c090fd5d0e2bea5d447343
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="ktM-CF-tpq"/>
@@ -244,7 +276,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 <dataDetectorType key="dataDetectorTypes" address="YES"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Customer Feedback"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Feedback Pelanggan"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
                                                         <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -264,7 +296,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="OEV-fe-9JR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
-                                                <state key="normal" title="Submit">
+                                                <state key="normal" title="Kirim">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>

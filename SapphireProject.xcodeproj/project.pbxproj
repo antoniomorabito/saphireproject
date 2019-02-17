@@ -27,6 +27,7 @@
 		042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CA10C21A79FAA00AF8E74 /* SPMainTabbar.m */; };
 		042F42E52218B5D500D4CFA9 /* SPMainTakeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042F42E42218B5D500D4CFA9 /* SPMainTakeImageCell.m */; };
 		042F42F422199D4200D4CFA9 /* SPSku_V2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042F42F322199D4200D4CFA9 /* SPSku_V2.storyboard */; };
+		042F42F72219B50100D4CFA9 /* SPAttendace_v2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042F42F62219B50100D4CFA9 /* SPAttendace_v2.storyboard */; };
 		043E0289220C0D1000CCA20C /* SPCarouselVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E0288220C0D1000CCA20C /* SPCarouselVC.m */; };
 		043E028E220C0E2D00CCA20C /* imagetwo.png in Resources */ = {isa = PBXBuildFile; fileRef = 043E028B220C0E2D00CCA20C /* imagetwo.png */; };
 		043E028F220C0E2D00CCA20C /* imagethree.png in Resources */ = {isa = PBXBuildFile; fileRef = 043E028C220C0E2D00CCA20C /* imagethree.png */; };
@@ -150,6 +151,7 @@
 		042F42E82218C3E000D4CFA9 /* SPDataFeedBack+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataFeedBack+CoreDataClass.m"; sourceTree = "<group>"; };
 		042F42E92218C3E000D4CFA9 /* SPDataFeedBack+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataFeedBack+CoreDataProperties.m"; sourceTree = "<group>"; };
 		042F42F322199D4200D4CFA9 /* SPSku_V2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSku_V2.storyboard; sourceTree = "<group>"; };
+		042F42F62219B50100D4CFA9 /* SPAttendace_v2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPAttendace_v2.storyboard; sourceTree = "<group>"; };
 		043E0287220C0D1000CCA20C /* SPCarouselVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCarouselVC.h; sourceTree = "<group>"; };
 		043E0288220C0D1000CCA20C /* SPCarouselVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCarouselVC.m; sourceTree = "<group>"; };
 		043E028B220C0E2D00CCA20C /* imagetwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagetwo.png; sourceTree = "<group>"; };
@@ -266,7 +268,6 @@
 		84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPSKUOverview.storyboard; sourceTree = "<group>"; };
 		84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabAttendance.storyboard; sourceTree = "<group>"; };
 		84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTabProfile.storyboard; sourceTree = "<group>"; };
-		848A7D762212C92F0005293B /* SPTabAttendance-v2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPTabAttendance-v2.storyboard"; sourceTree = "<group>"; };
 		84C51B8121DBBF9F0048AFF9 /* SPQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPQuiz.storyboard; sourceTree = "<group>"; };
 		84C6728D21AFE0690063CB63 /* SPFeedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPFeedback.storyboard; sourceTree = "<group>"; };
 		84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SPOffTake-Monthly.storyboard"; sourceTree = "<group>"; };
@@ -468,7 +469,6 @@
 				042CA0ED21A51DB900AF8E74 /* SPMain.storyboard */,
 				84CC66FF21AD8BC300DC3C9F /* SPTabHome.storyboard */,
 				84727FE221A9B4FF00EDC907 /* SPTabAttendance.storyboard */,
-				848A7D762212C92F0005293B /* SPTabAttendance-v2.storyboard */,
 				845411A721AF0B9800DE8DA8 /* SPTabUpload.storyboard */,
 				84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */,
 				845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */,
@@ -484,6 +484,7 @@
 				042CA0F321A51E7000AF8E74 /* SPAttendanceOverview.storyboard */,
 				043E0294220C0F4A00CCA20C /* SPCarousel.storyboard */,
 				042F42F322199D4200D4CFA9 /* SPSku_V2.storyboard */,
+				042F42F62219B50100D4CFA9 /* SPAttendace_v2.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -566,6 +567,13 @@
 			sourceTree = "<group>";
 		};
 		042F42F222199BF600D4CFA9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		042F42F52219B41500D4CFA9 /* cell */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -726,6 +734,7 @@
 		0490B5B4220BA7DE0054F854 /* quiz */ = {
 			isa = PBXGroup;
 			children = (
+				042F42F52219B41500D4CFA9 /* cell */,
 				0490B5B5220BA8040054F854 /* SPQuizVC.h */,
 				0490B5B6220BA8040054F854 /* SPQuizVC.m */,
 			);
@@ -986,6 +995,7 @@
 				042CA0F221A51E0F00AF8E74 /* SPSKU.storyboard in Resources */,
 				84727FE121A9B3F000EDC907 /* SPSKUOverview.storyboard in Resources */,
 				04934B742216450D00AB5250 /* SearchStringPickerViewController.xib in Resources */,
+				042F42F72219B50100D4CFA9 /* SPAttendace_v2.storyboard in Resources */,
 				84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */,
 				84C51B8221DBBF9F0048AFF9 /* SPQuiz.storyboard in Resources */,
 				84727FE321A9B4FF00EDC907 /* SPTabAttendance.storyboard in Resources */,

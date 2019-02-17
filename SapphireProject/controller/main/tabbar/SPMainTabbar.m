@@ -84,7 +84,7 @@
     }
     
    else if (tag == 1) {
-        vc= [[UIStoryboard storyboardWithName:@"SPTabAttendance" bundle:nil]instantiateViewControllerWithIdentifier:@"navAttendance"];
+        vc= [[UIStoryboard storyboardWithName:@"SPAttendace_v2" bundle:nil]instantiateViewControllerWithIdentifier:@"navAttendance"];
     }
     
    else if (tag == 2) {

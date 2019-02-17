@@ -28,6 +28,10 @@
 }
 - (IBAction)didTapDismiss:(id)sender {
 }
+- (IBAction)didTapSebelumnya:(id)sender {
+}
+- (IBAction)didTapSubmit:(id)sender {
+}
 
 /*
 #pragma mark - Navigation

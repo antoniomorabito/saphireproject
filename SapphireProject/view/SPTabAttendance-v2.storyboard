@@ -438,7 +438,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mZ-et-Ov6">
                                                 <rect key="frame" x="32" y="267" width="104" height="160"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="25a-o4-NZv" customClass="RoundImageView" customModule="FreakingSimpleRoundImageView">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" image="ic_placeholder_user" translatesAutoresizingMaskIntoConstraints="NO" id="25a-o4-NZv" customClass="RoundImageView" customModule="FreakingSimpleRoundImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
                                                         <color key="backgroundColor" red="0.24586087470000001" green="0.60279899839999995" blue="0.48740202189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -450,7 +450,7 @@
                                                                 <real key="value" value="4"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="value" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="deviceRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
@@ -485,7 +485,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-Qc-FEr">
                                                 <rect key="frame" x="184" y="267" width="104" height="160"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="mCd-Mx-HaR" customClass="RoundImageView" customModule="FreakingSimpleRoundImageView">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" image="ic_placeholder_user" translatesAutoresizingMaskIntoConstraints="NO" id="mCd-Mx-HaR" customClass="RoundImageView" customModule="FreakingSimpleRoundImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
                                                         <color key="backgroundColor" red="0.24586087470000001" green="0.60279899839999995" blue="0.48740202189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -497,7 +497,7 @@
                                                                 <real key="value" value="4"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="value" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="deviceRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
@@ -658,6 +658,7 @@
         <image name="bg_field_unfocus" width="32" height="18"/>
         <image name="ic_clock_in" width="20" height="20"/>
         <image name="ic_clock_out" width="20" height="20"/>
+        <image name="ic_placeholder_user" width="320" height="320"/>
         <image name="scrim_bar" width="20" height="3.5"/>
     </resources>
 </document>

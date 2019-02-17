@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pH4-6e-Ti9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pH4-6e-Ti9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -339,7 +339,7 @@
                                                                 </constraints>
                                                                 <size key="customSize" width="144" height="81"/>
                                                             </collectionViewCell>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4OA-rA-iVV" userLabel="Add Button">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainImageCell" id="4OA-rA-iVV" userLabel="Add Button" customClass="SPMainTakeImageCell">
                                                                 <rect key="frame" x="215" y="0.0" width="144" height="81"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -477,6 +477,18 @@
                         </view>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="collectionView" destination="DFI-0Z-fFd" id="8me-Uz-CZA"/>
+                        <outlet property="fieldAkhirPeriode" destination="d73-N4-cEb" id="SUb-z3-9dp"/>
+                        <outlet property="fieldAwalPeriode" destination="uqx-Ko-dYo" id="8K9-TE-qby"/>
+                        <outlet property="fieldCategory" destination="ub1-YU-XTt" id="TxK-tz-aHI"/>
+                        <outlet property="fieldDeskripsiPromo" destination="FXS-lF-tSI" id="wLD-h7-LQI"/>
+                        <outlet property="fieldHargaProduk" destination="CZe-pT-Kjz" id="XDF-g4-0t0"/>
+                        <outlet property="fieldLokasi" destination="ccc-MU-huW" id="ojg-hk-ouw"/>
+                        <outlet property="fieldPilihKompetitor" destination="o5f-f6-MA9" id="jsB-oQ-sWC"/>
+                        <outlet property="fieldTipeProduk" destination="Xzr-2q-yud" id="NZz-n3-Iqf"/>
+                        <outlet property="lblTanggal" destination="Mjg-jh-V03" id="dTL-n3-Tvn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMg-n2-aln" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

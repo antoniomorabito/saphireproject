@@ -355,6 +355,8 @@ completionHandler:(SPCompletionHandler)handler;{
             app.status = ParseString([object objectForKey:@"status"]);
             app.created_by = ParseString([object objectForKey:@"created_by"]);
             app.created_date = ParseString([object objectForKey:@"created_date"]);
+            
+            
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         }
         
@@ -583,7 +585,75 @@ completionHandler:(SPCompletionHandler)handler;{
     
     }];
 }
-
+- (void)doGetDataProductsByCategory:
+                                (NSString* )idproduct
+                               view:(UIView *)view
+                  completionHandler:(SPCompletionHandler)handler;{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    SPUser *user = [SPUser MR_findFirst];
+  
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.token] forHTTPHeaderField:@"token"];
+    
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.companyId] forHTTPHeaderField:@"companyId"];
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.userId] forHTTPHeaderField:@"userId"];
+    
+    [manager GET:[NSString stringWithFormat:@"%@master-products?page=0&limit=20&categoryId=%@",kCABaseURL,idproduct]  parameters:NULL progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSError *jsonError;
+        NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
+        if(jsonError) {
+            // check the error description
+            NSLog(@"json error : %@", [jsonError localizedDescription]);
+        } else {
+            // use the jsonDictionaryOrArray
+            
+            NSLog(@"json data products : %@",jsonDictionaryOrArray);
+        }
+        [SPProduct MR_truncateAll];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
+        
+        NSArray *dataContent = [jsonDictionaryOrArray objectForKey:@"data"];
+        
+        for (int i = 0; i<dataContent.count; i++) {
+            SPProduct *app = [SPProduct MR_createEntity];
+            
+            NSDictionary *object = [dataContent objectAtIndex:i];
+            
+            app.idproduct = ParseString([object objectForKey:@"id"]);
+            app.category_id = ParseString([object objectForKey:@"category_id"]);
+            app.region_id = ParseString([object objectForKey:@"region_id"]);
+            app.channel_id = ParseString([object objectForKey:@"channel_id"]);
+            app.model_product = ParseString([object objectForKey:@"model_product"]);
+            app.price = ParseString([object objectForKey:@"price"]);
+            app.incentive = ParseString([object objectForKey:@"incentive"]);
+            app.periode_start = ParseString([object objectForKey:@"periode_start"]);
+            app.periode_end = ParseString([object objectForKey:@"periode_end"]);
+            app.status = ParseString([object objectForKey:@"status"]);
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        }
+        
+        
+        handler(YES,responseObject,nil);
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+        NSLog(@"error response nya adalah : %@",ErrorResponse);
+        NSData *data = [ErrorResponse dataUsingEncoding:NSUTF8StringEncoding];
+        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        handler(NO,json,error);
+        
+        
+    }];
+}
 - (void)doSellout:(NSDictionary* )data
              view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;{

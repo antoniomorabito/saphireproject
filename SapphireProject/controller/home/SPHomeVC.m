@@ -97,7 +97,7 @@
         [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"SKU"]) {
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSKU-v2" bundle:nil]instantiateViewControllerWithIdentifier:@"navsku"];
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSku_V2" bundle:nil]instantiateViewControllerWithIdentifier:@"navsku"];
         
         [self presentViewController:vc animated:YES completion:nil];
     }

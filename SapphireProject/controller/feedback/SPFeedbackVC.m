@@ -71,8 +71,8 @@
     [toolbars setItems:[NSArray arrayWithObjects:buttonflexible,buttonDone, nil]];
     _fieldCustomerName.inputAccessoryView = toolbars;
     _fieldPhoneNumber.inputAccessoryView = toolbars;
-    _fieldStatus.inputAccessoryView = toolbars;
-    _fieldCategory.inputAccessoryView = toolbars;
+//    _fieldStatus.inputAccessoryView = toolbars;
+//    _fieldCategory.inputAccessoryView = toolbars;
     _textFeedback.inputAccessoryView = toolbars;
     // Do any additional setup after loading the view.
     
@@ -166,7 +166,16 @@
         
         [network doAddFeedback:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
            
-            
+            if (success) {
+                [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    
+                    
+                }];
+            }
+            else{
+                
+            }
             
         }];
     }
@@ -184,6 +193,8 @@
                            [formatter setDateStyle:NSDateFormatterMediumStyle];
                            NSLog(@"Date selected: %@",[formatter stringFromDate:date]);
                            self.fieldDate.text =[formatter stringFromDate:date];
+                           
+                           [self.fieldDate resignFirstResponder];
                        }
                    }
      ];
@@ -200,6 +211,9 @@
     }
     
     else if (textField == _fieldCategory) {
+        return FALSE;
+    }
+    else if (textField == _fieldStatus) {
         return FALSE;
     }
     else{

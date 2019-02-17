@@ -25,6 +25,7 @@
     [self changeViewBySelectedItem:0];
     
 
+    _attendancevc= [[UIStoryboard storyboardWithName:@"SPAttendace_v2" bundle:nil]instantiateViewControllerWithIdentifier:@"navAttendance"];
 
 
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -78,31 +79,54 @@
 
 -(void)changeViewBySelectedItem:(NSInteger)tag
 {
-    UIViewController* vc ;
+   
     if (tag == 0) {
-       vc= [[UIStoryboard storyboardWithName:@"SPTabHome" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+        UIViewController* vc = [[UIStoryboard storyboardWithName:@"SPTabHome" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+        [self.mainCustomTabbar setSelectedItem:[self.mainCustomTabbar.items objectAtIndex:tag]];
+        
+        
+        vc.view.frame = self.containerView.bounds;
+        [self.containerView addSubview:vc.view];
+        [self addChildViewController:vc];
+        [vc didMoveToParentViewController:self];
     }
     
    else if (tag == 1) {
-        vc= [[UIStoryboard storyboardWithName:@"SPAttendace_v2" bundle:nil]instantiateViewControllerWithIdentifier:@"navAttendance"];
+       
+       
+       [self.mainCustomTabbar setSelectedItem:[self.mainCustomTabbar.items objectAtIndex:tag]];
+       
+       
+       _attendancevc.view.frame = self.containerView.bounds;
+       [self.containerView addSubview:_attendancevc.view];
+       [self addChildViewController:_attendancevc];
+       [_attendancevc didMoveToParentViewController:self];
     }
     
    else if (tag == 2) {
-       vc= [[UIStoryboard storyboardWithName:@"SPTabUpload" bundle:nil]instantiateViewControllerWithIdentifier:@"navUpload"];
+        UIViewController* vc= [[UIStoryboard storyboardWithName:@"SPTabUpload" bundle:nil]instantiateViewControllerWithIdentifier:@"navUpload"];
+       [self.mainCustomTabbar setSelectedItem:[self.mainCustomTabbar.items objectAtIndex:tag]];
+       
+       
+       vc.view.frame = self.containerView.bounds;
+       [self.containerView addSubview:vc.view];
+       [self addChildViewController:vc];
+       [vc didMoveToParentViewController:self];
    }
     
    else if (tag == 3) {
-       vc= [[UIStoryboard storyboardWithName:@"SPTabProfile" bundle:nil]instantiateViewControllerWithIdentifier:@"navprofile"];
+        UIViewController* vc= [[UIStoryboard storyboardWithName:@"SPTabProfile" bundle:nil]instantiateViewControllerWithIdentifier:@"navprofile"];
+       [self.mainCustomTabbar setSelectedItem:[self.mainCustomTabbar.items objectAtIndex:tag]];
+       
+       
+       vc.view.frame = self.containerView.bounds;
+       [self.containerView addSubview:vc.view];
+       [self addChildViewController:vc];
+       [vc didMoveToParentViewController:self];
    }
     
     
-    [self.mainCustomTabbar setSelectedItem:[self.mainCustomTabbar.items objectAtIndex:tag]];
-    
-    
-    vc.view.frame = self.containerView.bounds;
-    [self.containerView addSubview:vc.view];
-    [self addChildViewController:vc];
-    [vc didMoveToParentViewController:self];
+   
 }
 
 -(void)initCategory{

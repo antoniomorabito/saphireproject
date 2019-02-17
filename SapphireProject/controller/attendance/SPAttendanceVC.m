@@ -107,6 +107,11 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)didTapCekIn:(id)sender {
+    
+    if (storeid.length == 0) {
+        [SPMessageUtility message:@"Anda belum memilih lokasi " needAction:YES viewController:self];
+        return;
+    }
     self.fdTake = [[FDTakeController alloc] init];
     self.fdTake.delegate = self;
     typeFoto = @"cekin";
@@ -118,6 +123,9 @@
     self.fdTake.delegate = self;
     typeFoto = @"cekout";
     [self.fdTake takePhoto];
+    
+    
+  
 }
 #pragma mark - FDTakeDelegate
 
@@ -184,8 +192,8 @@
              
                  if ([self->typeFoto isEqualToString:@"cekin"]) {
                   [self writeImageData:self.imageViewCekIn.image filename:path];
-                     
-//                     [self ins]
+                     NSString *newID = [[NSUUID UUID] UUIDString];
+                     [self insertNetworkAttendance:newID];
                  }
                  else{
                       [self writeImageData:self.imageViewCekout.image filename:path];
@@ -249,7 +257,7 @@
     }
     
 }
--(void)insertNetworkAttendance{
+-(void)insertNetworkAttendance:(NSString*)refID{
     TrueTimeClient *client = [TrueTimeClient sharedInstance];
     
     NSDate *now = [[client referenceTime] now];
@@ -257,7 +265,7 @@
     NSLog(@"nilai date network adalah : %@",now);
     // Do any additional setup after loading the view
     NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timestampFormatString]];
-    NSDictionary *data =@{@"storeId":storeid,@"time_attandance":displayString,@"remark":@"attendancein",@"refId":@""};
+    NSDictionary *data =@{@"storeId":storeid,@"time_attandance":displayString,@"remark":@"attendancein",@"refId":refID};
     
     SPNetworkManager *network = [[SPNetworkManager alloc]init];
     
@@ -268,7 +276,22 @@
     }];
     
 }
--(void)insertLocalAttendance{
+-(void)insertLocalAttendance:(NSString*)refID
+              attendancetime:  (NSString *)timepost
+            typeAttendance:  (NSString *)type{
+   
+    
+    NSLog(@"nilai id nya  : %@",refID );
+    SPDataAttendanceIn *data = [SPDataAttendanceIn MR_createEntity];
+
+    SPUser *user = [SPUser MR_findFirst];
+    data.refId = refID;
+    data.photo = _filePath;
+    data.userId =user.userId;
+    data.storeId = storeid;
+    data.time_attandance =timepost;
+    data.remark =type;
+     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     
 }
 

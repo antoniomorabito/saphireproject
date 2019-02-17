@@ -93,37 +93,25 @@ completionHandler:(SPCompletionHandler)handler;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"response object config : %@",responseObject);
+//        NSLog(@"response object config : %@",responseObject);
         
         NSError *jsonError;
         NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:nil error:&jsonError];
         if(jsonError) {
             // check the error description
             NSLog(@"json error : %@", [jsonError localizedDescription]);
+//             handler(NO,json,nil);
+//             [hud hideAnimated:YES];
+            
         } else {
             // use the jsonDictionaryOrArray
             
-            NSLog(@"json data  : %@",jsonDictionaryOrArray);
+            NSLog(@"json data config : %@",jsonDictionaryOrArray);
         }
-        [SPAppConfig MR_truncateAll];
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-    
+          NSArray *dataContent = [jsonDictionaryOrArray objectForKey:@"content"];
+          NSLog(@"array content : %@",dataContent);
         
-        NSArray *dataContent = [jsonDictionaryOrArray objectForKey:@"content"];
-        
-        for (int i = 0; i<dataContent.count; i++) {
-            SPAppConfig *app = [SPAppConfig MR_createEntity];
-            
-            NSDictionary *object = [dataContent objectAtIndex:i];
-            
-            app.parameterFormat = ParseString([object objectForKey:@"parameterFormat"]);
-            app.parameterName = ParseString([object objectForKey:@"parameterName"]);
-            app.parameterValue = ParseString([object objectForKey:@"parameterValue"]);
-            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-        }
-        
-        
-        handler(YES,responseObject,nil);
+        handler(YES,dataContent,nil);
         [hud hideAnimated:YES];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -145,46 +133,63 @@ completionHandler:(SPCompletionHandler)handler;
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    SPUser *user = [SPUser MR_findFirst];
     
-//    NSLog(@"user data  : %@ dan username %@ dan user company : %@ , dan user id :%@",user.token,user.username,user.companyId,user.userId);
+    SPUser *user = [SPUser MR_findFirst];
+
+    //    NSLog(@"user data  : %@ dan username %@ dan user company : %@ , dan user id :%@",user.token,user.username,user.companyId,user.userId);
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.token] forHTTPHeaderField:@"token"];
 
-    
+
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.companyId] forHTTPHeaderField:@"companyId"];
-    
+
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.userId] forHTTPHeaderField:@"userId"];
-    
-    
-    
+
+    [manager.requestSerializer setValue:@"" forHTTPHeaderField:@"privilege"];
+
+    NSLog(@"nilai url : %@",[NSString stringWithFormat:@"%@stores",kCABaseURL] );
+
+
     [manager GET:[NSString stringWithFormat:@"%@stores",kCABaseURL]  parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
-        
+
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        
-        NSLog(@"response stores stores : %@",responseObject);
-        
+
+
+//        NSLog(@"response stores stores : %@",responseObject);
+
         NSError *jsonError;
-        NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
+        NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:nil error:&jsonError];
         if(jsonError) {
             // check the error description
-            NSLog(@"json error : %@", [jsonError localizedDescription]);
+            NSLog(@"json error stores : %@", [jsonError localizedDescription]);
         } else {
             // use the jsonDictionaryOrArray
-            
-            NSLog(@"json data  : %@",jsonDictionaryOrArray);
+
+            NSLog(@"json data store : %@",jsonDictionaryOrArray);
         }
         [SPStore MR_truncateAll];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-        
-        
+
+//        "id": "5a80ef725cc10b498a62b433bfc3ddf2",
+//        "area_id": "eaa2660d453d135f3721661634135283",
+//        "region_id": "1",
+//        "channel_id": "2",
+//        "dealer_id": "70e055e1-0e8f-11e9-b925-005056b6739b",
+//        "name": "Store 1",
+//        "address": "Duka dimana",
+//        "latitude": "123",
+//        "longitude": "321",
+//        "created_by": "6e4633d3-2391-11e9-997e-005056b6739b",
+//        "created_date": "2019-02-08 05:48:49",
+//        "updated_by": null,
+//        "updated_create": "0000-00-00 00:00:00",
+//        "user_id": "9dd6bfd7-2ab4-11e9-997e-005056b6739b"
         NSArray *dataContent = [jsonDictionaryOrArray objectForKey:@"data"];
-        
+
         for (int i = 0; i<dataContent.count; i++) {
             SPStore *app = [SPStore MR_createEntity];
-            
+
             NSDictionary *object = [dataContent objectAtIndex:i];
-            
+
             app.idstore = ParseString([object objectForKey:@"id"]);
             app.area_id = ParseString([object objectForKey:@"area_id"]);
             app.region_id = ParseString([object objectForKey:@"region_id"]);
@@ -201,20 +206,22 @@ completionHandler:(SPCompletionHandler)handler;
             app.user_id = ParseString([object objectForKey:@"user_id"]);
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         }
-        
-        
+
+
         handler(YES,responseObject,nil);
-      
-        
+
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
-        NSLog(@"error response nya adalah : %@",ErrorResponse);
+        NSLog(@"error response store nya adalah : %@",ErrorResponse);
         NSData *data = [ErrorResponse dataUsingEncoding:NSUTF8StringEncoding];
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         handler(NO,json,error);
-        
-      
+
+
     }];
+    
+
 }
 - (void)doGetQuiz:(NSDictionary* )data
              view:(UIView *)view
@@ -242,7 +249,7 @@ completionHandler:(SPCompletionHandler)handler;{
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"response quia : %@",responseObject);
+//        NSLog(@"response quia : %@",responseObject);
         
         NSError *jsonError;
         NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
@@ -252,7 +259,7 @@ completionHandler:(SPCompletionHandler)handler;{
         } else {
             // use the jsonDictionaryOrArray
             
-            NSLog(@"json data  : %@",jsonDictionaryOrArray);
+            NSLog(@"json data quiz : %@",jsonDictionaryOrArray);
         }
         [SPQuizMaster MR_truncateAll];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
@@ -320,7 +327,7 @@ completionHandler:(SPCompletionHandler)handler;{
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"response category : %@",responseObject);
+//        NSLog(@"response category : %@",responseObject);
         
         NSError *jsonError;
         NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
@@ -330,7 +337,7 @@ completionHandler:(SPCompletionHandler)handler;{
         } else {
             // use the jsonDictionaryOrArray
             
-            NSLog(@"json data  : %@",jsonDictionaryOrArray);
+            NSLog(@"json data category : %@",jsonDictionaryOrArray);
         }
         [SPQuizMaster MR_truncateAll];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
@@ -389,7 +396,7 @@ completionHandler:(SPCompletionHandler)handler;{
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"response dealer : %@",responseObject);
+//        NSLog(@"response dealer : %@",responseObject);
         
         NSError *jsonError;
         NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
@@ -399,7 +406,7 @@ completionHandler:(SPCompletionHandler)handler;{
         } else {
             // use the jsonDictionaryOrArray
             
-            NSLog(@"json data  : %@",jsonDictionaryOrArray);
+            NSLog(@"json data dealer  : %@",jsonDictionaryOrArray);
         }
         [SPDealer MR_truncateAll];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
@@ -458,7 +465,7 @@ completionHandler:(SPCompletionHandler)handler;{
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"response competitors : %@",responseObject);
+//        NSLog(@"response competitors : %@",responseObject);
         
         NSError *jsonError;
         NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
@@ -468,7 +475,7 @@ completionHandler:(SPCompletionHandler)handler;{
         } else {
             // use the jsonDictionaryOrArray
             
-            NSLog(@"json data  : %@",jsonDictionaryOrArray);
+            NSLog(@"json data competitor : %@",jsonDictionaryOrArray);
         }
         [SPCompetitor MR_truncateAll];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
@@ -526,7 +533,7 @@ completionHandler:(SPCompletionHandler)handler;{
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"response master-products?page=0&limit=10 : %@",responseObject);
+//        NSLog(@"response master-products?page=0&limit=10 : %@",responseObject);
         
         NSError *jsonError;
         NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
@@ -536,7 +543,7 @@ completionHandler:(SPCompletionHandler)handler;{
         } else {
             // use the jsonDictionaryOrArray
             
-            NSLog(@"json data  : %@",jsonDictionaryOrArray);
+            NSLog(@"json data products : %@",jsonDictionaryOrArray);
         }
         [SPProduct MR_truncateAll];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
@@ -602,7 +609,7 @@ completionHandler:(SPCompletionHandler)handler;{
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"sellout/add : %@",responseObject);
+//        NSLog(@"sellout/add : %@",responseObject);
         
         NSError *jsonError;
         NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
@@ -620,7 +627,7 @@ completionHandler:(SPCompletionHandler)handler;{
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
-        NSLog(@"error response nya adalah : %@",ErrorResponse);
+        NSLog(@"error response nya sellout adalah : %@",ErrorResponse);
         NSData *data = [ErrorResponse dataUsingEncoding:NSUTF8StringEncoding];
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         handler(NO,json,error);
@@ -631,6 +638,51 @@ completionHandler:(SPCompletionHandler)handler;{
 - (void)doAddFeedback:(NSDictionary* )data
                  view:(UIView *)view
     completionHandler:(SPCompletionHandler)handler;{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    SPUser *user = [SPUser MR_findFirst];
+    
+    //    NSLog(@"user data  : %@ dan username %@ dan user company : %@ , dan user id :%@",user.token,user.username,user.companyId,user.userId);
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.token] forHTTPHeaderField:@"token"];
+    
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.companyId] forHTTPHeaderField:@"companyId"];
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.userId] forHTTPHeaderField:@"userId"];
+    
+    
+    
+    [manager POST:[NSString stringWithFormat:@"%@feedback/add",kCABaseURL]  parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        //        NSLog(@"sellout/add : %@",responseObject);
+        
+        NSError *jsonError;
+        NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
+        if(jsonError) {
+            // check the error description
+            NSLog(@"json error : %@", [jsonError localizedDescription]);
+        } else {
+            // use the jsonDictionaryOrArray
+            
+            NSLog(@"json data feedback : %@",jsonDictionaryOrArray);
+        }
+        
+        handler(YES,responseObject,nil);
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+        NSLog(@"error response nya adalah : %@",ErrorResponse);
+        NSData *data = [ErrorResponse dataUsingEncoding:NSUTF8StringEncoding];
+        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        handler(NO,json,error);
+        
+        
+    }];
 }
 @end

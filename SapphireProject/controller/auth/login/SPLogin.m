@@ -149,6 +149,33 @@ bool isTap=false;
                    
                     
                     if (success) {
+                         NSArray *datacontent = (NSArray *)responseObject;
+                        NSLog(@"nilai data content : %@",datacontent);
+                                    for (int i = 0; i<datacontent.count; i++) {
+                        
+                        
+                                        NSDictionary *object = [datacontent objectAtIndex:i];
+                        
+                                        SPAppConfig *app = [SPAppConfig MR_createEntity];
+                                        app.parameterFormat = ParseString([object objectForKey:@"parameterFormat"]);
+                                        app.parameterName = ParseString([object objectForKey:@"parameterName"]);
+                                        app.parameterValue = ParseString([object objectForKey:@"parameterValue"]);
+                                        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                        
+                        
+                                    }
+                        
+                        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                        hud.mode = MBProgressHUDModeIndeterminate;
+                        hud.label.text = @"";
+                        [hud showAnimated:YES];
+                        [self initCategory];
+                        [self initProduct];
+                        [self initQuizMaster];
+                        [self initDealers];
+                        [self initStores];
+                        [self initCompetitior];
+                        [hud hideAnimated:YES];
                         UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
                         
                         
@@ -174,7 +201,100 @@ bool isTap=false;
     }
     
 }
+-(void)initCategory{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetCategory:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync category done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
 
+-(void)initProduct{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetProducts:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync products done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
+
+-(void)initCompetitior{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetCompetitor:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+            //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync competitor done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
+-(void)initDealers{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetDealer:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+            //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync dealers done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
+
+-(void)initQuizMaster{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetQuiz:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+            //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync quiz master done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
+
+-(void)initStores{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetStore:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+            //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync stores done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
 /*
 #pragma mark - Navigation
 

@@ -24,19 +24,22 @@
     
     [self changeViewBySelectedItem:0];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // Running on background thread, don't call UIKit
-        
-        [self initCategory];
-        [self initProduct];
-        [self initQuizMaster];
-        [self initDealers];
-        [self initStores];
-        [self initCompetitior];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Running on main thread, feel free to call UIKit
-        });
-    });
+
+
+
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        // Running on background thread, don't call UIKit
+//
+//        [self initCategory];
+//        [self initProduct];
+//        [self initQuizMaster];
+//        [self initDealers];
+//        [self initStores];
+//        [self initCompetitior];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            // Running on main thread, feel free to call UIKit
+//        });
+//    });
 
     // Do any additional setup after loading the view.
 }

@@ -13,13 +13,40 @@
 @end
 
 @implementation SPFeedbackVC
-
+{
+    NSMutableArray *datacategory;
+    NSMutableArray *datastores;
+    NSMutableArray *statusbuy;
+    
+    NSString *storeid;
+    NSString *categoryid;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
  
     
-   
+    storeid = [[NSString alloc]init];
+    categoryid = [[NSString alloc]init];
+    //untuk data category
+    NSArray *aryCountries = [SPCategory MR_findAll];
+    datacategory = [[NSMutableArray alloc]init];
+    for (SPCategory * category in aryCountries) {
+        [datacategory addObject:category.name];
+//        NSLog(@"nilai category : %@",category.name);
+    }
+    
+    
+    NSArray *arraystore = [SPStore MR_findAll];
+    
+    datastores = [[NSMutableArray alloc]init];
+    for (SPStore * store in arraystore) {
+        [datastores addObject:store.name];
+    }
 
+    statusbuy =[[NSMutableArray alloc]init];
+    
+    [statusbuy addObject:@"Tidak Beli"];
+    [statusbuy addObject:@"Beli"];
     _fieldDate.delegate = self;
     _fieldLocation.delegate = self;
     _fieldCategory.delegate = self;
@@ -31,6 +58,7 @@
     _fieldDate.inputView = dummyView;
     _fieldLocation.inputView = dummyView;
     _fieldCategory.inputView = dummyView;
+    _fieldStatus.inputView = dummyView;
     
     UIToolbar *toolbars = [[UIToolbar alloc] init];
     [toolbars setBarStyle:UIBarStyleBlackTranslucent];
@@ -59,19 +87,30 @@
 }
 
 - (IBAction)didTapPickLocation:(id)sender {
-    NSArray *aryCountries = [NSArray arrayWithObjects:@"Afghanistan", @"Georgia", @"Haiti", @"India", nil];
+ 
+
+//    NSLog(@"data store :%@",datastore);
     
-    [SearchStringPickerViewController showPickerWithTitle:@"Countries"
-                                                     rows:aryCountries
-                                         initialSelection:0
-                                               sourceView:sender
-                                                doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
-                                                    NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
-                                                    
-                                                    _fieldLocation.text =selectedValue;
-                                                }
-                                              cancelBlock:nil
-                                presentFromViewController:self];
+    
+    if (datastores.count >0) {
+        [SearchStringPickerViewController showPickerWithTitle:@"Toko"
+                                                         rows:datastores
+                                             initialSelection:0
+                                                   sourceView:sender
+                                                    doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
+                                                        NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
+                                                        
+                                                        _fieldLocation.text =selectedValue;
+                                                        
+                                 SPStore *store = [SPStore MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"name== %@",selectedValue]];
+                                                        
+                                                        storeid = store.idstore;
+                                                    }
+         
+         
+                                                  cancelBlock:nil
+                                    presentFromViewController:self];
+    }
 }
 
 
@@ -83,6 +122,54 @@
 
 - (IBAction)didTapSubmit:(id)sender {
     
+    if (_fieldDate.text.length == 0) {
+        [SPMessageUtility message:@"Belum masukin tanggal" needAction:YES viewController:self];
+    }
+    else if (_fieldLocation.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin lokasinya" needAction:YES viewController:self];
+    }
+    
+    else if (_fieldCategory.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin kategorinya" needAction:YES viewController:self];
+    }
+    else if (_fieldStatus.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin statusnya" needAction:YES viewController:self];
+    }
+    else if (_fieldCustomerName.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin kustomernya" needAction:YES viewController:self];
+    }
+    else if (_fieldPhoneNumber.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin no telepon" needAction:YES viewController:self];
+    }
+    else if (_textFeedback == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin isi feedbacknya" needAction:YES viewController:self];
+    }
+    else{
+        
+        SPNetworkManager *network = [[SPNetworkManager alloc]init];
+        
+        NSLog(@"store id : %@",storeid );
+        NSDictionary *data= @{@"storeId":storeid,
+                       @"timeFeedback":_fieldDate.text,
+                       @"categoryId":categoryid,
+                       @"statusBuy":_fieldStatus.text,
+                       @"customerName":_fieldCustomerName.text,
+                       @"customerPhone":_fieldPhoneNumber.text,
+                       @"CustomerFeedback":_textFeedback.text
+                       };
+        
+        [network doAddFeedback:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+           
+            
+            
+        }];
+    }
 
 }
 - (IBAction)didTapDate:(UITextField *)sender {
@@ -150,7 +237,7 @@
     // Create animation.
     void (^animations)(void) = ^() {
         CGPoint newOffset = self->_scrollView.contentOffset;
-        newOffset.y = 160;
+        newOffset.y = 250;
         self.scrollView.contentOffset = newOffset;
     };
     
@@ -185,6 +272,49 @@
                      completion:^(BOOL finished) {
                      }];
 }
+
+- (IBAction)didTapCategory:(id)sender {
+   
+ 
+    
+//    NSLog(@"data category :%@",datacategory);
+    
+    
+    if (datacategory.count >0) {
+        [SearchStringPickerViewController showPickerWithTitle:@"Kategori produk"
+                                                         rows:datacategory
+                                             initialSelection:0
+                                                   sourceView:sender
+                                                    doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
+                                                        NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
+                                                        
+                                                        _fieldCategory.text =selectedValue;
+                                                        
+                                                        
+                                                        SPCategory *category = [SPCategory MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"name== %@",selectedValue]];
+                                                        
+                                                        categoryid = category.idcategory;
+                                                    }
+                                                  cancelBlock:nil
+                                    presentFromViewController:self];
+    }
+
+}
+- (IBAction)didTapStatus:(id)sender {
+    
+    [SearchStringPickerViewController showPickerWithTitle:@"Status beli"
+                                                     rows:statusbuy
+                                         initialSelection:0
+                                               sourceView:sender
+                                                doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
+                                                    NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
+                                                    
+                                                    _fieldStatus.text =selectedValue;
+                                                }
+                                              cancelBlock:nil
+                                presentFromViewController:self];
+}
+
 /*
 #pragma mark - Navigation
 

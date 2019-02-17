@@ -47,10 +47,16 @@
 #import "LSLDatePickerDialog.h"
 #import <APBanner/APBannerManager.h>
 
-
+#import "NSDate+Helper.h"
 #import "SPUtility.h"
 
 //coredata modeling
+#import "SPDataAttendanceIn+CoreDataProperties.h"
 #import "SPDataSellout+CoreDataProperties.h"
 #import "SPDataFeedBack+CoreDataProperties.h"
+
+
+#import "FDTakeController.h"
+
+@import Photos;
 #endif /* SPLibrary_h */

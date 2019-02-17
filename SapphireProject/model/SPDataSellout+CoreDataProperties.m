@@ -2,7 +2,7 @@
 //  SPDataSellout+CoreDataProperties.m
 //  SapphireProject
 //
-//  Created by mac on 16/02/19.
+//  Created by mac on 18/02/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 //
@@ -15,16 +15,18 @@
 	return [NSFetchRequest fetchRequestWithEntityName:@"SPDataSellout"];
 }
 
-@dynamic storeId;
-@dynamic timeSellout;
-@dynamic productId;
-@dynamic totalQty;
-@dynamic statusStock;
-@dynamic statusInstalation;
+@dynamic customerAddress;
 @dynamic customerName;
 @dynamic customerPhone;
-@dynamic customerAddress;
-@dynamic customerPrice;
 @dynamic customerPhoto;
+@dynamic customerPrice;
+@dynamic productId;
+@dynamic statusInstalation;
+@dynamic statusStock;
+@dynamic storeId;
+@dynamic timeSellout;
+@dynamic totalQty;
+@dynamic userId;
+@dynamic idTable;
 
 @end

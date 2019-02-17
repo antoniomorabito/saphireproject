@@ -25,6 +25,10 @@
     self.tableView.dataSource = self;
     
     [self.tableView reloadData];
+    
+    SPUser *user = [SPUser MR_findFirst];
+    
+    _lblName.text = user.name;
     // Do any additional setup after loading the view.
 }
 

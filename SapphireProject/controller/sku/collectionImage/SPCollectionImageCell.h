@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SPCollectionImageCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageBackground;
 
 @end

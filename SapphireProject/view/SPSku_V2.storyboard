@@ -70,6 +70,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihTanggal:" destination="kEu-bb-Cyx" eventType="touchDown" id="rQ9-M3-VCP"/>
+                                                    <action selector="didTapPilihTanggal:" destination="kEu-bb-Cyx" eventType="editingDidBegin" id="ssR-MD-Upz"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="y5W-FI-nw2">
                                                 <rect key="frame" x="16" y="39.5" width="20" height="20"/>
@@ -99,6 +103,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihLokasi:" destination="kEu-bb-Cyx" eventType="editingDidBegin" id="4v9-zb-ggi"/>
+                                                    <action selector="didTapPilihLokasi:" destination="kEu-bb-Cyx" eventType="touchDown" id="77O-bI-9Ll"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="UKE-Ga-0Qy">
                                                 <rect key="frame" x="16" y="96.5" width="20" height="20"/>
@@ -128,6 +136,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihKategori:" destination="kEu-bb-Cyx" eventType="editingDidBegin" id="1gs-r4-4ij"/>
+                                                    <action selector="didTapPilihKategori:" destination="kEu-bb-Cyx" eventType="touchDown" id="hLr-4n-bG2"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="qcp-mL-Oje">
                                                 <rect key="frame" x="16" y="153.5" width="20" height="20"/>
@@ -184,7 +196,7 @@
                                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="93N-P1-QG1" userLabel="Image">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imagecell" id="93N-P1-QG1" userLabel="Image" customClass="SPCollectionImageCell">
                                                         <rect key="frame" x="16" y="0.0" width="144" height="81"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -203,8 +215,11 @@
                                                             <constraint firstAttribute="trailing" secondItem="H9f-c6-a4Q" secondAttribute="trailing" id="Sfi-Xc-dKy"/>
                                                         </constraints>
                                                         <size key="customSize" width="144" height="81"/>
+                                                        <connections>
+                                                            <outlet property="imageBackground" destination="H9f-c6-a4Q" id="q4y-R6-v9C"/>
+                                                        </connections>
                                                     </collectionViewCell>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e4B-e4-JSu" userLabel="Add Button" customClass="SPMainTakeImageCell">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="takefoto" id="e4B-e4-JSu" userLabel="Add Button" customClass="SPMainTakeImageCell">
                                                         <rect key="frame" x="215" y="0.0" width="144" height="81"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -246,6 +261,9 @@
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapSubmit:" destination="kEu-bb-Cyx" eventType="touchUpInside" id="Jdq-iX-XY2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -336,6 +354,7 @@
                         <outlet property="fieldPilihKategori" destination="TYw-5M-vLl" id="xqc-Ve-5En"/>
                         <outlet property="fieldPilihLokasi" destination="j9O-QG-lYo" id="w1R-DY-d26"/>
                         <outlet property="fieldTanggal" destination="kdK-sN-bI8" id="T1X-6r-rfs"/>
+                        <outlet property="scrollView" destination="SqM-uX-4EZ" id="eKY-Vb-e0S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92N-de-Pt8" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -93,7 +93,7 @@
     
     
     if (datastores.count >0) {
-        [SearchStringPickerViewController showPickerWithTitle:@"Toko"
+        [SearchStringPickerViewController showPickerWithTitle:@"Lokasi"
                                                          rows:datastores
                                              initialSelection:0
                                                    sourceView:sender

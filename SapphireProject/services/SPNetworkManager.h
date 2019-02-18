@@ -60,6 +60,10 @@ completionHandler:(SPCompletionHandler)handler;
              view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;
 
+- (void)doAddSKU:(NSDictionary* )data
+                 view:(UIView *)view
+    completionHandler:(SPCompletionHandler)handler;
+
 - (void)doAttendanceIn :(NSDictionary* )data
              imagedata:(NSData *)imageData
          imageFileName:(NSString*)filename

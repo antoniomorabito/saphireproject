@@ -171,6 +171,10 @@
 		0465396821EE107B00A3BF1F /* SPUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		046CC2B72219FB00007B167F /* NSDate+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		046CC2B82219FB00007B167F /* NSDate+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		046CC2BA221A3075007B167F /* SPMasterPromo+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPMasterPromo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		046CC2BB221A3075007B167F /* SPMasterPromo+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPMasterPromo+CoreDataClass.h"; sourceTree = "<group>"; };
+		046CC2BC221A3075007B167F /* SPMasterPromo+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPMasterPromo+CoreDataClass.m"; sourceTree = "<group>"; };
+		046CC2BD221A3076007B167F /* SPMasterPromo+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPMasterPromo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		0490B575220B84140054F854 /* SPSelloutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSelloutVC.h; sourceTree = "<group>"; };
 		0490B576220B84140054F854 /* SPSelloutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSelloutVC.m; sourceTree = "<group>"; };
 		0490B579220B89650054F854 /* SPSKUVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSKUVC.h; sourceTree = "<group>"; };
@@ -398,6 +402,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				046CC2BA221A3075007B167F /* SPMasterPromo+CoreDataProperties.h */,
+				046CC2BB221A3075007B167F /* SPMasterPromo+CoreDataClass.h */,
+				046CC2BC221A3075007B167F /* SPMasterPromo+CoreDataClass.m */,
+				046CC2BD221A3076007B167F /* SPMasterPromo+CoreDataProperties.m */,
 				04BCFFF02219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataProperties.h */,
 				04BCFFF12219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataClass.h */,
 				04BCFFF22219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataClass.m */,

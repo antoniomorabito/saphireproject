@@ -54,7 +54,7 @@
 #import "SPDataAttendanceIn+CoreDataProperties.h"
 #import "SPDataSellout+CoreDataProperties.h"
 #import "SPDataFeedBack+CoreDataProperties.h"
-
+#import "SPMasterPromo+CoreDataProperties.h"
 
 #import "FDTakeController.h"
 

@@ -43,6 +43,11 @@ completionHandler:(SPCompletionHandler)handler;
                    view:(UIView *)view
       completionHandler:(SPCompletionHandler)handler;
 
+
+- (void)doGetMasterPromo:(NSDictionary* )data
+                 view:(UIView *)view
+    completionHandler:(SPCompletionHandler)handler;
+
 - (void)doGetDataProductsByCategory:(NSString* )idproduct
                  view:(UIView *)view
     completionHandler:(SPCompletionHandler)handler;

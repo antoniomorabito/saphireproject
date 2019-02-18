@@ -84,6 +84,7 @@
                 [self initDealers];
                 [self initStores];
                 [self initCompetitior];
+                [self initMasterPromo];
             }
 
             
@@ -192,6 +193,22 @@
         if (success) {
             
 //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync stores done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
+
+-(void)initMasterPromo{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetMasterPromo:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+            //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync stores done" body:@""];
         }
         else{
             

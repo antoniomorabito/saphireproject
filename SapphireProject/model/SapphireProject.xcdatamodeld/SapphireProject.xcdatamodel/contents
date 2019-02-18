@@ -56,6 +56,11 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SPMasterPromo" representedClassName="SPMasterPromo" syncable="YES" codeGenerationType="class">
+        <attribute name="idPromo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path_photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="SPProduct" representedClassName="SPProduct" syncable="YES" codeGenerationType="class">
         <attribute name="category_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="channel_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -122,6 +127,7 @@
         <element name="SPAppConfig" positionX="-54" positionY="117" width="128" height="90"/>
         <element name="SPCategory" positionX="-36" positionY="153" width="128" height="120"/>
         <element name="SPCompetitor" positionX="0" positionY="171" width="128" height="105"/>
+        <element name="SPDataAttendanceIn" positionX="-18" positionY="135" width="128" height="135"/>
         <element name="SPDataFeedBack" positionX="-9" positionY="144" width="128" height="165"/>
         <element name="SPDataSellout" positionX="-18" positionY="135" width="128" height="240"/>
         <element name="SPDealer" positionX="-18" positionY="162" width="128" height="90"/>
@@ -129,6 +135,6 @@
         <element name="SPQuizMaster" positionX="-45" positionY="144" width="128" height="240"/>
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
-        <element name="SPDataAttendanceIn" positionX="-18" positionY="135" width="128" height="135"/>
+        <element name="SPMasterPromo" positionX="-18" positionY="135" width="128" height="90"/>
     </elements>
 </model>

@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSArray *data = [NSArray arrayWithObjects:@"imageone",@"imagetwo" ,@"imagethree",nil];
+    NSArray *data = [SPMasterPromo MR_findAll];
     
     if (data.count >0) {
         self.arrayPins = [[NSMutableArray alloc]initWithArray:data];
@@ -40,10 +40,10 @@
         
 SPCarouselChild *carousel = [[UIStoryboard storyboardWithName:@"SPCarousel" bundle:nil] instantiateViewControllerWithIdentifier:@"carouselPage"];
         
-        NSString *tourImage = [self.arrayPins objectAtIndex:0];
+        SPMasterPromo *tourImage = [self.arrayPins objectAtIndex:0];
         carousel.pageIndex = 0;
 //        carousel.headerString =
-        carousel.imageBack = tourImage;
+        carousel.imageBack = tourImage.path_photo;
         
         
         [_pageVC setViewControllers:@[carousel] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
@@ -130,9 +130,9 @@ SPCarouselChild *carousel = [[UIStoryboard storyboardWithName:@"SPCarousel" bund
     }
     SPCarouselChild  *carousel = [[UIStoryboard storyboardWithName:@"SPCarousel" bundle:nil] instantiateViewControllerWithIdentifier:@"carouselPage"];
     
-    NSString *tourImage = [self.arrayPins objectAtIndex:index];
+    SPMasterPromo *tourImage = [self.arrayPins objectAtIndex:index];
     carousel.pageIndex = index;
-    carousel.imageBack = tourImage;
+    carousel.imageBack = tourImage.path_photo;
     
     return carousel;
 }

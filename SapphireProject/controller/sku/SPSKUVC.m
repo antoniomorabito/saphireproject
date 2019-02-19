@@ -19,6 +19,8 @@
     NSString *storeid;
     NSString *categoryid;
     NSMutableArray *datas;
+    NSMutableArray *products;
+    NSString *product_id;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,7 +47,7 @@
 
     storeid = [[NSString alloc]init];
     categoryid = [[NSString alloc]init];
-    
+      product_id = [[NSString alloc]init];
     _fieldTanggal.delegate = self;
     _fieldPilihLokasi.delegate = self;
     _fieldPilihKategori.delegate = self;
@@ -55,6 +57,7 @@
     _fieldTanggal.inputView = dummyView;
     _fieldPilihLokasi.inputView = dummyView;
     _fieldPilihKategori.inputView = dummyView;
+    _fieldNamModel.inputView = dummyView;
 
     
     UIToolbar *toolbars = [[UIToolbar alloc] init];
@@ -232,6 +235,51 @@
                                     presentFromViewController:self];
     }
 }
+- (IBAction)didTapPilihProduk:(id)sender {
+    if ([categoryid isEqualToString:@""]) {
+        [SPUtility initBannerNotif:@"Information" subtitle:@"Belum memilih kategori produk" body:@""];
+    }
+    else{
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeIndeterminate;
+        hud.label.text = @"";
+        [hud showAnimated:YES];
+        NSArray *arrayproducts = [SPProduct MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"category_id == %@",categoryid]];
+        
+        products = [[NSMutableArray alloc]init];
+        for (SPProduct * product in arrayproducts) {
+            [products addObject:product.model_product];
+        }
+        [hud hideAnimated:YES];
+        
+        
+        if (products.count >0) {
+            [SearchStringPickerViewController showPickerWithTitle:@"produk"
+                                                             rows:products
+                                                 initialSelection:0
+                                                       sourceView:sender
+                                                        doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
+                                                            NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
+                                                            
+                                                            self->_fieldNamModel.text =selectedValue;
+                                                            
+                                                            
+                                                            SPProduct *produk = [SPProduct MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"model_product== %@",selectedValue]];
+                                                            
+                                                            self->product_id = produk.idproduct;
+                                                        }
+                                                      cancelBlock:nil
+                                        presentFromViewController:self];
+        }
+        else
+        {
+            [SPUtility initBannerNotif:@"Information" subtitle:@"Produk untuk kategori tersebut tidak ada" body:@""];
+        }
+        
+    }
+}
+
+
 - (IBAction)didTapSubmit:(id)sender {
     if (_fieldTanggal.text.length == 0) {
         [SPMessageUtility message:@"Belum masukin tanggal" needAction:YES viewController:self];
@@ -247,7 +295,7 @@
     }
     else if (_fieldNamModel.text.length == 0)
     {
-        [SPMessageUtility message:@"Belum menulis nama produk" needAction:YES viewController:self];
+        [SPMessageUtility message:@"Belum masukin produk" needAction:YES viewController:self];
     }
     else{
         SPNetworkManager *network = [[SPNetworkManager alloc]init];
@@ -256,20 +304,21 @@
         NSDictionary *data= @{@"storeId":storeid,
                               @"timeSku":_fieldTanggal.text,
                               @"categoryId":categoryid,
-                              @"productId":_fieldNamModel.text,
+                              @"productId":product_id,
                               @"refId":newID
                               };
         
  
         [network doAddSKU:data imagedata:_fileData imageFileName:_fileName view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
            
-            if (success) {
-                [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
-                    [self dismissViewControllerAnimated:YES completion:nil];
-                    
-                    
-                }];
-            }
+            NSLog(@"response object: %@",responseObject);
+//            if (success) {
+//                [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+//                    [self dismissViewControllerAnimated:YES completion:nil];
+//
+//
+//                }];
+//            }
             
         }];
         

@@ -169,6 +169,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihProduk:" destination="kEu-bb-Cyx" eventType="editingDidBegin" id="VSG-Zx-sws"/>
+                                                    <action selector="didTapPilihProduk:" destination="kEu-bb-Cyx" eventType="touchDown" id="gSE-eE-rju"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="bNC-LV-bWO">
                                                 <rect key="frame" x="16" y="210.5" width="20" height="20"/>

@@ -546,7 +546,7 @@
         TrueTimeClient *client = [TrueTimeClient sharedInstance];
         
         NSDate *now = [[client referenceTime] now];
-        NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timeFormatString]];
+        NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate dateFormatString]];
         
         NSLog(@"tangga; skrang : %@",displayString);
         SPNetworkManager *network = [[SPNetworkManager alloc]init];

@@ -33,7 +33,7 @@
     TrueTimeClient *client = [TrueTimeClient sharedInstance];
     
     NSDate *now = [[client referenceTime] now];
-    NSString *displayString = [NSDate stringForDisplayFromDate:now prefixed:NO alwaysDisplayTime:YES];
+    NSString *displayString = [NSDate stringForDisplayFromDate:now prefixed:YES alwaysDisplayTime:NO];
     
     
     self.lblTanggal.text = displayString;
@@ -543,17 +543,23 @@
     }
     else
     {
+        TrueTimeClient *client = [TrueTimeClient sharedInstance];
+        
+        NSDate *now = [[client referenceTime] now];
+        NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timeFormatString]];
+        
+        NSLog(@"tangga; skrang : %@",displayString);
         SPNetworkManager *network = [[SPNetworkManager alloc]init];
         NSString *newID = [[NSUUID UUID] UUIDString];
         NSLog(@"store id : %@",storeid );
         NSDictionary *data= @{@"storeId":storeid,
-                              @"timeCompetitor":@"",
-                           @"categoryId":categoryid,
-                        @"productId":_fieldTipeProduk.text,
-                              @"brand":@"",
-                              @"normalPrice":@"",
+                              @"timeCompetitor":displayString,
+                              @"categoryId":categoryid,
+                              @"productId":_fieldTipeProduk.text,
+                              @"brand":competitorid,
+                              @"normalPrice":_fieldHargaProduk.text,
                               @"salePrice":@"",
-                              @"remark":@"",
+                              @"remark":@"null",
                               @"startPeriode":_fieldAwalPeriode.text,
                               @"endPeriode":_fieldAkhirPeriode.text,
                               @"totalPromotor":@"",

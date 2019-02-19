@@ -76,6 +76,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihTanggal:" destination="F0J-Ti-C58" eventType="editingDidBegin" id="00t-7j-KPB"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-fm-cge">
                                                 <rect key="frame" x="16" y="66" width="20" height="20"/>

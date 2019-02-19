@@ -547,11 +547,29 @@
         NSString *newID = [[NSUUID UUID] UUIDString];
         NSLog(@"store id : %@",storeid );
         NSDictionary *data= @{@"storeId":storeid,
-                              @"timeSku":_fieldTanggal.text,
-                              @"categoryId":categoryid,
-                              @"productId":_fieldNamModel.text,
+                              @"timeCompetitor":@"",
+                           @"categoryId":categoryid,
+                        @"productId":_fieldTipeProduk.text,
+                              @"brand":@"",
+                              @"normalPrice":@"",
+                              @"salePrice":@"",
+                              @"remark":@"",
+                              @"startPeriode":_fieldAwalPeriode.text,
+                              @"endPeriode":_fieldAkhirPeriode.text,
+                              @"totalPromotor":@"",
+                              @"estimationSellout":@"",
                               @"refId":newID
                               };
+        
+        [network doCompetitorInfo:data imagedata:_fileData imageFileName:_fileName view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+            if (success) {
+                [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                    
+                    
+                }];
+            }
+        }];
     }
 }
 

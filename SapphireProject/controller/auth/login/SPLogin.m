@@ -177,10 +177,7 @@ bool isTap=false;
                         [self initCompetitior];
                         [self initMasterPromo];
                         [hud hideAnimated:YES];
-                        UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
-                        
-                        
-                        [self presentViewController:vc animated:YES completion:nil];
+                       
                     }
                     else{
                         NSLog(@"response error config adalah :%@",responseObject);
@@ -305,6 +302,11 @@ bool isTap=false;
         if (success) {
             
             //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync stores done" body:@""];
+            
+            UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+            
+            
+            [self presentViewController:vc animated:YES completion:nil];
         }
         else{
             

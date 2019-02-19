@@ -306,7 +306,7 @@
         SPCollectionImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imagecell" forIndexPath:indexPath];
         
     
-        
+        cell.imageBackground.image = [UIImage imageWithData:[NSData dataWithData:[data objectForKey:@"imagedata"]]];
         return cell;
     }
   
@@ -391,7 +391,7 @@
                  //                 NSLog(@"check the datae : %@",_fileData);
                  //                 _filePath =@"tst";
                  
-               [self writeImageData:self.imageViewCekIn.image filename:path];
+               [self writeImageData:viewImage filename:path];
                  
                  
                  
@@ -415,6 +415,16 @@
     //    NSLog(@"image yang akan di post ke peladen : %@",_filePath);
 
     
+    
+    
+    [datas addObject:@{
+                    @"header":@"content",
+                    @"imagedata":_fileData,
+                    @"imagefilenam":_fileName,
+                    @"imagefilepath":_filePath
+                    }];
+    
+    [self.collectionView reloadData];
 }
 - (NSString *)documentsPathForFileName:(NSString *)name
 {

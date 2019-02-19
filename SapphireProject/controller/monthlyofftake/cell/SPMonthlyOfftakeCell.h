@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SPNetworkManager.h"
 @interface SPMonthlyOfftakeCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblNameProduk;
 @property (weak, nonatomic) IBOutlet UILabel *lblHarga;

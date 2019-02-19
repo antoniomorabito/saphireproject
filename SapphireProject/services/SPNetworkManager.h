@@ -61,8 +61,17 @@ completionHandler:(SPCompletionHandler)handler;
 completionHandler:(SPCompletionHandler)handler;
 
 - (void)doAddSKU:(NSDictionary* )data
+            imagedata:(NSData *)imageData
+        imageFileName:(NSString*)filename
                  view:(UIView *)view
     completionHandler:(SPCompletionHandler)handler;
+
+
+- (void)doCompetitorInfo:(NSDictionary* )data
+       imagedata:(NSData *)imageData
+   imageFileName:(NSString*)filename
+            view:(UIView *)view
+completionHandler:(SPCompletionHandler)handler;
 
 - (void)doAttendanceIn :(NSDictionary* )data
              imagedata:(NSData *)imageData

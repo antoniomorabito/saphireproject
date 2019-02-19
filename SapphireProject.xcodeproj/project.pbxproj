@@ -226,6 +226,10 @@
 		04BCFFF12219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataAttendanceIn+CoreDataClass.h"; sourceTree = "<group>"; };
 		04BCFFF22219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataAttendanceIn+CoreDataClass.m"; sourceTree = "<group>"; };
 		04BCFFF32219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataAttendanceIn+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04E0182D221BEA0900927974 /* SPDataCompetitor+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataCompetitor+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04E0182E221BEA0900927974 /* SPDataCompetitor+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataCompetitor+CoreDataClass.h"; sourceTree = "<group>"; };
+		04E0182F221BEA0900927974 /* SPDataCompetitor+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataCompetitor+CoreDataClass.m"; sourceTree = "<group>"; };
+		04E01830221BEA0900927974 /* SPDataCompetitor+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataCompetitor+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -405,6 +409,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04E0182D221BEA0900927974 /* SPDataCompetitor+CoreDataProperties.h */,
+				04E0182E221BEA0900927974 /* SPDataCompetitor+CoreDataClass.h */,
+				04E0182F221BEA0900927974 /* SPDataCompetitor+CoreDataClass.m */,
+				04E01830221BEA0900927974 /* SPDataCompetitor+CoreDataProperties.m */,
 				046CC2BA221A3075007B167F /* SPMasterPromo+CoreDataProperties.h */,
 				046CC2BB221A3075007B167F /* SPMasterPromo+CoreDataClass.h */,
 				046CC2BC221A3075007B167F /* SPMasterPromo+CoreDataClass.m */,

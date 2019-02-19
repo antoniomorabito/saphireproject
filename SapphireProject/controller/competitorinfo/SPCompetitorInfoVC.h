@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SPNetworkManager.h"
+#import "SPMainTakeImageCell.h"
+#import "SPCollectionImageCell.h"
 @interface SPCompetitorInfoVC : UIViewController<UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *lblTanggal;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldLokasi;
@@ -20,5 +22,11 @@
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldAkhirPeriode;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (strong, nonatomic) FDTakeController *fdTake;
+
+@property (strong,nonatomic)NSData *fileData;
+@property (strong,nonatomic)NSString *fileName;
+@property (strong,nonatomic)NSString *filePath;
 
 @end

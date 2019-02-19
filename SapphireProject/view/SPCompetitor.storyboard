@@ -76,6 +76,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihLokasi:" destination="san-vg-xEq" eventType="editingDidBegin" id="QWY-Ju-DXx"/>
+                                                    <action selector="didTapPilihLokasi:" destination="san-vg-xEq" eventType="touchDown" id="e6z-gd-KJU"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-Rf-YJg">
                                                 <rect key="frame" x="16" y="66" width="20" height="20"/>
@@ -105,6 +109,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihCategory:" destination="san-vg-xEq" eventType="editingDidBegin" id="YLd-Wb-7WY"/>
+                                                    <action selector="didTapPilihCategory:" destination="san-vg-xEq" eventType="touchDown" id="jrO-aW-HdF"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="Do8-1w-DCG">
                                                 <rect key="frame" x="16" y="123" width="20" height="20"/>
@@ -134,6 +142,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihProduk:" destination="san-vg-xEq" eventType="editingDidBegin" id="9Jn-VA-zjo"/>
+                                                    <action selector="didTapPilihProduk:" destination="san-vg-xEq" eventType="touchDown" id="Sxv-hf-MC0"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-y0-IAH">
                                                 <rect key="frame" x="16" y="180" width="20" height="20"/>
@@ -207,6 +219,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapAwalPeriode:" destination="san-vg-xEq" eventType="editingDidBegin" id="jcR-2g-7Oy"/>
+                                                    <action selector="didTapAwalPeriode:" destination="san-vg-xEq" eventType="touchDown" id="xCg-mt-yWf"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-8X-VWY">
                                                 <rect key="frame" x="16" y="407" width="20" height="20"/>
@@ -244,6 +260,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapAkhirPeriode:" destination="san-vg-xEq" eventType="editingDidBegin" id="Dtj-mh-Hh7"/>
+                                                    <action selector="didTapAkhirPeriode:" destination="san-vg-xEq" eventType="touchDown" id="IEJ-xT-WAT"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="8ld-1f-Ffs">
                                                 <rect key="frame" x="195.5" y="407" width="20" height="20"/>
@@ -267,6 +287,9 @@
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapKirim:" destination="san-vg-xEq" eventType="touchUpInside" id="1XX-T9-r87"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih Kompetitor Anda (Cth. Samsung)" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="o5f-f6-MA9" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="52" y="221.5" width="307" height="41"/>
@@ -289,6 +312,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihKompetitor:" destination="san-vg-xEq" eventType="editingDidBegin" id="D99-id-4Oa"/>
+                                                    <action selector="didTapPilihKompetitor:" destination="san-vg-xEq" eventType="touchDown" id="Sm3-pP-5Zu"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="FfW-jQ-bI7">
                                                 <rect key="frame" x="16" y="237" width="20" height="20"/>
@@ -319,7 +346,7 @@
                                                             <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DO0-IV-zff" userLabel="Image">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainImageCell" id="DO0-IV-zff" userLabel="Image" customClass="SPCollectionImageCell">
                                                                 <rect key="frame" x="16" y="0.0" width="144" height="81"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -338,8 +365,11 @@
                                                                     <constraint firstItem="jA0-aV-Xvh" firstAttribute="leading" secondItem="DO0-IV-zff" secondAttribute="leading" id="eox-cc-R6k"/>
                                                                 </constraints>
                                                                 <size key="customSize" width="144" height="81"/>
+                                                                <connections>
+                                                                    <outlet property="imageBackground" destination="jA0-aV-Xvh" id="Uqa-uC-2dO"/>
+                                                                </connections>
                                                             </collectionViewCell>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainImageCell" id="4OA-rA-iVV" userLabel="Add Button" customClass="SPMainTakeImageCell">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="takefoto" id="4OA-rA-iVV" userLabel="Add Button" customClass="SPMainTakeImageCell">
                                                                 <rect key="frame" x="215" y="0.0" width="144" height="81"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

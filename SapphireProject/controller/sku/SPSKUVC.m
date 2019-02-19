@@ -260,8 +260,8 @@
                               @"refId":newID
                               };
         
-        
-        [network doAddSKU:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+ 
+        [network doAddSKU:data imagedata:_fileData imageFileName:_fileName view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
            
             if (success) {
                 [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
@@ -270,9 +270,7 @@
                     
                 }];
             }
-            else{
-                
-            }
+            
         }];
         
         

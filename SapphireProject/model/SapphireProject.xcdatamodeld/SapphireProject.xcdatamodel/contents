@@ -26,6 +26,20 @@
         <attribute name="time_attandance" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SPDataCompetitor" representedClassName="SPDataCompetitor" syncable="YES" codeGenerationType="class">
+        <attribute name="brand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endPeriode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idTable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="normalPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="salePrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startPeriode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeCompetitor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="SPDataFeedBack" representedClassName="SPDataFeedBack" syncable="YES" codeGenerationType="class">
         <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="customerFeedback" optional="YES" attributeType="String" syncable="YES"/>
@@ -131,10 +145,11 @@
         <element name="SPDataFeedBack" positionX="-9" positionY="144" width="128" height="165"/>
         <element name="SPDataSellout" positionX="-18" positionY="135" width="128" height="240"/>
         <element name="SPDealer" positionX="-18" positionY="162" width="128" height="90"/>
+        <element name="SPMasterPromo" positionX="-18" positionY="135" width="128" height="90"/>
         <element name="SPProduct" positionX="18" positionY="180" width="128" height="195"/>
         <element name="SPQuizMaster" positionX="-45" positionY="144" width="128" height="240"/>
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
-        <element name="SPMasterPromo" positionX="-18" positionY="135" width="128" height="90"/>
+        <element name="SPDataCompetitor" positionX="-18" positionY="135" width="128" height="225"/>
     </elements>
 </model>

@@ -360,6 +360,9 @@
                                                                     <constraint firstAttribute="trailing" secondItem="c5N-EJ-HgB" secondAttribute="trailing" id="Q0i-6G-vac"/>
                                                                 </constraints>
                                                                 <size key="customSize" width="144" height="81"/>
+                                                                <connections>
+                                                                    <outlet property="btnTakeFoto" destination="c5N-EJ-HgB" id="5oX-84-UD2"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -488,6 +491,7 @@
                         <outlet property="fieldPilihKompetitor" destination="o5f-f6-MA9" id="jsB-oQ-sWC"/>
                         <outlet property="fieldTipeProduk" destination="Xzr-2q-yud" id="NZz-n3-Iqf"/>
                         <outlet property="lblTanggal" destination="Mjg-jh-V03" id="dTL-n3-Tvn"/>
+                        <outlet property="scrollView" destination="3I2-pS-3HI" id="436-PY-34A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMg-n2-aln" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldAwalPeriode;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldAkhirPeriode;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

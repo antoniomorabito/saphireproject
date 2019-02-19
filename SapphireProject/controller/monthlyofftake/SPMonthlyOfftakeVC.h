@@ -11,5 +11,8 @@
 #import "SPMonthlyOfftakeCell.h"
 @interface SPMonthlyOfftakeVC : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihTanggal;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihLokasi;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihKategori;
 
 @end

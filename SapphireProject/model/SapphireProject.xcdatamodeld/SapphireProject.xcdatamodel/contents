@@ -19,10 +19,23 @@
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="SPDataAttendanceIn" representedClassName="SPDataAttendanceIn" syncable="YES" codeGenerationType="class">
+        <attribute name="idattendance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagefotdata" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="refId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tanggal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time_attandance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SPDataAttendanceOut" representedClassName="SPDataAttendanceOut" syncable="YES" codeGenerationType="class">
+        <attribute name="attandance_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagefotdata" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="refId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tanggal" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time_attandance" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -149,7 +162,10 @@
         <element name="SPAppConfig" positionX="-54" positionY="117" width="128" height="90"/>
         <element name="SPCategory" positionX="-36" positionY="153" width="128" height="120"/>
         <element name="SPCompetitor" positionX="0" positionY="171" width="128" height="105"/>
-        <element name="SPDataAttendanceIn" positionX="-18" positionY="135" width="128" height="135"/>
+        <element name="SPDataAttendanceIn" positionX="-18" positionY="135" width="128" height="180"/>
+        <element name="SPDataAttendanceOut" positionX="0" positionY="153" width="128" height="165"/>
+        <element name="SPDataCompetitor" positionX="-18" positionY="135" width="128" height="225"/>
+        <element name="SPDataDisplay" positionX="-9" positionY="144" width="128" height="135"/>
         <element name="SPDataFeedBack" positionX="-9" positionY="144" width="128" height="165"/>
         <element name="SPDataSellout" positionX="-18" positionY="135" width="128" height="240"/>
         <element name="SPDealer" positionX="-18" positionY="162" width="128" height="90"/>
@@ -158,7 +174,5 @@
         <element name="SPQuizMaster" positionX="-45" positionY="144" width="128" height="240"/>
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
-        <element name="SPDataCompetitor" positionX="-18" positionY="135" width="128" height="225"/>
-        <element name="SPDataDisplay" positionX="-9" positionY="144" width="128" height="135"/>
     </elements>
 </model>

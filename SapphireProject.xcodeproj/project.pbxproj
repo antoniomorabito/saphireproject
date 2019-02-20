@@ -238,6 +238,10 @@
 		04E0183A221CEBA500927974 /* SPDataDisplay+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataDisplay+CoreDataClass.h"; sourceTree = "<group>"; };
 		04E0183B221CEBA500927974 /* SPDataDisplay+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataDisplay+CoreDataClass.m"; sourceTree = "<group>"; };
 		04E0183C221CEBA500927974 /* SPDataDisplay+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataDisplay+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04E0183F221CFE9900927974 /* SPDataAttendanceOut+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataAttendanceOut+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04E01840221CFE9900927974 /* SPDataAttendanceOut+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataAttendanceOut+CoreDataClass.h"; sourceTree = "<group>"; };
+		04E01841221CFE9900927974 /* SPDataAttendanceOut+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataAttendanceOut+CoreDataClass.m"; sourceTree = "<group>"; };
+		04E01842221CFE9900927974 /* SPDataAttendanceOut+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataAttendanceOut+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -418,6 +422,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04E0183F221CFE9900927974 /* SPDataAttendanceOut+CoreDataProperties.h */,
+				04E01840221CFE9900927974 /* SPDataAttendanceOut+CoreDataClass.h */,
+				04E01841221CFE9900927974 /* SPDataAttendanceOut+CoreDataClass.m */,
+				04E01842221CFE9900927974 /* SPDataAttendanceOut+CoreDataProperties.m */,
 				04E01839221CEBA500927974 /* SPDataDisplay+CoreDataProperties.h */,
 				04E0183A221CEBA500927974 /* SPDataDisplay+CoreDataClass.h */,
 				04E0183B221CEBA500927974 /* SPDataDisplay+CoreDataClass.m */,

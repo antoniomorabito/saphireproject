@@ -392,7 +392,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAM TOTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qW-RV-b4a">
-                                                <rect key="frame" x="126" y="112.5" width="68" height="15"/>
+                                                <rect key="frame" x="126.5" y="112.5" width="68" height="15"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.46666666670000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -661,6 +661,8 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnCheckIn" destination="dRe-A7-1Xd" id="Hed-Jg-YlW"/>
+                        <outlet property="btnCheckOut" destination="qCj-ZP-kBj" id="APi-lR-qXz"/>
                         <outlet property="fieldTempatBekerja" destination="n3X-AE-Sp8" id="get-Dy-pB7"/>
                         <outlet property="imageViewCekIn" destination="25a-o4-NZv" id="B3e-f5-iJn"/>
                         <outlet property="imageViewCekout" destination="mCd-Mx-HaR" id="JDo-RO-Qoy"/>

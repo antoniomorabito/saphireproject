@@ -20,31 +20,19 @@
     NSString *storeid;
     NSString *typeFoto;
 }
+-(NSString *)getDocumentDirectoryPath:(NSString *)Name
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,  NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *savedImagePath = [documentsDirectory stringByAppendingPathComponent:Name];
+    NSLog(@"savedImagePath: %@", savedImagePath);
+    return savedImagePath;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-     TrueTimeClient *client = [TrueTimeClient sharedInstance];
-    
-      NSDate *now = [[client referenceTime] now];
-    
-    NSLog(@"nilai datenya adalah : %@",now);
-    // Do any additional setup after loading the view.
-    
-
-    
-     NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timeFormatString]];
-    
-   storeid = [[NSString alloc]init];
-       typeFoto = [[NSString alloc]init];
-    
-    NSArray *arraystore = [SPStore MR_findAll];
-    
-    datastores = [[NSMutableArray alloc]init];
-    for (SPStore * store in arraystore) {
-        [datastores addObject:store.name];
-    }
-    
-    
+  
+    [self initData];
     _fieldTempatBekerja.delegate = self;
     
     UIView *dummyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
@@ -63,10 +51,115 @@
      _fieldTempatBekerja.inputAccessoryView = toolbars;
     
     
+}
+
+-(void)initData{
+    TrueTimeClient *client = [TrueTimeClient sharedInstance];
     
-    _waktuJamNow.text =   displayString;
+    NSDate *now = [[client referenceTime] now];
+    NSString *functiondate = [NSDate stringFromDate:now withFormat:@"yyyy-MM-dd"];
     
-    _lblTotalJamSkrang.text = @"00:00:00";
+    NSLog(@"get function date id : %@",functiondate);
+    SPUser *user =[SPUser MR_findFirst];
+    
+       SPDataAttendanceIn *attendanceIn = [SPDataAttendanceIn MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@",functiondate,user.userId]];
+
+    if (attendanceIn) {
+        //kalau ada buat kondisi dari awal lagi ntuk proses cek out
+        
+         SPDataAttendanceOut *attendanceout = [SPDataAttendanceOut MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@ and attandance_id == %@",functiondate,user.userId,attendanceIn.idattendance]];
+        
+        
+        if (attendanceout) {
+            NSLog(@"ada outnya loj");
+            //kalau ada..init baru lagi
+            _btnCheckIn.enabled = true;
+            _btnCheckOut.enabled = false;
+            _fieldTempatBekerja.enabled = true;
+            
+            NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timeFormatString]];
+            
+            storeid = [[NSString alloc]init];
+            typeFoto = [[NSString alloc]init];
+            
+            NSArray *arraystore = [SPStore MR_findAll];
+            
+            datastores = [[NSMutableArray alloc]init];
+            for (SPStore * store in arraystore) {
+                [datastores addObject:store.name];
+            }
+            
+            _waktuJamNow.text =   displayString;
+            
+            _lblTotalJamSkrang.text = @"00:00:00";
+            _imageViewCekIn.image = NULL;
+            _imageViewCekout.image = NULL;
+            _lblJamCekIn.text = @"";
+            _lblJamCekOut.text = @"";
+            _fieldTempatBekerja.text = @"";
+            
+            
+        }
+        else{
+            NSLog(@"gak ada  outnya loj");
+            //kalau tidak ada out..
+            NSString *dateString = attendanceIn.time_attandance;
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSDate *dateFromString = [dateFormatter dateFromString:dateString];
+            NSDateFormatter *dateFormattersecond = [[NSDateFormatter alloc] init];
+            [dateFormattersecond setDateFormat:@"HH:mm"];
+            NSString *stringDate = [dateFormattersecond stringFromDate:dateFromString];
+            _lblJamCekIn.text = stringDate;
+            
+            //            NSLog(@"image foto nya adalah : %@",);
+            _imageViewCekIn.image = [UIImage imageWithData:attendanceIn.imagefotdata];
+            
+            SPStore *store = [SPStore MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"idstore == %@",attendanceIn.storeId]];
+            
+            storeid = store.idstore;
+            _fieldTempatBekerja.text = store.name;
+            
+            _fieldTempatBekerja.enabled = false;
+            
+            self.btnCheckIn.enabled =false;
+            self.btnCheckOut.enabled =true;
+            
+        }
+    }
+    else{
+        
+        NSLog(@"blum ada attendance untuk hari itu ");
+        //jika blum ada attendance in sama sekali
+        _btnCheckIn.enabled = true;
+        _btnCheckOut.enabled = false;
+        _fieldTempatBekerja.enabled = true;
+        
+        NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timeFormatString]];
+        
+        storeid = [[NSString alloc]init];
+        typeFoto = [[NSString alloc]init];
+        
+        NSArray *arraystore = [SPStore MR_findAll];
+        
+        datastores = [[NSMutableArray alloc]init];
+        for (SPStore * store in arraystore) {
+            [datastores addObject:store.name];
+        }
+        
+        _waktuJamNow.text =   displayString;
+        
+        _lblTotalJamSkrang.text = @"00:00:00";
+        _imageViewCekIn.image = NULL;
+        _imageViewCekout.image = NULL;
+    }
+
+    
+    
+    
+    NSLog(@"nilai datenya adalah : %@",now);
+    // Do any additional setup after loading the view.
+   
     
 }
 -(void)doneClicked:(UIBarButtonItem*)button
@@ -193,10 +286,13 @@
                  if ([self->typeFoto isEqualToString:@"cekin"]) {
                   [self writeImageData:self.imageViewCekIn.image filename:path];
                      NSString *newID = [[NSUUID UUID] UUIDString];
-                     [self insertNetworkAttendance:newID];
+                     [self insertNetworkAttendanceIn:newID];
                  }
                  else{
                       [self writeImageData:self.imageViewCekout.image filename:path];
+                     
+                     NSString *newID = [[NSUUID UUID] UUIDString];
+                     [self insertNetworkAttendanceOut:newID];
                  }
                  
                
@@ -257,28 +353,96 @@
     }
     
 }
--(void)insertNetworkAttendance:(NSString*)refID{
+
+-(void)insertNetworkAttendanceOut:(NSString *)refID
+{
     TrueTimeClient *client = [TrueTimeClient sharedInstance];
     
     NSDate *now = [[client referenceTime] now];
     
-    NSLog(@"nilai date network adalah : %@",now);
+    NSLog(@"nilai date network out adalah adalah : %@",now);
     // Do any additional setup after loading the view
     NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timestampFormatString]];
+    NSString *functiondate = [NSDate stringFromDate:now withFormat:@"yyyy-MM-dd"];
+    SPUser *user =[SPUser MR_findFirst];
+    SPDataAttendanceIn *attendanceIn = [SPDataAttendanceIn MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@",functiondate,user.userId]];
+    NSLog(@"data attendande oin adalah : %@ atau data attend %@",attendanceIn.idattendance,attendanceIn.time_attandance);
+    NSDictionary *data =@{@"attandance_id":attendanceIn.idattendance,@"time_attandance":displayString,@"remark":@"attendanceout",@"refId":refID};
+    
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doAttendanceOut:data imagedata:_fileData imageFileName:_fileName view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        NSLog(@"response attendance out  adalah: %@",responseObject);
+        
+        if (success) {
+            
+            [self insertLocalAttendanceOut:[data objectForKey:@"refId"] attendancetime:[data objectForKey:@"time_attandance"] typeAttendance:[data objectForKey:@"remark"] tanggal:functiondate attendanceid:attendanceIn.idattendance];
+            
+            NSString *dateString = [data objectForKey:@"time_attandance"];
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSDate *dateFromString = [dateFormatter dateFromString:dateString];
+            NSDateFormatter *dateFormattersecond = [[NSDateFormatter alloc] init];
+            [dateFormattersecond setDateFormat:@"HH:mm"];
+            NSString *stringDate = [dateFormattersecond stringFromDate:dateFromString];
+            
+            self.lblJamCekOut.text = stringDate;
+            
+            [self initData];
+            
+        }
+        else{
+            
+        }
+        
+    }];
+}
+-(void)insertNetworkAttendanceIn:(NSString*)refID{
+    TrueTimeClient *client = [TrueTimeClient sharedInstance];
+    
+    NSDate *now = [[client referenceTime] now];
+    
+    NSLog(@"nilai date network in adalah : %@",now);
+    // Do any additional setup after loading the view
+    NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timestampFormatString]];
+    NSString *functiondate = [NSDate stringFromDate:now withFormat:@"yyyy-MM-dd"];
     NSDictionary *data =@{@"storeId":storeid,@"time_attandance":displayString,@"remark":@"attendancein",@"refId":refID};
     
     SPNetworkManager *network = [[SPNetworkManager alloc]init];
     
     [network doAttendanceIn:data imagedata:_fileData imageFileName:_fileName view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
        
-        NSLog(@"response attendance in : %@",data);
+        NSLog(@"response attendance in  adalah: %@",responseObject);
+        if (![[responseObject objectForKey:@"error_description"] isEqualToString:@"Incorrect token"]) {
+            
+            [self insertLocalAttendanceIn:[data objectForKey:@"refId"] attendancetime:[data objectForKey:@"time_attandance"] typeAttendance:[data objectForKey:@"remark"] tanggal:functiondate attendanceID:[responseObject objectForKey:@"attandance_id"]];
+            
+            NSString *dateString = [data objectForKey:@"time_attandance"];
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSDate *dateFromString = [dateFormatter dateFromString:dateString];
+            NSDateFormatter *dateFormattersecond = [[NSDateFormatter alloc] init];
+            [dateFormattersecond setDateFormat:@"HH:mm"];
+            NSString *stringDate = [dateFormattersecond stringFromDate:dateFromString];
+            
+            self.lblJamCekIn.text = stringDate;
+            
+            [self initData];
+            
+        }
+        else{
+            
+        }
         
     }];
     
 }
--(void)insertLocalAttendance:(NSString*)refID
+-(void)insertLocalAttendanceIn:(NSString*)refID
               attendancetime:  (NSString *)timepost
-            typeAttendance:  (NSString *)type{
+            typeAttendance:  (NSString *)type
+                tanggal:  (NSString *)tanggalin
+                attendanceID:  (NSString *)idattendance{
    
     
     NSLog(@"nilai id nya  : %@",refID );
@@ -286,16 +450,40 @@
 
     SPUser *user = [SPUser MR_findFirst];
     data.refId = refID;
+    data.idattendance =idattendance;
+    data.imagefotdata = _fileData;
     data.photo = _filePath;
     data.userId =user.userId;
     data.storeId = storeid;
+    data.tanggal = tanggalin;
     data.time_attandance =timepost;
     data.remark =type;
      [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     
 }
 
-
+-(void)insertLocalAttendanceOut:(NSString*)refID
+                attendancetime:  (NSString *)timepost
+                typeAttendance:  (NSString *)type
+                       tanggal:  (NSString *)tanggalin
+                        attendanceid:  (NSString *)idattendance{
+    
+    
+    NSLog(@"nilai id nya output  : %@",refID );
+    SPDataAttendanceOut *data = [SPDataAttendanceOut MR_createEntity];
+    
+    SPUser *user = [SPUser MR_findFirst];
+    data.refId = refID;
+    data.attandance_id =idattendance;
+    data.imagefotdata = _fileData;
+    data.foto = _filePath;
+    data.userId =user.userId;
+    data.tanggal = tanggalin;
+    data.time_attandance =timepost;
+    data.remark =type;
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    
+}
 /*
 #pragma mark - Navigation
 

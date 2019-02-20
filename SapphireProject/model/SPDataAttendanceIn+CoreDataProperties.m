@@ -2,7 +2,7 @@
 //  SPDataAttendanceIn+CoreDataProperties.m
 //  SapphireProject
 //
-//  Created by mac on 18/02/19.
+//  Created by mac on 20/02/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 //
@@ -15,11 +15,14 @@
 	return [NSFetchRequest fetchRequestWithEntityName:@"SPDataAttendanceIn"];
 }
 
-@dynamic storeId;
-@dynamic time_attandance;
-@dynamic remark;
+@dynamic idattendance;
 @dynamic photo;
 @dynamic refId;
+@dynamic remark;
+@dynamic storeId;
+@dynamic tanggal;
+@dynamic time_attandance;
 @dynamic userId;
+@dynamic imagefotdata;
 
 @end

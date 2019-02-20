@@ -25,6 +25,8 @@
 
 @property (strong, nonatomic) FDTakeController *fdTake;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnCheckIn;
+@property (weak, nonatomic) IBOutlet UIButton *btnCheckOut;
 
 @property (strong,nonatomic)NSData *fileData;
 @property (strong,nonatomic)NSString *fileName;

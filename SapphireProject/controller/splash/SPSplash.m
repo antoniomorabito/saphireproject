@@ -85,6 +85,7 @@
                 [self initStores];
                 [self initCompetitior];
                 [self initMasterPromo];
+                [self initChannel];
             }
 
             
@@ -216,6 +217,22 @@
         
     }];
 }
+-(void)initChannel{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetChannel:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+//            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync products done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
+
 /*
 #pragma mark - Navigation
 

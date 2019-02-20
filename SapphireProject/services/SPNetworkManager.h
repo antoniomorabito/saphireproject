@@ -18,6 +18,11 @@ completionHandler:(SPCompletionHandler)handler;
            view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;
 
+
+- (void)doGetChannel:(NSDictionary* )data
+               view:(UIView *)view
+  completionHandler:(SPCompletionHandler)handler;
+
 - (void)doGetStore:(NSDictionary* )data
                view:(UIView *)view
   completionHandler:(SPCompletionHandler)handler;
@@ -93,4 +98,9 @@ completionHandler:(SPCompletionHandler)handler;
           imageFileName:(NSString*)filename
                    view:(UIView *)view
       completionHandler:(SPCompletionHandler)handler;
+
+
+- (void)doMonthlyOfftake:(NSDictionary* )data
+            view:(UIView *)view
+completionHandler:(SPCompletionHandler)handler;
 @end

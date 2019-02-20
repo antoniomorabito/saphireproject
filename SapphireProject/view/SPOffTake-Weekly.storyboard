@@ -219,6 +219,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihTanggal:" destination="juy-5y-1Lg" eventType="editingDidBegin" id="GGc-Ua-Uim"/>
+                                                    <action selector="didTapPilihTanggal:" destination="juy-5y-1Lg" eventType="touchDown" id="Rlu-eh-eJR"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="TjV-c7-hI6">
                                                 <rect key="frame" x="16" y="31.5" width="20" height="20"/>
@@ -248,6 +252,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihLokasi:" destination="juy-5y-1Lg" eventType="touchDown" id="bOT-BM-tx2"/>
+                                                    <action selector="didTapPilihLokasi:" destination="juy-5y-1Lg" eventType="editingDidBegin" id="vNM-qz-Egp"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="FFu-Ti-lyh">
                                                 <rect key="frame" x="16" y="88.5" width="20" height="20"/>
@@ -277,6 +285,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihKategori:" destination="juy-5y-1Lg" eventType="touchDown" id="x8y-PY-9pG"/>
+                                                    <action selector="didTapPilihKategori:" destination="juy-5y-1Lg" eventType="editingDidBegin" id="xef-fZ-EtN"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="kr7-k7-MMh">
                                                 <rect key="frame" x="16" y="145.5" width="20" height="20"/>
@@ -399,6 +411,9 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="fieldPilihKategori" destination="VyT-Sp-ZhD" id="yWO-El-Rv2"/>
+                        <outlet property="fieldPilihLokasi" destination="oFC-ag-LMX" id="uQV-T5-27J"/>
+                        <outlet property="fieldPilihTanggal" destination="8mw-pV-4gh" id="ET5-t3-b8h"/>
                         <outlet property="tableView" destination="4PU-2u-shY" id="Zgy-Bk-PDd"/>
                     </connections>
                 </viewController>

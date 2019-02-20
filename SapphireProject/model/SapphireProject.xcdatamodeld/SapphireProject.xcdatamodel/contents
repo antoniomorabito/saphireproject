@@ -12,6 +12,12 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SPChannel" representedClassName="SPChannel" syncable="YES" codeGenerationType="class">
+        <attribute name="created_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idChannel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="SPCompetitor" representedClassName="SPCompetitor" syncable="YES" codeGenerationType="class">
         <attribute name="category_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idcompetitor" optional="YES" attributeType="String" syncable="YES"/>
@@ -174,5 +180,6 @@
         <element name="SPQuizMaster" positionX="-45" positionY="144" width="128" height="240"/>
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
+        <element name="SPChannel" positionX="-18" positionY="135" width="128" height="105"/>
     </elements>
 </model>

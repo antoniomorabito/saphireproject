@@ -40,7 +40,7 @@
             <objects>
                 <viewController storyboardIdentifier="monthlyofftake" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uGk-mz-ArQ" customClass="SPMonthlyOfftakeVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7uE-pW-SAl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbh-pO-bXR">
@@ -117,7 +117,7 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="aYu-g7-2e3">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" background="bg_field_unfocus" translatesAutoresizingMaskIntoConstraints="NO" id="aYu-g7-2e3">
                                                                     <rect key="frame" x="15" y="180" width="234" height="29"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="29" id="8N3-gx-t98"/>
@@ -126,7 +126,7 @@
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
-                                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="GAI-R8-TLj">
+                                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="GAI-R8-TLj">
                                                                     <rect key="frame" x="265" y="180" width="94" height="29"/>
                                                                     <color key="tintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </stepper>
@@ -221,6 +221,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihTanggal:" destination="uGk-mz-ArQ" eventType="editingDidBegin" id="5pL-hs-Jej"/>
+                                                    <action selector="didTapPilihTanggal:" destination="uGk-mz-ArQ" eventType="touchDown" id="wJK-nB-Dja"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="FNC-BP-xg2">
                                                 <rect key="frame" x="16" y="31.5" width="20" height="20"/>
@@ -250,6 +254,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihLokasi:" destination="uGk-mz-ArQ" eventType="editingDidBegin" id="04W-f8-d9p"/>
+                                                    <action selector="didTapPilihLokasi:" destination="uGk-mz-ArQ" eventType="touchDown" id="We0-jq-MoG"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="wMc-i0-oPL">
                                                 <rect key="frame" x="16" y="88.5" width="20" height="20"/>
@@ -279,6 +287,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihKategori:" destination="uGk-mz-ArQ" eventType="editingDidBegin" id="NeA-jH-5mq"/>
+                                                    <action selector="didTapPilihKategori:" destination="uGk-mz-ArQ" eventType="touchDown" id="PVP-Ud-RFJ"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="0Sq-cn-Cji">
                                                 <rect key="frame" x="16" y="145.5" width="20" height="20"/>
@@ -384,7 +396,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offtake Bulanan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8S-FW-EuE">
-                                    <rect key="frame" x="-73" y="0.0" width="146" height="44"/>
+                                    <rect key="frame" x="-73.5" y="0.0" width="147" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="CNA-Xd-XCA"/>
                                     </constraints>

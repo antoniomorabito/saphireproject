@@ -58,6 +58,9 @@
 #import "SPDataCompetitor+CoreDataProperties.h"
 #import "SPDataDisplay+CoreDataProperties.h"
 #import "SPDataAttendanceOut+CoreDataProperties.h"
+#import "SPChannel+CoreDataProperties.h"
+
+
 #import "FDTakeController.h"
 
 @import Photos;

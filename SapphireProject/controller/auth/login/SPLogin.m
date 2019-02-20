@@ -175,6 +175,7 @@ bool isTap=false;
                         [self initDealers];
                         [self initStores];
                         [self initCompetitior];
+                        [self initChannel];
                         [self initMasterPromo];
                         [hud hideAnimated:YES];
                        
@@ -286,6 +287,21 @@ bool isTap=false;
         if (success) {
             
             //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync stores done" body:@""];
+        }
+        else{
+            
+        }
+        
+    }];
+}
+-(void)initChannel{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetChannel:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+            
+            //            [SPUtility initBannerNotif:@"Information" subtitle:@"Sync products done" body:@""];
         }
         else{
             

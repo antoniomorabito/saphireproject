@@ -282,6 +282,10 @@
 		04EBBD0C21F862D700B26B44 /* SPUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUtility.m; sourceTree = "<group>"; };
 		04EE4D7721F48A3D002D07DF /* SPHomeMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeMenuCell.h; sourceTree = "<group>"; };
 		04EE4D7821F48A3D002D07DF /* SPHomeMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeMenuCell.m; sourceTree = "<group>"; };
+		04F0D3BD221D35B5007AEF0E /* SPChannel+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPChannel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04F0D3BE221D35B5007AEF0E /* SPChannel+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPChannel+CoreDataClass.h"; sourceTree = "<group>"; };
+		04F0D3BF221D35B5007AEF0E /* SPChannel+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPChannel+CoreDataClass.m"; sourceTree = "<group>"; };
+		04F0D3C0221D35B5007AEF0E /* SPChannel+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPChannel+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
 		04F71C7A21D37A9A00C5068A /* SPHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeVC.m; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,6 +426,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04F0D3BD221D35B5007AEF0E /* SPChannel+CoreDataProperties.h */,
+				04F0D3BE221D35B5007AEF0E /* SPChannel+CoreDataClass.h */,
+				04F0D3BF221D35B5007AEF0E /* SPChannel+CoreDataClass.m */,
+				04F0D3C0221D35B5007AEF0E /* SPChannel+CoreDataProperties.m */,
 				04E0183F221CFE9900927974 /* SPDataAttendanceOut+CoreDataProperties.h */,
 				04E01840221CFE9900927974 /* SPDataAttendanceOut+CoreDataClass.h */,
 				04E01841221CFE9900927974 /* SPDataAttendanceOut+CoreDataClass.m */,

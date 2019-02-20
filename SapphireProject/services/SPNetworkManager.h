@@ -87,4 +87,10 @@ completionHandler:(SPCompletionHandler)handler;
          imageFileName:(NSString*)filename
                   view:(UIView *)view
    completionHandler:(SPCompletionHandler)handler;
+
+- (void)doAttendanceOut :(NSDictionary* )data
+              imagedata:(NSData *)imageData
+          imageFileName:(NSString*)filename
+                   view:(UIView *)view
+      completionHandler:(SPCompletionHandler)handler;
 @end

@@ -911,20 +911,7 @@ completionHandler:(SPCompletionHandler)handler;{
     
     
     //    manager.securityPolicy.allowInvalidCertificates = YES;
-    
-    if (filename.length ==0)
-    {
-        [manager POST:[NSString stringWithFormat:@"%@feedback/add",kCABaseURL] parameters:data constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-            
-        } progress:^(NSProgress * _Nonnull uploadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
-        }];
-    }
-    else{
+
         [manager POST:[NSString stringWithFormat:@"%@attendances/send/in",kCABaseURL] parameters:data constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
             [formData appendPartWithFileData:imageData
                                         name:@"photo"
@@ -933,7 +920,18 @@ completionHandler:(SPCompletionHandler)handler;{
         } progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            handler(YES,responseObject,nil);
+            NSError *jsonError;
+            NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
+            if(jsonError) {
+                // check the error description
+                NSLog(@"json error : %@", [jsonError localizedDescription]);
+            } else {
+                // use the jsonDictionaryOrArray
+                
+                NSLog(@"json data feedback : %@",jsonDictionaryOrArray);
+            }
+            
+            handler(YES,jsonDictionaryOrArray,nil);
             [hud hideAnimated:YES];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -943,7 +941,15 @@ completionHandler:(SPCompletionHandler)handler;{
             handler(NO,serializedData,error);
             [hud hideAnimated:YES];
         }];
-    }
+    
+}
+
+- (void)doAttendanceOut :(NSDictionary* )data
+               imagedata:(NSData *)imageData
+           imageFileName:(NSString*)filename
+                    view:(UIView *)view
+       completionHandler:(SPCompletionHandler)handler;
+{
     
 }
 - (void)doAddSKU:(NSDictionary* )data

@@ -58,6 +58,13 @@ completionHandler:(SPCompletionHandler)handler;
              view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;
 
+
+- (void)doAddDisplay:(NSDictionary* )data
+        imagedata:(NSData *)imageData
+    imageFileName:(NSString*)filename
+             view:(UIView *)view
+completionHandler:(SPCompletionHandler)handler;
+
 - (void)doAddFeedback:(NSDictionary* )data
              view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;

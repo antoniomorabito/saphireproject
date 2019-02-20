@@ -58,6 +58,8 @@
 		04934B742216450D00AB5250 /* SearchStringPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04934B6C2216450D00AB5250 /* SearchStringPickerViewController.xib */; };
 		04934B752216450D00AB5250 /* NSString+SearchablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04934B6D2216450D00AB5250 /* NSString+SearchablePicker.m */; };
 		04934B762216450D00AB5250 /* UIImage+SearchablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04934B6E2216450D00AB5250 /* UIImage+SearchablePicker.m */; };
+		04E01836221CE27B00927974 /* SPDisplayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E01835221CE27B00927974 /* SPDisplayVC.m */; };
+		04E01838221CE34800927974 /* SPDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8459516B221C597C0075ECF1 /* SPDisplay.storyboard */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
 		04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD521F7143F00B26B44 /* SPUploadCell.m */; };
 		04EBBCDA21F7173000B26B44 /* SPProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD921F7173000B26B44 /* SPProfileVC.m */; };
@@ -230,6 +232,12 @@
 		04E0182E221BEA0900927974 /* SPDataCompetitor+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataCompetitor+CoreDataClass.h"; sourceTree = "<group>"; };
 		04E0182F221BEA0900927974 /* SPDataCompetitor+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataCompetitor+CoreDataClass.m"; sourceTree = "<group>"; };
 		04E01830221BEA0900927974 /* SPDataCompetitor+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataCompetitor+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04E01834221CE27B00927974 /* SPDisplayVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPDisplayVC.h; sourceTree = "<group>"; };
+		04E01835221CE27B00927974 /* SPDisplayVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPDisplayVC.m; sourceTree = "<group>"; };
+		04E01839221CEBA500927974 /* SPDataDisplay+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataDisplay+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04E0183A221CEBA500927974 /* SPDataDisplay+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataDisplay+CoreDataClass.h"; sourceTree = "<group>"; };
+		04E0183B221CEBA500927974 /* SPDataDisplay+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataDisplay+CoreDataClass.m"; sourceTree = "<group>"; };
+		04E0183C221CEBA500927974 /* SPDataDisplay+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataDisplay+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04EBBCD021F70A9B00B26B44 /* SPUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadVC.h; sourceTree = "<group>"; };
 		04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPUploadVC.m; sourceTree = "<group>"; };
 		04EBBCD421F7143F00B26B44 /* SPUploadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUploadCell.h; sourceTree = "<group>"; };
@@ -410,6 +418,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04E01839221CEBA500927974 /* SPDataDisplay+CoreDataProperties.h */,
+				04E0183A221CEBA500927974 /* SPDataDisplay+CoreDataClass.h */,
+				04E0183B221CEBA500927974 /* SPDataDisplay+CoreDataClass.m */,
+				04E0183C221CEBA500927974 /* SPDataDisplay+CoreDataProperties.m */,
 				04E0182D221BEA0900927974 /* SPDataCompetitor+CoreDataProperties.h */,
 				04E0182E221BEA0900927974 /* SPDataCompetitor+CoreDataClass.h */,
 				04E0182F221BEA0900927974 /* SPDataCompetitor+CoreDataClass.m */,
@@ -470,6 +482,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				04E01833221CE26700927974 /* display */,
 				043E0286220C0C7000CCA20C /* pagingvc */,
 				0490B5B8220BA8B20054F854 /* attendance */,
 				0490B5B4220BA7DE0054F854 /* quiz */,
@@ -801,6 +814,15 @@
 			path = SearchablePicker;
 			sourceTree = "<group>";
 		};
+		04E01833221CE26700927974 /* display */ = {
+			isa = PBXGroup;
+			children = (
+				04E01834221CE27B00927974 /* SPDisplayVC.h */,
+				04E01835221CE27B00927974 /* SPDisplayVC.m */,
+			);
+			path = display;
+			sourceTree = "<group>";
+		};
 		04EBBCD321F70CA800B26B44 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1020,6 +1042,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E01838221CE34800927974 /* SPDisplay.storyboard in Resources */,
 				845411A821AF0B9800DE8DA8 /* SPTabUpload.storyboard in Resources */,
 				8422417821A617F40022AB75 /* Montserrat-Bold.otf in Resources */,
 				8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */,
@@ -1196,6 +1219,7 @@
 				04EBBD0D21F862D700B26B44 /* SPUtility.m in Sources */,
 				0490B577220B84140054F854 /* SPSelloutVC.m in Sources */,
 				0490B5A5220BA4CE0054F854 /* SPMonthlyOfftakeVC.m in Sources */,
+				04E01836221CE27B00927974 /* SPDisplayVC.m in Sources */,
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,

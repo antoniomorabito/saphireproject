@@ -25,7 +25,7 @@
     
     
     
-    self.datas = [[NSMutableArray alloc]initWithObjects:@"Sell out",@"Monthly Offtake",@"Weekly Offtake",@"Attendance Overview",@"Sell Out Overview",@"Competitor Info",@"Feedback",@"SKU",@"SKU Overview", nil];
+    self.datas = [[NSMutableArray alloc]initWithObjects:@"Sell out",@"Monthly Offtake",@"Weekly Offtake",@"Attendance Overview",@"Sell Out Overview",@"Competitor Info",@"Feedback",@"SKU",@"SKU Overview",@"Display", nil];
   
     
     [self.collectionView reloadData];
@@ -106,6 +106,11 @@
         
         [self presentViewController:vc animated:YES completion:nil];
     }
+    else if ([data isEqualToString:@"Display"]){
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPDisplay" bundle:nil]instantiateViewControllerWithIdentifier:@"navdisplay"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 
 
     
@@ -144,6 +149,9 @@
    }
    else if ([data isEqualToString:@"SKU Overview"]){
          cell.iconimage.image =[UIImage imageNamed:@"ic_sku_overview"];
+   }
+   else if ([data isEqualToString:@"Display"]){
+       cell.iconimage.image =[UIImage imageNamed:@"ic_sku_overview"];
    }
     
     //Add your cell Values here

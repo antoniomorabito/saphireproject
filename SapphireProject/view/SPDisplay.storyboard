@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,7 @@
         <!--Navigation Controller-->
         <scene sceneID="VDt-9o-haY">
             <objects>
-                <navigationController storyboardIdentifier="navsku" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Ce-eY-chX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navdisplay" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Ce-eY-chX" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="4qe-UU-iab">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-263" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--DisplayVC-->
         <scene sceneID="P9Q-Je-5Wp">
             <objects>
-                <viewController storyboardIdentifier="skuvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uSP-vy-YlZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="skuvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uSP-vy-YlZ" customClass="SPDisplayVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="blz-V5-ZUZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +70,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihTanggal:" destination="uSP-vy-YlZ" eventType="touchDown" id="dMe-dP-Ukp"/>
+                                                    <action selector="didTapPilihTanggal:" destination="uSP-vy-YlZ" eventType="editingDidBegin" id="x7v-64-7FX"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_date" translatesAutoresizingMaskIntoConstraints="NO" id="T5p-uj-Th6">
                                                 <rect key="frame" x="16" y="39.5" width="20" height="20"/>
@@ -98,6 +103,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihLokasi:" destination="uSP-vy-YlZ" eventType="editingDidBegin" id="kDK-PO-3sP"/>
+                                                    <action selector="didTapPilihLokasi:" destination="uSP-vy-YlZ" eventType="touchDown" id="z3y-8q-hl1"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_pin" translatesAutoresizingMaskIntoConstraints="NO" id="s89-6V-8JT">
                                                 <rect key="frame" x="16" y="96.5" width="20" height="20"/>
@@ -127,6 +136,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keepBaseline" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPilihProduk:" destination="uSP-vy-YlZ" eventType="touchDown" id="12C-a4-IF0"/>
+                                                    <action selector="didTapPilihProduk:" destination="uSP-vy-YlZ" eventType="editingDidBegin" id="EvS-xy-8ND"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot_package" translatesAutoresizingMaskIntoConstraints="NO" id="30p-mC-tbh">
                                                 <rect key="frame" x="16" y="153.5" width="20" height="20"/>
@@ -154,7 +167,7 @@
                                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pWt-u2-7Dg" userLabel="Image">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imagecell" id="pWt-u2-7Dg" userLabel="Image" customClass="SPCollectionImageCell">
                                                         <rect key="frame" x="16" y="0.0" width="144" height="81"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -173,8 +186,11 @@
                                                             <constraint firstItem="0H7-bu-khM" firstAttribute="leading" secondItem="pWt-u2-7Dg" secondAttribute="leading" id="hBH-qp-Yvi"/>
                                                         </constraints>
                                                         <size key="customSize" width="144" height="81"/>
+                                                        <connections>
+                                                            <outlet property="imageBackground" destination="0H7-bu-khM" id="Oje-97-XiI"/>
+                                                        </connections>
                                                     </collectionViewCell>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TEG-bY-5a6" userLabel="Add Button">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="takefoto" id="TEG-bY-5a6" userLabel="Add Button" customClass="SPMainTakeImageCell">
                                                         <rect key="frame" x="215" y="0.0" width="144" height="81"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -195,6 +211,9 @@
                                                             <constraint firstItem="bdJ-cM-UOp" firstAttribute="top" secondItem="TEG-bY-5a6" secondAttribute="top" id="lAp-iG-2mG"/>
                                                         </constraints>
                                                         <size key="customSize" width="144" height="81"/>
+                                                        <connections>
+                                                            <outlet property="btnTakeFoto" destination="bdJ-cM-UOp" id="Yju-VE-712"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -213,6 +232,9 @@
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapSubmit:" destination="uSP-vy-YlZ" eventType="touchUpInside" id="Ony-DJ-auM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -268,7 +290,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="ic_back" id="ebK-dr-C5p">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="didTapBack:" destination="uSP-vy-YlZ" id="hJl-rK-Y5M"/>
+                                <action selector="didTapBack:" destination="uSP-vy-YlZ" id="Hq9-Ca-JbU"/>
                             </connections>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="CeO-ly-wFe">
@@ -292,6 +314,12 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="asE-WX-yBZ" id="GkX-El-1yN"/>
+                        <outlet property="pilihLokasi" destination="4RF-JR-FPV" id="y91-rm-Gn8"/>
+                        <outlet property="pilihModelBarang" destination="KBa-JS-YCe" id="2LF-Oq-N1a"/>
+                        <outlet property="pilihTanggal" destination="9PQ-H5-Png" id="oB5-Ig-mNW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbq-Qr-1zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

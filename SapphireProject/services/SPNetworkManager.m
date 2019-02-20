@@ -1112,4 +1112,59 @@ completionHandler:(SPCompletionHandler)handler;
         [hud hideAnimated:YES];
     }];
 }
+- (void)doAddDisplay:(NSDictionary* )data
+           imagedata:(NSData *)imageData
+       imageFileName:(NSString*)filename
+                view:(UIView *)view
+   completionHandler:(SPCompletionHandler)handler;
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.text = @"";
+    [hud showAnimated:YES];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    SPUser *user = [SPUser MR_findFirst];
+    
+    //    NSLog(@"user data  : %@ dan username %@ dan user company : %@ , dan user id :%@",user.token,user.username,user.companyId,user.userId);
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.token] forHTTPHeaderField:@"token"];
+    
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.companyId] forHTTPHeaderField:@"companyId"];
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.userId] forHTTPHeaderField:@"userId"];
+    
+    
+    [manager POST:[NSString stringWithFormat:@"%@display/add",kCABaseURL] parameters:data constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:imageData
+                                    name:@"photo"
+                                fileName:filename mimeType:@"image/png"];   // add image to formData
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSError *jsonError;
+        NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
+        if(jsonError) {
+            // check the error description
+            NSLog(@"json error : %@", [jsonError localizedDescription]);
+        } else {
+            // use the jsonDictionaryOrArray
+            
+            NSLog(@"json data feedback : %@",jsonDictionaryOrArray);
+        }
+        
+        handler(YES,jsonDictionaryOrArray,nil);
+        [hud hideAnimated:YES];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
+        
+        handler(NO,serializedData,error);
+        [hud hideAnimated:YES];
+    }];
+}
 @end

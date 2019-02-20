@@ -59,11 +59,13 @@
     NSDate *now = [[client referenceTime] now];
     NSString *functiondate = [NSDate stringFromDate:now withFormat:@"yyyy-MM-dd"];
     
-    NSLog(@"get function date id : %@",functiondate);
+//    NSLog(@"get function date id : %@",functiondate);
     SPUser *user =[SPUser MR_findFirst];
     
-       SPDataAttendanceIn *attendanceIn = [SPDataAttendanceIn MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@",functiondate,user.userId]];
-
+    SPDataAttendanceIn *attendanceIn = [SPDataAttendanceIn MR_findFirstOrderedByAttribute:@"time_attandance" ascending:NO];
+    
+    NSLog(@"attendance id nya last or gak : %@",attendanceIn.idattendance);
+//[SPDataAttendanceIn MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@",functiondate,user.userId]];
     if (attendanceIn) {
         //kalau ada buat kondisi dari awal lagi ntuk proses cek out
         
@@ -365,7 +367,7 @@
     NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate timestampFormatString]];
     NSString *functiondate = [NSDate stringFromDate:now withFormat:@"yyyy-MM-dd"];
     SPUser *user =[SPUser MR_findFirst];
-    SPDataAttendanceIn *attendanceIn = [SPDataAttendanceIn MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@",functiondate,user.userId]];
+    SPDataAttendanceIn *attendanceIn = [SPDataAttendanceIn MR_findFirstOrderedByAttribute:@"time_attandance" ascending:NO];;
     NSLog(@"data attendande oin adalah : %@ atau data attend %@",attendanceIn.idattendance,attendanceIn.time_attandance);
     NSDictionary *data =@{@"attandance_id":attendanceIn.idattendance,@"time_attandance":displayString,@"remark":@"attendanceout",@"refId":refID};
     

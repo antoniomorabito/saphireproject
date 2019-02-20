@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (strong, nonatomic) FDTakeController *fdTake;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldTotalPromo;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldEstimasiSellout;
 
 @property (strong,nonatomic)NSData *fileData;
 @property (strong,nonatomic)NSString *fileName;

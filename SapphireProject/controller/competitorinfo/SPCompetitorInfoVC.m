@@ -80,6 +80,9 @@
     _fieldAwalPeriode.delegate= self;
     _fieldAkhirPeriode.delegate= self;
     
+    _fieldTotalPromo.delegate = self;
+    _fieldEstimasiSellout.delegate = self;
+    
     UIView *dummyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
     _fieldLokasi.inputView = dummyView;
     _fieldCategory.inputView = dummyView;
@@ -101,6 +104,8 @@
      _fieldDeskripsiPromo.inputAccessoryView = toolbars;
     _fieldHargaProduk.inputAccessoryView = toolbars;
     
+     _fieldTotalPromo.inputAccessoryView = toolbars;
+     _fieldEstimasiSellout.inputAccessoryView = toolbars;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
@@ -541,6 +546,14 @@
     {
         [SPMessageUtility message:@"Belum masukin akhir periode" needAction:YES viewController:self];
     }
+    else if (_fieldEstimasiSellout.text.length == 0)
+    {
+        [SPMessageUtility message:@"Estimasi sellout blum dimasukin" needAction:YES viewController:self];
+    }
+    else if (_fieldTotalPromo.text.length == 0)
+    {
+        [SPMessageUtility message:@"Total promo belum dimasukin" needAction:YES viewController:self];
+    }
     else
     {
         TrueTimeClient *client = [TrueTimeClient sharedInstance];
@@ -558,12 +571,12 @@
                               @"productId":_fieldTipeProduk.text,
                               @"brand":competitorid,
                               @"normalPrice":_fieldHargaProduk.text,
-                              @"salePrice":@"",
+                              @"salePrice":_fieldEstimasiSellout.text,
                               @"remark":@"null",
                               @"startPeriode":_fieldAwalPeriode.text,
                               @"endPeriode":_fieldAkhirPeriode.text,
-                              @"totalPromotor":@"",
-                              @"estimationSellout":@"",
+                              @"totalPromotor":_fieldTotalPromo.text,
+                              @"estimationSellout":_fieldEstimasiSellout.text,
                               @"refId":newID
                               };
         

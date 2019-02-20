@@ -566,10 +566,12 @@
                         <outlet property="fieldAwalPeriode" destination="uqx-Ko-dYo" id="8K9-TE-qby"/>
                         <outlet property="fieldCategory" destination="ub1-YU-XTt" id="TxK-tz-aHI"/>
                         <outlet property="fieldDeskripsiPromo" destination="FXS-lF-tSI" id="wLD-h7-LQI"/>
+                        <outlet property="fieldEstimasiSellout" destination="OGD-Vd-lhL" id="OUk-68-exQ"/>
                         <outlet property="fieldHargaProduk" destination="CZe-pT-Kjz" id="XDF-g4-0t0"/>
                         <outlet property="fieldLokasi" destination="ccc-MU-huW" id="ojg-hk-ouw"/>
                         <outlet property="fieldPilihKompetitor" destination="o5f-f6-MA9" id="jsB-oQ-sWC"/>
                         <outlet property="fieldTipeProduk" destination="Xzr-2q-yud" id="NZz-n3-Iqf"/>
+                        <outlet property="fieldTotalPromo" destination="Qft-Kf-tTg" id="WGT-BX-7gg"/>
                         <outlet property="lblTanggal" destination="Mjg-jh-V03" id="dTL-n3-Tvn"/>
                         <outlet property="scrollView" destination="3I2-pS-3HI" id="436-PY-34A"/>
                     </connections>

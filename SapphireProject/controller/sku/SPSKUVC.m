@@ -284,7 +284,7 @@
     if (_fieldTanggal.text.length == 0) {
         [SPMessageUtility message:@"Belum masukin tanggal" needAction:YES viewController:self];
     }
-    else if (_fieldPilihKategori.text.length == 0)
+    else if (_fieldPilihLokasi.text.length == 0)
     {
         [SPMessageUtility message:@"Belum masukin lokasinya" needAction:YES viewController:self];
     }

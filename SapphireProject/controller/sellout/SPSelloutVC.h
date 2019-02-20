@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SPNetworkManager.h"
-@interface SPSelloutVC : UIViewController<UITextFieldDelegate>
+#import "SPMainTakeImageCell.h"
+#import "SPCollectionImageCell.h"
+
+@interface SPSelloutVC : UIViewController<UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource,FDTakeDelegate>
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldDate;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldLocation;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldCategory;
@@ -21,5 +24,15 @@
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldProdukInstalasi;
 @property (weak, nonatomic) IBOutlet UITextField *fieldSubTotalPrice;
 @property (weak, nonatomic) IBOutlet UIStepper *fieldCounterAddAndMin;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *lblTotalSubPrice;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextView *fieldcustomerAddress;
 
+
+@property (strong, nonatomic) FDTakeController *fdTake;
+
+@property (strong,nonatomic)NSData *fileData;
+@property (strong,nonatomic)NSString *fileName;
+@property (strong,nonatomic)NSString *filePath;
 @end

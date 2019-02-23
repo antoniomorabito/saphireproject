@@ -17,6 +17,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihKategori;
 @property (unsafe_unretained, nonatomic) IBOutlet JVFloatLabeledTextField *fieldNamModel;
 @property (unsafe_unretained, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldQuantity;
 @property (strong, nonatomic) FDTakeController *fdTake;
 
 @property (strong,nonatomic)NSData *fileData;

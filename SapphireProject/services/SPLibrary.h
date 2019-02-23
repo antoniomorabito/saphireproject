@@ -59,7 +59,8 @@
 #import "SPDataDisplay+CoreDataProperties.h"
 #import "SPDataAttendanceOut+CoreDataProperties.h"
 #import "SPChannel+CoreDataProperties.h"
-
+#import "SPDataMonthlyOfftake+CoreDataProperties.h"
+#import "SPDataSKU+CoreDataProperties.h"
 
 #import "FDTakeController.h"
 

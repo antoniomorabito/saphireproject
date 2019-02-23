@@ -28,6 +28,19 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+
+    NSArray *rawdata = [SPDataMonthlyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"refId == %@",@""]];
+    for (SPDataMonthlyOfftake *indata in rawdata) {
+        
+        [indata MR_deleteEntity];
+         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    }
+    for (int i= 0; i< [SPDataMonthlyOfftake MR_findAll].count; i++) {
+        
+        SPDataMonthlyOfftake *data = [[SPDataMonthlyOfftake MR_findAll] objectAtIndex:i];
+        NSLog(@"data monthly offtake : %@",data.storeId);
+    }
     // Do any additional setup after loading the view.
     NSArray *aryCountries = [SPCategory MR_findAll];
     
@@ -53,15 +66,37 @@
     _fieldPilihLokasi.delegate = self;
     _fieldPilihKategori.delegate = self;
     
+
+    
     UIView *dummyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
     _fieldPilihTanggal.inputView = dummyView;
     _fieldPilihLokasi.inputView = dummyView;
     _fieldPilihKategori.inputView = dummyView;
 }
 - (IBAction)didTapPilihTanggal:(id)sender {
+    
+    SPAppConfig *backdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"backdate_trans"]];
+    
+     SPAppConfig *nextdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"nextdate_trans"]];
+    NSDate *resultbackdate = [NSDate date];
+    if (backdate) {
+        
+        NSInteger  backd = [backdate.parameterValue integerValue];
+        resultbackdate = [resultbackdate dateByAddingTimeInterval:-backd*24*60*60];
+    }
+    
+    NSDate *resultnextdate = [NSDate date];
+    if (nextdate) {
+        
+        NSInteger  nextda = [nextdate.parameterValue integerValue];
+        resultnextdate = [resultbackdate dateByAddingTimeInterval:+nextda*24*60*60];
+    }
+    
+    
+    
     LSLDatePickerDialog *dpDialog = [[LSLDatePickerDialog alloc] init];
     [dpDialog showWithTitle:@"Pilih tanggal" doneButtonTitle:@"Done" cancelButtonTitle:@"Cancel"
-                defaultDate:[NSDate date] minimumDate:nil maximumDate:nil datePickerMode:UIDatePickerModeDate
+                defaultDate:[NSDate date] minimumDate:resultbackdate maximumDate:resultnextdate datePickerMode:UIDatePickerModeDate
                    callback:^(NSDate * _Nullable date){
                        if(date)
                        {
@@ -133,14 +168,23 @@
         hud.label.text = @"";
         [hud showAnimated:YES];
         NSArray *arrayproducts = [SPProduct MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"category_id == %@",categoryid]];
-        
+        SPUser *user = [SPUser MR_findFirst];
         products = [[NSMutableArray alloc]init];
-        for (SPProduct * product in arrayproducts) {
-            [products addObject:product];
+        for (SPProduct * product in arrayproducts)
+        {
+            SPDataMonthlyOfftake *monthlyofftake = [SPDataMonthlyOfftake MR_createEntity];
+            monthlyofftake.userId = user.userId;
+            monthlyofftake.totalQty = @"0";
+            monthlyofftake.totalSales = @"0";
+            monthlyofftake.productId = product.idproduct;
+            monthlyofftake.categoryId = categoryid;
+            monthlyofftake.storeId = storeid;
+            monthlyofftake.refId =@"";
+            monthlyofftake.timeMT =@"";
+            monthlyofftake.channel_id =product.channel_id;
+            [products addObject:monthlyofftake];
         }
         [hud hideAnimated:YES];
-        
-        
         [self.tableView reloadData];
         
         
@@ -181,35 +225,130 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    SPProduct *product = [products objectAtIndex:indexPath.row];
-    
-    
+    SPDataMonthlyOfftake *product = [products objectAtIndex:indexPath.row];
+
     SPChannel *chanel = [SPChannel MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"idChannel == %@",product.channel_id]];
     
-        SPMonthlyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"monthlyofftake" forIndexPath:indexPath];
+    SPMonthlyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"monthlyofftake" forIndexPath:indexPath];
     
-    cell.lblNameProduk.text = product.model_product;
-    cell.lblHarga.text = [NSString stringWithFormat:@"Rp %@",product.price];
+    SPProduct *second = [SPProduct MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"idproduct == %@",product.productId]];
+    
+    cell.lblNameProduk.text = second.model_product;
+    
+    cell.lblHarga.text = [NSString stringWithFormat:@"Rp %@",second.price];
     
     cell.lblChannel.text = chanel.name;
-    
-//    cell.
+
     cell.btnAddOrMin.tag = indexPath.row;
     
     [cell.btnAddOrMin addTarget:self action:@selector(didTapChangeValue:) forControlEvents:UIControlEventValueChanged];
     
-        // Configure the cell...
-        
-        return cell;
+    cell.fieldCounter.tag = indexPath.row;
+    cell.fieldTotalPenjualan.tag = indexPath.row;
+    
+    cell.fieldCounter.text = product.totalQty;
+    cell.fieldTotalPenjualan.text = product.totalSales;
+    
+    UIToolbar *toolbars = [[UIToolbar alloc] init];
+    [toolbars setBarStyle:UIBarStyleBlackTranslucent];
+    [toolbars sizeToFit];
+    UIBarButtonItem *buttonflexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *buttonDone = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneClicked:)];
+    
+    [toolbars setItems:[NSArray arrayWithObjects:buttonflexible,buttonDone, nil]];
+    
+     cell.fieldTotalPenjualan.inputAccessoryView = toolbars;
+    
+    [cell.fieldTotalPenjualan addTarget:self action:@selector(didtapChange:) forControlEvents:UIControlEventEditingDidEnd];
+    return cell;
     
 }
 
+-(void)didtapChange:(UITextField *)sender
+{
+    NSLog(@"sender text field : %@",sender.text);
+    SPDataMonthlyOfftake *product = [products objectAtIndex:sender.tag];
+    product.totalSales = [NSString stringWithFormat:@"%@",sender.text];
+    [self.tableView reloadData];
+}
+-(void)doneClicked:(UIBarButtonItem*)button
+{
+    [self.view endEditing:YES];
+}
 -(void)didTapChangeValue:(UIStepper *)sender{
     
     NSLog(@"sender value : %f",sender.value);
+     SPDataMonthlyOfftake *product = [products objectAtIndex:sender.tag];
+    NSNumber *myDoubleNumber = [NSNumber numberWithDouble:sender.value];
+    product.totalQty = [NSString stringWithFormat:@"%@",[myDoubleNumber stringValue]];
     
+    [self.tableView reloadData];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(registerKeyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(registerKeyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)registerKeyboardWillShow:(NSNotification *)aNotification {
+    NSDictionary *userInfo = aNotification.userInfo;
+    NSNumber *durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval animationDuration = durationValue.doubleValue;
+    
+    NSNumber *curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey];
+    UIViewAnimationCurve animationCurve = curveValue.intValue;
+    
+    // Create animation.
+    void (^animations)(void) = ^() {
+        CGPoint newOffset = self.scrollView.contentOffset;
+        newOffset.y = 160;
+        self.scrollView.contentOffset = newOffset;
+    };
+    
+    // Begin animation.
+    [UIView animateWithDuration:animationDuration
+                          delay:0.0
+                        options:(animationCurve << 16)
+                     animations:animations
+                     completion:nil];
+}
+
+- (void)registerKeyboardWillHide:(NSNotification *)aNotification {
+    NSDictionary *userInfo = aNotification.userInfo;
+    NSNumber *durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval animationDuration = durationValue.doubleValue;
+    
+    NSNumber *curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey];
+    UIViewAnimationCurve animationCurve = curveValue.intValue;
+    
+    // Create animation.
+    void (^animations)(void) = ^() {
+        CGPoint newOffset = self.scrollView.contentOffset;
+        newOffset.y = 0;
+        self.scrollView.contentOffset = newOffset;
+    };
+    
+    // Begin animation.
+    [UIView animateWithDuration:animationDuration
+                          delay:0.0
+                        options:(animationCurve << 16)
+                     animations:animations
+                     completion:^(BOOL finished) {
+                     }];
 }
 /*
 #pragma mark - Navigation
@@ -220,6 +359,65 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)insertNetwork:(SPDataMonthlyOfftake *)datamonthly
+{
+     TrueTimeClient *client = [TrueTimeClient sharedInstance];
+    NSDate *now = [[client referenceTime] now];
+    NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate dateFormatString]];
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    NSString *newID = [[NSUUID UUID] UUIDString];
+    NSLog(@"ref id id : %@",newID );
+    NSDictionary *data =@{@"storeId":datamonthly.storeId,
+                          @"timeMT":displayString,
+                          @"categoryId":datamonthly.categoryId,
+                          @"productId":datamonthly.productId,
+                          @"totalQty" : datamonthly.totalQty,
+                          @"totalSales":datamonthly.totalSales,
+                          @"refId":newID
+                          };
+    [network doMonthlyOfftake:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+       
+        if (success) {
+            datamonthly.refId = newID;
+            datamonthly.timeMT = displayString;
+            datamonthly.status = @"terkirim";
+            
+        
+        }
+        else{
+            datamonthly.refId = newID;
+            datamonthly.timeMT = displayString;
+            datamonthly.status = @"belumterkirim";
+        }
+        
+    }];
+}
+- (IBAction)didTapTerkirim:(id)sender {
+    if (_fieldPilihTanggal.text.length == 0) {
+        [SPMessageUtility message:@"Belum masukin tanggal" needAction:YES viewController:self];
+    }
+   else if (_fieldPilihLokasi.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin lokasinya" needAction:YES viewController:self];
+    }
+    
+    else if (_fieldPilihKategori.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin kategorinya" needAction:YES viewController:self];
+    }
+    else{
+       
+        for (int i = 0; i<products.count; i++) {
+            SPDataMonthlyOfftake *data = [products objectAtIndex:i];
+            [self insertNetwork:data];
+        }
+        
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+}
+
 - (IBAction)didTapBack:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

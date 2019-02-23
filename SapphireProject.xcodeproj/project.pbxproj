@@ -164,6 +164,10 @@
 		043E0294220C0F4A00CCA20C /* SPCarousel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPCarousel.storyboard; sourceTree = "<group>"; };
 		043E0296220C0F6F00CCA20C /* SPCarouselChild.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCarouselChild.h; sourceTree = "<group>"; };
 		043E0297220C0F6F00CCA20C /* SPCarouselChild.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCarouselChild.m; sourceTree = "<group>"; };
+		044C8CD222210AE9004F31E8 /* SPDataSKU+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataSKU+CoreDataProperties.h"; sourceTree = "<group>"; };
+		044C8CD322210AE9004F31E8 /* SPDataSKU+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataSKU+CoreDataClass.h"; sourceTree = "<group>"; };
+		044C8CD422210AE9004F31E8 /* SPDataSKU+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataSKU+CoreDataClass.m"; sourceTree = "<group>"; };
+		044C8CD522210AE9004F31E8 /* SPDataSKU+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataSKU+CoreDataProperties.m"; sourceTree = "<group>"; };
 		0465396121EE107B00A3BF1F /* SPAppConfig+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPAppConfig+CoreDataProperties.h"; sourceTree = "<group>"; };
 		0465396221EE107B00A3BF1F /* SPAppConfig+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPAppConfig+CoreDataClass.h"; sourceTree = "<group>"; };
 		0465396321EE107B00A3BF1F /* SPAppConfig+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPAppConfig+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -172,6 +176,10 @@
 		0465396621EE107B00A3BF1F /* SPUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPUser+CoreDataClass.h"; sourceTree = "<group>"; };
 		0465396721EE107B00A3BF1F /* SPUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataClass.m"; sourceTree = "<group>"; };
 		0465396821EE107B00A3BF1F /* SPUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04663973222025AB003D445A /* SPDataMonthlyOfftake+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataMonthlyOfftake+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04663974222025AB003D445A /* SPDataMonthlyOfftake+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataMonthlyOfftake+CoreDataClass.h"; sourceTree = "<group>"; };
+		04663975222025AB003D445A /* SPDataMonthlyOfftake+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataMonthlyOfftake+CoreDataClass.m"; sourceTree = "<group>"; };
+		04663976222025AB003D445A /* SPDataMonthlyOfftake+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataMonthlyOfftake+CoreDataProperties.m"; sourceTree = "<group>"; };
 		046CC2B72219FB00007B167F /* NSDate+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		046CC2B82219FB00007B167F /* NSDate+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		046CC2BA221A3075007B167F /* SPMasterPromo+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPMasterPromo+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -426,6 +434,14 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				044C8CD222210AE9004F31E8 /* SPDataSKU+CoreDataProperties.h */,
+				044C8CD322210AE9004F31E8 /* SPDataSKU+CoreDataClass.h */,
+				044C8CD422210AE9004F31E8 /* SPDataSKU+CoreDataClass.m */,
+				044C8CD522210AE9004F31E8 /* SPDataSKU+CoreDataProperties.m */,
+				04663973222025AB003D445A /* SPDataMonthlyOfftake+CoreDataProperties.h */,
+				04663974222025AB003D445A /* SPDataMonthlyOfftake+CoreDataClass.h */,
+				04663975222025AB003D445A /* SPDataMonthlyOfftake+CoreDataClass.m */,
+				04663976222025AB003D445A /* SPDataMonthlyOfftake+CoreDataProperties.m */,
 				04F0D3BD221D35B5007AEF0E /* SPChannel+CoreDataProperties.h */,
 				04F0D3BE221D35B5007AEF0E /* SPChannel+CoreDataClass.h */,
 				04F0D3BF221D35B5007AEF0E /* SPChannel+CoreDataClass.m */,

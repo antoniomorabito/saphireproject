@@ -52,7 +52,7 @@
     _fieldPilihLokasi.delegate = self;
     _fieldPilihKategori.delegate = self;
     _fieldNamModel.delegate= self;
-    
+    _fieldQuantity.delegate = self;
     UIView *dummyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
     _fieldTanggal.inputView = dummyView;
     _fieldPilihLokasi.inputView = dummyView;
@@ -71,7 +71,7 @@
     [toolbars setItems:[NSArray arrayWithObjects:buttonflexible,buttonDone, nil]];
  
     _fieldNamModel.inputAccessoryView = toolbars;
-    
+    _fieldQuantity.inputAccessoryView =toolbars;
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -92,9 +92,27 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)didTapPilihTanggal:(id)sender {
+    SPAppConfig *backdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"backdate_trans"]];
+    
+    SPAppConfig *nextdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"nextdate_trans"]];
+    NSDate *resultbackdate = [NSDate date];
+    if (backdate) {
+        
+        NSInteger  backd = [backdate.parameterValue integerValue];
+        resultbackdate = [resultbackdate dateByAddingTimeInterval:-backd*24*60*60];
+    }
+    
+    NSDate *resultnextdate = [NSDate date];
+    if (nextdate) {
+        
+        NSInteger  nextda = [nextdate.parameterValue integerValue];
+        resultnextdate = [resultbackdate dateByAddingTimeInterval:+nextda*24*60*60];
+    }
+    
+    
     LSLDatePickerDialog *dpDialog = [[LSLDatePickerDialog alloc] init];
     [dpDialog showWithTitle:@"Pilih tanggal" doneButtonTitle:@"Done" cancelButtonTitle:@"Cancel"
-                defaultDate:[NSDate date] minimumDate:nil maximumDate:nil datePickerMode:UIDatePickerModeDate
+                defaultDate:[NSDate date] minimumDate:resultbackdate maximumDate:resultnextdate datePickerMode:UIDatePickerModeDate
                    callback:^(NSDate * _Nullable date){
                        if(date)
                        {
@@ -297,6 +315,10 @@
     {
         [SPMessageUtility message:@"Belum masukin produk" needAction:YES viewController:self];
     }
+    else if (_fieldQuantity.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin qty" needAction:YES viewController:self];
+    }
     else{
         SPNetworkManager *network = [[SPNetworkManager alloc]init];
          NSString *newID = [[NSUUID UUID] UUIDString];
@@ -305,7 +327,8 @@
                               @"timeSku":_fieldTanggal.text,
                               @"categoryId":categoryid,
                               @"productId":product_id,
-                              @"refId":newID
+                              @"refId":newID,
+                              @"qty":_fieldQuantity.text
                               };
         
  
@@ -315,9 +338,33 @@
             if (success) {
                 [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
                     [self dismissViewControllerAnimated:YES completion:nil];
-
-
+                    
+                    SPDataSKU *datasku = [SPDataSKU MR_createEntity];
+                    
+                    datasku.refId = newID;
+                    datasku.productId = product_id;
+                    datasku.qty = _fieldQuantity.text;
+                    datasku.storeId = storeid;
+                    datasku.timeSku =_fieldTanggal.text;
+                    datasku.categoryId = categoryid;
+                    datasku.status = @"terkirim";
+                    
                 }];
+            }
+            else{
+                
+                SPDataSKU *datasku = [SPDataSKU MR_createEntity];
+                
+                datasku.refId = newID;
+                datasku.productId = product_id;
+                datasku.qty = _fieldQuantity.text;
+                datasku.storeId = storeid;
+                datasku.timeSku =_fieldTanggal.text;
+                datasku.categoryId = categoryid;
+                datasku.status = @"tidakterkirim";
+                
+                [self dismissViewControllerAnimated:YES completion:nil];
+                
             }
             
         }];

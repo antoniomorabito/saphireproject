@@ -70,49 +70,49 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD5-JU-JLh">
-                                                                    <rect key="frame" x="16" y="16" width="343" height="20"/>
+                                                                    <rect key="frame" x="16" y="16" width="343" height="19"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harga" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-Zv-4n5">
-                                                                    <rect key="frame" x="16" y="52" width="40" height="16"/>
+                                                                    <rect key="frame" x="16" y="51" width="35" height="16"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp 404.000" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziG-4t-49q">
-                                                                    <rect key="frame" x="267.5" y="52" width="91.5" height="18.5"/>
+                                                                    <rect key="frame" x="281" y="51" width="78" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX6-Fu-6xH">
-                                                                    <rect key="frame" x="16" y="87" width="28" height="16"/>
+                                                                    <rect key="frame" x="16" y="85" width="24" height="16"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400g" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K56-WY-4gG">
-                                                                    <rect key="frame" x="317.5" y="87" width="41.5" height="18.5"/>
+                                                                    <rect key="frame" x="325" y="85" width="34" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqH-iE-KI3">
-                                                                    <rect key="frame" x="16" y="121.5" width="55" height="16"/>
+                                                                    <rect key="frame" x="16" y="118.5" width="48" height="16"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="GT" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUu-GG-zSl">
-                                                                    <rect key="frame" x="338" y="121.5" width="21" height="18.5"/>
+                                                                    <rect key="frame" x="339" y="118.5" width="20" height="21.5"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDj-cB-Vb1">
-                                                                    <rect key="frame" x="16" y="156" width="49.5" height="16"/>
+                                                                    <rect key="frame" x="16" y="156" width="42.5" height="16"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -126,7 +126,7 @@
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
-                                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="GAI-R8-TLj">
+                                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="GAI-R8-TLj">
                                                                     <rect key="frame" x="265" y="180" width="94" height="29"/>
                                                                     <color key="tintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </stepper>
@@ -138,7 +138,7 @@
                                                                     </constraints>
                                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
                                                                             <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -187,6 +187,7 @@
                                                         </tableViewCellContentView>
                                                         <connections>
                                                             <outlet property="btnAddOrMin" destination="GAI-R8-TLj" id="sKa-QK-qnV"/>
+                                                            <outlet property="fieldCounter" destination="aYu-g7-2e3" id="Cxz-5u-BYQ"/>
                                                             <outlet property="fieldTotalPenjualan" destination="vbe-hP-p5r" id="S1t-UM-Sae"/>
                                                             <outlet property="lblChannel" destination="JUu-GG-zSl" id="pPt-Oh-IxG"/>
                                                             <outlet property="lblHarga" destination="ziG-4t-49q" id="aT0-DP-jF2"/>
@@ -317,6 +318,9 @@
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapTerkirim:" destination="uGk-mz-ArQ" eventType="touchUpInside" id="wrS-rP-qiM"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krQ-my-rQ8">
                                                 <rect key="frame" x="0.0" y="187" width="375" height="1"/>
@@ -396,7 +400,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offtake Bulanan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8S-FW-EuE">
-                                    <rect key="frame" x="-73.5" y="0.0" width="147" height="44"/>
+                                    <rect key="frame" x="-61" y="0.0" width="122" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="CNA-Xd-XCA"/>
                                     </constraints>
@@ -416,6 +420,7 @@
                         <outlet property="fieldPilihKategori" destination="z5c-op-FWM" id="duV-0l-IPE"/>
                         <outlet property="fieldPilihLokasi" destination="LkP-oZ-5cf" id="SFH-ol-xQI"/>
                         <outlet property="fieldPilihTanggal" destination="Ebz-BC-gzf" id="YWl-WS-NvM"/>
+                        <outlet property="scrollView" destination="hbh-pO-bXR" id="KcU-ew-Pxe"/>
                         <outlet property="tableView" destination="jYi-Uf-hOB" id="4zS-JV-qWZ"/>
                     </connections>
                 </viewController>

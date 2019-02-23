@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblChannel;
 @property (weak, nonatomic) IBOutlet UIStepper *btnAddOrMin;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldTotalPenjualan;
+@property (weak, nonatomic) IBOutlet UITextField *fieldCounter;
 
 @end

@@ -25,7 +25,7 @@
     
     
     
-    self.datas = [[NSMutableArray alloc]initWithObjects:@"Sell out",@"Monthly Offtake",@"Weekly Offtake",@"Attendance Overview",@"Sell Out Overview",@"Competitor Info",@"Feedback",@"SKU",@"SKU Overview",@"Display", nil];
+    self.datas = [[NSMutableArray alloc]initWithObjects:@"Sell out",@"Monthly Offtake",@"Weekly Offtake",@"Competitor Info",@"Feedback",@"SKU",@"Display",@"Overview", nil];
   
     
     [self.collectionView reloadData];
@@ -72,18 +72,6 @@
         
         [self presentViewController:vc animated:YES completion:nil];
     }
-    else if ([data isEqualToString:@"Attendance Overview"]) {
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
-        
-        [self presentViewController:vc animated:YES completion:nil];
-       
-    }
-    else if ([data isEqualToString:@"Sell Out Overview"]) {
-      
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSellOutOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navselloutoverview"];
-        
-        [self presentViewController:vc animated:YES completion:nil];
-    }
     else if ([data isEqualToString:@"Competitor Info"]) {
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPCompetitor" bundle:nil]instantiateViewControllerWithIdentifier:@"navcompetitor"];
         
@@ -101,16 +89,17 @@
         
         [self presentViewController:vc animated:YES completion:nil];
     }
-    else if ([data isEqualToString:@"SKU Overview"]){
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSKUOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navSKUOverview"];
-        
-        [self presentViewController:vc animated:YES completion:nil];
-    }
+   
     else if ([data isEqualToString:@"Display"]){
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPDisplay" bundle:nil]instantiateViewControllerWithIdentifier:@"navdisplay"];
         
         [self presentViewController:vc animated:YES completion:nil];
     }
+    
+    else if ([data isEqualToString:@"Overview"]){
+
+    }
+
 
 
     
@@ -132,12 +121,7 @@
    else if ([data isEqualToString:@"Weekly Offtake"]) {
          cell.iconimage.image =[UIImage imageNamed:@"ic_offtake_weekly"];
    }
-   else if ([data isEqualToString:@"Attendance Overview"]) {
-         cell.iconimage.image =[UIImage imageNamed:@"ic_attendance_overview"];
-   }
-   else if ([data isEqualToString:@"Sell Out Overview"]) {
-         cell.iconimage.image =[UIImage imageNamed:@"ic_sellout_overview"];
-   }
+
    else if ([data isEqualToString:@"Competitor Info"]) {
          cell.iconimage.image =[UIImage imageNamed:@"ic_competition_info"];
    }
@@ -147,11 +131,11 @@
    else if ([data isEqualToString:@"SKU"]) {
          cell.iconimage.image =[UIImage imageNamed:@"ic_sku"];
    }
-   else if ([data isEqualToString:@"SKU Overview"]){
-         cell.iconimage.image =[UIImage imageNamed:@"ic_sku_overview"];
-   }
    else if ([data isEqualToString:@"Display"]){
        cell.iconimage.image =[UIImage imageNamed:@"ic_sku_overview"];
+   }
+   else if ([data isEqualToString:@"Overview"]){
+       cell.iconimage.image =[UIImage imageNamed:@"ic_overview"];
    }
     
     //Add your cell Values here

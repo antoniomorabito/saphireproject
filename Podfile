@@ -14,7 +14,6 @@ target 'SapphireProject' do
     pod 'DatePickerDialog-ObjC'
     pod 'FreakingSimpleRoundImageView', '~> 1.2.3'
     pod 'APBanner'
-    pod 'TrueTime'
 
   target 'SapphireProjectTests' do
     inherit! :search_paths

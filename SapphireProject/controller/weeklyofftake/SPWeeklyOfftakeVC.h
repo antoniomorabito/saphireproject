@@ -16,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihTanggal;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihLokasi;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *fieldPilihKategori;
-@end
+    @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+    @end

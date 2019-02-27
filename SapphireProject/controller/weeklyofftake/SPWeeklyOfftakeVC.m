@@ -29,7 +29,17 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     // Do any additional setup after loading the view.
-    
+    NSArray *rawdata = [SPDataWeeklyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"refId == %@",@""]];
+    for (SPDataWeeklyOfftake *indata in rawdata) {
+        
+        [indata MR_deleteEntity];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    }
+    for (int i= 0; i< [SPDataWeeklyOfftake MR_findAll].count; i++) {
+        
+        SPDataWeeklyOfftake *data = [[SPDataMonthlyOfftake MR_findAll] objectAtIndex:i];
+        NSLog(@"data weekly offtake : %@",data.storeId);
+    }
     NSArray *aryCountries = [SPCategory MR_findAll];
     
     datacategory = [[NSMutableArray alloc]init];
@@ -61,9 +71,26 @@
 }
 
 - (IBAction)didTapPilihTanggal:(id)sender {
+    SPAppConfig *backdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"backdate_trans"]];
+    
+    SPAppConfig *nextdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"nextdate_trans"]];
+    NSDate *resultbackdate = [NSDate date];
+    if (backdate) {
+        
+        NSInteger  backd = [backdate.parameterValue integerValue];
+        resultbackdate = [resultbackdate dateByAddingTimeInterval:-backd*24*60*60];
+    }
+    
+    NSDate *resultnextdate = [NSDate date];
+    if (nextdate) {
+        
+        NSInteger  nextda = [nextdate.parameterValue integerValue];
+        resultnextdate = [resultbackdate dateByAddingTimeInterval:+nextda*24*60*60];
+    }
+    
     LSLDatePickerDialog *dpDialog = [[LSLDatePickerDialog alloc] init];
     [dpDialog showWithTitle:@"Pilih tanggal" doneButtonTitle:@"Done" cancelButtonTitle:@"Cancel"
-                defaultDate:[NSDate date] minimumDate:nil maximumDate:nil datePickerMode:UIDatePickerModeDate
+                defaultDate:[NSDate date] minimumDate:resultbackdate maximumDate:resultnextdate datePickerMode:UIDatePickerModeDate
                    callback:^(NSDate * _Nullable date){
                        if(date)
                        {
@@ -135,14 +162,26 @@
         hud.label.text = @"";
         [hud showAnimated:YES];
         NSArray *arrayproducts = [SPProduct MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"category_id == %@",categoryid]];
-        
+        SPUser *user = [SPUser MR_findFirst];
         products = [[NSMutableArray alloc]init];
-        for (SPProduct * product in arrayproducts) {
-            [products addObject:product];
+        for (SPProduct * product in arrayproducts)
+        {
+            SPDataWeeklyOfftake *weeklyofftake = [SPDataWeeklyOfftake MR_createEntity];
+            weeklyofftake.userId = user.userId;
+            weeklyofftake.totalQty1 = @"0";
+            weeklyofftake.totalQty2 = @"0";
+            weeklyofftake.totalQty3 = @"0";
+            weeklyofftake.totalSales = @"0";
+            weeklyofftake.categoryId = categoryid;
+            weeklyofftake.channel_id = product.channel_id;
+            weeklyofftake.productId = product.idproduct;
+            weeklyofftake.storeId = storeid;
+            weeklyofftake.refId =@"";
+            weeklyofftake.timeWT =@"";
+        
+            [products addObject:weeklyofftake];
         }
         [hud hideAnimated:YES];
-        
-        
         [self.tableView reloadData];
         
         
@@ -176,10 +215,10 @@
     
   
     if (indexPath.section) {
-         return 100;
+         return 80;
     }
     else{
-        return 220;
+        return 80;
     }
    
 }
@@ -193,11 +232,28 @@
     
     return 5;
 }
+-(void)doneClicked:(UIBarButtonItem*)button
+    {
+        [self.view endEditing:YES];
+    }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIToolbar *toolbars = [[UIToolbar alloc] init];
+    [toolbars setBarStyle:UIBarStyleBlackTranslucent];
+    [toolbars sizeToFit];
+    UIBarButtonItem *buttonflexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *buttonDone = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneClicked:)];
+    
+    [toolbars setItems:[NSArray arrayWithObjects:buttonflexible,buttonDone, nil]];
+    
+    SPDataWeeklyOfftake *data= [products objectAtIndex:indexPath.section];
     
     if (indexPath.row == 0) {
         SPHeaderCellOfftake *cell = [tableView dequeueReusableCellWithIdentifier:@"headercell" forIndexPath:indexPath];
+         SPProduct *second = [SPProduct MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"idproduct == %@",data.productId]];
+      
+         SPChannel *chanel = [SPChannel MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"idChannel == %@",data.channel_id]];
         
+        cell.lblNameProduct.text = [NSString stringWithFormat:@"%@ (Channel : %@",second.model_product,chanel.name];
         // Configure the cell...
         
         return cell;
@@ -206,39 +262,183 @@
     {
         SPMiddleWeeklyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"middleofftake" forIndexPath:indexPath];
         
+        cell.lblProdutPrice.text = @"Stock 6";
         // Configure the cell...
+        
+        cell.fieldValue.tag = indexPath.section*1000 +indexPath.row;
+        cell.steperValue.tag = indexPath.section;
+         [cell.steperValue addTarget:self action:@selector(didTapChangeValueStockEnam:) forControlEvents:UIControlEventValueChanged];
+        cell.fieldValue.text = data.totalQty1;
+         cell.fieldValue.inputAccessoryView = toolbars;
         
         return cell;
     }
     else if (indexPath.row == 2)
     {
         SPMiddleWeeklyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"middleofftake" forIndexPath:indexPath];
-        
+        cell.lblProdutPrice.text = @"Stock 6-12";
         // Configure the cell...
-        
+        cell.fieldValue.text = data.totalQty2;
+        cell.fieldValue.tag = indexPath.section*1000 +indexPath.row;
+        cell.steperValue.tag = indexPath.section;
+         [cell.steperValue addTarget:self action:@selector(didTapChangeValueStockEnamDuabelas:) forControlEvents:UIControlEventValueChanged];
+        cell.fieldValue.inputAccessoryView = toolbars;
         return cell;
     }
     else if (indexPath.row == 3)
     {
         SPMiddleWeeklyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"middleofftake" forIndexPath:indexPath];
-        
-        // Configure the cell...
-        
+        cell.lblProdutPrice.text = @"Stock 12";
+        cell.steperValue.tag = indexPath.section;
+    
+        cell.fieldValue.text = data.totalQty3;
+         [cell.steperValue addTarget:self action:@selector(didTapChangeValueStockDuabelas:) forControlEvents:UIControlEventValueChanged];
+        cell.fieldValue.inputAccessoryView = toolbars;
         return cell;
     }
     else{
         SPFooterWeeklyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"footercell" forIndexPath:indexPath];
         
+        cell.lblTotalPenjualan.text = data.totalSales;
+        cell.lblTotalPenjualan.tag = indexPath.section;
         // Configure the cell...
-        
+        cell.lblTotalPenjualan.inputAccessoryView = toolbars;
+         [cell.lblTotalPenjualan addTarget:self action:@selector(didtapChange:) forControlEvents:UIControlEventEditingDidEnd];
         return cell;
     }
    
 }
+-(void)didTapChangeValueStockEnam:(UIStepper *)sender{
+    
+//    NSLog(@"sender value : %f",sender.value);
+
+    SPDataWeeklyOfftake *product = [products objectAtIndex:sender.tag];
+    NSNumber *myDoubleNumber = [NSNumber numberWithDouble:sender.value];
+    product.totalQty1 = [NSString stringWithFormat:@"%@",[myDoubleNumber stringValue]];
+    
+    [self.tableView reloadData];
+    
+}
+    
+-(void)didTapChangeValueStockEnamDuabelas:(UIStepper *)sender{
+    
+    //    NSLog(@"sender value : %f",sender.value);
+    
+    SPDataWeeklyOfftake *product = [products objectAtIndex:sender.tag];
+    NSNumber *myDoubleNumber = [NSNumber numberWithDouble:sender.value];
+    product.totalQty2 = [NSString stringWithFormat:@"%@",[myDoubleNumber stringValue]];
+    
+    [self.tableView reloadData];
+    
+}
+    
+-(void)didTapChangeValueStockDuabelas:(UIStepper *)sender{
+    
+    //    NSLog(@"sender value : %f",sender.value);
+    
+    SPDataWeeklyOfftake *product = [products objectAtIndex:sender.tag];
+    NSNumber *myDoubleNumber = [NSNumber numberWithDouble:sender.value];
+    product.totalQty3 = [NSString stringWithFormat:@"%@",[myDoubleNumber stringValue]];
+    
+    [self.tableView reloadData];
+    
+}
+    
+    
+    
+-(void)didtapChange:(UITextField *)sender
+{
+        NSLog(@"sender text field : %@",sender.text);
+        SPDataWeeklyOfftake *product = [products objectAtIndex:sender.tag];
+        product.totalSales = [NSString stringWithFormat:@"%@",sender.text];
+        [self.tableView reloadData];
+    
+}
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(registerKeyboardWillShow:)
+                                                     name:UIKeyboardWillShowNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(registerKeyboardWillHide:)
+                                                     name:UIKeyboardWillHideNotification
+                                                   object:nil];
+    }
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)registerKeyboardWillShow:(NSNotification *)aNotification {
+    NSDictionary *userInfo = aNotification.userInfo;
+    NSNumber *durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval animationDuration = durationValue.doubleValue;
+    
+    NSNumber *curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey];
+    UIViewAnimationCurve animationCurve = curveValue.intValue;
+    
+    // Create animation.
+    void (^animations)(void) = ^() {
+        CGPoint newOffset = self.scrollView.contentOffset;
+        newOffset.y = 160;
+        self.scrollView.contentOffset = newOffset;
+    };
+    
+    // Begin animation.
+    [UIView animateWithDuration:animationDuration
+                          delay:0.0
+                        options:(animationCurve << 16)
+                     animations:animations
+                     completion:nil];
+}
+    
+- (void)registerKeyboardWillHide:(NSNotification *)aNotification {
+    NSDictionary *userInfo = aNotification.userInfo;
+    NSNumber *durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval animationDuration = durationValue.doubleValue;
+    
+    NSNumber *curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey];
+    UIViewAnimationCurve animationCurve = curveValue.intValue;
+    
+    // Create animation.
+    void (^animations)(void) = ^() {
+        CGPoint newOffset = self.scrollView.contentOffset;
+        newOffset.y = 0;
+        self.scrollView.contentOffset = newOffset;
+    };
+    
+    // Begin animation.
+    [UIView animateWithDuration:animationDuration
+                          delay:0.0
+                        options:(animationCurve << 16)
+                     animations:animations
+                     completion:^(BOOL finished) {
+                     }];
+}
 - (IBAction)didTapBack:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+- (IBAction)didTapSubmit:(id)sender {
+    if (_fieldPilihTanggal.text.length == 0) {
+        [SPMessageUtility message:@"Belum masukin tanggal" needAction:YES viewController:self];
+    }
+    else if (_fieldPilihLokasi.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin lokasinya" needAction:YES viewController:self];
+    }
+    
+    else if (_fieldPilihKategori.text.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin kategorinya" needAction:YES viewController:self];
+    }
+    else{
+        
+    }
+}
+    
 /*
 #pragma mark - Navigation
 

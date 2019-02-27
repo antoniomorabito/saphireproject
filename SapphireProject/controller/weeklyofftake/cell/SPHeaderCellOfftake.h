@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SPHeaderCellOfftake : UITableViewCell
-
+    @property (weak, nonatomic) IBOutlet UILabel *lblNameProduct;
+    
 @end

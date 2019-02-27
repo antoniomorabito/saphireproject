@@ -61,6 +61,7 @@
 #import "SPChannel+CoreDataProperties.h"
 #import "SPDataMonthlyOfftake+CoreDataProperties.h"
 #import "SPDataSKU+CoreDataProperties.h"
+#import "SPDataWeeklyOfftake+CoreDataProperties.h"
 
 #import "FDTakeController.h"
 

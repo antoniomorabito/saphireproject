@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SPNetworkManager.h"
 @interface SPFooterWeeklyOfftakeCell : UITableViewCell
-
+    @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *lblTotalPenjualan;
+    
 @end

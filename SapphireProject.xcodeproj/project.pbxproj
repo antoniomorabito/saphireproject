@@ -236,6 +236,10 @@
 		04BCFFF12219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataAttendanceIn+CoreDataClass.h"; sourceTree = "<group>"; };
 		04BCFFF22219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataAttendanceIn+CoreDataClass.m"; sourceTree = "<group>"; };
 		04BCFFF32219F66B00A1FB4F /* SPDataAttendanceIn+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataAttendanceIn+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04D4B8B82226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataWeeklyOfftake+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04D4B8B92226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataWeeklyOfftake+CoreDataClass.h"; sourceTree = "<group>"; };
+		04D4B8BA2226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataWeeklyOfftake+CoreDataClass.m"; sourceTree = "<group>"; };
+		04D4B8BB2226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataWeeklyOfftake+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04E0182D221BEA0900927974 /* SPDataCompetitor+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataCompetitor+CoreDataProperties.h"; sourceTree = "<group>"; };
 		04E0182E221BEA0900927974 /* SPDataCompetitor+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataCompetitor+CoreDataClass.h"; sourceTree = "<group>"; };
 		04E0182F221BEA0900927974 /* SPDataCompetitor+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataCompetitor+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -434,6 +438,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04D4B8B82226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataProperties.h */,
+				04D4B8B92226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataClass.h */,
+				04D4B8BA2226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataClass.m */,
+				04D4B8BB2226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataProperties.m */,
 				044C8CD222210AE9004F31E8 /* SPDataSKU+CoreDataProperties.h */,
 				044C8CD322210AE9004F31E8 /* SPDataSKU+CoreDataClass.h */,
 				044C8CD422210AE9004F31E8 /* SPDataSKU+CoreDataClass.m */,
@@ -1132,6 +1140,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SapphireProject/Pods-SapphireProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/APBanner/APBanner.framework",
+				"${BUILT_PRODUCTS_DIR}/CZPicker/CZPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog-ObjC/DatePickerDialog_ObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/FDTake/FDTake.framework",
 				"${BUILT_PRODUCTS_DIR}/FreakingSimpleRoundImageView/FreakingSimpleRoundImageView.framework",
@@ -1146,6 +1155,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APBanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CZPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog_ObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDTake.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FreakingSimpleRoundImageView.framework",

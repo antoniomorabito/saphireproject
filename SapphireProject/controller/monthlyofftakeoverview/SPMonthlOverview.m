@@ -13,15 +13,26 @@
 @end
 
 @implementation SPMonthlOverview
-
+{
+    NSMutableArray *datas;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    NSArray *rawdata = [SPDataMonthlyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"refId == %@",@""]];
+//    for (SPDataMonthlyOfftake *indata in rawdata) {
+//        
+//        [indata MR_deleteEntity];
+//        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+//    }
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    datas = [[NSMutableArray alloc]init];
+    
+    SPUser *user = [SPUser MR_findFirst];
+    NSArray *tempdata = [SPDataMonthlyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"userId == %@",user.userId]];
+    
+    datas = [[NSMutableArray alloc]initWithArray:tempdata];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +43,39 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return datas.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    SPDataMonthlyOfftake *datasellout = [datas objectAtIndex:indexPath.row];
+    SPSelloutoverCell *cell = [tableView dequeueReusableCellWithIdentifier:@"selloutoverview" forIndexPath:indexPath];
     
-    // Configure the cell...
+  
+    cell.lblPrice.hidden = YES;
+    
+    cell.lblLokasi.text = datasellout.storeName;
+    cell.lblStatus.text = datasellout.status;
+    cell.lblTanggal.text = datasellout.timeMT;
+    cell.lblCustomerName.hidden = YES;
+    cell.lblProductName.text = datasellout.productName;
+
     
     return cell;
 }
-*/
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 166;
+}
+- (IBAction)didTapBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 /*
 // Override to support conditional editing of the table view.

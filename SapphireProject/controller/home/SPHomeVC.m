@@ -171,7 +171,7 @@
     }
     else if ([dataov isEqualToString:@"Competitor"])
     {
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPCompetitorOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navcompetitoroverview"];
         
         [self presentViewController:vc animated:YES completion:nil];
     }

@@ -174,16 +174,29 @@
     
     if ([data isEqualToString:@"Change Password"]) {
       
-        [SPMessageUtility customInputDialog:@"Saphire" message:@"Ganti Password" placeholder:@"Masukan password baru anda" viewController:self completiH:^(BOOL success, NSString *value) {
+      
+      
+        [SPMessageUtility customInputDialog:@"Saphire" message:@"Ubah password" placeholder:@"Masukan password lama anda" placeholderSecond:@"Masukan password baru anda" viewController:self completiH:^(BOOL success, NSString *valueFirst, NSString *valuesecond) {
            
             SPNetworkManager *network =[[SPNetworkManager alloc]init
                                         ];
             
-            [network doUpdatePassword:@{@"password":value} view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
-               
+            [network doUpdatePassword:@{@"password":valuesecond,
+                                      @"oldpassword":valueFirst
+                                        } view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+                
                 NSLog(@"nilai change passw : %@",responseObject);
+                        
+                        if ([responseObject objectForKey:@"error_description"]) {
+                                                    [SPMessageUtility message:[NSString stringWithFormat:@"%@",[responseObject objectForKey:@"error_description"]] needAction:YES viewController:self];
+                                            }
+                                            else{
+                                                
+                                            }
+                                            
+                                            
+                
             }];
-            
         }];
     }
     else if ([data isEqualToString:@"Term Of Service"]) {

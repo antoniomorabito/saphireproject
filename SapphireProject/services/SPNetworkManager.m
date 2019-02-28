@@ -1338,6 +1338,13 @@ completionHandler:(SPCompletionHandler)handler;
             // use the jsonDictionaryOrArray
             
             NSLog(@"json data auth/profile : %@",jsonDictionaryOrArray);
+            
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+            
+            SPUser *spuser = [SPUser MR_findFirst];
+
+            spuser.photo = [jsonDictionaryOrArray objectForKey:@"photo"];
+             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         }
         
         handler(YES,jsonDictionaryOrArray,nil);

@@ -182,8 +182,9 @@
 +(void)customInputDialog:(NSString *)amount
                  message:(NSString *)messageInfo
              placeholder:(NSString *)placeholderInfo
+placeholderSecond:(NSString *)ppl
           viewController:(UIViewController *)vc
-               completiH:(utilityHandler)handler;{
+               completiH:(utilityHandlerSecond)handler;{
     
     __block NSString *value = amount;
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Saphire"
@@ -196,14 +197,16 @@
         textField.textColor = [UIColor blueColor];
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.borderStyle = UITextBorderStyleRoundedRect;
-        if ([placeholderInfo isEqualToString:@"email field"])
-        {
-            textField.keyboardType = UIKeyboardTypeNumberPad;
-        }
-        else
-        {
-            textField.keyboardType = UIKeyboardTypeEmailAddress;
-        }
+         textField.keyboardType = UIKeyboardTypeEmailAddress;
+        
+    }];
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = ppl;
+        textField.textColor = [UIColor blueColor];
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.keyboardType = UIKeyboardTypeEmailAddress;
         
     }];
     
@@ -211,9 +214,12 @@
         NSArray * textfields = alertController.textFields;
         UITextField * namefield = textfields[0];
         
+         UITextField * namefieldSecond = textfields[1];
+        
         NSLog(@"nilai value: %@",namefield.text);
         value = namefield.text;
-        handler(YES,value);
+        NSString *secpnd = namefieldSecond.text;
+        handler(YES,value,secpnd);
         
     }]];
     
@@ -223,7 +229,7 @@
                                    handler:^(UIAlertAction *action)
                                    {
                                        NSLog(@"Cancel action");
-                                       handler(NO,value);
+                                       handler(NO,value,@"");
                                    }];
     
     [alertController addAction:cancelAction];

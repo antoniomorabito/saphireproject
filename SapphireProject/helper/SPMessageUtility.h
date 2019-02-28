@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 typedef void (^utilityHandler)(BOOL success,NSString* value);
+typedef void (^utilityHandlerSecond)(BOOL success,NSString* valueFirst,NSString* valuesecond);
 @interface SPMessageUtility : NSObject
 +(BOOL)message :(NSString *)text needAction :(BOOL)actionType viewController :(UIViewController *)vc;
 +(BOOL)messagemaaf :(NSString *)text needAction :(BOOL)actionType viewController :(UIViewController *)vc;
@@ -21,8 +22,9 @@ typedef void (^utilityHandler)(BOOL success,NSString* value);
 +(void)customInputDialog:(NSString *)amount
                  message:(NSString *)messageInfo
              placeholder:(NSString *)placeholderInfo
+placeholderSecond:(NSString *)ppl
           viewController:(UIViewController *)vc
-               completiH:(utilityHandler)handler;
+               completiH:(utilityHandlerSecond)handler;
 
 +(void)customDeleteYesOrno :(NSString *)text needAction :(BOOL)actionType viewController :(UIViewController *)vc CH:(utilityHandler)handler;
 +(void)customLocation :(NSString *)text needAction :(BOOL)actionType viewController :(UIViewController *)vc CH:(utilityHandler)handler;

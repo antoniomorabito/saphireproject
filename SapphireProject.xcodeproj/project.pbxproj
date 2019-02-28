@@ -40,6 +40,8 @@
 		04884C022227BE8A0099648C /* SPMonthlOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 04884C012227BE8A0099648C /* SPMonthlOverview.m */; };
 		04884C052227DC530099648C /* SPOffTakeWeeklyOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04884C042227DC530099648C /* SPOffTakeWeeklyOverview.storyboard */; };
 		04884C092227DCF20099648C /* SPWeeklyOfftakeOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 04884C082227DCF20099648C /* SPWeeklyOfftakeOverview.m */; };
+		04884C0B2227E5590099648C /* SPCompetitorOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04884C0A2227E5590099648C /* SPCompetitorOverview.storyboard */; };
+		04884C0F2227E5B00099648C /* SPCompetitorOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 04884C0E2227E5B00099648C /* SPCompetitorOverview.m */; };
 		0490B577220B84140054F854 /* SPSelloutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B576220B84140054F854 /* SPSelloutVC.m */; };
 		0490B57B220B89650054F854 /* SPSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B57A220B89650054F854 /* SPSKUVC.m */; };
 		0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B581220B8CB30054F854 /* SPTableSKUVC.m */; };
@@ -198,6 +200,9 @@
 		04884C042227DC530099648C /* SPOffTakeWeeklyOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPOffTakeWeeklyOverview.storyboard; sourceTree = "<group>"; };
 		04884C072227DCF20099648C /* SPWeeklyOfftakeOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPWeeklyOfftakeOverview.h; sourceTree = "<group>"; };
 		04884C082227DCF20099648C /* SPWeeklyOfftakeOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPWeeklyOfftakeOverview.m; sourceTree = "<group>"; };
+		04884C0A2227E5590099648C /* SPCompetitorOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPCompetitorOverview.storyboard; sourceTree = "<group>"; };
+		04884C0D2227E5B00099648C /* SPCompetitorOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCompetitorOverview.h; sourceTree = "<group>"; };
+		04884C0E2227E5B00099648C /* SPCompetitorOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCompetitorOverview.m; sourceTree = "<group>"; };
 		0490B575220B84140054F854 /* SPSelloutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSelloutVC.h; sourceTree = "<group>"; };
 		0490B576220B84140054F854 /* SPSelloutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSelloutVC.m; sourceTree = "<group>"; };
 		0490B579220B89650054F854 /* SPSKUVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSKUVC.h; sourceTree = "<group>"; };
@@ -532,6 +537,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				04884C0C2227E5990099648C /* competitoroverview */,
 				04884C062227DCD90099648C /* weeklyofftakeoverview */,
 				04884BFF2227BE630099648C /* monthlyofftakeoverview */,
 				04E01833221CE26700927974 /* display */,
@@ -569,11 +575,14 @@
 				84869CA221B01F9A00B19623 /* SPTabProfile.storyboard */,
 				845411A521AEE42F00DE8DA8 /* SPHomePromoCell.xib */,
 				042CA0EF21A51DF900AF8E74 /* SPCompetitor.storyboard */,
+				04884C0A2227E5590099648C /* SPCompetitorOverview.storyboard */,
 				84FCFF2821A8276E0037F0A9 /* SPSellOut.storyboard */,
 				842CAA5021D614EE00B7CFF9 /* SPOffTake-Weekly.storyboard */,
 				84C51B8121DBBF9F0048AFF9 /* SPQuiz.storyboard */,
 				84CA659B21D789E0003CA458 /* SPOffTake-Monthly.storyboard */,
 				84727FDE21A9AFE000EDC907 /* SPSellOutOverview.storyboard */,
+				04884BFD2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard */,
+				04884C042227DC530099648C /* SPOffTakeWeeklyOverview.storyboard */,
 				042CA0F121A51E0F00AF8E74 /* SPSKU.storyboard */,
 				8459516B221C597C0075ECF1 /* SPDisplay.storyboard */,
 				84727FE021A9B3F000EDC907 /* SPSKUOverview.storyboard */,
@@ -582,8 +591,6 @@
 				043E0294220C0F4A00CCA20C /* SPCarousel.storyboard */,
 				042F42F322199D4200D4CFA9 /* SPSku_V2.storyboard */,
 				042F42F62219B50100D4CFA9 /* SPAttendace_v2.storyboard */,
-				04884BFD2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard */,
-				04884C042227DC530099648C /* SPOffTakeWeeklyOverview.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -720,6 +727,15 @@
 				04884C082227DCF20099648C /* SPWeeklyOfftakeOverview.m */,
 			);
 			path = weeklyofftakeoverview;
+			sourceTree = "<group>";
+		};
+		04884C0C2227E5990099648C /* competitoroverview */ = {
+			isa = PBXGroup;
+			children = (
+				04884C0D2227E5B00099648C /* SPCompetitorOverview.h */,
+				04884C0E2227E5B00099648C /* SPCompetitorOverview.m */,
+			);
+			path = competitoroverview;
 			sourceTree = "<group>";
 		};
 		0490B574220B800D0054F854 /* sellout */ = {
@@ -1136,6 +1152,7 @@
 				043E0295220C0F4A00CCA20C /* SPCarousel.storyboard in Resources */,
 				84CC670021AD8BC300DC3C9F /* SPTabHome.storyboard in Resources */,
 				042CA0B121A4F19800AF8E74 /* Assets.xcassets in Resources */,
+				04884C0B2227E5590099648C /* SPCompetitorOverview.storyboard in Resources */,
 				042CA0E421A5198D00AF8E74 /* SPSplash.storyboard in Resources */,
 				043E0290220C0E2D00CCA20C /* imageone.png in Resources */,
 				84727FDF21A9AFE000EDC907 /* SPSellOutOverview.storyboard in Resources */,
@@ -1289,6 +1306,7 @@
 				04EBBCD621F7143F00B26B44 /* SPUploadCell.m in Sources */,
 				046CC2B92219FB00007B167F /* NSDate+Helper.m in Sources */,
 				84FCFF3221A84CEE0037F0A9 /* NSString+TextDirectionality.m in Sources */,
+				04884C0F2227E5B00099648C /* SPCompetitorOverview.m in Sources */,
 				84FCFF2321A7D2110037F0A9 /* SPMainTab.swift in Sources */,
 				04EBBCDF21F7175500B26B44 /* SPProfileCell.m in Sources */,
 				04934B762216450D00AB5250 /* UIImage+SearchablePicker.m in Sources */,

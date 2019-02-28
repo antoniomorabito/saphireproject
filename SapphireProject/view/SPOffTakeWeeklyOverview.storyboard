@@ -199,8 +199,8 @@
                             <rect key="frame" x="187.5" y="0.0" width="0.0" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview Monthly Offtake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXn-cK-I5t">
-                                    <rect key="frame" x="-117.5" y="0.0" width="235" height="44"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview Weekly Offtake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXn-cK-I5t">
+                                    <rect key="frame" x="-114" y="0.0" width="228" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="0Hb-B2-Fhd"/>
                                     </constraints>

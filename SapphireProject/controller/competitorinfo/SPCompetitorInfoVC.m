@@ -80,8 +80,12 @@
     _fieldAwalPeriode.delegate= self;
     _fieldAkhirPeriode.delegate= self;
     
+    
+    
     _fieldTotalPromo.delegate = self;
     _fieldEstimasiSellout.delegate = self;
+    _fieldHargaProduk.delegate = self;
+    _fieldDeskripsiPromo.delegate = self;
     
     UIView *dummyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
     _fieldLokasi.inputView = dummyView;
@@ -110,6 +114,13 @@
     self.collectionView.dataSource = self;
     
     [self.collectionView reloadData];
+}
+-(void)dismissAllKeyboard{
+    
+    [self.fieldHargaProduk resignFirstResponder];
+    [self.fieldEstimasiSellout resignFirstResponder];
+    [self.fieldTotalPromo resignFirstResponder];
+    [self.fieldDeskripsiPromo resignFirstResponder];
 }
 -(void)doneClicked:(UIBarButtonItem*)button
 {
@@ -268,9 +279,28 @@
     }
 }
 - (IBAction)didTapAwalPeriode:(id)sender {
+   [self.view endEditing:YES];
+    SPAppConfig *backdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"backdate_trans"]];
+    
+    SPAppConfig *nextdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"nextdate_trans"]];
+    NSDate *resultbackdate = [NSDate date];
+    if (backdate) {
+        
+        NSInteger  backd = [backdate.parameterValue integerValue];
+        resultbackdate = [resultbackdate dateByAddingTimeInterval:-backd*24*60*60];
+    }
+    
+    NSDate *resultnextdate = [NSDate date];
+    if (nextdate) {
+        
+        NSInteger  nextda = [nextdate.parameterValue integerValue];
+        resultnextdate = [resultbackdate dateByAddingTimeInterval:+nextda*24*60*60];
+    }
+    
+    
     LSLDatePickerDialog *dpDialog = [[LSLDatePickerDialog alloc] init];
     [dpDialog showWithTitle:@"Pilih tanggal" doneButtonTitle:@"Done" cancelButtonTitle:@"Cancel"
-                defaultDate:[NSDate date] minimumDate:nil maximumDate:nil datePickerMode:UIDatePickerModeDate
+                defaultDate:resultbackdate minimumDate:resultbackdate maximumDate:resultnextdate datePickerMode:UIDatePickerModeDate
                    callback:^(NSDate * _Nullable date){
                        if(date)
                        {
@@ -285,9 +315,28 @@
      ];
 }
 - (IBAction)didTapAkhirPeriode:(id)sender {
+    [self.view endEditing:YES];
+    
+
+    SPAppConfig *backdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"backdate_trans"]];
+    
+    SPAppConfig *nextdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"nextdate_trans"]];
+    NSDate *resultbackdate = [NSDate date];
+    if (backdate) {
+        
+        NSInteger  backd = [backdate.parameterValue integerValue];
+        resultbackdate = [resultbackdate dateByAddingTimeInterval:-backd*24*60*60];
+    }
+    
+    NSDate *resultnextdate = [NSDate date];
+    if (nextdate) {
+        
+        NSInteger  nextda = [nextdate.parameterValue integerValue];
+        resultnextdate = [resultbackdate dateByAddingTimeInterval:+nextda*24*60*60];
+    }
     LSLDatePickerDialog *dpDialog = [[LSLDatePickerDialog alloc] init];
     [dpDialog showWithTitle:@"Pilih tanggal" doneButtonTitle:@"Done" cancelButtonTitle:@"Cancel"
-                defaultDate:[NSDate date] minimumDate:nil maximumDate:nil datePickerMode:UIDatePickerModeDate
+                defaultDate:resultnextdate minimumDate:resultnextdate maximumDate:resultnextdate datePickerMode:UIDatePickerModeDate
                    callback:^(NSDate * _Nullable date){
                        if(date)
                        {
@@ -581,12 +630,50 @@
                               };
         
         [network doCompetitorInfo:data imagedata:_fileData imageFileName:_fileName view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+            SPDataCompetitor *sellout = [SPDataCompetitor MR_createEntity];
+            SPUser *user = [SPUser MR_findFirst];
             if (success) {
                 [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                    
+                    
+                    sellout.idTable = newID;
+                    sellout.userId =user.userId;
+                    sellout.productName = self->_fieldTipeProduk.text;
+                    sellout.storeName = self->_fieldLokasi.text;
+                    sellout.salePrice =self->_fieldHargaProduk.text;
+                    sellout.timeCompetitor = displayString;
+                    sellout.photopath = self->_fileData;
+                    sellout.productId = self->product_id;
+                    sellout.storeId = self->storeid;
+                    sellout.photo = self->_fileName;
+                    
+                    sellout.status = @"Terkirim ke Server";
+                    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                    
                     [self dismissViewControllerAnimated:YES completion:nil];
                     
                     
                 }];
+            }
+            else{
+                [SPMessageUtility customMessageDialog:@"Data anda tersimpan secara lokal, silahkan upload ulang atau review kembali di overviewnya" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                    sellout.idTable = newID;
+                    sellout.userId =user.userId;
+                    sellout.productName = self->_fieldTipeProduk.text;
+                    sellout.storeName = self->_fieldLokasi.text;
+                    sellout.salePrice =self->_fieldHargaProduk.text;
+                    sellout.timeCompetitor = displayString;
+                    sellout.photopath = self->_fileData;
+                    sellout.productId = self->product_id;
+                    sellout.storeId = self->storeid;
+                    sellout.photo = self->_fileName;
+                    
+                   sellout.status = @"Belum terkirim ke server";
+                    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                    
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }];
+                
             }
         }];
     }

@@ -563,7 +563,7 @@
                 
                 
                 [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
-                    [self dismissViewControllerAnimated:YES completion:nil];
+                  
                     
                     sellout.idTable = newID;
                     sellout.userId =user.userId;
@@ -586,6 +586,8 @@
                   
                     sellout.status = @"Terkirim ke Server";
                      [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                    
+                      [self dismissViewControllerAnimated:YES completion:nil];
                 }];
             }
             else{
@@ -610,6 +612,8 @@
                      sellout.statusInstalation = self->_fieldProdukInstalasi.text;
                      sellout.status = @"Belum terkirim ke server";
                      [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                     
+                       [self dismissViewControllerAnimated:YES completion:nil];
                  }];
               
             }

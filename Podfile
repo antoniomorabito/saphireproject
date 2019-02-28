@@ -15,7 +15,6 @@ target 'SapphireProject' do
     pod 'FreakingSimpleRoundImageView', '~> 1.2.3'
     pod 'APBanner'
     pod 'CZPicker'
-
   target 'SapphireProjectTests' do
     inherit! :search_paths
     # Pods for testing

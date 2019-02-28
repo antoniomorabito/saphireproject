@@ -107,4 +107,16 @@ completionHandler:(SPCompletionHandler)handler;
 - (void)doWeeklyOfftake:(NSDictionary* )data
                         view:(UIView *)view
            completionHandler:(SPCompletionHandler)handler;
+
+
+- (void)doUpdatePicture:(NSDictionary* )data
+              imagedata:(NSData *)imageData
+          imageFileName:(NSString*)filename
+                       view:(UIView *)view
+          completionHandler:(SPCompletionHandler)handler;
+    
+    
+- (void)doUpdatePassword:(NSDictionary* )data
+                       view:(UIView *)view
+          completionHandler:(SPCompletionHandler)handler;
 @end

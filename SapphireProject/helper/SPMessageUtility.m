@@ -102,7 +102,7 @@
 {
     __block BOOL value;
     UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:@"Pertamina MS2"
+                                  alertControllerWithTitle:@"Saphire"
                                   message:text
                                   preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction
@@ -132,7 +132,7 @@
 +(void)customDeleteYesOrno :(NSString *)text needAction :(BOOL)actionType viewController :(UIViewController *)vc CH:(utilityHandler)handler;{
     __block BOOL value;
     UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:@"Pertamina MS2"
+                                  alertControllerWithTitle:@"Saphire"
                                   message:text
                                   preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction
@@ -162,7 +162,7 @@
 {
     __block BOOL value;
     UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:@"Pertamina MS2"
+                                  alertControllerWithTitle:@"Saphire"
                                   message:text
                                   preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction
@@ -186,7 +186,7 @@
                completiH:(utilityHandler)handler;{
     
     __block NSString *value = amount;
-    UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Pertamina MS2"
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Saphire"
                                                                               message: messageInfo
                                                                        preferredStyle:UIAlertControllerStyleAlert];
     
@@ -238,7 +238,7 @@
 {
     __block BOOL value;
     UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:@"Pertamina MS2"
+                                  alertControllerWithTitle:@"Saphire"
                                   message:text
                                   preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction

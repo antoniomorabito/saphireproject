@@ -1285,4 +1285,50 @@ completionHandler:(SPCompletionHandler)handler;
     }];
     
 }
+- (void)doWeeklyOfftake:(NSDictionary* )data
+                       view:(UIView *)view
+          completionHandler:(SPCompletionHandler)handler;{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.text = @"";
+    [hud showAnimated:YES];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    SPUser *user = [SPUser MR_findFirst];
+
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.token] forHTTPHeaderField:@"token"];
+    
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.companyId] forHTTPHeaderField:@"companyId"];
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.userId] forHTTPHeaderField:@"userId"];
+    
+    
+    [manager POST:[NSString stringWithFormat:@"%@/weekly-offtake/add",kCABaseURL] parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSError *jsonError;
+        NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NULL error:&jsonError];
+        if(jsonError) {
+            // check the error description
+            NSLog(@"json error : %@", [jsonError localizedDescription]);
+        } else {
+            // use the jsonDictionaryOrArray
+            
+            NSLog(@"json data weekly offtake : %@",jsonDictionaryOrArray);
+        }
+        
+        handler(YES,jsonDictionaryOrArray,nil);
+        [hud hideAnimated:YES];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
+        
+        handler(NO,serializedData,error);
+        [hud hideAnimated:YES];
+    }];
+}
 @end

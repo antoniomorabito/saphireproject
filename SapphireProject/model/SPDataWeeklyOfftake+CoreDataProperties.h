@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *userId;
 @property (nullable, nonatomic, copy) NSString *categoryId;
 @property (nullable, nonatomic, copy) NSString *channel_id;
+@property (nullable, nonatomic, copy) NSString *status;
 
 @end
 

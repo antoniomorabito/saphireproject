@@ -103,4 +103,8 @@ completionHandler:(SPCompletionHandler)handler;
 - (void)doMonthlyOfftake:(NSDictionary* )data
             view:(UIView *)view
 completionHandler:(SPCompletionHandler)handler;
+    
+- (void)doWeeklyOfftake:(NSDictionary* )data
+                        view:(UIView *)view
+           completionHandler:(SPCompletionHandler)handler;
 @end

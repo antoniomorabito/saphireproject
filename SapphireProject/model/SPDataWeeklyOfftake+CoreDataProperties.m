@@ -26,5 +26,6 @@
 @dynamic userId;
 @dynamic categoryId;
 @dynamic channel_id;
+@dynamic status;
 
 @end

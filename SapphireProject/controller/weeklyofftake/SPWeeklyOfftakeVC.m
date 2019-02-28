@@ -263,10 +263,8 @@
         SPMiddleWeeklyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"middleofftake" forIndexPath:indexPath];
         
         cell.lblProdutPrice.text = @"Stock 6";
-        // Configure the cell...
-        
-        cell.fieldValue.tag = indexPath.section*1000 +indexPath.row;
         cell.steperValue.tag = indexPath.section;
+        cell.steperValue.value = [data.totalQty1 doubleValue];
          [cell.steperValue addTarget:self action:@selector(didTapChangeValueStockEnam:) forControlEvents:UIControlEventValueChanged];
         cell.fieldValue.text = data.totalQty1;
          cell.fieldValue.inputAccessoryView = toolbars;
@@ -277,11 +275,10 @@
     {
         SPMiddleWeeklyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"middleofftake" forIndexPath:indexPath];
         cell.lblProdutPrice.text = @"Stock 6-12";
-        // Configure the cell...
         cell.fieldValue.text = data.totalQty2;
-        cell.fieldValue.tag = indexPath.section*1000 +indexPath.row;
+         cell.steperValue.value = [data.totalQty2 doubleValue];
         cell.steperValue.tag = indexPath.section;
-         [cell.steperValue addTarget:self action:@selector(didTapChangeValueStockEnamDuabelas:) forControlEvents:UIControlEventValueChanged];
+        [cell.steperValue addTarget:self action:@selector(didTapChangeValueStockEnamDuabelas:) forControlEvents:UIControlEventValueChanged];
         cell.fieldValue.inputAccessoryView = toolbars;
         return cell;
     }
@@ -289,9 +286,9 @@
     {
         SPMiddleWeeklyOfftakeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"middleofftake" forIndexPath:indexPath];
         cell.lblProdutPrice.text = @"Stock 12";
-        cell.steperValue.tag = indexPath.section;
-    
         cell.fieldValue.text = data.totalQty3;
+         cell.steperValue.value = [data.totalQty3 doubleValue];
+        cell.steperValue.tag = indexPath.section;
          [cell.steperValue addTarget:self action:@selector(didTapChangeValueStockDuabelas:) forControlEvents:UIControlEventValueChanged];
         cell.fieldValue.inputAccessoryView = toolbars;
         return cell;
@@ -435,10 +432,50 @@
         [SPMessageUtility message:@"Belum masukin kategorinya" needAction:YES viewController:self];
     }
     else{
+        for (int i = 0; i<products.count; i++) {
+            SPDataWeeklyOfftake *data = [products objectAtIndex:i];
+            [self insertNetwork:data];
+        }
         
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
-    
+-(void)insertNetwork:(SPDataWeeklyOfftake *)dataweekly
+    {
+        TrueTimeClient *client = [TrueTimeClient sharedInstance];
+        NSDate *now = [[client referenceTime] now];
+        NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate dateFormatString]];
+        SPNetworkManager *network = [[SPNetworkManager alloc]init];
+        NSString *newID = [[NSUUID UUID] UUIDString];
+        NSLog(@"ref id id : %@",newID );
+        NSDictionary *data =@{@"storeId":dataweekly.storeId,
+                              @"timeWT":displayString,
+                        @"categoryId":dataweekly.categoryId,
+                            @"productId":dataweekly.productId,
+                              @"totalQty1" : dataweekly.totalQty1,
+                               @"totalQty2" : dataweekly.totalQty2,
+                               @"totalQty3" : dataweekly.totalQty3,
+                           @"totalSales":dataweekly.totalSales,
+                              @"refId":newID
+                              };
+        [network doMonthlyOfftake:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+            
+            if (success) {
+                dataweekly.refId = newID;
+                dataweekly.timeWT = displayString;
+                dataweekly.status = @"terkirim";
+                
+                
+            }
+            else{
+                dataweekly.refId = newID;
+                dataweekly.timeWT = displayString;
+                dataweekly.status = @"belumterkirim";
+            }
+            
+        }];
+    }
 /*
 #pragma mark - Navigation
 

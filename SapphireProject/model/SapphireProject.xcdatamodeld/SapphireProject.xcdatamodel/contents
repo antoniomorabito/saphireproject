@@ -120,6 +120,7 @@
         <attribute name="channel_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="refId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storeId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeWT" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="totalQty1" optional="YES" attributeType="String" syncable="YES"/>
@@ -219,6 +220,6 @@
         <element name="SPQuizMaster" positionX="-45" positionY="144" width="128" height="240"/>
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
-        <element name="SPDataWeeklyOfftake" positionX="-18" positionY="135" width="128" height="210"/>
+        <element name="SPDataWeeklyOfftake" positionX="-18" positionY="135" width="128" height="225"/>
     </elements>
 </model>

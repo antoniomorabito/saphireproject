@@ -159,7 +159,7 @@
     }
     else if ([dataov isEqualToString:@"Monthly Offtake"])
     {
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPOffTakeMonthlyOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navMonthlyOfftake"];
         
         [self presentViewController:vc animated:YES completion:nil];
     }

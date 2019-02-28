@@ -67,23 +67,13 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NO-xl-IZe">
-                                        <rect key="frame" x="343" y="20" width="32" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="jcE-iY-r1A"/>
-                                            <constraint firstAttribute="width" constant="32" id="u0h-OS-Va2"/>
-                                        </constraints>
-                                        <state key="normal" image="ic_more"/>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="LDn-PB-RNT" firstAttribute="top" secondItem="cI7-DL-Z2t" secondAttribute="bottom" id="3I4-J0-aEX"/>
                                     <constraint firstAttribute="bottom" secondItem="aBY-EK-dQv" secondAttribute="bottom" id="B9x-pf-JUA"/>
                                     <constraint firstAttribute="trailing" secondItem="LDn-PB-RNT" secondAttribute="trailing" id="WzZ-8Z-Lrf"/>
-                                    <constraint firstAttribute="trailing" secondItem="6NO-xl-IZe" secondAttribute="trailing" id="fIJ-rC-MvZ"/>
                                     <constraint firstAttribute="bottom" secondItem="LDn-PB-RNT" secondAttribute="bottom" id="gTC-cV-CUH"/>
-                                    <constraint firstItem="LDn-PB-RNT" firstAttribute="top" secondItem="6NO-xl-IZe" secondAttribute="bottom" id="hYb-7d-VbT"/>
                                     <constraint firstItem="cI7-DL-Z2t" firstAttribute="centerX" secondItem="4gk-lN-dme" secondAttribute="centerX" id="ifS-lF-D81"/>
                                     <constraint firstItem="LDn-PB-RNT" firstAttribute="leading" secondItem="4gk-lN-dme" secondAttribute="leading" id="iiU-wK-ns5"/>
                                     <constraint firstItem="aBY-EK-dQv" firstAttribute="leading" secondItem="4gk-lN-dme" secondAttribute="leading" id="mqH-Rs-Wad"/>
@@ -232,7 +222,6 @@
     </scenes>
     <resources>
         <image name="ic_competition_info" width="50" height="50"/>
-        <image name="ic_more" width="20" height="20"/>
         <image name="scrim_bar" width="20" height="3"/>
         <image name="scrim_bar_" width="20" height="4"/>
         <image name="shade_gradient" width="1" height="1"/>

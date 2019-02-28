@@ -29,18 +29,17 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-
     NSArray *rawdata = [SPDataMonthlyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"refId == %@",@""]];
     for (SPDataMonthlyOfftake *indata in rawdata) {
         
         [indata MR_deleteEntity];
          [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     }
-    for (int i= 0; i< [SPDataMonthlyOfftake MR_findAll].count; i++) {
-        
-        SPDataMonthlyOfftake *data = [[SPDataMonthlyOfftake MR_findAll] objectAtIndex:i];
-        NSLog(@"data monthly offtake : %@",data.storeId);
-    }
+//    for (int i= 0; i< [SPDataMonthlyOfftake MR_findAll].count; i++) {
+//
+//        SPDataMonthlyOfftake *data = [[SPDataMonthlyOfftake MR_findAll] objectAtIndex:i];
+//        NSLog(@"data monthly offtake : %@",data.storeId);
+//    }
     // Do any additional setup after loading the view.
     NSArray *aryCountries = [SPCategory MR_findAll];
     
@@ -177,11 +176,15 @@
             monthlyofftake.totalQty = @"0";
             monthlyofftake.totalSales = @"0";
             monthlyofftake.productId = product.idproduct;
+            monthlyofftake.productName= product.model_product;
+            monthlyofftake.storeName = _fieldPilihLokasi.text;
+            monthlyofftake.categoryName = _fieldPilihKategori.text;
             monthlyofftake.categoryId = categoryid;
             monthlyofftake.storeId = storeid;
             monthlyofftake.refId =@"";
             monthlyofftake.timeMT =@"";
             monthlyofftake.channel_id =product.channel_id;
+             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
             [products addObject:monthlyofftake];
         }
         [hud hideAnimated:YES];
@@ -361,7 +364,7 @@
 */
 -(void)insertNetwork:(SPDataMonthlyOfftake *)datamonthly
 {
-     TrueTimeClient *client = [TrueTimeClient sharedInstance];
+    TrueTimeClient *client = [TrueTimeClient sharedInstance];
     NSDate *now = [[client referenceTime] now];
     NSString *displayString = [NSDate stringFromDate:now withFormat:[NSDate dateFormatString]];
     SPNetworkManager *network = [[SPNetworkManager alloc]init];
@@ -380,14 +383,16 @@
         if (success) {
             datamonthly.refId = newID;
             datamonthly.timeMT = displayString;
-            datamonthly.status = @"terkirim";
+            datamonthly.status = @"Terkirim ke Server";
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
             
         
         }
         else{
             datamonthly.refId = newID;
             datamonthly.timeMT = displayString;
-            datamonthly.status = @"belumterkirim";
+            datamonthly.status = @"Belum terkirim ke server";
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         }
         
     }];
@@ -406,14 +411,20 @@
         [SPMessageUtility message:@"Belum masukin kategorinya" needAction:YES viewController:self];
     }
     else{
-       
-        for (int i = 0; i<products.count; i++) {
-            SPDataMonthlyOfftake *data = [products objectAtIndex:i];
-            [self insertNetwork:data];
-        }
+        
+        [self dismissViewControllerAnimated:YES completion:^{
+            for (int i = 0; i<self->products.count; i++) {
+                SPDataMonthlyOfftake *data = [self->products objectAtIndex:i];
+                [self insertNetwork:data];
+            }
+            
+            
+        }];
+
+      
         
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+    
     }
     
 }

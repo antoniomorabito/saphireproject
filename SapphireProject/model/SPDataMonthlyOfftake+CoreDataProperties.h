@@ -2,7 +2,7 @@
 //  SPDataMonthlyOfftake+CoreDataProperties.h
 //  SapphireProject
 //
-//  Created by mac on 23/02/19.
+//  Created by mac on 28/02/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 //
@@ -20,12 +20,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *channel_id;
 @property (nullable, nonatomic, copy) NSString *productId;
 @property (nullable, nonatomic, copy) NSString *refId;
+@property (nullable, nonatomic, copy) NSString *status;
 @property (nullable, nonatomic, copy) NSString *storeId;
 @property (nullable, nonatomic, copy) NSString *timeMT;
 @property (nullable, nonatomic, copy) NSString *totalQty;
 @property (nullable, nonatomic, copy) NSString *totalSales;
 @property (nullable, nonatomic, copy) NSString *userId;
-@property (nullable, nonatomic, copy) NSString *status;
+@property (nullable, nonatomic, copy) NSString *categoryName;
+@property (nullable, nonatomic, copy) NSString *productName;
+@property (nullable, nonatomic, copy) NSString *storeName;
 
 @end
 

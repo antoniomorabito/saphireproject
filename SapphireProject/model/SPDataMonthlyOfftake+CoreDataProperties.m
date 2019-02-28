@@ -2,7 +2,7 @@
 //  SPDataMonthlyOfftake+CoreDataProperties.m
 //  SapphireProject
 //
-//  Created by mac on 23/02/19.
+//  Created by mac on 28/02/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 //
@@ -19,11 +19,14 @@
 @dynamic channel_id;
 @dynamic productId;
 @dynamic refId;
+@dynamic status;
 @dynamic storeId;
 @dynamic timeMT;
 @dynamic totalQty;
 @dynamic totalSales;
 @dynamic userId;
-@dynamic status;
+@dynamic categoryName;
+@dynamic productName;
+@dynamic storeName;
 
 @end

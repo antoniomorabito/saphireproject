@@ -13,15 +13,27 @@
 @end
 
 @implementation SPWeeklyOfftakeOverview
-
+{
+    NSMutableArray *datas;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSArray *rawdata = [SPDataWeeklyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"refId == %@",@""]];
+    for (SPDataWeeklyOfftake *indata in rawdata) {
+        
+        [indata MR_deleteEntity];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    }
+    
+    datas = [[NSMutableArray alloc]init];
+    
+    SPUser *user = [SPUser MR_findFirst];
+    NSArray *tempdata = [SPDataWeeklyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"userId == %@",user.userId]];
+    
+    datas = [[NSMutableArray alloc]initWithArray:tempdata];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +44,110 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return datas.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    SPDataWeeklyOfftake *datasellout = [datas objectAtIndex:indexPath.row];
+    SPSelloutoverCell *cell = [tableView dequeueReusableCellWithIdentifier:@"selloutoverview" forIndexPath:indexPath];
     
-    // Configure the cell...
+    
+    cell.lblPrice.hidden = YES;
+    
+    cell.lblLokasi.text = datasellout.storeName;
+    cell.lblStatus.text = datasellout.status;
+    cell.lblTanggal.text = datasellout.timeWT;
+    cell.lblCustomerName.hidden = YES;
+    cell.lblProductName.text = datasellout.productName;
+    
     
     return cell;
 }
-*/
+- (IBAction)didTapBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 166;
+}
 
+#pragma mark - Table view data source
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    SPDataWeeklyOfftake *data = [datas objectAtIndex:indexPath.row];
+    
+    if ([data.status isEqualToString:@"Terkirim ke Server"]) {
+        
+        [SPMessageUtility customDeleteYesOrno:@"Apakah anda yakin ingin menghapus data ini?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+            
+            
+            if (success) {
+                
+                [self->datas removeObject:data];
+                [data MR_deleteEntity];
+                [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                
+                
+                [self.tableView reloadData];
+            }
+            else{
+                
+            }
+        }];
+    }
+    else{
+        
+        [SPMessageUtility customYesOrNo:@"Apakah anda ingin mengirim ulang data ini ke server?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+            
+            
+            if (success) {
+                SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+                NSDictionary *datadikirim =@{@"storeId":data.storeId,
+                                      @"timeWT":data.timeWT,
+                                      @"categoryId":data.categoryId,
+                                      @"productId":data.productId,
+                                      @"totalQty1" : data.totalQty1,
+                                      @"totalQty2" : data.totalQty2,
+                                      @"totalQty3" : data.totalQty3,
+                                      @"totalSales":data.totalSales,
+                                      @"refId":data.refId
+                                      };
+                
+                
+                [network doWeeklyOfftake:datadikirim view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+                    if (success) {
+                        [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                            
+                            
+                            data.status = @"Terkirim ke Server";
+                            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                            
+                            [self.tableView reloadData];
+                        }];
+                        
+                    }
+                    else
+                    {
+                        [SPMessageUtility message:@"Masih gagal dikirim, silahkan cek ulang internet anda" needAction:YES viewController:self];
+                    }
+                    
+                }];
+                
+                
+            }
+        }];
+    }
+}
 /*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.

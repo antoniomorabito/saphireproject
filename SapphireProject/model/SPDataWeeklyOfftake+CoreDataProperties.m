@@ -15,17 +15,21 @@
 	return [NSFetchRequest fetchRequestWithEntityName:@"SPDataWeeklyOfftake"];
 }
 
+@dynamic categoryId;
+@dynamic channel_id;
+@dynamic productId;
 @dynamic refId;
+@dynamic status;
 @dynamic storeId;
 @dynamic timeWT;
-@dynamic productId;
 @dynamic totalQty1;
 @dynamic totalQty2;
 @dynamic totalQty3;
 @dynamic totalSales;
 @dynamic userId;
-@dynamic categoryId;
-@dynamic channel_id;
-@dynamic status;
+@dynamic categoryName;
+@dynamic productName;
+@dynamic storeName;
+@dynamic channelName;
 
 @end

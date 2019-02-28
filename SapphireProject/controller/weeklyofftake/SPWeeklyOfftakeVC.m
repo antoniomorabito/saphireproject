@@ -35,11 +35,7 @@
         [indata MR_deleteEntity];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     }
-    for (int i= 0; i< [SPDataWeeklyOfftake MR_findAll].count; i++) {
-        
-        SPDataWeeklyOfftake *data = [[SPDataMonthlyOfftake MR_findAll] objectAtIndex:i];
-        NSLog(@"data weekly offtake : %@",data.storeId);
-    }
+    
     NSArray *aryCountries = [SPCategory MR_findAll];
     
     datacategory = [[NSMutableArray alloc]init];
@@ -172,6 +168,10 @@
             weeklyofftake.totalQty2 = @"0";
             weeklyofftake.totalQty3 = @"0";
             weeklyofftake.totalSales = @"0";
+            weeklyofftake.productName= product.model_product;
+            weeklyofftake.channelName= @"";
+            weeklyofftake.categoryName= _fieldPilihKategori.text;
+            weeklyofftake.storeName= _fieldPilihLokasi.text;
             weeklyofftake.categoryId = categoryid;
             weeklyofftake.channel_id = product.channel_id;
             weeklyofftake.productId = product.idproduct;
@@ -451,27 +451,27 @@
         NSLog(@"ref id id : %@",newID );
         NSDictionary *data =@{@"storeId":dataweekly.storeId,
                               @"timeWT":displayString,
-                        @"categoryId":dataweekly.categoryId,
-                            @"productId":dataweekly.productId,
+                              @"categoryId":dataweekly.categoryId,
+                             @"productId":dataweekly.productId,
                               @"totalQty1" : dataweekly.totalQty1,
                                @"totalQty2" : dataweekly.totalQty2,
                                @"totalQty3" : dataweekly.totalQty3,
-                           @"totalSales":dataweekly.totalSales,
+                              @"totalSales":dataweekly.totalSales,
                               @"refId":newID
                               };
-        [network doMonthlyOfftake:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        
+        [network doWeeklyOfftake:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
             
             if (success) {
                 dataweekly.refId = newID;
                 dataweekly.timeWT = displayString;
-                dataweekly.status = @"terkirim";
-                
-                
+                dataweekly.status = @"Terkirim ke Server";
             }
             else{
                 dataweekly.refId = newID;
                 dataweekly.timeWT = displayString;
-                dataweekly.status = @"belumterkirim";
+                dataweekly.status = @"Belum terkirim ke server";
             }
             
         }];

@@ -165,7 +165,7 @@
     }
     else if ([dataov isEqualToString:@"Weekly Offtake"])
     {
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPOffTakeWeeklyOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navWeeklyOfftake"];
         
         [self presentViewController:vc animated:YES completion:nil];
     }

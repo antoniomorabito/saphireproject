@@ -18,12 +18,12 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    NSArray *rawdata = [SPDataMonthlyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"refId == %@",@""]];
-//    for (SPDataMonthlyOfftake *indata in rawdata) {
-//        
-//        [indata MR_deleteEntity];
-//        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-//    }
+    NSArray *rawdata = [SPDataMonthlyOfftake MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"refId == %@",@""]];
+    for (SPDataMonthlyOfftake *indata in rawdata) {
+        
+        [indata MR_deleteEntity];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    }
     
     
     datas = [[NSMutableArray alloc]init];
@@ -112,7 +112,7 @@
                                       @"productId":data.productId,
                                       @"totalQty" : data.totalQty,
                                       @"totalSales":data.totalSales,
-                                      @"refId":newID
+                                      @"refId":data.refId
                                       };
                 
                 [network doMonthlyOfftake:datadikirim view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
@@ -121,7 +121,6 @@
                             
                             
                             data.status = @"Terkirim ke Server";
-                            data.refId =newID;
                             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
                             
                             [self.tableView reloadData];

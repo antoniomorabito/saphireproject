@@ -38,6 +38,8 @@
 		046CC2C2221A3C49007B167F /* SPCollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CC2C1221A3C49007B167F /* SPCollectionImageCell.m */; };
 		04884BFE2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04884BFD2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard */; };
 		04884C022227BE8A0099648C /* SPMonthlOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 04884C012227BE8A0099648C /* SPMonthlOverview.m */; };
+		04884C052227DC530099648C /* SPOffTakeWeeklyOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04884C042227DC530099648C /* SPOffTakeWeeklyOverview.storyboard */; };
+		04884C092227DCF20099648C /* SPWeeklyOfftakeOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 04884C082227DCF20099648C /* SPWeeklyOfftakeOverview.m */; };
 		0490B577220B84140054F854 /* SPSelloutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B576220B84140054F854 /* SPSelloutVC.m */; };
 		0490B57B220B89650054F854 /* SPSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B57A220B89650054F854 /* SPSKUVC.m */; };
 		0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490B581220B8CB30054F854 /* SPTableSKUVC.m */; };
@@ -193,6 +195,9 @@
 		04884BFD2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPOffTakeMonthlyOverview.storyboard; sourceTree = "<group>"; };
 		04884C002227BE8A0099648C /* SPMonthlOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMonthlOverview.h; sourceTree = "<group>"; };
 		04884C012227BE8A0099648C /* SPMonthlOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMonthlOverview.m; sourceTree = "<group>"; };
+		04884C042227DC530099648C /* SPOffTakeWeeklyOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPOffTakeWeeklyOverview.storyboard; sourceTree = "<group>"; };
+		04884C072227DCF20099648C /* SPWeeklyOfftakeOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPWeeklyOfftakeOverview.h; sourceTree = "<group>"; };
+		04884C082227DCF20099648C /* SPWeeklyOfftakeOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPWeeklyOfftakeOverview.m; sourceTree = "<group>"; };
 		0490B575220B84140054F854 /* SPSelloutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSelloutVC.h; sourceTree = "<group>"; };
 		0490B576220B84140054F854 /* SPSelloutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSelloutVC.m; sourceTree = "<group>"; };
 		0490B579220B89650054F854 /* SPSKUVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSKUVC.h; sourceTree = "<group>"; };
@@ -527,6 +532,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				04884C062227DCD90099648C /* weeklyofftakeoverview */,
 				04884BFF2227BE630099648C /* monthlyofftakeoverview */,
 				04E01833221CE26700927974 /* display */,
 				043E0286220C0C7000CCA20C /* pagingvc */,
@@ -577,6 +583,7 @@
 				042F42F322199D4200D4CFA9 /* SPSku_V2.storyboard */,
 				042F42F62219B50100D4CFA9 /* SPAttendace_v2.storyboard */,
 				04884BFD2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard */,
+				04884C042227DC530099648C /* SPOffTakeWeeklyOverview.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -700,18 +707,19 @@
 		04884BFF2227BE630099648C /* monthlyofftakeoverview */ = {
 			isa = PBXGroup;
 			children = (
-				04884C032227BEA20099648C /* cell */,
 				04884C002227BE8A0099648C /* SPMonthlOverview.h */,
 				04884C012227BE8A0099648C /* SPMonthlOverview.m */,
 			);
 			path = monthlyofftakeoverview;
 			sourceTree = "<group>";
 		};
-		04884C032227BEA20099648C /* cell */ = {
+		04884C062227DCD90099648C /* weeklyofftakeoverview */ = {
 			isa = PBXGroup;
 			children = (
+				04884C072227DCF20099648C /* SPWeeklyOfftakeOverview.h */,
+				04884C082227DCF20099648C /* SPWeeklyOfftakeOverview.m */,
 			);
-			path = cell;
+			path = weeklyofftakeoverview;
 			sourceTree = "<group>";
 		};
 		0490B574220B800D0054F854 /* sellout */ = {
@@ -1109,6 +1117,7 @@
 				04E01838221CE34800927974 /* SPDisplay.storyboard in Resources */,
 				845411A821AF0B9800DE8DA8 /* SPTabUpload.storyboard in Resources */,
 				8422417821A617F40022AB75 /* Montserrat-Bold.otf in Resources */,
+				04884C052227DC530099648C /* SPOffTakeWeeklyOverview.storyboard in Resources */,
 				8422417921A617F40022AB75 /* Montserrat-Regular.otf in Resources */,
 				042CA0EE21A51DB900AF8E74 /* SPMain.storyboard in Resources */,
 				04884BFE2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard in Resources */,
@@ -1272,6 +1281,7 @@
 				0490B5AF220BA5710054F854 /* SPFooterWeeklyOfftakeCell.m in Sources */,
 				042CA0EC21A51B0000AF8E74 /* SPMessageUtility.m in Sources */,
 				04934B732216450D00AB5250 /* SearchStringPickerViewController.m in Sources */,
+				04884C092227DCF20099648C /* SPWeeklyOfftakeOverview.m in Sources */,
 				0490B58E220B9D8B0054F854 /* SPSelloutoverCell.m in Sources */,
 				04EBBD0A21F84AE000B26B44 /* SPTimeHelper.m in Sources */,
 				0490B5A2220BA4C00054F854 /* SPWeeklyOfftakeVC.m in Sources */,

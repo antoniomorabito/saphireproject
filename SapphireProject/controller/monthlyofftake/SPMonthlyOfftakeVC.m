@@ -389,7 +389,7 @@
         
         }
         else{
-            datamonthly.refId = @"";
+            datamonthly.refId = newID;
             datamonthly.timeMT = displayString;
             datamonthly.status = @"Belum terkirim ke server";
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];

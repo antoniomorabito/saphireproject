@@ -1397,9 +1397,21 @@ completionHandler:(SPCompletionHandler)handler;
             handler(YES,jsonDictionaryOrArray,nil);
             [hud hideAnimated:YES];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
             
-            handler(NO,errResponse,error);
+            NSData *data= error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+            NSError* errorda;
+            
+            if (data !=nil) {
+                NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
+                                                                     options:kNilOptions
+                                                                       error:&errorda];
+                   NSLog(@"error json : %@",json);
+                 handler(NO,json,error);
+            }
+            else{
+            NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+                handler(NO,errResponse,error);
+            }
             [hud hideAnimated:YES];
         }];
     }

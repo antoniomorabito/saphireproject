@@ -178,25 +178,40 @@
       
         [SPMessageUtility customInputDialog:@"Saphire" message:@"Ubah password" placeholder:@"Masukan password lama anda" placeholderSecond:@"Masukan password baru anda" viewController:self completiH:^(BOOL success, NSString *valueFirst, NSString *valuesecond) {
            
-            SPNetworkManager *network =[[SPNetworkManager alloc]init
-                                        ];
             
-            [network doUpdatePassword:@{@"password":valuesecond,
-                                      @"oldpassword":valueFirst
-                                        } view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+            if (success) {
+                SPNetworkManager *network =[[SPNetworkManager alloc]init
+                                            ];
                 
-                NSLog(@"nilai change passw : %@",responseObject);
-                        
-                        if ([responseObject objectForKey:@"error_description"]) {
-                                                    [SPMessageUtility message:[NSString stringWithFormat:@"%@",[responseObject objectForKey:@"error_description"]] needAction:YES viewController:self];
-                                            }
-                                            else{
+                [network doUpdatePassword:@{@"password":valuesecond,
+                                            @"oldpassword":valueFirst
+                                            } view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
                                                 
-                                            }
+                                                NSLog(@"nilai change passw : %@",responseObject);
+                                               
                                             
-                                            
+                                              if ([responseObject isKindOfClass:[NSString class]]) {
+                                                    
+                                                    [SPMessageUtility message:@"Error koneksi, tolong cek koneksi internet anda lagi" needAction:YES viewController:self
+                                                     ];
+                                                }
+                                                
+                                               else if ([responseObject objectForKey:@"error_description"]) {
+                                                    [SPMessageUtility message:[NSString stringWithFormat:@"%@",[responseObject objectForKey:@"error_description"]] needAction:YES viewController:self];
+                                                }
+                                                else{
+                                                    
+                                                    [SPMessageUtility message:@"Berhasil update password" needAction:YES viewController:self];
+                                                }
+                                                
+                                                
+                                                
+                                            }];
+            }
+            else{
                 
-            }];
+            }
+           
         }];
     }
     else if ([data isEqualToString:@"Term Of Service"]) {

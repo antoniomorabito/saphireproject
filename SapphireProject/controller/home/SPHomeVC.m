@@ -15,6 +15,7 @@
 @implementation SPHomeVC
 {
     NSMutableArray *datamenu;
+    NSArray *dataSap;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -97,6 +98,14 @@
     }
     
     else if ([data isEqualToString:@"Overview"]){
+         dataSap = @[@"Attendance", @"Display", @"Sell out", @"Monthly Offtake", @"Weekly Offtake",@"Competitor",@"SKU",@"Feedback"];
+       
+        CZPickerView *pickerWithImage = [[CZPickerView alloc] initWithHeaderTitle:@"Overview" cancelButtonTitle:@"Cancel" confirmButtonTitle:@"Confirm"];
+        pickerWithImage.delegate = self;
+        pickerWithImage.dataSource = self;
+        pickerWithImage.needFooterView = YES;
+        [pickerWithImage show];
+        
 
     }
 
@@ -106,6 +115,91 @@
     
 }
 
+- (void)czpickerViewDidClickCancelButton:(CZPickerView *)pickerView {
+    [self.navigationController setNavigationBarHidden:YES];
+    NSLog(@"Canceled.");
+}
+    
+- (void)czpickerViewWillDisplay:(CZPickerView *)pickerView {
+    NSLog(@"Picker will display.");
+}
+    
+- (void)czpickerViewDidDisplay:(CZPickerView *)pickerView {
+    NSLog(@"Picker did display.");
+}
+    
+- (void)czpickerViewWillDismiss:(CZPickerView *)pickerView {
+    NSLog(@"Picker will dismiss.");
+}
+    
+- (void)czpickerViewDidDismiss:(CZPickerView *)pickerView {
+    NSLog(@"Picker did dismiss.");
+    
+    
+}
+- (void)czpickerView:(CZPickerView *)pickerView didConfirmWithItemAtRow:(NSInteger)row {
+        NSLog(@"%@ is chosen!", dataSap[row]);
+    
+    NSString *dataov = dataSap[row];
+    if([dataov isEqualToString:@"Attendance"])
+    {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    else if ([dataov isEqualToString:@"Display"])
+    {
+        
+    }
+    else if ([dataov isEqualToString:@"Sell out"])
+    {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSellOutOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navselloutoverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    else if ([dataov isEqualToString:@"Monthly Offtake"])
+    {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    else if ([dataov isEqualToString:@"Weekly Offtake"])
+    {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    else if ([dataov isEqualToString:@"Competitor"])
+    {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAttendanceOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navaattendanceoverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    else if ([dataov isEqualToString:@"SKU"])
+    {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPSKUOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navSKUOverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    }
+    else if ([dataov isEqualToString:@"Feedback"])
+    {
+        
+    }
+    
+}
+    - (void)czpickerView:(CZPickerView *)pickerView didConfirmWithItemsAtRows:(NSArray *)rows {
+  
+    }
+    
+- (NSString *)czpickerView:(CZPickerView *)pickerView
+                   titleForRow:(NSInteger)row{
+        return dataSap[row];
+    }
+
+- (NSInteger)numberOfRowsInPickerView:(CZPickerView *)pickerView {
+    return dataSap.count;
+}
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     NSString *data = [self.datas objectAtIndex:indexPath.row];
     SPHomeMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"menuCell" forIndexPath:indexPath];

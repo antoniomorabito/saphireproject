@@ -17,15 +17,19 @@
 @end
 
 @implementation SPSelloutOverviewVC
-
+{
+    NSMutableArray *datas;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+
+    datas = [[NSMutableArray alloc]init];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    SPUser *user = [SPUser MR_findFirst];
+    NSArray *tempdata = [SPDataSellout MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"userId == %@",user.userId]];
+    datas = [[NSMutableArray alloc]initWithArray:tempdata];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,15 +38,67 @@
 }
 
 #pragma mark - Table view data source
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    SPDataSellout *data = [datas objectAtIndex:indexPath.row];
+    
+    if ([data.status isEqualToString:@"Terkirim ke Server"]) {
+        
+        [SPMessageUtility customDeleteYesOrno:@"Apakah anda yakin menghapus atau tidak?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+           
+            
+            if (success) {
+                
+                [datas removeObject:data];
+                [data MR_deleteEntity];
+                 [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                
+                
+                [self.tableView reloadData];
+            }
+            else{
+                
+            }
+        }];
+    }
+    else{
+        
+        [SPMessageUtility customYesOrNo:@"Apakah anda ingin mengirim ulang data ini ke server?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+            
+            SPNetworkManager *network = [[SPNetworkManager alloc]init];
+            
+            NSDictionary *datakiriman= @{@"storeId":data.storeId,
+                                  @"timeSellout":data.timeSellout,
+                                  @"productId":data.productId,
+                                  @"totalQty":data.totalQty,
+                                  @"statusStock":data.statusStock,
+                                  @"statusInstalation":data.statusInstalation,
+                                  @"customerName":data.customerName,
+                                  @"customerPhone":data.customerPhone,
+                                  @"customerAddress":data.customerAddress,
+                                  @"customerPrice":data.customerPrice,
+                                  @"refId":data.idTable
+                                  };
+            
+            [network doSellout:datakiriman imagedata:data.photofile imageFileName:data.customerPhoto view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+                
+                [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                  
+                    
+                }];
+                
+            }];
+        }];
+    }
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 10;
+    return datas.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -51,7 +107,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SPDataSellout *datasellout = [datas objectAtIndex:indexPath.row];
     SPSelloutoverCell *cell = [tableView dequeueReusableCellWithIdentifier:@"overcell" forIndexPath:indexPath];
+    
+    cell.lblPrice.text = [NSString stringWithFormat:@"Rp %@",[SPUtility changeFormat:[datasellout.customerPrice doubleValue]]];
+    
+    cell.lblLokasi.text = datasellout.storeName;
+    cell.lblStatus.text = datasellout.status;
+    cell.lblTanggal.text = datasellout.timeSellout;
+    cell.lblCustomerName.text = datasellout.customerName;
+    cell.lblProductName.text = datasellout.productName;
     
     // Configure the cell...
     

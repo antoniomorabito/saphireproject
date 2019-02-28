@@ -29,4 +29,15 @@
     
     [APBannerManager setDuration:[NSNumber numberWithInteger:2]];
 }
+
+
++(NSString *)changeFormat:(double)hasil{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setCurrencySymbol:@""];
+    NSNumber *numberDone = [NSNumber numberWithDouble:hasil];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSString *text = [formatter stringFromNumber:numberDone];
+    
+    return text;
+}
 @end

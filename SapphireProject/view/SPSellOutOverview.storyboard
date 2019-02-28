@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -141,6 +141,14 @@
                                         <constraint firstAttribute="trailing" secondItem="zsK-PQ-3Tq" secondAttribute="trailing" constant="16" id="xcr-wK-Uj4"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblCustomerName" destination="cZz-gp-ghl" id="7aZ-5U-mAl"/>
+                                    <outlet property="lblLokasi" destination="zsK-PQ-3Tq" id="VqI-B8-iLT"/>
+                                    <outlet property="lblPrice" destination="age-bC-m0g" id="N2j-DG-TJf"/>
+                                    <outlet property="lblProductName" destination="WTf-4w-yYE" id="CHd-Jg-5j3"/>
+                                    <outlet property="lblStatus" destination="J8P-PT-KNA" id="1qd-57-Co8"/>
+                                    <outlet property="lblTanggal" destination="mxL-Pe-B93" id="vxq-8h-6Wz"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="166" id="o0g-yK-wjf" userLabel="COLOR GUIDE">
                                 <rect key="frame" x="0.0" y="167" width="375" height="166"/>

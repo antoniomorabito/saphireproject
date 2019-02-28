@@ -64,6 +64,6 @@
 #import "SPDataWeeklyOfftake+CoreDataProperties.h"
 
 #import "FDTakeController.h"
-
+#import "CZPicker.h"
 @import Photos;
 #endif /* SPLibrary_h */

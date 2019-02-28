@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SPNetworkManager.h"
 #import "SPHomeMenuCell.h"
-@interface SPHomeVC : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface SPHomeVC : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,CZPickerViewDataSource, CZPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 

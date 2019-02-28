@@ -2,7 +2,7 @@
 //  SPDataSellout+CoreDataProperties.m
 //  SapphireProject
 //
-//  Created by mac on 18/02/19.
+//  Created by mac on 28/02/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 //
@@ -20,6 +20,7 @@
 @dynamic customerPhone;
 @dynamic customerPhoto;
 @dynamic customerPrice;
+@dynamic idTable;
 @dynamic productId;
 @dynamic statusInstalation;
 @dynamic statusStock;
@@ -27,6 +28,11 @@
 @dynamic timeSellout;
 @dynamic totalQty;
 @dynamic userId;
-@dynamic idTable;
+@dynamic status;
+@dynamic photofile;
+@dynamic category_id;
+@dynamic categoryName;
+@dynamic productName;
+@dynamic storeName;
 
 @end

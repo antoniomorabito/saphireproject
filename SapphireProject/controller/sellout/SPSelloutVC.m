@@ -129,9 +129,28 @@
     
 }
 - (IBAction)didTapPilihTanggal:(id)sender {
+    SPAppConfig *backdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"backdate_trans"]];
+    
+    SPAppConfig *nextdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"nextdate_trans"]];
+    NSDate *resultbackdate = [NSDate date];
+    if (backdate) {
+        
+        NSInteger  backd = [backdate.parameterValue integerValue];
+        resultbackdate = [resultbackdate dateByAddingTimeInterval:-backd*24*60*60];
+    }
+    
+    NSDate *resultnextdate = [NSDate date];
+    if (nextdate) {
+        
+        NSInteger  nextda = [nextdate.parameterValue integerValue];
+        resultnextdate = [resultbackdate dateByAddingTimeInterval:+nextda*24*60*60];
+    }
+    
+    
+    
     LSLDatePickerDialog *dpDialog = [[LSLDatePickerDialog alloc] init];
     [dpDialog showWithTitle:@"Pilih tanggal" doneButtonTitle:@"Done" cancelButtonTitle:@"Cancel"
-                defaultDate:[NSDate date] minimumDate:nil maximumDate:nil datePickerMode:UIDatePickerModeDate
+                defaultDate:[NSDate date] minimumDate:resultbackdate maximumDate:resultnextdate datePickerMode:UIDatePickerModeDate
                    callback:^(NSDate * _Nullable date){
                        if(date)
                        {
@@ -518,6 +537,8 @@
     else{
         
         SPNetworkManager *network = [[SPNetworkManager alloc]init];
+        
+        SPUser *user = [SPUser MR_findFirst];
           NSString *newID = [[NSUUID UUID] UUIDString];
         NSDictionary *data= @{@"storeId":storeid,
                               @"timeSellout":_fieldDate.text,
@@ -525,7 +546,7 @@
                               @"totalQty":_fieldSubTotalPrice.text,
                               @"statusStock":_fieldProdukKeberadaan.text,
                               @"statusInstalation":_fieldProdukInstalasi.text,
-                              @"customerName":_fieldProductName.text,
+                              @"customerName":_fieldCustomerName.text,
                               @"customerPhone":_fieldCustomerPhoneNumber.text,
                               @"customerAddress":_fieldCustomerAddress.text,
                               @"customerPrice":_fieldCustomerPrice.text,
@@ -533,13 +554,59 @@
                               };
         
         
+        
         [network doSellout:data imagedata:_fileData imageFileName:_fileName view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+            SPDataSellout *sellout = [SPDataSellout MR_createEntity];
             if (success) {
+                
+                
                 [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
                     [self dismissViewControllerAnimated:YES completion:nil];
                     
-                    
+                    sellout.idTable = newID;
+                    sellout.userId =user.userId;
+                    sellout.productName = self->_fieldProductName.text;
+                    sellout.storeName = self->_fieldLocation.text;
+                    sellout.categoryName = self->_fieldCategory.text;
+                    sellout.customerAddress =self->_fieldcustomerAddress.text;
+                    sellout.customerName = self->_fieldCustomerName.text;
+                    sellout.customerPhone = self->_fieldCustomerPhoneNumber.text;
+                    sellout.customerPhoto = self->_fileName;
+                    sellout.customerPrice = self->_fieldCustomerPrice.text;
+                    sellout.photofile = self->_fileData;
+                    sellout.productId = self->product_id;
+                    sellout.category_id = self->categoryid;
+                    sellout.storeId = self->storeid;
+                    sellout.timeSellout = self->_fieldDate.text;
+                    sellout.totalQty = self->_fieldSubTotalPrice.text;
+                    sellout.statusStock = self->_fieldProdukKeberadaan.text;
+                    sellout.statusInstalation = self->_fieldProdukInstalasi.text;
+                  
+                    sellout.status = @"Terkirim ke Server";
+                     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
                 }];
+            }
+            else{
+                sellout.idTable = newID;
+                sellout.userId =user.userId;
+                sellout.productName = self->_fieldProductName.text;
+                sellout.storeName = self->_fieldLocation.text;
+                sellout.categoryName = self->_fieldCategory.text;
+                sellout.customerAddress =self->_fieldcustomerAddress.text;
+                sellout.customerName = self->_fieldCustomerName.text;
+                sellout.customerPhone = self->_fieldCustomerPhoneNumber.text;
+                sellout.customerPhoto = self->_fileName;
+                sellout.customerPrice = self->_fieldCustomerPrice.text;
+                sellout.photofile = self->_fileData;
+                sellout.productId = self->product_id;
+                sellout.category_id = self->categoryid;
+                sellout.storeId = self->storeid;
+                sellout.timeSellout = self->_fieldDate.text;
+                sellout.totalQty = self->_fieldSubTotalPrice.text;
+                sellout.statusStock = self->_fieldProdukKeberadaan.text;
+                sellout.statusInstalation = self->_fieldProdukInstalasi.text;
+                sellout.status = @"Belum terkirim ke server";
+                 [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
             }
             
             

@@ -10,4 +10,5 @@
 #import "SPNetworkManager.h"
 @interface SPUtility : NSObject
 +(void)initBannerNotif:(NSString *)title subtitle:(NSString*)mes body:(NSString*)bodmessage;
++(NSString *)changeFormat:(double)hasil;
 @end

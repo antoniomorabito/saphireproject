@@ -59,6 +59,8 @@
     _fieldSubTotalPrice.delegate = self;
     _fieldCustomerPrice.delegate = self;
     _fieldCustomerName.delegate = self;
+    _fieldCustomerPhoneNumber.delegate = self;
+    _fieldProdukKeberadaan.delegate =self;
     _fieldDate.delegate = self;
     
     UIView *dummyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
@@ -80,7 +82,7 @@
     _fieldCustomerName.inputAccessoryView = toolbars;
     _fieldCustomerPrice.inputAccessoryView = toolbars;
     _fieldSubTotalPrice.inputAccessoryView = toolbars;
-
+    _fieldCustomerPhoneNumber.inputAccessoryView = toolbars;
     _fieldCustomerAddress.inputAccessoryView = toolbars;
   
     _fieldProdukInstalasi.inputAccessoryView = toolbars;
@@ -587,26 +589,29 @@
                 }];
             }
             else{
-                sellout.idTable = newID;
-                sellout.userId =user.userId;
-                sellout.productName = self->_fieldProductName.text;
-                sellout.storeName = self->_fieldLocation.text;
-                sellout.categoryName = self->_fieldCategory.text;
-                sellout.customerAddress =self->_fieldcustomerAddress.text;
-                sellout.customerName = self->_fieldCustomerName.text;
-                sellout.customerPhone = self->_fieldCustomerPhoneNumber.text;
-                sellout.customerPhoto = self->_fileName;
-                sellout.customerPrice = self->_fieldCustomerPrice.text;
-                sellout.photofile = self->_fileData;
-                sellout.productId = self->product_id;
-                sellout.category_id = self->categoryid;
-                sellout.storeId = self->storeid;
-                sellout.timeSellout = self->_fieldDate.text;
-                sellout.totalQty = self->_fieldSubTotalPrice.text;
-                sellout.statusStock = self->_fieldProdukKeberadaan.text;
-                sellout.statusInstalation = self->_fieldProdukInstalasi.text;
-                sellout.status = @"Belum terkirim ke server";
-                 [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                 [SPMessageUtility customMessageDialog:@"Data anda tersimpan secara lokal, silahkan upload ulang atau review kembali di overviewnya" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                     sellout.idTable = newID;
+                     sellout.userId =user.userId;
+                     sellout.productName = self->_fieldProductName.text;
+                     sellout.storeName = self->_fieldLocation.text;
+                     sellout.categoryName = self->_fieldCategory.text;
+                     sellout.customerAddress =self->_fieldcustomerAddress.text;
+                     sellout.customerName = self->_fieldCustomerName.text;
+                     sellout.customerPhone = self->_fieldCustomerPhoneNumber.text;
+                     sellout.customerPhoto = self->_fileName;
+                     sellout.customerPrice = self->_fieldCustomerPrice.text;
+                     sellout.photofile = self->_fileData;
+                     sellout.productId = self->product_id;
+                     sellout.category_id = self->categoryid;
+                     sellout.storeId = self->storeid;
+                     sellout.timeSellout = self->_fieldDate.text;
+                     sellout.totalQty = self->_fieldSubTotalPrice.text;
+                     sellout.statusStock = self->_fieldProdukKeberadaan.text;
+                     sellout.statusInstalation = self->_fieldProdukInstalasi.text;
+                     sellout.status = @"Belum terkirim ke server";
+                     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                 }];
+              
             }
             
             

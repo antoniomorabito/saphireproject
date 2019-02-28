@@ -45,12 +45,12 @@
     
     if ([data.status isEqualToString:@"Terkirim ke Server"]) {
         
-        [SPMessageUtility customDeleteYesOrno:@"Apakah anda yakin menghapus atau tidak?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+        [SPMessageUtility customDeleteYesOrno:@"Apakah anda yakin ingin menghapus data ini?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
            
             
             if (success) {
                 
-                [datas removeObject:data];
+                [self->datas removeObject:data];
                 [data MR_deleteEntity];
                  [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
                 
@@ -66,29 +66,44 @@
         
         [SPMessageUtility customYesOrNo:@"Apakah anda ingin mengirim ulang data ini ke server?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
             
-            SPNetworkManager *network = [[SPNetworkManager alloc]init];
-            
-            NSDictionary *datakiriman= @{@"storeId":data.storeId,
-                                  @"timeSellout":data.timeSellout,
-                                  @"productId":data.productId,
-                                  @"totalQty":data.totalQty,
-                                  @"statusStock":data.statusStock,
-                                  @"statusInstalation":data.statusInstalation,
-                                  @"customerName":data.customerName,
-                                  @"customerPhone":data.customerPhone,
-                                  @"customerAddress":data.customerAddress,
-                                  @"customerPrice":data.customerPrice,
-                                  @"refId":data.idTable
-                                  };
-            
-            [network doSellout:datakiriman imagedata:data.photofile imageFileName:data.customerPhoto view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+          
+            if (success) {
+                SPNetworkManager *network = [[SPNetworkManager alloc]init];
                 
-                [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
-                  
+                NSDictionary *datakiriman= @{@"storeId":data.storeId,
+                                             @"timeSellout":data.timeSellout,
+                                             @"productId":data.productId,
+                                             @"totalQty":data.totalQty,
+                                             @"statusStock":data.statusStock,
+                                             @"statusInstalation":data.statusInstalation,
+                                             @"customerName":data.customerName,
+                                             @"customerPhone":data.customerPhone,
+                                             @"customerAddress":data.customerAddress,
+                                             @"customerPrice":data.customerPrice,
+                                             @"refId":data.idTable
+                                             };
+                
+                [network doSellout:datakiriman imagedata:data.photofile imageFileName:data.customerPhoto view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
                     
+                    if (success) {
+                        [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                            
+                            
+                             data.status = @"Terkirim ke Server";
+                              [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                            
+                            [self.tableView reloadData];
+                        }];
+                        
+                    }
+                    else
+                    {
+                        [SPMessageUtility message:@"Masih gagal dikirim, silahkan cek ulang internet anda" needAction:YES viewController:self];
+                    }
+                   
                 }];
                 
-            }];
+            }
         }];
     }
 }

@@ -1174,10 +1174,9 @@ completionHandler:(SPCompletionHandler)handler;
         [hud hideAnimated:YES];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
-        NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
+       NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
         
-        handler(NO,serializedData,error);
+        handler(NO,errResponse,error);
         [hud hideAnimated:YES];
     }];
 }

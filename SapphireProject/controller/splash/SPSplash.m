@@ -96,9 +96,20 @@
             [self presentViewController:vc animated:YES completion:nil];
         }
         else{
-            UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAuthentication" bundle:nil]instantiateViewControllerWithIdentifier:@"login"];
             
-            [self presentViewController:vc animated:YES completion:nil];
+            SPUser *user = [SPUser MR_findFirst];
+            
+            if (user)
+            {
+                UIViewController *vc =[[UIStoryboard storyboardWithName:@"SPMain" bundle:nil]instantiateViewControllerWithIdentifier:@"navtabbar"];
+                //
+                [self presentViewController:vc animated:YES completion:nil];
+            }
+            else{
+                UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAuthentication" bundle:nil]instantiateViewControllerWithIdentifier:@"login"];
+                
+                [self presentViewController:vc animated:YES completion:nil];
+            }
         }
     }];
     

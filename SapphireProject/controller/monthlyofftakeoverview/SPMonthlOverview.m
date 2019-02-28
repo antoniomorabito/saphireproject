@@ -73,6 +73,73 @@
 {
     return 166;
 }
+#pragma mark - Table view data source
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    SPDataMonthlyOfftake *data = [datas objectAtIndex:indexPath.row];
+    
+    if ([data.status isEqualToString:@"Terkirim ke Server"]) {
+        
+        [SPMessageUtility customDeleteYesOrno:@"Apakah anda yakin ingin menghapus data ini?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+            
+            
+            if (success) {
+                
+                [self->datas removeObject:data];
+                [data MR_deleteEntity];
+                [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                
+                
+                [self.tableView reloadData];
+            }
+            else{
+                
+            }
+        }];
+    }
+    else{
+        
+        [SPMessageUtility customYesOrNo:@"Apakah anda ingin mengirim ulang data ini ke server?" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+            
+            
+            if (success) {
+                SPNetworkManager *network = [[SPNetworkManager alloc]init];
+                 NSString *newID = [[NSUUID UUID] UUIDString];
+                NSDictionary *datadikirim =@{@"storeId":data.storeId,
+                                      @"timeMT":data.timeMT,
+                                      @"categoryId":data.categoryId,
+                                      @"productId":data.productId,
+                                      @"totalQty" : data.totalQty,
+                                      @"totalSales":data.totalSales,
+                                      @"refId":newID
+                                      };
+                
+                [network doMonthlyOfftake:datadikirim view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+                    if (success) {
+                        [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                            
+                            
+                            data.status = @"Terkirim ke Server";
+                            data.refId =newID;
+                            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                            
+                            [self.tableView reloadData];
+                        }];
+                        
+                    }
+                    else
+                    {
+                        [SPMessageUtility message:@"Masih gagal dikirim, silahkan cek ulang internet anda" needAction:YES viewController:self];
+                    }
+        
+                }];
+               
+                
+            }
+        }];
+    }
+}
 - (IBAction)didTapBack:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

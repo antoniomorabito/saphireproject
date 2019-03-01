@@ -1088,10 +1088,20 @@ completionHandler:(SPCompletionHandler)handler;
         [hud hideAnimated:YES];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
-        NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
+        NSData *data= error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSError* errorda;
         
-        handler(NO,serializedData,error);
+        if (data !=nil) {
+            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:kNilOptions
+                                                                   error:&errorda];
+            NSLog(@"error json : %@",json);
+            handler(NO,json,error);
+        }
+        else{
+            NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+            handler(NO,errResponse,error);
+        }
         [hud hideAnimated:YES];
     }];
 }

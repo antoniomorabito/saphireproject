@@ -620,7 +620,7 @@
         NSDictionary *data= @{@"storeId":storeid,
                               @"timeCompetitor":displayString,
                               @"categoryId":categoryid,
-                              @"productId":_fieldTipeProduk.text,
+                              @"productId":product_id,
                               @"brand":competitorid,
                               @"normalPrice":_fieldHargaProduk.text,
                               @"salePrice":_fieldEstimasiSellout.text,
@@ -643,13 +643,20 @@
                     sellout.userId =user.userId;
                     sellout.productName = self->_fieldTipeProduk.text;
                     sellout.storeName = self->_fieldLokasi.text;
-                    sellout.salePrice =self->_fieldHargaProduk.text;
+                    sellout.normalPrice =self->_fieldHargaProduk.text;
+                    sellout.salePrice =self->_fieldEstimasiSellout.text;
                     sellout.timeCompetitor = displayString;
                     sellout.photopath = self->_fileData;
                     sellout.productId = self->product_id;
+                    sellout.brand =self->competitorid;
+                    sellout.startPeriode =self->_fieldAwalPeriode.text;
+                    sellout.endPeriode =self->_fieldAkhirPeriode.text;
+                    sellout.estimationSellout =_fieldEstimasiSellout.text;
+                    sellout.totalPromotor =_fieldTotalPromo.text;
+                    sellout.categoryId =self->categoryid;
                     sellout.storeId = self->storeid;
                     sellout.photo = self->_fileName;
-                    
+                      sellout.remark = self->_fieldPilihKompetitor.text;
                     sellout.status = @"Terkirim ke Server";
                     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
                     
@@ -664,13 +671,20 @@
                     sellout.userId =user.userId;
                     sellout.productName = self->_fieldTipeProduk.text;
                     sellout.storeName = self->_fieldLokasi.text;
-                    sellout.salePrice =self->_fieldHargaProduk.text;
+                    sellout.normalPrice =self->_fieldHargaProduk.text;
+                    sellout.salePrice =self->_fieldEstimasiSellout.text;
                     sellout.timeCompetitor = displayString;
                     sellout.photopath = self->_fileData;
                     sellout.productId = self->product_id;
+                    sellout.brand =self->competitorid;
+                    sellout.startPeriode =self->_fieldAwalPeriode.text;
+                    sellout.endPeriode =self->_fieldAkhirPeriode.text;
+                    sellout.estimationSellout =_fieldEstimasiSellout.text;
+                    sellout.totalPromotor =_fieldTotalPromo.text;
+                    sellout.categoryId =self->categoryid;
                     sellout.storeId = self->storeid;
                     sellout.photo = self->_fileName;
-                    
+                    sellout.remark = self->_fieldPilihKompetitor.text;
                    sellout.status = @"Belum terkirim ke server";
                     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
                     

@@ -226,6 +226,8 @@
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAuthentication" bundle:nil]instantiateViewControllerWithIdentifier:@"login"];
         
         [SPUser MR_truncateAll];
+        [SPAppConfig MR_truncateAll];
+          [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         [self presentViewController:vc animated:YES completion:nil];
     }
 }

@@ -2,7 +2,7 @@
 //  SPDataFeedBack+CoreDataProperties.m
 //  SapphireProject
 //
-//  Created by mac on 17/02/19.
+//  Created by mac on 01/03/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 //
@@ -15,12 +15,16 @@
 	return [NSFetchRequest fetchRequestWithEntityName:@"SPDataFeedBack"];
 }
 
-@dynamic storeId;
-@dynamic timeFeedback;
 @dynamic categoryId;
-@dynamic statusBuy;
+@dynamic customerFeedback;
 @dynamic customerName;
 @dynamic customerPhone;
-@dynamic customerFeedback;
+@dynamic statusBuy;
+@dynamic storeId;
+@dynamic timeFeedback;
+@dynamic userId;
+@dynamic categoryname;
+@dynamic status;
+@dynamic refId;
 
 @end

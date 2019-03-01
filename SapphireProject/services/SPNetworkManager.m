@@ -54,9 +54,20 @@ completionHandler:(SPCompletionHandler)handler;
         [hud hideAnimated:YES];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+        NSData *data= error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSError* errorda;
         
-        handler(NO,errResponse,error);
+        if (data !=nil) {
+            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:kNilOptions
+                                                                   error:&errorda];
+            NSLog(@"error json : %@",json);
+            handler(NO,json,error);
+        }
+        else{
+            NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+            handler(NO,errResponse,error);
+        }
         [hud hideAnimated:YES];
     }];
 }
@@ -640,7 +651,7 @@ completionHandler:(SPCompletionHandler)handler;{
     
     
     
-    [manager GET:[NSString stringWithFormat:@"%@master-products?page=0&limit=10",kCABaseURL]  parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager GET:[NSString stringWithFormat:@"%@master-products",kCABaseURL]  parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         

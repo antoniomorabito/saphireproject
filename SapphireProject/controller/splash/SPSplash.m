@@ -36,8 +36,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    Boolean mustBeUpdated = false;
+
     SPNetworkManager *network = [[SPNetworkManager alloc]init];
     
     [network doGetConfig:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {

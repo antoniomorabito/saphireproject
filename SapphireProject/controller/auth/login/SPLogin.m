@@ -189,8 +189,20 @@ bool isTap=false;
             }
             else{
                 
-                NSLog(@"response error :%@",responseObject);
-                [SPMessageUtility message:[responseObject objectForKey:@"error_description"] needAction:YES viewController:self];
+                if ([responseObject isKindOfClass:[NSString class]]) {
+                    
+                    [SPMessageUtility message:@"Error koneksi, tolong cek koneksi internet anda lagi" needAction:YES viewController:self
+                     ];
+                }
+                
+                else if ([responseObject objectForKey:@"error_description"]) {
+                    [SPMessageUtility message:[NSString stringWithFormat:@"%@",[responseObject objectForKey:@"error_description"]] needAction:YES viewController:self];
+                }
+                else{
+                    
+//                    [SPMessageUtility message:@"" needAction:YES viewController:self];
+                }
+         
             }
             
         }];

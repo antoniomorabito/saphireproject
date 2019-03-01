@@ -77,9 +77,12 @@
     </entity>
     <entity name="SPDataFeedBack" representedClassName="SPDataFeedBack" syncable="YES" codeGenerationType="class">
         <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="customerFeedback" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="customerName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="customerPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="statusBuy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storeId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeFeedback" optional="YES" attributeType="String" syncable="YES"/>
@@ -231,7 +234,7 @@
         <element name="SPDataAttendanceOut" positionX="0" positionY="153" width="128" height="165"/>
         <element name="SPDataCompetitor" positionX="-18" positionY="135" width="128" height="345"/>
         <element name="SPDataDisplay" positionX="-9" positionY="144" width="128" height="135"/>
-        <element name="SPDataFeedBack" positionX="-9" positionY="144" width="128" height="165"/>
+        <element name="SPDataFeedBack" positionX="-9" positionY="144" width="128" height="210"/>
         <element name="SPDataMonthlyOfftake" positionX="-18" positionY="135" width="128" height="240"/>
         <element name="SPDataSellout" positionX="-18" positionY="135" width="128" height="330"/>
         <element name="SPDataSKU" positionX="-18" positionY="135" width="128" height="180"/>

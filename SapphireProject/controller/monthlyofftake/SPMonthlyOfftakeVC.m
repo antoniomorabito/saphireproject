@@ -148,7 +148,13 @@
                                                         
                                                         self->categoryid = category.idcategory;
                                                         
+                                                        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                                                        hud.mode = MBProgressHUDModeIndeterminate;
+                                                        hud.label.text = @"";
+                                                        [hud showAnimated:YES];
                                                         [self initDataProduct:self->categoryid];
+                                                        
+                                                        [hud hideAnimated:YES];
                                                     }
                                                   cancelBlock:nil
                                     presentFromViewController:self];
@@ -162,11 +168,8 @@
         [SPUtility initBannerNotif:@"Information" subtitle:@"Belum memilih kategori produk" body:@""];
     }
     else{
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.mode = MBProgressHUDModeIndeterminate;
-        hud.label.text = @"";
-        [hud showAnimated:YES];
-        NSArray *arrayproducts = [SPProduct MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"category_id == %@",categoryid]];
+      
+        NSArray *arrayproducts = [SPProduct MR_findAll];
         SPUser *user = [SPUser MR_findFirst];
         products = [[NSMutableArray alloc]init];
         for (SPProduct * product in arrayproducts)
@@ -187,7 +190,7 @@
              [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
             [products addObject:monthlyofftake];
         }
-        [hud hideAnimated:YES];
+      
         [self.tableView reloadData];
         
         

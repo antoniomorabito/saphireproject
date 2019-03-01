@@ -79,9 +79,6 @@
     _fieldTipeProduk.delegate = self;
     _fieldAwalPeriode.delegate= self;
     _fieldAkhirPeriode.delegate= self;
-    
-    
-    
     _fieldTotalPromo.delegate = self;
     _fieldEstimasiSellout.delegate = self;
     _fieldHargaProduk.delegate = self;
@@ -107,20 +104,12 @@
     
      _fieldDeskripsiPromo.inputAccessoryView = toolbars;
     _fieldHargaProduk.inputAccessoryView = toolbars;
-    
      _fieldTotalPromo.inputAccessoryView = toolbars;
      _fieldEstimasiSellout.inputAccessoryView = toolbars;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
     [self.collectionView reloadData];
-}
--(void)dismissAllKeyboard{
-    
-    [self.fieldHargaProduk resignFirstResponder];
-    [self.fieldEstimasiSellout resignFirstResponder];
-    [self.fieldTotalPromo resignFirstResponder];
-    [self.fieldDeskripsiPromo resignFirstResponder];
 }
 -(void)doneClicked:(UIBarButtonItem*)button
 {
@@ -278,8 +267,23 @@
                                     presentFromViewController:self];
     }
 }
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    NSLog(@"jalan editingnya");
+    [self.view endEditing:YES];
+    return YES;
+}
+
+// It is important for you to hide the keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"jalan returnnya");
+    [textField resignFirstResponder];
+    return YES;
+}
 - (IBAction)didTapAwalPeriode:(id)sender {
-   [self.view endEditing:YES];
+
+    
     SPAppConfig *backdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"backdate_trans"]];
     
     SPAppConfig *nextdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"nextdate_trans"]];
@@ -316,7 +320,6 @@
 }
 - (IBAction)didTapAkhirPeriode:(id)sender {
     [self.view endEditing:YES];
-    
 
     SPAppConfig *backdate = [SPAppConfig MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"parameterName== %@",@"backdate_trans"]];
     

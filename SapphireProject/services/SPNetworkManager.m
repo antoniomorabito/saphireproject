@@ -868,11 +868,19 @@ completionHandler:(SPCompletionHandler)handler;{
         [hud hideAnimated:YES];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
-        NSLog(@"error response nya adalah : %@",ErrorResponse);
-        NSData *data = [ErrorResponse dataUsingEncoding:NSUTF8StringEncoding];
-        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        handler(NO,json,error);
+        NSData *data= error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSError* errorda;
+        if (data !=nil) {
+            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:kNilOptions
+                                                                   error:&errorda];
+            NSLog(@"error json : %@",json);
+            handler(NO,json,error);
+        }
+        else{
+            NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+            handler(NO,errResponse,error);
+        }
         [hud hideAnimated:YES];
         
     }];

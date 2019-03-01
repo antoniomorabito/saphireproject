@@ -32,8 +32,6 @@
     [self.collectionView reloadData];
     
     
-
-    
    
     // Do any additional setup after loading the view.
 }
@@ -184,6 +182,9 @@
     }
     else if ([dataov isEqualToString:@"Feedback"])
     {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPFeedbackOverview" bundle:nil]instantiateViewControllerWithIdentifier:@"navfeedbackoverview"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
         
     }
     

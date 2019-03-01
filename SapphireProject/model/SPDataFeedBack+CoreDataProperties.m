@@ -26,5 +26,6 @@
 @dynamic categoryname;
 @dynamic status;
 @dynamic refId;
+@dynamic storeName;
 
 @end

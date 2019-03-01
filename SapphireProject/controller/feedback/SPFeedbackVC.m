@@ -100,11 +100,11 @@
                                                     doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
                                                         NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
                                                         
-                                                        _fieldLocation.text =selectedValue;
+                                                        self->_fieldLocation.text =selectedValue;
                                                         
                                  SPStore *store = [SPStore MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"name== %@",selectedValue]];
                                                         
-                                                        storeid = store.idstore;
+                                                        self->storeid = store.idstore;
                                                     }
          
          
@@ -166,14 +166,89 @@
         
         [network doAddFeedback:data view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
            
+            NSString *newID = [[NSUUID UUID] UUIDString];
+            SPDataFeedBack *dataff = [SPDataFeedBack MR_createEntity];
+            SPUser *user = [SPUser MR_findFirst];
             if (success) {
                 [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"message"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
-                        [self dismissViewControllerAnimated:YES completion:nil];
+                    
+                    
+                    dataff.refId = newID;
+                    dataff.userId =user.userId;
+                    dataff.categoryId = self->categoryid;
+                    dataff.categoryname = self->_fieldCategory.text;
+                    dataff.customerFeedback =self->_textFeedback.text;
+                    dataff.storeId =self->storeid;
+                    dataff.storeName = self->_fieldLocation.text;
+                    dataff.statusBuy = self->_fieldStatus.text;
+                    dataff.customerName = self->_fieldCustomerName.text;
+                    dataff.customerPhone =self->_fieldPhoneNumber.text;
+                    dataff.timeFeedback = self->_fieldDate.text;
+                    dataff.status = @"Terkirim ke Server";
+                    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                    
+                    [self dismissViewControllerAnimated:YES completion:nil];
                     
                     
                 }];
             }
             else{
+                
+                if ([responseObject isKindOfClass:[NSString class]]) {
+                    
+                    [SPMessageUtility customMessageDialog:@"Data anda tersimpan secara lokal, silahkan upload ulang atau review kembali di overviewnya" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                        dataff.refId = newID;
+                        dataff.userId =user.userId;
+                        dataff.categoryId = self->categoryid;
+                        dataff.categoryname = self->_fieldCategory.text;
+                        dataff.customerFeedback =self->_textFeedback.text;
+                        dataff.storeId =self->storeid;
+                        dataff.storeName = self->_fieldLocation.text;
+                        dataff.statusBuy = self->_fieldStatus.text;
+                        dataff.customerName = self->_fieldCustomerName.text;
+                        dataff.customerPhone =self->_fieldPhoneNumber.text;
+                        dataff.timeFeedback = self->_fieldDate.text;
+                        dataff.status = @"Belum terkirim ke server";
+                        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                        
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    }];
+                }
+                
+                else if ([responseObject objectForKey:@"error_description"]) {
+                   
+                    [SPMessageUtility customMessageDialog:[responseObject objectForKey:@"error_description"] needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                       
+                        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPAuthentication" bundle:nil]instantiateViewControllerWithIdentifier:@"login"];
+                        
+                        [SPUser MR_truncateAll];
+                        [SPAppConfig MR_truncateAll];
+                        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                        [self presentViewController:vc animated:YES completion:nil];
+                        
+                    }];
+                }
+                else{
+                    
+                    [SPMessageUtility customMessageDialog:@"Data anda tersimpan secara lokal, silahkan upload ulang atau review kembali di overviewnya" needAction:YES viewController:self CH:^(BOOL success, NSString *value) {
+                        dataff.refId = newID;
+                        dataff.userId =user.userId;
+                        dataff.categoryId = self->categoryid;
+                        dataff.categoryname = self->_fieldCategory.text;
+                        dataff.customerFeedback =self->_textFeedback.text;
+                        dataff.storeId =self->storeid;
+                        dataff.storeName = self->_fieldLocation.text;
+                        dataff.statusBuy = self->_fieldStatus.text;
+                        dataff.customerName = self->_fieldCustomerName.text;
+                        dataff.customerPhone =self->_fieldPhoneNumber.text;
+                        dataff.timeFeedback = self->_fieldDate.text;
+                        dataff.status = @"Belum terkirim ke server";
+                        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                        
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    }];
+                }
+            
                 
             }
             

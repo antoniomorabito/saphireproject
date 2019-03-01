@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *categoryname;
 @property (nullable, nonatomic, copy) NSString *status;
 @property (nullable, nonatomic, copy) NSString *refId;
+@property (nullable, nonatomic, copy) NSString *storeName;
 
 @end
 

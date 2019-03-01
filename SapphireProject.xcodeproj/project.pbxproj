@@ -36,6 +36,8 @@
 		043E0298220C0F6F00CCA20C /* SPCarouselChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E0297220C0F6F00CCA20C /* SPCarouselChild.m */; };
 		046CC2B92219FB00007B167F /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CC2B82219FB00007B167F /* NSDate+Helper.m */; };
 		046CC2C2221A3C49007B167F /* SPCollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CC2C1221A3C49007B167F /* SPCollectionImageCell.m */; };
+		047AA0F92229010E008DEC7A /* SPFeedbackOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047AA0F82229010E008DEC7A /* SPFeedbackOverview.storyboard */; };
+		047AA0FD2229013D008DEC7A /* SPFeedbackOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AA0FC2229013D008DEC7A /* SPFeedbackOverview.m */; };
 		04884BFE2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04884BFD2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard */; };
 		04884C022227BE8A0099648C /* SPMonthlOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 04884C012227BE8A0099648C /* SPMonthlOverview.m */; };
 		04884C052227DC530099648C /* SPOffTakeWeeklyOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04884C042227DC530099648C /* SPOffTakeWeeklyOverview.storyboard */; };
@@ -194,6 +196,9 @@
 		046CC2BD221A3076007B167F /* SPMasterPromo+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPMasterPromo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		046CC2C0221A3C49007B167F /* SPCollectionImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCollectionImageCell.h; sourceTree = "<group>"; };
 		046CC2C1221A3C49007B167F /* SPCollectionImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCollectionImageCell.m; sourceTree = "<group>"; };
+		047AA0F82229010E008DEC7A /* SPFeedbackOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPFeedbackOverview.storyboard; sourceTree = "<group>"; };
+		047AA0FB2229013D008DEC7A /* SPFeedbackOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPFeedbackOverview.h; sourceTree = "<group>"; };
+		047AA0FC2229013D008DEC7A /* SPFeedbackOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPFeedbackOverview.m; sourceTree = "<group>"; };
 		04884BFD2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPOffTakeMonthlyOverview.storyboard; sourceTree = "<group>"; };
 		04884C002227BE8A0099648C /* SPMonthlOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMonthlOverview.h; sourceTree = "<group>"; };
 		04884C012227BE8A0099648C /* SPMonthlOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMonthlOverview.m; sourceTree = "<group>"; };
@@ -537,6 +542,7 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				047AA0FA2229012B008DEC7A /* feedbackoverview */,
 				04884C0C2227E5990099648C /* competitoroverview */,
 				04884C062227DCD90099648C /* weeklyofftakeoverview */,
 				04884BFF2227BE630099648C /* monthlyofftakeoverview */,
@@ -591,6 +597,7 @@
 				043E0294220C0F4A00CCA20C /* SPCarousel.storyboard */,
 				042F42F322199D4200D4CFA9 /* SPSku_V2.storyboard */,
 				042F42F62219B50100D4CFA9 /* SPAttendace_v2.storyboard */,
+				047AA0F82229010E008DEC7A /* SPFeedbackOverview.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -709,6 +716,15 @@
 				043E028C220C0E2D00CCA20C /* imagethree.png */,
 			);
 			path = imageasset;
+			sourceTree = "<group>";
+		};
+		047AA0FA2229012B008DEC7A /* feedbackoverview */ = {
+			isa = PBXGroup;
+			children = (
+				047AA0FB2229013D008DEC7A /* SPFeedbackOverview.h */,
+				047AA0FC2229013D008DEC7A /* SPFeedbackOverview.m */,
+			);
+			path = feedbackoverview;
 			sourceTree = "<group>";
 		};
 		04884BFF2227BE630099648C /* monthlyofftakeoverview */ = {
@@ -1154,6 +1170,7 @@
 				042CA0B121A4F19800AF8E74 /* Assets.xcassets in Resources */,
 				04884C0B2227E5590099648C /* SPCompetitorOverview.storyboard in Resources */,
 				042CA0E421A5198D00AF8E74 /* SPSplash.storyboard in Resources */,
+				047AA0F92229010E008DEC7A /* SPFeedbackOverview.storyboard in Resources */,
 				043E0290220C0E2D00CCA20C /* imageone.png in Resources */,
 				84727FDF21A9AFE000EDC907 /* SPSellOutOverview.storyboard in Resources */,
 				845411A621AEE42F00DE8DA8 /* SPHomePromoCell.xib in Resources */,
@@ -1284,6 +1301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				042F42E52218B5D500D4CFA9 /* SPMainTakeImageCell.m in Sources */,
+				047AA0FD2229013D008DEC7A /* SPFeedbackOverview.m in Sources */,
 				84FCFF2F21A84CBB0037F0A9 /* JVFloatLabeledTextField.m in Sources */,
 				0490B5AC220BA5590054F854 /* SPMiddleWeeklyOfftakeCell.m in Sources */,
 				043E0289220C0D1000CCA20C /* SPCarouselVC.m in Sources */,

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vps-33-qhs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="twu-Ud-yHq">
+            <objects>
+                <navigationController storyboardIdentifier="doTerms" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vps-33-qhs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="kaM-qT-572">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="phH-wg-dbh" kind="relationship" relationship="rootViewController" id="DI8-5Y-uy2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K4e-rh-q7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="151"/>
+        </scene>
+        <!--Terms Of Agg-->
+        <scene sceneID="wJf-3K-Vjx">
+            <objects>
+                <viewController storyboardIdentifier="tems" useStoryboardIdentifierAsRestorationIdentifier="YES" id="phH-wg-dbh" customClass="SPTermsOfAgg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="epd-yH-ImV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXw-0c-Va9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KXw-0c-Va9" secondAttribute="trailing" id="AWX-Lv-vew"/>
+                            <constraint firstItem="KXw-0c-Va9" firstAttribute="top" secondItem="7wQ-YC-umR" secondAttribute="top" id="EGT-it-veh"/>
+                            <constraint firstItem="KXw-0c-Va9" firstAttribute="leading" secondItem="epd-yH-ImV" secondAttribute="leading" id="fEg-zf-zqt"/>
+                            <constraint firstItem="KXw-0c-Va9" firstAttribute="bottom" secondItem="7wQ-YC-umR" secondAttribute="bottom" id="iIH-bT-bNs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7wQ-YC-umR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gWX-v3-Irk">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_back" id="AXi-yn-d8j">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapBack:" destination="phH-wg-dbh" id="fjd-p6-haH"/>
+                            </connections>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="rbn-vj-7uI">
+                            <rect key="frame" x="187.5" y="0.0" width="0.0" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-az-jbT">
+                                    <rect key="frame" x="-27.5" y="0.0" width="55" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="kYQ-98-xeB"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="mFQ-az-jbT" firstAttribute="centerY" secondItem="rbn-vj-7uI" secondAttribute="centerY" id="1lU-Ny-sTv"/>
+                                <constraint firstItem="mFQ-az-jbT" firstAttribute="centerX" secondItem="rbn-vj-7uI" secondAttribute="centerX" id="Fr6-qe-spT"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webViewTerms" destination="KXw-0c-Va9" id="VYO-gv-UsU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1R6-1W-2ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661.60000000000002" y="149.77511244377811"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_back" width="20" height="20"/>
+    </resources>
+</document>

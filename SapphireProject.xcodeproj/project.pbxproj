@@ -66,6 +66,10 @@
 		04934B742216450D00AB5250 /* SearchStringPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04934B6C2216450D00AB5250 /* SearchStringPickerViewController.xib */; };
 		04934B752216450D00AB5250 /* NSString+SearchablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04934B6D2216450D00AB5250 /* NSString+SearchablePicker.m */; };
 		04934B762216450D00AB5250 /* UIImage+SearchablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04934B6E2216450D00AB5250 /* UIImage+SearchablePicker.m */; };
+		04DD4BE2223FDBDB00EE2250 /* SPTermsOfAgg.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DD4BE1223FDBDB00EE2250 /* SPTermsOfAgg.storyboard */; };
+		04DD4BE6223FDC9500EE2250 /* SPTermsOfAgg.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD4BE5223FDC9500EE2250 /* SPTermsOfAgg.m */; };
+		04DD4BE8223FDF0B00EE2250 /* SPPrivacy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DD4BE7223FDF0B00EE2250 /* SPPrivacy.storyboard */; };
+		04DD4BEC223FDF6E00EE2250 /* SPPrivacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD4BEB223FDF6E00EE2250 /* SPPrivacy.m */; };
 		04E01836221CE27B00927974 /* SPDisplayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E01835221CE27B00927974 /* SPDisplayVC.m */; };
 		04E01838221CE34800927974 /* SPDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8459516B221C597C0075ECF1 /* SPDisplay.storyboard */; };
 		04EBBCD221F70A9B00B26B44 /* SPUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBCD121F70A9B00B26B44 /* SPUploadVC.m */; };
@@ -260,6 +264,12 @@
 		04D4B8B92226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataWeeklyOfftake+CoreDataClass.h"; sourceTree = "<group>"; };
 		04D4B8BA2226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataWeeklyOfftake+CoreDataClass.m"; sourceTree = "<group>"; };
 		04D4B8BB2226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataWeeklyOfftake+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04DD4BE1223FDBDB00EE2250 /* SPTermsOfAgg.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPTermsOfAgg.storyboard; sourceTree = "<group>"; };
+		04DD4BE4223FDC9500EE2250 /* SPTermsOfAgg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTermsOfAgg.h; sourceTree = "<group>"; };
+		04DD4BE5223FDC9500EE2250 /* SPTermsOfAgg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTermsOfAgg.m; sourceTree = "<group>"; };
+		04DD4BE7223FDF0B00EE2250 /* SPPrivacy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPPrivacy.storyboard; sourceTree = "<group>"; };
+		04DD4BEA223FDF6E00EE2250 /* SPPrivacy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPrivacy.h; sourceTree = "<group>"; };
+		04DD4BEB223FDF6E00EE2250 /* SPPrivacy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPrivacy.m; sourceTree = "<group>"; };
 		04E0182D221BEA0900927974 /* SPDataCompetitor+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataCompetitor+CoreDataProperties.h"; sourceTree = "<group>"; };
 		04E0182E221BEA0900927974 /* SPDataCompetitor+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataCompetitor+CoreDataClass.h"; sourceTree = "<group>"; };
 		04E0182F221BEA0900927974 /* SPDataCompetitor+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataCompetitor+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -542,6 +552,8 @@
 		042CA0DA21A4FA0C00AF8E74 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				04DD4BE9223FDF5E00EE2250 /* privacy */,
+				04DD4BE3223FDC8200EE2250 /* termsof */,
 				047AA0FA2229012B008DEC7A /* feedbackoverview */,
 				04884C0C2227E5990099648C /* competitoroverview */,
 				04884C062227DCD90099648C /* weeklyofftakeoverview */,
@@ -598,6 +610,8 @@
 				042F42F322199D4200D4CFA9 /* SPSku_V2.storyboard */,
 				042F42F62219B50100D4CFA9 /* SPAttendace_v2.storyboard */,
 				047AA0F82229010E008DEC7A /* SPFeedbackOverview.storyboard */,
+				04DD4BE1223FDBDB00EE2250 /* SPTermsOfAgg.storyboard */,
+				04DD4BE7223FDF0B00EE2250 /* SPPrivacy.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -918,6 +932,24 @@
 			path = SearchablePicker;
 			sourceTree = "<group>";
 		};
+		04DD4BE3223FDC8200EE2250 /* termsof */ = {
+			isa = PBXGroup;
+			children = (
+				04DD4BE4223FDC9500EE2250 /* SPTermsOfAgg.h */,
+				04DD4BE5223FDC9500EE2250 /* SPTermsOfAgg.m */,
+			);
+			path = termsof;
+			sourceTree = "<group>";
+		};
+		04DD4BE9223FDF5E00EE2250 /* privacy */ = {
+			isa = PBXGroup;
+			children = (
+				04DD4BEA223FDF6E00EE2250 /* SPPrivacy.h */,
+				04DD4BEB223FDF6E00EE2250 /* SPPrivacy.m */,
+			);
+			path = privacy;
+			sourceTree = "<group>";
+		};
 		04E01833221CE26700927974 /* display */ = {
 			isa = PBXGroup;
 			children = (
@@ -1156,9 +1188,11 @@
 				043E028F220C0E2D00CCA20C /* imagethree.png in Resources */,
 				042CA0F421A51E7000AF8E74 /* SPAttendanceOverview.storyboard in Resources */,
 				042F42F422199D4200D4CFA9 /* SPSku_V2.storyboard in Resources */,
+				04DD4BE2223FDBDB00EE2250 /* SPTermsOfAgg.storyboard in Resources */,
 				84CA659C21D789E0003CA458 /* SPOffTake-Monthly.storyboard in Resources */,
 				042CA0F221A51E0F00AF8E74 /* SPSKU.storyboard in Resources */,
 				84727FE121A9B3F000EDC907 /* SPSKUOverview.storyboard in Resources */,
+				04DD4BE8223FDF0B00EE2250 /* SPPrivacy.storyboard in Resources */,
 				04934B742216450D00AB5250 /* SearchStringPickerViewController.xib in Resources */,
 				042F42F72219B50100D4CFA9 /* SPAttendace_v2.storyboard in Resources */,
 				84FCFF2921A8276E0037F0A9 /* SPSellOut.storyboard in Resources */,
@@ -1336,6 +1370,7 @@
 				845411A421AEAD0D00DE8DA8 /* RoundingMode.swift in Sources */,
 				042CA0E821A51ADB00AF8E74 /* SPNetworkManager.m in Sources */,
 				04F71C7B21D37A9A00C5068A /* SPHomeVC.m in Sources */,
+				04DD4BEC223FDF6E00EE2250 /* SPPrivacy.m in Sources */,
 				0490B59D220BA2760054F854 /* SPCompetitorInfoVC.m in Sources */,
 				04934B752216450D00AB5250 /* NSString+SearchablePicker.m in Sources */,
 				04EE4D7921F48A3D002D07DF /* SPHomeMenuCell.m in Sources */,
@@ -1343,6 +1378,7 @@
 				042CA10D21A79FAA00AF8E74 /* SPMainTabbar.m in Sources */,
 				04EBBD0721F76E0200B26B44 /* SPFeedbackVC.m in Sources */,
 				042CA0B721A4F19800AF8E74 /* main.m in Sources */,
+				04DD4BE6223FDC9500EE2250 /* SPTermsOfAgg.m in Sources */,
 				0490B5B7220BA8040054F854 /* SPQuizVC.m in Sources */,
 				0490B57B220B89650054F854 /* SPSKUVC.m in Sources */,
 				0490B582220B8CB30054F854 /* SPTableSKUVC.m in Sources */,

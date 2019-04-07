@@ -12,7 +12,7 @@ target 'SapphireProject' do
     pod 'FDTake', '= 0.2.5'
     pod 'IQDropDownTextField'
     pod 'DatePickerDialog-ObjC'
-    pod 'FreakingSimpleRoundImageView', '~> 1.2.3'
+    pod 'FreakingSimpleRoundImageView', '~> 1.3'
     pod 'APBanner'
     pod 'CZPicker'
   target 'SapphireProjectTests' do

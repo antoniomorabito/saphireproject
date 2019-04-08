@@ -606,6 +606,10 @@
     {
         [SPMessageUtility message:@"Total promo belum dimasukin" needAction:YES viewController:self];
     }
+    else if (_fileName.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin gambar" needAction:YES viewController:self];
+    }
     else
     {
         TrueTimeClient *client = [TrueTimeClient sharedInstance];

@@ -319,6 +319,10 @@
     {
         [SPMessageUtility message:@"Belum masukin qty" needAction:YES viewController:self];
     }
+    else if (_fileName.length == 0)
+    {
+        [SPMessageUtility message:@"Belum masukin gambar" needAction:YES viewController:self];
+    }
     else{
         SPNetworkManager *network = [[SPNetworkManager alloc]init];
          NSString *newID = [[NSUUID UUID] UUIDString];

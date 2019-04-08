@@ -203,6 +203,10 @@
 		047AA0F82229010E008DEC7A /* SPFeedbackOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPFeedbackOverview.storyboard; sourceTree = "<group>"; };
 		047AA0FB2229013D008DEC7A /* SPFeedbackOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPFeedbackOverview.h; sourceTree = "<group>"; };
 		047AA0FC2229013D008DEC7A /* SPFeedbackOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPFeedbackOverview.m; sourceTree = "<group>"; };
+		0480619E225B0D9F0096B6C8 /* SPStaticPage+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPStaticPage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0480619F225B0D9F0096B6C8 /* SPStaticPage+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPStaticPage+CoreDataClass.h"; sourceTree = "<group>"; };
+		048061A0225B0D9F0096B6C8 /* SPStaticPage+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPStaticPage+CoreDataClass.m"; sourceTree = "<group>"; };
+		048061A1225B0D9F0096B6C8 /* SPStaticPage+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPStaticPage+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04884BFD2227BE170099648C /* SPOffTakeMonthlyOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SPOffTakeMonthlyOverview.storyboard; sourceTree = "<group>"; };
 		04884C002227BE8A0099648C /* SPMonthlOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMonthlOverview.h; sourceTree = "<group>"; };
 		04884C012227BE8A0099648C /* SPMonthlOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMonthlOverview.m; sourceTree = "<group>"; };
@@ -468,6 +472,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0480619E225B0D9F0096B6C8 /* SPStaticPage+CoreDataProperties.h */,
+				0480619F225B0D9F0096B6C8 /* SPStaticPage+CoreDataClass.h */,
+				048061A0225B0D9F0096B6C8 /* SPStaticPage+CoreDataClass.m */,
+				048061A1225B0D9F0096B6C8 /* SPStaticPage+CoreDataProperties.m */,
 				04D4B8B82226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataProperties.h */,
 				04D4B8B92226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataClass.h */,
 				04D4B8BA2226E91200E5A980 /* SPDataWeeklyOfftake+CoreDataClass.m */,

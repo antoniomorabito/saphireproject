@@ -215,10 +215,14 @@
         }];
     }
     else if ([data isEqualToString:@"Term Of Service"]) {
-        
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPTermsOfAgg" bundle:nil]instantiateViewControllerWithIdentifier:@"doTerms"];
+
+        [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"Privacy Policy"]) {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"SPPrivacy" bundle:nil]instantiateViewControllerWithIdentifier:@"doPrivacy"];
         
+        [self presentViewController:vc animated:YES completion:nil];
     }
     else if ([data isEqualToString:@"Log Out"]) {
         

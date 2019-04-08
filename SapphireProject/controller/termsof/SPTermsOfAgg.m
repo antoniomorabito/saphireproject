@@ -21,8 +21,8 @@
   
 self.webViewTerms.userInteractionEnabled = YES;
     self.webViewTerms.delegate = self;
-
-     NSString *embedHTML =[NSString stringWithFormat: @"<html><head></head><body>%@</body></html>",_dataterms];
+  SPStaticPage *sp= [SPStaticPage MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"page == %@",@"term-of-service"]];
+     NSString *embedHTML =[NSString stringWithFormat: @"<html><head></head><body>%@</body></html>",sp.content];
 
     self.webViewTerms.scrollView.delegate = self;
      [self.webViewTerms loadHTMLString: embedHTML baseURL: nil];

@@ -19,7 +19,12 @@
 self.webViewPrivacy.userInteractionEnabled = YES;
     self.webViewPrivacy.delegate = self;
     
-    NSString *embedHTML =[NSString stringWithFormat: @"<html><head></head><body>%@</body></html>",_dataprivacy];
+    
+    SPStaticPage *sp= [SPStaticPage MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"page == %@",@"faq"]];
+    
+    NSLog(@"nilai sp nya : %@",sp);
+    
+    NSString *embedHTML =[NSString stringWithFormat: @"<html><head></head><body>%@</body></html>",sp.content];
     
     self.webViewPrivacy.scrollView.delegate = self;
     [self.webViewPrivacy loadHTMLString: embedHTML baseURL: nil];

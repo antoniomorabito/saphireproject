@@ -63,6 +63,7 @@
 #import "SPDataSKU+CoreDataProperties.h"
 #import "SPDataWeeklyOfftake+CoreDataProperties.h"
 
+#import "SPStaticPage+CoreDataProperties.h"
 #import "FDTakeController.h"
 #import "CZPicker.h"
 @import Photos;

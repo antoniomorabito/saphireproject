@@ -19,6 +19,11 @@ completionHandler:(SPCompletionHandler)handler;
 completionHandler:(SPCompletionHandler)handler;
 
 
+- (void)doGetStaticPage:(NSDictionary* )data
+               view:(UIView *)view
+  completionHandler:(SPCompletionHandler)handler;
+
+
 - (void)doGetChannel:(NSDictionary* )data
                view:(UIView *)view
   completionHandler:(SPCompletionHandler)handler;

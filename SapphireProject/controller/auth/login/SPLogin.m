@@ -152,8 +152,8 @@ bool isTap=false;
                          NSArray *datacontent = (NSArray *)responseObject;
                         NSLog(@"nilai data content : %@",datacontent);
                                     for (int i = 0; i<datacontent.count; i++) {
-                        
-                        
+                                        
+        
                                         NSDictionary *object = [datacontent objectAtIndex:i];
                         
                                         SPAppConfig *app = [SPAppConfig MR_createEntity];
@@ -164,6 +164,8 @@ bool isTap=false;
                         
                         
                                     }
+                        
+                        
                         
                         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                         hud.mode = MBProgressHUDModeIndeterminate;
@@ -177,6 +179,7 @@ bool isTap=false;
                         [self initCompetitior];
                         [self initChannel];
                         [self initMasterPromo];
+                        [self initStaticPage];
                         [hud hideAnimated:YES];
                        
                     }
@@ -228,6 +231,19 @@ bool isTap=false;
     }];
 }
 
+-(void)initStaticPage{
+    SPNetworkManager *network = [[SPNetworkManager alloc]init];
+    
+    [network doGetStaticPage:nil view:self.view completionHandler:^(BOOL success, id responseObject, NSError *error) {
+        
+        if (success) {
+        }
+        else{
+            
+        }
+        
+    }];
+}
 -(void)initProduct{
     SPNetworkManager *network = [[SPNetworkManager alloc]init];
     

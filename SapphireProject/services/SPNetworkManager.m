@@ -1444,4 +1444,79 @@ completionHandler:(SPCompletionHandler)handler;
             [hud hideAnimated:YES];
         }];
     }
+
+- (void)doGetStaticPage:(NSDictionary* )data
+                   view:(UIView *)view
+      completionHandler:(SPCompletionHandler)handler;
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.text = @"";
+    [hud showAnimated:YES];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    SPUser *user = [SPUser MR_findFirst];
+    
+    NSLog(@"user data  : %@ dan username %@ dan user company : %@ , dan user id :%@",user.token,user.username,user.companyId,user.userId);
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.token] forHTTPHeaderField:@"token"];
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.username] forHTTPHeaderField:@"username"];
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.companyId] forHTTPHeaderField:@"companyId"];
+    
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",user.userId] forHTTPHeaderField:@"userId"];
+    
+    
+    
+    [manager GET:[NSString stringWithFormat:@"%@static-page",kCABaseURL]  parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        //        NSLog(@"response object config : %@",responseObject);
+        
+        NSError *jsonError;
+        NSDictionary * jsonDictionaryOrArray = [NSJSONSerialization JSONObjectWithData:responseObject options:nil error:&jsonError];
+        if(jsonError) {
+            // check the error description
+            NSLog(@"json error : %@", [jsonError localizedDescription]);
+            //             handler(NO,json,nil);
+            //             [hud hideAnimated:YES];
+            
+        } else {
+            // use the jsonDictionaryOrArray
+            
+            NSLog(@"json data config : %@",jsonDictionaryOrArray);
+        }
+        NSArray *dataContent = [jsonDictionaryOrArray objectForKey:@"data"];
+        NSLog(@"array content : %@",dataContent);
+        
+        [SPStaticPage MR_truncateAll];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        if (dataContent.count >0) {
+            for (NSDictionary *data in dataContent) {
+           
+                
+                SPStaticPage *ta = [SPStaticPage MR_createEntity];
+                
+                ta.page = ParseString([data objectForKey:@"page"]);
+                ta.content = ParseString([data objectForKey:@"content"]);
+                [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+            }
+        }
+       
+        
+        handler(YES,dataContent,nil);
+        [hud hideAnimated:YES];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+        
+        handler(NO,errResponse,error);
+        [hud hideAnimated:YES];
+    }];
+}
 @end

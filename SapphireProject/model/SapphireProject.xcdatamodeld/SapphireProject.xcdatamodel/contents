@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="SPAppConfig" representedClassName="SPAppConfig" syncable="YES" codeGenerationType="class">
         <attribute name="parameterFormat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parameterName" optional="YES" attributeType="String" syncable="YES"/>
@@ -191,6 +191,10 @@
         <attribute name="updated_by" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_date" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SPStaticPage" representedClassName="SPStaticPage" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="page" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="SPStore" representedClassName="SPStore" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="area_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -246,5 +250,6 @@
         <element name="SPQuizMaster" positionX="-45" positionY="144" width="128" height="240"/>
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
+        <element name="SPStaticPage" positionX="-18" positionY="135" width="128" height="75"/>
     </elements>
 </model>

@@ -334,6 +334,10 @@
 		04F0D3C0221D35B5007AEF0E /* SPChannel+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPChannel+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04F71C7921D37A9A00C5068A /* SPHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeVC.h; sourceTree = "<group>"; };
 		04F71C7A21D37A9A00C5068A /* SPHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeVC.m; sourceTree = "<group>"; };
+		04FC30EA225D750400E2F1D9 /* SPDataLastCheckIn+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataLastCheckIn+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04FC30EB225D750400E2F1D9 /* SPDataLastCheckIn+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPDataLastCheckIn+CoreDataClass.h"; sourceTree = "<group>"; };
+		04FC30EC225D750400E2F1D9 /* SPDataLastCheckIn+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataLastCheckIn+CoreDataClass.m"; sourceTree = "<group>"; };
+		04FC30ED225D750400E2F1D9 /* SPDataLastCheckIn+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SPDataLastCheckIn+CoreDataProperties.m"; sourceTree = "<group>"; };
 		0E59184FED3B11FCC5DA0ABD /* Pods_SapphireProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21216777675D63E330508CCD /* Pods_SapphireProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C74BD607467C3DD6AE968 /* Pods_SapphireProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SapphireProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -472,6 +476,10 @@
 		042CA0D921A4FA0200AF8E74 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				04FC30EA225D750400E2F1D9 /* SPDataLastCheckIn+CoreDataProperties.h */,
+				04FC30EB225D750400E2F1D9 /* SPDataLastCheckIn+CoreDataClass.h */,
+				04FC30EC225D750400E2F1D9 /* SPDataLastCheckIn+CoreDataClass.m */,
+				04FC30ED225D750400E2F1D9 /* SPDataLastCheckIn+CoreDataProperties.m */,
 				0480619E225B0D9F0096B6C8 /* SPStaticPage+CoreDataProperties.h */,
 				0480619F225B0D9F0096B6C8 /* SPStaticPage+CoreDataClass.h */,
 				048061A0225B0D9F0096B6C8 /* SPStaticPage+CoreDataClass.m */,

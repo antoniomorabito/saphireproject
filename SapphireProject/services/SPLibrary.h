@@ -62,6 +62,7 @@
 #import "SPDataMonthlyOfftake+CoreDataProperties.h"
 #import "SPDataSKU+CoreDataProperties.h"
 #import "SPDataWeeklyOfftake+CoreDataProperties.h"
+#import "SPDataLastCheckIn+CoreDataProperties.h"
 
 #import "SPStaticPage+CoreDataProperties.h"
 #import "FDTakeController.h"

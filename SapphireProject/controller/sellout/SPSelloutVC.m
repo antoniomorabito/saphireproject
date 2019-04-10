@@ -124,6 +124,13 @@
     else if (textField == _fieldDate) {
         return FALSE;
     }
+    else if (textField == _fieldProdukInstalasi) {
+        return FALSE;
+    }
+    else if (textField == _fieldProdukKeberadaan) {
+        return FALSE;
+    }
+    
     
     else{
         return YES;
@@ -254,6 +261,44 @@
         
     }
 }
+- (IBAction)fieldproductkeberadaan:(id)sender {
+   
+    NSArray *datakeberadaa =  [[NSArray alloc] initWithObjects:@"Ready Stock",@"Indent",nil];
+    [SearchStringPickerViewController showPickerWithTitle:@"Produk Keberadaan"
+                                                     rows:datakeberadaa
+                                         initialSelection:0
+                                               sourceView:sender
+                                                doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
+                                                    NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
+                                                    
+                                                    self->_fieldProdukKeberadaan.text =selectedValue;
+                                                    
+                                                    
+                                                                }
+                                              cancelBlock:nil
+                                presentFromViewController:self];
+
+}
+
+- (IBAction)didTapInstalasi:(id)sender {
+    NSArray *dataInstalasi =  [[NSArray alloc] initWithObjects:@"YES",@"NO",nil];
+    [SearchStringPickerViewController showPickerWithTitle:@"Produk Instalasi"
+                                                     rows:dataInstalasi
+                                         initialSelection:0
+                                               sourceView:sender
+                                                doneBlock:^(NSInteger selectedIndex, NSString *selectedValue) {
+                                                    NSLog(@"Index: %ld, value: %@", (long)selectedIndex, selectedValue);
+                                                    
+                                                    self->_fieldProdukInstalasi.text =selectedValue;
+                                                    
+                                                    
+                                                }
+                                              cancelBlock:nil
+                                presentFromViewController:self];
+
+    
+}
+
 #pragma mark - Private Method
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

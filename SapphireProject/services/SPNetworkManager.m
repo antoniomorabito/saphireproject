@@ -27,6 +27,7 @@ completionHandler:(SPCompletionHandler)handler;
     
         NSLog(@"response login user :  %@",responseObject);;
         [SPUser MR_truncateAll];
+        [SPDataLastCheckIn MR_truncateAll];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     
         SPUser *spuser = [SPUser MR_createEntity];
@@ -48,6 +49,22 @@ completionHandler:(SPCompletionHandler)handler;
         spuser.companyName = ParseString([responseObject objectForKey:@"companyName"]);
         spuser.areaId = ParseString([responseObject objectForKey:@"areaId"]);
         spuser.areaName = ParseString([responseObject objectForKey:@"areaName"]);
+        
+        NSDictionary *objectlastcheckin = [responseObject objectForKey:@"last_checkin"];
+        
+        
+        if (objectlastcheckin != NULL) {
+            SPDataLastCheckIn *lastcekin = [SPDataLastCheckIn MR_createEntity];
+            
+            lastcekin.attandance_id = [objectlastcheckin objectForKey:@"attandance_id"];
+              lastcekin.time_attandance = [objectlastcheckin objectForKey:@"time_attandance"];
+              lastcekin.refId = [objectlastcheckin objectForKey:@"refId"];
+              lastcekin.store_id = [objectlastcheckin objectForKey:@"store_id"];
+            lastcekin.photo = [objectlastcheckin objectForKey:@"photo"];
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    
+    }
+        
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         
         handler(YES,responseObject,nil);

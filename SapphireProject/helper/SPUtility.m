@@ -40,4 +40,53 @@
     
     return text;
 }
+
++(NSString *)formattanggal:(NSString *)time
+{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    NSDate *dateFromString = [dateFormatter dateFromString:time];
+    NSDateFormatter *dateFormattersecond = [[NSDateFormatter alloc] init];
+    [dateFormattersecond setDateFormat:@"hh:mm:ss"];
+    NSString *stringDate = [dateFormattersecond stringFromDate:dateFromString];
+    
+    NSLog(@"nilai string date : %@",stringDate);
+    return stringDate;
+
+}
+
++(NSString *)convertDateToString:(NSDate *)strDate toFormat:(NSString *)strToFormat
+{
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = strToFormat;
+    return [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:strDate]];
+}
+
++(NSString *)convertDate:(NSString *)strDate fromFormat:(NSString *)strFromFormat toFormat:(NSString *)strToFormat
+{
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = strFromFormat;
+    NSDate *dtNew = [dateFormatter dateFromString:strDate];
+    dateFormatter.dateFormat = strToFormat;
+    return [dateFormatter stringFromDate:dtNew];
+}
+
++(NSDate *)convertStringToDate:(NSString *)strDate fromFormat:(NSString *)strFromFormat
+{
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = strFromFormat;
+    return [dateFormatter dateFromString:strDate];
+}
+
++(NSString *)intervalhours:(NSDate *)strDate toFormat:(NSDate *)afterdate
+{
+    NSDate* date1 = strDate;
+    NSDate* date2 = afterdate;
+    NSTimeInterval distanceBetweenDates = [date1 timeIntervalSinceDate:date2];
+    double secondsInAnHour = 3600;
+    NSInteger hoursBetweenDates = distanceBetweenDates / secondsInAnHour;
+    
+    return [NSString stringWithFormat:@"%d",hoursBetweenDates];
+}
 @end

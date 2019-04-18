@@ -57,19 +57,86 @@
     TrueTimeClient *client = [TrueTimeClient sharedInstance];
     
     NSDate *now = [[client referenceTime] now];
-    NSString *functiondate = [NSDate stringFromDate:now withFormat:@"yyyy-MM-dd"];
+   
+    /// cek dlu ada gak dari API last cek in
+    SPDataLastCheckIn *data = [SPDataLastCheckIn MR_findFirst];
+    if (data) {
+     
+        NSLog(@"datanya ada : %@ ",data.attandance_id);
+        
+        //setup tanggal attendancenya
+        NSString *dateString = data.time_attandance;
     
-//    NSLog(@"get function date id : %@",functiondate);
+//        NSLog(@"time attenda : %@",dateString);
+        
+        
+//        NSLog(@"hasil convert : %@",[SPUtility formattanggal:dateString]);
+        
+        _waktuJamNow.text =[SPUtility convertDateToString:now toFormat:@"hh:mm:ss"];
+        
+        //jam cek in
+        _lblJamCekIn.text =[SPUtility formattanggal:dateString];
+        
+        
+        // substract time and hour
+        
+        NSDate *convertdatenow = [SPUtility convertStringToDate:[SPUtility convertDateToString:now toFormat:@"yyyy-MM-dd hh:mm:ss"] fromFormat:@"yyyy-MM-dd hh:mm:ss"];
+        
+        
+          NSDate * convertdatefromcekin = [SPUtility convertStringToDate:dateString fromFormat:@"yyyy-MM-dd hh:mm:ss"];
+        
+        
+        NSLog(@"interval waktu : %@",[SPUtility intervalhours:convertdatenow toFormat: convertdatefromcekin]);
+        
+        
+        _lblTotalJamSkrang.text =[NSString stringWithFormat:@"%@ hours",[SPUtility intervalhours:convertdatenow toFormat: convertdatefromcekin]];
+        
+        
+        // cek image urlnya
+        [_imageViewCekIn sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",data.photo]]];
+        
+        //cek storenya
+        SPStore *store = [SPStore MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"idstore == %@",data.store_id]];
+        
+        //get id store
+        storeid = store.idstore;
+        _fieldTempatBekerja.text = store.name;
+        
+        _fieldTempatBekerja.enabled = false;
+        
+        self.btnCheckIn.enabled =false;
+        self.btnCheckOut.enabled =true;
+        
+    }
+    else{
+        NSLog(@"datanya gak ada :");
+    }
+
+
+    
+    
+    
+    NSLog(@"nilai datenya adalah : %@",now);
+    // Do any additional setup after loading the view.
+   
+    
+}
+
+-(void)anothersetup{
+      TrueTimeClient *client = [TrueTimeClient sharedInstance];
+     NSDate *now = [[client referenceTime] now];
+     NSString *functiondate = [NSDate stringFromDate:now withFormat:@"yyyy-MM-dd"];
+    //    NSLog(@"get function date id : %@",functiondate);
     SPUser *user =[SPUser MR_findFirst];
     
     SPDataAttendanceIn *attendanceIn = [SPDataAttendanceIn MR_findFirstOrderedByAttribute:@"time_attandance" ascending:NO];
     
     NSLog(@"attendance id nya last or gak : %@",attendanceIn.idattendance);
-//[SPDataAttendanceIn MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@",functiondate,user.userId]];
+    //[SPDataAttendanceIn MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@",functiondate,user.userId]];
     if (attendanceIn) {
         //kalau ada buat kondisi dari awal lagi ntuk proses cek out
         
-         SPDataAttendanceOut *attendanceout = [SPDataAttendanceOut MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@ and attandance_id == %@",functiondate,user.userId,attendanceIn.idattendance]];
+        SPDataAttendanceOut *attendanceout = [SPDataAttendanceOut MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"tanggal == %@ and userId == %@ and attandance_id == %@",functiondate,user.userId,attendanceIn.idattendance]];
         
         
         if (attendanceout) {
@@ -155,14 +222,6 @@
         _imageViewCekIn.image = NULL;
         _imageViewCekout.image = NULL;
     }
-
-    
-    
-    
-    NSLog(@"nilai datenya adalah : %@",now);
-    // Do any additional setup after loading the view.
-   
-    
 }
 -(void)doneClicked:(UIBarButtonItem*)button
 {

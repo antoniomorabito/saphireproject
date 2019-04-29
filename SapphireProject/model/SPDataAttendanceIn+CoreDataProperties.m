@@ -2,7 +2,7 @@
 //  SPDataAttendanceIn+CoreDataProperties.m
 //  SapphireProject
 //
-//  Created by mac on 20/02/19.
+//  Created by mac on 26/04/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 //
@@ -16,6 +16,7 @@
 }
 
 @dynamic idattendance;
+@dynamic imagefotdata;
 @dynamic photo;
 @dynamic refId;
 @dynamic remark;
@@ -23,6 +24,6 @@
 @dynamic tanggal;
 @dynamic time_attandance;
 @dynamic userId;
-@dynamic imagefotdata;
+@dynamic status;
 
 @end

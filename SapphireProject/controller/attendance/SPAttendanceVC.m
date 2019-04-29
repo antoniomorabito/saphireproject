@@ -89,6 +89,7 @@
         NSLog(@"interval waktu : %@",[SPUtility intervalhours:convertdatenow toFormat: convertdatefromcekin]);
         
         
+        // check interval waktu
         _lblTotalJamSkrang.text =[NSString stringWithFormat:@"%@ hours",[SPUtility intervalhours:convertdatenow toFormat: convertdatefromcekin]];
         
         
@@ -109,14 +110,45 @@
         
     }
     else{
-        NSLog(@"datanya gak ada :");
+        
+        
+        
+        NSLog(@"datanya gak ada dari last cek in:");
+        
+        
+        //check dari lokal aja
+        NSString *functiondate = [NSDate stringFromDate:now withFormat:@"yyyy-MM-dd"];
+        //    NSLog(@"get function date id : %@",functiondate);
+        SPUser *user =[SPUser MR_findFirst];
+        
+        SPDataAttendanceIn *attendanceIn = [SPDataAttendanceIn MR_findFirstOrderedByAttribute:@"time_attandance" ascending:NO];
+        
+        NSLog(@"attendance id nya last or gak : %@",attendanceIn.idattendance);
+        
+        
+        if (attendanceIn) {
+            
+            NSLog(@"in nya ada");
+            
+            if ([attendanceIn.status isEqualToString:@"OPENED"]) {
+                
+            }
+            else{
+                
+                
+            }
+        }
+        else
+        {
+            
+        }
     }
 
 
     
     
     
-    NSLog(@"nilai datenya adalah : %@",now);
+
     // Do any additional setup after loading the view.
    
     

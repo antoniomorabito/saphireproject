@@ -30,6 +30,7 @@
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="refId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storeId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tanggal" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time_attandance" optional="YES" attributeType="String" syncable="YES"/>
@@ -242,11 +243,12 @@
         <element name="SPCategory" positionX="-36" positionY="153" width="128" height="120"/>
         <element name="SPChannel" positionX="-18" positionY="135" width="128" height="105"/>
         <element name="SPCompetitor" positionX="0" positionY="171" width="128" height="105"/>
-        <element name="SPDataAttendanceIn" positionX="-18" positionY="135" width="128" height="180"/>
+        <element name="SPDataAttendanceIn" positionX="-18" positionY="135" width="128" height="195"/>
         <element name="SPDataAttendanceOut" positionX="0" positionY="153" width="128" height="165"/>
         <element name="SPDataCompetitor" positionX="-18" positionY="135" width="128" height="345"/>
         <element name="SPDataDisplay" positionX="-9" positionY="144" width="128" height="135"/>
         <element name="SPDataFeedBack" positionX="-9" positionY="144" width="128" height="225"/>
+        <element name="SPDataLastCheckIn" positionX="-18" positionY="135" width="128" height="120"/>
         <element name="SPDataMonthlyOfftake" positionX="-18" positionY="135" width="128" height="240"/>
         <element name="SPDataSellout" positionX="-18" positionY="135" width="128" height="330"/>
         <element name="SPDataSKU" positionX="-18" positionY="135" width="128" height="180"/>
@@ -258,6 +260,5 @@
         <element name="SPStaticPage" positionX="-18" positionY="135" width="128" height="75"/>
         <element name="SPStore" positionX="-54" positionY="108" width="128" height="255"/>
         <element name="SPUser" positionX="-63" positionY="-18" width="128" height="300"/>
-        <element name="SPDataLastCheckIn" positionX="-18" positionY="135" width="128" height="120"/>
     </elements>
 </model>

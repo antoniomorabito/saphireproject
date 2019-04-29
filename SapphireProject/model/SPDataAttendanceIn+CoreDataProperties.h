@@ -2,7 +2,7 @@
 //  SPDataAttendanceIn+CoreDataProperties.h
 //  SapphireProject
 //
-//  Created by mac on 20/02/19.
+//  Created by mac on 26/04/19.
 //  Copyright © 2019 telkom. All rights reserved.
 //
 //
@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<SPDataAttendanceIn *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *idattendance;
+@property (nullable, nonatomic, retain) NSData *imagefotdata;
 @property (nullable, nonatomic, copy) NSString *photo;
 @property (nullable, nonatomic, copy) NSString *refId;
 @property (nullable, nonatomic, copy) NSString *remark;
@@ -24,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *tanggal;
 @property (nullable, nonatomic, copy) NSString *time_attandance;
 @property (nullable, nonatomic, copy) NSString *userId;
-@property (nullable, nonatomic, retain) NSData *imagefotdata;
+@property (nullable, nonatomic, copy) NSString *status;
 
 @end
 
